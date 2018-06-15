@@ -1,4 +1,0 @@
-# MascotasEnRed
-hola
-Holaaaa
-hello!!!

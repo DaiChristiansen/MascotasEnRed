@@ -5,12 +5,12 @@ package com.unb001.mascotasenred.modelo;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Manuel
  */
 public class Denuncia {
+
     private float dni;
     private String tipodedenuncia;
     private float fecha;
@@ -44,5 +44,5 @@ public class Denuncia {
     public void setFecha(float fecha) {
         this.fecha = fecha;
     }
-    
+
 }

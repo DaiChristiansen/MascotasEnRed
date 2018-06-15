@@ -15,9 +15,9 @@ public class Denuncia {
     private String tipodedenuncia;
     private float fecha;
 
-    public Denuncia(float dni, String tipo, float fecha) {
+    public Denuncia(float dni, String t, float fecha) {
         this.dni = dni;
-        this.tipodedenuncia = tipo;
+        this.tipodedenuncia = t;
         this.fecha = fecha;
     }
 

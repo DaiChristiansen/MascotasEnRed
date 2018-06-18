@@ -15,9 +15,9 @@ public class Denunciante {
     private String apellido;
     private String direccion;
     private String email;
-    private float dni;
+    private int dni;
 
-    public Denunciante(String nombre, String apellido, String direccion, String email, float dni) {
+    public Denunciante(String nombre, String apellido, String direccion, String email, int dni) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.direccion = direccion;
@@ -57,11 +57,11 @@ public class Denunciante {
         this.email = email;
     }
 
-    public float getDni() {
+    public int getDni() {
         return dni;
     }
 
-    public void setDni(float dni) {
+    public void setDni(int dni) {
         this.dni = dni;
     }
     

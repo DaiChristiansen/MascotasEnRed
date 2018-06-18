@@ -1,5 +1,7 @@
 package com.unb001.mascotasenred.modelo;
 
+import java.util.Date;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,21 +13,21 @@ package com.unb001.mascotasenred.modelo;
  */
 public class Denuncia {
 
-    private float dni;
+    private int dni;
     private String tipodedenuncia;
-    private float fecha;
+    private Date fecha;
 
-    public Denuncia(float dni, String tipodenuncia, float fecha) {
+    public Denuncia(int dni, String tipodenuncia, Date fecha) {
         this.dni = dni;
         this.tipodedenuncia = tipodenuncia;
         this.fecha = fecha;
     }
 
-    public float getDni() {
+    public int getDni() {
         return dni;
     }
 
-    public void setDni(float dni) {
+    public void setDni(int dni) {
         this.dni = dni;
     }
 
@@ -37,11 +39,11 @@ public class Denuncia {
         this.tipodedenuncia = tipodedenuncia;
     }
 
-    public float getFecha() {
+    public Date getFecha() {
         return fecha;
     }
 
-    public void setFecha(float fecha) {
+    public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
 

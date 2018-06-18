@@ -16,6 +16,7 @@ public class Denunciante {
     private String direccion;
     private String email;
     private int dni;
+    
 
     public Denunciante(String nombre, String apellido, String direccion, String email, int dni) {
         this.nombre = nombre;

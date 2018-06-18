@@ -11,9 +11,17 @@ package com.unb001.mascotasenred.modelo;
  * @author Manuel
  */
 public class Telefono {
+    private Denunciante denunciante;
     private int area;
     private int telefono;
     private String tipo;
+    
+public Telefono (Denunciante denunciante, int area, int telefono, String tipo) {
+    this.denunciante= denunciante;
+    this.area=area;
+    this.telefono=telefono;
+    this.tipo=tipo;
+}
 
     public int getArea() {
         return area;

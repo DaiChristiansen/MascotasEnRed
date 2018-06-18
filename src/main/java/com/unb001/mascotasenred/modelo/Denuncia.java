@@ -13,22 +13,14 @@ import java.util.Date;
  */
 public class Denuncia {
 
-    private int dni;
+    private Denunciante denunciante;
     private String tipodedenuncia;
     private Date fecha;
 
-    public Denuncia(int dni, String tipodenuncia, Date fecha) {
-        this.dni = dni;
+    public Denuncia(Denunciante denunciante, String tipodenuncia, Date fecha) {
+        this.denunciante = denunciante;
         this.tipodedenuncia = tipodenuncia;
         this.fecha = fecha;
-    }
-
-    public int getDni() {
-        return dni;
-    }
-
-    public void setDni(int dni) {
-        this.dni = dni;
     }
 
     public String getTipoDeDenuncia() {

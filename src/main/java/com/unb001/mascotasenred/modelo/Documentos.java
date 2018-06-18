@@ -11,11 +11,13 @@ package com.unb001.mascotasenred.modelo;
  * @author Manuel
  */
 public class Documentos {
-    private int tipo;
-    private String nombre;
-    private int nro;
+    private Denunciante denunciante;
+    private int tipo; // 1, 2, depende el nombre del documento
+    private String nombre; // perdido, encontrado, en adopcion o registrado
+    private int nro; //nro autoincremento
 
-    public Documentos(int tipo, String nombre, int nro) {
+    public Documentos(Denunciante denunciante, int tipo, String nombre, int nro) {
+        this.denunciante = denunciante;
         this.tipo = tipo;
         this.nombre = nombre;
         this.nro = nro;

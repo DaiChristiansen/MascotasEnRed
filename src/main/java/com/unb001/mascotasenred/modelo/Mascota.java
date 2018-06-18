@@ -11,16 +11,18 @@ package com.unb001.mascotasenred.modelo;
  * @author Manuel
  */
 public class Mascota {
+    private Denunciante denunciante;
     private String nombre;
-    private String tipo;
+    private String tipo; // perro, gato, tortuga, etc.
     private String raza;
     private String color;
     private String caracteristica_especiales;
     private String tamanio;
     private String zona;
-    private String estado;
+    private String estado; //perdido, encontrado, en adopcion o registrado
 
-    public Mascota(String nombre, String tipo, String raza, String color, String caracteristica_especiales, String tamanio, String zona, String estado) {
+    public Mascota(Denunciante denunciante, String nombre, String tipo, String raza, String color, String caracteristica_especiales, String tamanio, String zona, String estado) {
+        this.denunciante=denunciante;
         this.nombre = nombre;
         this.tipo = tipo;
         this.raza = raza;
@@ -30,6 +32,18 @@ public class Mascota {
         this.zona = zona;
         this.estado = estado;
     }
+    
+    public Mascota(Denunciante denunciante,String tipo, String raza, String color, String caracteristica_especiales, String tamanio, String zona, String estado) {
+        this.denunciante=denunciante;
+        this.tipo = tipo;
+        this.raza = raza;
+        this.color = color;
+        this.caracteristica_especiales = caracteristica_especiales;
+        this.tamanio = tamanio;
+        this.zona = zona;
+        this.estado = estado;
+    }
+    
 
     public String getNombre() {
         return nombre;

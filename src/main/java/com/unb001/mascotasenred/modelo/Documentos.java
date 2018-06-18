@@ -13,9 +13,9 @@ package com.unb001.mascotasenred.modelo;
 public class Documentos {
     private int tipo;
     private String nombre;
-    private float nro;
+    private int nro;
 
-    public Documentos(int tipo, String nombre, float nro) {
+    public Documentos(int tipo, String nombre, int nro) {
         this.tipo = tipo;
         this.nombre = nombre;
         this.nro = nro;
@@ -41,7 +41,7 @@ public class Documentos {
         return nro;
     }
 
-    public void setNro(float nro) {
+    public void setNro(int nro) {
         this.nro = nro;
     }
     

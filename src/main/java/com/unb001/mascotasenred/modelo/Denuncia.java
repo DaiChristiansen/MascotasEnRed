@@ -1,6 +1,17 @@
 package com.unb001.mascotasenred.modelo;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import java.util.Date;
+import javax.persistence.CascadeType;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -11,24 +22,37 @@ import java.util.Date;
  *
  * @author Manuel
  */
-public class Denuncia {
+@Entity(name = "denuncia")
+public class Denuncia implements Serializable {
 
-    private Denunciante denunciante;
-    private String tipodedenuncia;
+    @Id
+    private int nroDenuncia;
+    //private Denunciante denunciante;
+    private String tipoDenuncia;
     private Date fecha;
+    @OneToOne(cascade = CascadeType.ALL)
+    @PrimaryKeyJoinColumn
+    private Documentos documentos;
+    @OneToOne(cascade = CascadeType.ALL)
+    @PrimaryKeyJoinColumn
+    private Mascota mascota;
 
-    public Denuncia(Denunciante denunciante, String tipodenuncia, Date fecha) {
-        this.denunciante = denunciante;
-        this.tipodedenuncia = tipodenuncia;
+    public Denuncia() {
+
+    }
+
+    public Denuncia(int nroDenuncia, String tipoDenuncia, Date fecha) {
+        this.nroDenuncia = nroDenuncia;
+        this.tipoDenuncia = tipoDenuncia;
         this.fecha = fecha;
     }
 
-    public String getTipoDeDenuncia() {
-        return tipodedenuncia;
+    public String getTipoDenuncia() {
+        return tipoDenuncia;
     }
 
-    public void setTipoDeDenuncia(String tipodedenuncia) {
-        this.tipodedenuncia = tipodedenuncia;
+    public void setTipoDenuncia(String tipoDenuncia) {
+        this.tipoDenuncia = tipoDenuncia;
     }
 
     public Date getFecha() {

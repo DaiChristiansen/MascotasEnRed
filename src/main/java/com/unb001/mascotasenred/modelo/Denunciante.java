@@ -1,5 +1,14 @@
 package com.unb001.mascotasenred.modelo;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,15 +19,29 @@ package com.unb001.mascotasenred.modelo;
  *
  * @author Manuel
  */
-public class Denunciante {
+@Entity(name="denunciante")
+
+public class Denunciante implements Serializable {
+    @Id
+    private int dni;   
     private String nombre;
     private String apellido;
     private String direccion;
     private String email;
-    private int dni;
+    @OneToMany
+    @JoinColumn(name="dni")       
+    private List<Telefono> telefono = new ArrayList<>();
+    @OneToMany
+    @JoinColumn(name="dni")       
+    private List<Documentos> documentos = new ArrayList<>();
+ 
+    
+    public Denunciante(){
+    
+}
     
 
-    public Denunciante(String nombre, String apellido, String direccion, String email, int dni) {
+    public Denunciante(int dni, String nombre, String apellido, String direccion, String email) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.direccion = direccion;

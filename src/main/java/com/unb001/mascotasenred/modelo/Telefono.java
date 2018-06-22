@@ -1,5 +1,12 @@
 package com.unb001.mascotasenred.modelo;
 
+import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,18 +17,36 @@ package com.unb001.mascotasenred.modelo;
  *
  * @author Manuel
  */
-public class Telefono {
-    private Denunciante denunciante;
+@Entity (name="Telefono")
+    public class Telefono implements Serializable {
+    @Id
+    private int idTelefono;
     private int area;
     private int telefono;
     private String tipo;
+    @ManyToOne
+    @PrimaryKeyJoinColumn
+    private Denunciante denunciante;
     
-public Telefono (Denunciante denunciante, int area, int telefono, String tipo) {
-    this.denunciante= denunciante;
+    public Telefono(){
+        
+    }
+    
+public Telefono (int idTelefono, int area, int telefono, String tipo) {
+    this.idTelefono=idTelefono;
     this.area=area;
     this.telefono=telefono;
     this.tipo=tipo;
 }
+
+    public int getIdTelefono() {
+        return idTelefono;
+    }
+
+    public void setIdTelefono(int idTelefono) {
+        this.idTelefono = idTelefono;
+    }
+
 
     public int getArea() {
         return area;
@@ -48,3 +73,4 @@ public Telefono (Denunciante denunciante, int area, int telefono, String tipo) {
     }
     
 }
+

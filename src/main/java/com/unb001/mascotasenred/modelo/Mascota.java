@@ -1,5 +1,15 @@
 package com.unb001.mascotasenred.modelo;
 
+import java.io.Serializable;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,35 +20,45 @@ package com.unb001.mascotasenred.modelo;
  *
  * @author Manuel
  */
-public class Mascota {
-    private Denunciante denunciante;
+@Entity (name="Mascota")
+public class Mascota implements Serializable {
+    @Id
+    private int idMascota;
     private String nombre;
-    private String tipo; // perro, gato, tortuga, etc.
+    private String tipoMascota; // perro, gato, tortuga, etc.
     private String raza;
     private String color;
-    private String caracteristica_especiales;
+    private String caracteristicasEspeciales;
     private String tamanio;
     private String zona;
     private String estado; //perdido, encontrado, en adopcion o registrado
+     @OneToOne(cascade=CascadeType.ALL)
+     @PrimaryKeyJoinColumn
+     private Denuncia denuncia;
+    
+    
+    public Mascota(){
+        
+    }
 
-    public Mascota(Denunciante denunciante, String nombre, String tipo, String raza, String color, String caracteristica_especiales, String tamanio, String zona, String estado) {
-        this.denunciante=denunciante;
+    public Mascota( int idMascota, String nombre, String tipoMascota, String raza, String color, String caracteristicasEspeciales, String tamanio, String zona, String estado) {
+        this.idMascota = idMascota;
         this.nombre = nombre;
-        this.tipo = tipo;
+        this.tipoMascota = tipoMascota;
         this.raza = raza;
         this.color = color;
-        this.caracteristica_especiales = caracteristica_especiales;
+        this.caracteristicasEspeciales = caracteristicasEspeciales;
         this.tamanio = tamanio;
         this.zona = zona;
         this.estado = estado;
     }
     
-    public Mascota(Denunciante denunciante,String tipo, String raza, String color, String caracteristica_especiales, String tamanio, String zona, String estado) {
-        this.denunciante=denunciante;
-        this.tipo = tipo;
+    public Mascota(int idMascota, String tipoMascota, String raza, String color, String caracteristicasEspeciales, String tamanio, String zona, String estado) {
+        this.idMascota = idMascota;
+        this.tipoMascota = tipoMascota;
         this.raza = raza;
         this.color = color;
-        this.caracteristica_especiales = caracteristica_especiales;
+        this.caracteristicasEspeciales = caracteristicasEspeciales;
         this.tamanio = tamanio;
         this.zona = zona;
         this.estado = estado;
@@ -53,12 +73,12 @@ public class Mascota {
         this.nombre = nombre;
     }
 
-    public String getTipo() {
-        return tipo;
+    public String getTipoMascota() {
+        return tipoMascota;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setTipoMascota(String tipoMascota) {
+        this.tipoMascota = tipoMascota;
     }
 
     public String getRaza() {
@@ -77,12 +97,12 @@ public class Mascota {
         this.color = color;
     }
 
-    public String getCaracteristica_especiales() {
-        return caracteristica_especiales;
+    public String getCaracteristicasEspeciales() {
+        return caracteristicasEspeciales;
     }
 
-    public void setCaracteristica_especiales(String caracteristica_especiales) {
-        this.caracteristica_especiales = caracteristica_especiales;
+    public void setCaracteristica_especiales(String caracteristicasEspeciales) {
+        this.caracteristicasEspeciales = caracteristicasEspeciales;
     }
 
     public String getTamanio() {

@@ -42,12 +42,12 @@ public class NewJFrame extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem10 = new javax.swing.JMenuItem();
         jSeparator3 = new javax.swing.JPopupMenu.Separator();
-        jMenu8 = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
-        jMenu4 = new javax.swing.JMenu();
         jMenu5 = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
 
@@ -62,11 +62,12 @@ public class NewJFrame extends javax.swing.JFrame {
         jMenu7.setText("jMenu7");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Mascotas en red");
 
         jMenu1.setText("Archivo");
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Perdidos/Encontrados");
+        jMenu2.setText("Cargar");
 
         jMenuItem1.setText("Perdidos");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
@@ -78,9 +79,10 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jMenuItem2.setText("Encontrados");
         jMenu2.add(jMenuItem2);
-        jMenu2.add(jSeparator3);
 
-        jMenu8.setText("Opcion");
+        jMenuItem10.setText("Adopción");
+        jMenu2.add(jMenuItem10);
+        jMenu2.add(jSeparator3);
 
         jMenuItem9.setText("Buscar coincidencias");
         jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
@@ -88,19 +90,23 @@ public class NewJFrame extends javax.swing.JFrame {
                 jMenuItem9ActionPerformed(evt);
             }
         });
-        jMenu8.add(jMenuItem9);
-
-        jMenu2.add(jMenu8);
+        jMenu2.add(jMenuItem9);
 
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Ver registros");
         jMenuBar1.add(jMenu3);
 
-        jMenu4.setText("Adopcion");
-        jMenuBar1.add(jMenu4);
-
         jMenu5.setText("Formulario");
+
+        jMenuItem3.setText("Formulario de denuncia");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem3);
+
         jMenuBar1.add(jMenu5);
 
         jMenu6.setText("Ayuda");
@@ -143,6 +149,10 @@ public class NewJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -183,14 +193,14 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenu jMenu7;
-    private javax.swing.JMenu jMenu8;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;

@@ -40,12 +40,27 @@ public class Home extends javax.swing.JFrame {
         PanelBuscarMascota = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
+        PanelCrearAviso = new javax.swing.JPanel();
+        jSeparator2 = new javax.swing.JSeparator();
+        jLabel2 = new javax.swing.JLabel();
+        PanelCargarDenunciante = new javax.swing.JPanel();
+        jSeparator3 = new javax.swing.JSeparator();
+        jLabel3 = new javax.swing.JLabel();
+        PanelRegistrarMascota = new javax.swing.JPanel();
+        jSeparator4 = new javax.swing.JSeparator();
+        jLabel4 = new javax.swing.JLabel();
+        PanelDenunciaMaltrato = new javax.swing.JPanel();
+        jSeparator5 = new javax.swing.JSeparator();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
+        setMaximumSize(new java.awt.Dimension(903, 378));
         setUndecorated(true);
+        setSize(new java.awt.Dimension(0, 0));
 
         VentanaDeFondo.setBackground(new java.awt.Color(230, 230, 230));
+        VentanaDeFondo.setPreferredSize(new java.awt.Dimension(801, 1333));
 
         EspacioMenu.setBackground(new java.awt.Color(61, 0, 112));
 
@@ -141,10 +156,14 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(BotonRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(BotonDenunciaMaltrato, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(92, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         PanelBuscarMascota.setBackground(new java.awt.Color(230, 230, 230));
+        PanelBuscarMascota.setAlignmentX(0.0F);
+        PanelBuscarMascota.setAlignmentY(0.0F);
+        PanelBuscarMascota.setMaximumSize(new java.awt.Dimension(800, 1333));
+        PanelBuscarMascota.setPreferredSize(new java.awt.Dimension(800, 1333));
 
         jSeparator1.setBackground(new java.awt.Color(61, 0, 112));
 
@@ -159,7 +178,7 @@ public class Home extends javax.swing.JFrame {
             .addComponent(jSeparator1)
             .addGroup(PanelBuscarMascotaLayout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 507, Short.MAX_VALUE))
+                .addGap(0, 418, Short.MAX_VALUE))
         );
         PanelBuscarMascotaLayout.setVerticalGroup(
             PanelBuscarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -168,7 +187,131 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(299, Short.MAX_VALUE))
+                .addContainerGap(310, Short.MAX_VALUE))
+        );
+
+        PanelCrearAviso.setBackground(new java.awt.Color(230, 230, 230));
+        PanelCrearAviso.setAlignmentX(0.0F);
+        PanelCrearAviso.setAlignmentY(0.0F);
+        PanelCrearAviso.setMaximumSize(new java.awt.Dimension(800, 1333));
+        PanelCrearAviso.setPreferredSize(new java.awt.Dimension(800, 1333));
+
+        jSeparator2.setBackground(new java.awt.Color(61, 0, 112));
+
+        jLabel2.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(61, 0, 112));
+        jLabel2.setText(" > Crear Aviso");
+
+        javax.swing.GroupLayout PanelCrearAvisoLayout = new javax.swing.GroupLayout(PanelCrearAviso);
+        PanelCrearAviso.setLayout(PanelCrearAvisoLayout);
+        PanelCrearAvisoLayout.setHorizontalGroup(
+            PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jSeparator2)
+            .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 418, Short.MAX_VALUE))
+        );
+        PanelCrearAvisoLayout.setVerticalGroup(
+            PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(310, Short.MAX_VALUE))
+        );
+
+        PanelCargarDenunciante.setBackground(new java.awt.Color(230, 230, 230));
+        PanelCargarDenunciante.setAlignmentX(0.0F);
+        PanelCargarDenunciante.setAlignmentY(0.0F);
+        PanelCargarDenunciante.setMaximumSize(new java.awt.Dimension(800, 1333));
+        PanelCargarDenunciante.setPreferredSize(new java.awt.Dimension(800, 1333));
+
+        jSeparator3.setBackground(new java.awt.Color(61, 0, 112));
+
+        jLabel3.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(61, 0, 112));
+        jLabel3.setText(" > Cargar Denuncia");
+
+        javax.swing.GroupLayout PanelCargarDenuncianteLayout = new javax.swing.GroupLayout(PanelCargarDenunciante);
+        PanelCargarDenunciante.setLayout(PanelCargarDenuncianteLayout);
+        PanelCargarDenuncianteLayout.setHorizontalGroup(
+            PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jSeparator3)
+            .addGroup(PanelCargarDenuncianteLayout.createSequentialGroup()
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 418, Short.MAX_VALUE))
+        );
+        PanelCargarDenuncianteLayout.setVerticalGroup(
+            PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelCargarDenuncianteLayout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(310, Short.MAX_VALUE))
+        );
+
+        PanelRegistrarMascota.setBackground(new java.awt.Color(230, 230, 230));
+        PanelRegistrarMascota.setAlignmentX(0.0F);
+        PanelRegistrarMascota.setAlignmentY(0.0F);
+        PanelRegistrarMascota.setMaximumSize(new java.awt.Dimension(800, 1333));
+        PanelRegistrarMascota.setPreferredSize(new java.awt.Dimension(800, 1333));
+
+        jSeparator4.setBackground(new java.awt.Color(61, 0, 112));
+
+        jLabel4.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(61, 0, 112));
+        jLabel4.setText(" > Registrar Mascota");
+
+        javax.swing.GroupLayout PanelRegistrarMascotaLayout = new javax.swing.GroupLayout(PanelRegistrarMascota);
+        PanelRegistrarMascota.setLayout(PanelRegistrarMascotaLayout);
+        PanelRegistrarMascotaLayout.setHorizontalGroup(
+            PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jSeparator4)
+            .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 418, Short.MAX_VALUE))
+        );
+        PanelRegistrarMascotaLayout.setVerticalGroup(
+            PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(310, Short.MAX_VALUE))
+        );
+
+        PanelDenunciaMaltrato.setBackground(new java.awt.Color(230, 230, 230));
+        PanelDenunciaMaltrato.setAlignmentX(0.0F);
+        PanelDenunciaMaltrato.setAlignmentY(0.0F);
+        PanelDenunciaMaltrato.setMaximumSize(new java.awt.Dimension(800, 1333));
+        PanelDenunciaMaltrato.setPreferredSize(new java.awt.Dimension(800, 1333));
+
+        jSeparator5.setBackground(new java.awt.Color(61, 0, 112));
+
+        jLabel5.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(61, 0, 112));
+        jLabel5.setText(" > Denuncia de Maltrato");
+
+        javax.swing.GroupLayout PanelDenunciaMaltratoLayout = new javax.swing.GroupLayout(PanelDenunciaMaltrato);
+        PanelDenunciaMaltrato.setLayout(PanelDenunciaMaltratoLayout);
+        PanelDenunciaMaltratoLayout.setHorizontalGroup(
+            PanelDenunciaMaltratoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jSeparator5, javax.swing.GroupLayout.DEFAULT_SIZE, 541, Short.MAX_VALUE)
+            .addGroup(PanelDenunciaMaltratoLayout.createSequentialGroup()
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        PanelDenunciaMaltratoLayout.setVerticalGroup(
+            PanelDenunciaMaltratoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelDenunciaMaltratoLayout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(310, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout VentanaDeFondoLayout = new javax.swing.GroupLayout(VentanaDeFondo);
@@ -176,25 +319,50 @@ public class Home extends javax.swing.JFrame {
         VentanaDeFondoLayout.setHorizontalGroup(
             VentanaDeFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(VentanaDeFondoLayout.createSequentialGroup()
-                .addComponent(EspacioMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PanelBuscarMascota, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(VentanaDeFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(VentanaDeFondoLayout.createSequentialGroup()
+                        .addComponent(EspacioMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(PanelBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(VentanaDeFondoLayout.createSequentialGroup()
+                        .addGap(277, 277, 277)
+                        .addGroup(VentanaDeFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(PanelCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(PanelCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(PanelRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(PanelDenunciaMaltrato, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
         );
         VentanaDeFondoLayout.setVerticalGroup(
             VentanaDeFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(EspacioMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(PanelBuscarMascota, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(VentanaDeFondoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(PanelBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PanelCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PanelCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PanelRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PanelDenunciaMaltrato, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(VentanaDeFondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(VentanaDeFondo, javax.swing.GroupLayout.PREFERRED_SIZE, 828, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(VentanaDeFondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(VentanaDeFondo, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -210,7 +378,7 @@ public class Home extends javax.swing.JFrame {
         setLblColor(BotonDenunciaMaltrato);
         //CAMBIA PANELES SEGUN EL BOTON CLICKEADO-----------------------
         PanelBuscarMascota.setVisible(true);
-        PanelBuscarMascota1.setVisible(false);
+        PanelCrearAviso.setVisible(false);
         PanelCargarDenunciante.setVisible(false);
         PanelRegistrarMascota.setVisible(false);
         PanelDenunciaMaltrato.setVisible(false);
@@ -224,7 +392,7 @@ public class Home extends javax.swing.JFrame {
         setLblColor(BotonRegistrarMascota);
         setLblColor(BotonDenunciaMaltrato);
         PanelBuscarMascota.setVisible(false);
-        PanelBuscarMascota1.setVisible(true);
+        PanelCrearAviso.setVisible(true);
         PanelCargarDenunciante.setVisible(false);
         PanelRegistrarMascota.setVisible(false);
         PanelDenunciaMaltrato.setVisible(false);
@@ -238,7 +406,7 @@ public class Home extends javax.swing.JFrame {
         setLblColor(BotonRegistrarMascota);
         setLblColor(BotonDenunciaMaltrato);
         PanelBuscarMascota.setVisible(false);
-        PanelBuscarMascota1.setVisible(false);
+        PanelCrearAviso.setVisible(false);
         PanelCargarDenunciante.setVisible(true);
         PanelRegistrarMascota.setVisible(false);
         PanelDenunciaMaltrato.setVisible(false);
@@ -252,7 +420,7 @@ public class Home extends javax.swing.JFrame {
         resetLblColor(BotonRegistrarMascota);
         setLblColor(BotonDenunciaMaltrato);
         PanelBuscarMascota.setVisible(false);
-        PanelBuscarMascota1.setVisible(false);
+        PanelCrearAviso.setVisible(false);
         PanelCargarDenunciante.setVisible(false);
         PanelRegistrarMascota.setVisible(true);
         PanelDenunciaMaltrato.setVisible(false);
@@ -266,7 +434,7 @@ public class Home extends javax.swing.JFrame {
         setLblColor(BotonRegistrarMascota);
         resetLblColor(BotonDenunciaMaltrato);
         PanelBuscarMascota.setVisible(false);
-        PanelBuscarMascota1.setVisible(false);
+        PanelCrearAviso.setVisible(false);
         PanelCargarDenunciante.setVisible(false);
         PanelRegistrarMascota.setVisible(false);
         PanelDenunciaMaltrato.setVisible(true);
@@ -300,6 +468,7 @@ public class Home extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -317,9 +486,21 @@ public class Home extends javax.swing.JFrame {
     public javax.swing.JLabel BotonRegistrarMascota;
     private javax.swing.JPanel EspacioMenu;
     private javax.swing.JPanel PanelBuscarMascota;
+    private javax.swing.JPanel PanelCargarDenunciante;
+    private javax.swing.JPanel PanelCrearAviso;
+    private javax.swing.JPanel PanelDenunciaMaltrato;
+    private javax.swing.JPanel PanelRegistrarMascota;
     private javax.swing.JPanel VentanaDeFondo;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
     // End of variables declaration//GEN-END:variables
 
     private void setLblColor(JLabel lbl) {

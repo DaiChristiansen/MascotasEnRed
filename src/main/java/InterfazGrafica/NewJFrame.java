@@ -132,18 +132,22 @@ public class NewJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 701, Short.MAX_VALUE)
+            .addGap(0, 700, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 440, Short.MAX_VALUE)
+            .addGap(0, 439, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void PerdidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PerdidosActionPerformed
-        JFrame j = new JFrame();
+        JFrame j = new JFrame("Carga");
+        j.setSize(300, 300);
+        j.setLayout(null);
+        j.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+        j.setVisible(true);
         
     }//GEN-LAST:event_PerdidosActionPerformed
 

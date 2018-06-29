@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package InterfazNueva;
-
+         
+//import com.sun.awt.AWTUtilities;
 import java.awt.Color;
 import javax.swing.JLabel;
 
@@ -17,8 +18,11 @@ public class Home extends javax.swing.JFrame {
     /**
      * Creates new form Home
      */
+    int x, y;
     public Home() {
         initComponents();
+       // AWTUtilities.setWindowOpaque(this, false);
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -31,7 +35,8 @@ public class Home extends javax.swing.JFrame {
     private void initComponents() {
 
         VentanaDeFondo = new javax.swing.JPanel();
-        EspacioMenu2 = new javax.swing.JPanel();
+        EspacioMenu = new javax.swing.JPanel();
+        EspacioParaMoverFrame = new javax.swing.JLabel();
         BotonBuscarMascota = new javax.swing.JLabel();
         BotonCrearAviso = new javax.swing.JLabel();
         BotonCargarDenunciante = new javax.swing.JLabel();
@@ -40,6 +45,10 @@ public class Home extends javax.swing.JFrame {
         PanelBuscarMascota = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         PanelCrearAviso = new javax.swing.JPanel();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
@@ -55,14 +64,34 @@ public class Home extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
-        setMaximumSize(new java.awt.Dimension(903, 378));
+        setMaximumSize(new java.awt.Dimension(1280, 1024));
         setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(1280, 1024));
         setSize(new java.awt.Dimension(0, 0));
 
         VentanaDeFondo.setBackground(new java.awt.Color(230, 230, 230));
-        VentanaDeFondo.setPreferredSize(new java.awt.Dimension(801, 1333));
+        VentanaDeFondo.setPreferredSize(new java.awt.Dimension(1280, 1024));
 
-        EspacioMenu2.setBackground(new java.awt.Color(61, 0, 112));
+        EspacioMenu.setBackground(new java.awt.Color(61, 0, 112));
+        EspacioMenu.setPreferredSize(new java.awt.Dimension(278, 1024));
+
+        EspacioParaMoverFrame.setBackground(new java.awt.Color(0, 0, 0));
+        EspacioParaMoverFrame.setForeground(new java.awt.Color(0, 0, 0));
+        EspacioParaMoverFrame.setAlignmentY(0.0F);
+        EspacioParaMoverFrame.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
+        EspacioParaMoverFrame.setMaximumSize(new java.awt.Dimension(10, 10));
+        EspacioParaMoverFrame.setMinimumSize(new java.awt.Dimension(10, 10));
+        EspacioParaMoverFrame.setPreferredSize(new java.awt.Dimension(10, 10));
+        EspacioParaMoverFrame.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                EspacioParaMoverFrameMouseDragged(evt);
+            }
+        });
+        EspacioParaMoverFrame.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                EspacioParaMoverFrameMousePressed(evt);
+            }
+        });
 
         BotonBuscarMascota.setBackground(new java.awt.Color(88, 30, 138));
         BotonBuscarMascota.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
@@ -129,23 +158,28 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout EspacioMenu2Layout = new javax.swing.GroupLayout(EspacioMenu2);
-        EspacioMenu2.setLayout(EspacioMenu2Layout);
-        EspacioMenu2Layout.setHorizontalGroup(
-            EspacioMenu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(EspacioMenu2Layout.createSequentialGroup()
+        javax.swing.GroupLayout EspacioMenuLayout = new javax.swing.GroupLayout(EspacioMenu);
+        EspacioMenu.setLayout(EspacioMenuLayout);
+        EspacioMenuLayout.setHorizontalGroup(
+            EspacioMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(EspacioMenuLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addGroup(EspacioMenu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(EspacioMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(BotonBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BotonCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BotonCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BotonRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BotonDenunciaMaltrato, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
+            .addGroup(EspacioMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(EspacioMenuLayout.createSequentialGroup()
+                    .addGap(124, 124, 124)
+                    .addComponent(EspacioParaMoverFrame, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(124, Short.MAX_VALUE)))
         );
-        EspacioMenu2Layout.setVerticalGroup(
-            EspacioMenu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(EspacioMenu2Layout.createSequentialGroup()
+        EspacioMenuLayout.setVerticalGroup(
+            EspacioMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(EspacioMenuLayout.createSequentialGroup()
                 .addGap(88, 88, 88)
                 .addComponent(BotonBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -157,37 +191,95 @@ public class Home extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(BotonDenunciaMaltrato, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(EspacioMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(EspacioMenuLayout.createSequentialGroup()
+                    .addGap(989, 989, 989)
+                    .addComponent(EspacioParaMoverFrame, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(990, Short.MAX_VALUE)))
         );
 
         PanelBuscarMascota.setBackground(new java.awt.Color(230, 230, 230));
         PanelBuscarMascota.setAlignmentX(0.0F);
         PanelBuscarMascota.setAlignmentY(0.0F);
-        PanelBuscarMascota.setMaximumSize(new java.awt.Dimension(800, 1333));
-        PanelBuscarMascota.setPreferredSize(new java.awt.Dimension(800, 1333));
+        PanelBuscarMascota.setMaximumSize(new java.awt.Dimension(1002, 1024));
+        PanelBuscarMascota.setPreferredSize(new java.awt.Dimension(1002, 1024));
 
         jSeparator1.setBackground(new java.awt.Color(61, 0, 112));
+        jSeparator1.setPreferredSize(new java.awt.Dimension(0, 5));
 
         jLabel1.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(61, 0, 112));
         jLabel1.setText(" > Buscar Mascota");
 
+        jComboBox1.setBackground(new java.awt.Color(230, 230, 230));
+        jComboBox1.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        jComboBox1.setForeground(new java.awt.Color(51, 51, 51));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Perdido", "Encontrado", "Adopción", "Registrado" }));
+        jComboBox1.setBorder(null);
+        jComboBox1.setName("ComboBoxEstado"); // NOI18N
+        jComboBox1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jComboBox1MouseMoved(evt);
+            }
+        });
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(61, 0, 112));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel6.setText("Estado");
+
+        jLabel7.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(61, 0, 112));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel7.setText("Tamaño");
+
+        jLabel8.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(61, 0, 112));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel8.setText("Nombre");
+
         javax.swing.GroupLayout PanelBuscarMascotaLayout = new javax.swing.GroupLayout(PanelBuscarMascota);
         PanelBuscarMascota.setLayout(PanelBuscarMascotaLayout);
         PanelBuscarMascotaLayout.setHorizontalGroup(
             PanelBuscarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator1)
             .addGroup(PanelBuscarMascotaLayout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 418, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(PanelBuscarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(PanelBuscarMascotaLayout.createSequentialGroup()
+                        .addGroup(PanelBuscarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(PanelBuscarMascotaLayout.createSequentialGroup()
+                                .addGroup(PanelBuscarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 784, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         PanelBuscarMascotaLayout.setVerticalGroup(
             PanelBuscarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelBuscarMascotaLayout.createSequentialGroup()
-                .addGap(44, 44, 44)
+                .addGap(68, 68, 68)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(310, Short.MAX_VALUE))
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 1, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(PanelBuscarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel8)
+                .addContainerGap(829, Short.MAX_VALUE))
         );
 
         PanelCrearAviso.setBackground(new java.awt.Color(230, 230, 230));
@@ -319,26 +411,26 @@ public class Home extends javax.swing.JFrame {
         VentanaDeFondoLayout.setHorizontalGroup(
             VentanaDeFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(VentanaDeFondoLayout.createSequentialGroup()
+                .addComponent(EspacioMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(VentanaDeFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(VentanaDeFondoLayout.createSequentialGroup()
-                        .addComponent(EspacioMenu2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(PanelBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(PanelBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 1024, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(VentanaDeFondoLayout.createSequentialGroup()
-                        .addGap(277, 277, 277)
+                        .addGap(5, 5, 5)
                         .addGroup(VentanaDeFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(PanelCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(PanelCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(PanelRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(PanelDenunciaMaltrato, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         VentanaDeFondoLayout.setVerticalGroup(
             VentanaDeFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EspacioMenu2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(EspacioMenu, javax.swing.GroupLayout.DEFAULT_SIZE, 2588, Short.MAX_VALUE)
             .addGroup(VentanaDeFondoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(PanelBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(PanelBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 1002, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PanelCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -355,13 +447,13 @@ public class Home extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(VentanaDeFondo, javax.swing.GroupLayout.PREFERRED_SIZE, 828, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(VentanaDeFondo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(VentanaDeFondo, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(VentanaDeFondo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -438,9 +530,31 @@ public class Home extends javax.swing.JFrame {
         PanelCargarDenunciante.setVisible(false);
         PanelRegistrarMascota.setVisible(false);
         PanelDenunciaMaltrato.setVisible(true);
+        
+        //-----------FIN CAMBIO COLORES INCATIVO/ACTIVO-----------------------------------------------------
     }//GEN-LAST:event_BotonDenunciaMaltratoMouseClicked
 
-    //-----------FIN CAMBIO COLORES INCATIVO/ACTIVO-----------------------------------------------------
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void EspacioParaMoverFrameMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EspacioParaMoverFrameMousePressed
+        // TODO add your handling code here:
+        x = evt.getX(); 
+        y = evt.getY();
+    }//GEN-LAST:event_EspacioParaMoverFrameMousePressed
+
+    private void EspacioParaMoverFrameMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EspacioParaMoverFrameMouseDragged
+        // TODO add your handling code here:
+        this.setLocation(this.getLocation().x + evt.getX() - x, this.getLocation().y + evt.getY() - y);
+    }//GEN-LAST:event_EspacioParaMoverFrameMouseDragged
+
+    private void jComboBox1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBox1MouseMoved
+        // TODO add your handling code here:
+                
+    }//GEN-LAST:event_jComboBox1MouseMoved
+
+    
     
     /**
      * @param args the command line arguments
@@ -484,18 +598,23 @@ public class Home extends javax.swing.JFrame {
     public javax.swing.JLabel BotonCrearAviso;
     public javax.swing.JLabel BotonDenunciaMaltrato;
     public javax.swing.JLabel BotonRegistrarMascota;
-    private javax.swing.JPanel EspacioMenu2;
+    private javax.swing.JPanel EspacioMenu;
+    private javax.swing.JLabel EspacioParaMoverFrame;
     private javax.swing.JPanel PanelBuscarMascota;
     private javax.swing.JPanel PanelCargarDenunciante;
     private javax.swing.JPanel PanelCrearAviso;
     private javax.swing.JPanel PanelDenunciaMaltrato;
     private javax.swing.JPanel PanelRegistrarMascota;
     private javax.swing.JPanel VentanaDeFondo;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;

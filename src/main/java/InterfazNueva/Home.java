@@ -183,7 +183,7 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(EspacioMenuLayout.createSequentialGroup()
                     .addGap(124, 124, 124)
                     .addComponent(EspacioParaMoverFrame, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(124, Short.MAX_VALUE)))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         EspacioMenuLayout.setVerticalGroup(
             EspacioMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -203,7 +203,7 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(EspacioMenuLayout.createSequentialGroup()
                     .addGap(989, 989, 989)
                     .addComponent(EspacioParaMoverFrame, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(990, Short.MAX_VALUE)))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         PanelBuscarMascota.setBackground(new java.awt.Color(230, 230, 230));
@@ -405,7 +405,8 @@ public class Home extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jTable1.setSelectionBackground(new java.awt.Color(61, 0, 112));
+        jTable1.setSelectionBackground(new java.awt.Color(88, 30, 138));
+        jTable1.setShowVerticalLines(false);
         jScrollPane2.setViewportView(jTable1);
 
         javax.swing.GroupLayout PanelBuscarMascotaLayout = new javax.swing.GroupLayout(PanelBuscarMascota);
@@ -449,7 +450,7 @@ public class Home extends javax.swing.JFrame {
                                         .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jButton1)))
                             .addComponent(jScrollPane2))
-                        .addGap(0, 17, Short.MAX_VALUE)))
+                        .addGap(0, 39, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         PanelBuscarMascotaLayout.setVerticalGroup(
@@ -485,7 +486,7 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(jButton1)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(325, Short.MAX_VALUE))
+                .addContainerGap(303, Short.MAX_VALUE))
         );
 
         PanelCrearAviso.setBackground(new java.awt.Color(230, 230, 230));

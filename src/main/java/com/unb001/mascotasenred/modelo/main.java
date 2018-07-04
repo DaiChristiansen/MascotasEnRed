@@ -10,44 +10,36 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Collection;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
-/**
- *
- * @author Usuario
- */
 public class main {
 
     public static void main(String[] args) {
-        //System.setProperty("javax.xml.accessExternalDTD", "all");
-        StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
-                .configure() // obtiene los valores de hibernate.cfg.xml
-                .build();
+        // TODO code application logic here
 
-        try {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("MyPersistenceUnit");
+        EntityManager manager = emf.createEntityManager();
+        // manager.getTransaction().begin();
 
-            SessionFactory sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
+        Query query = manager.createQuery("SELECT e FROM Denunciante e");
 
-            Session session = sessionFactory.openSession();
+        System.out.println((Collection<Denunciante>) query.getResultList());
 
-            session.beginTransaction();
-            Denunciante d = session.load(Denunciante.class, 9);
-            System.out.print(d);
-
-            session.getTransaction().commit();
-            session.close();
-            sessionFactory.close();
-        
-        } catch (Exception e) {
-            if (registry != null) {
-                StandardServiceRegistryBuilder.destroy(registry);
-            }
-            throw e;
+        for (Denunciante cli : (Collection<Denunciante>) query.getResultList()) {
+            System.out.println(cli);
         }
+
+        manager.close();
+        emf.close();
 
     }
 

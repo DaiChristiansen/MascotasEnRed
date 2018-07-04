@@ -24,6 +24,14 @@ import javax.persistence.PrimaryKeyJoinColumn;
 public class Mascota implements Serializable {
     @Id
     private int idMascota;
+
+    public void setIdMascota(int idMascota) {
+        this.idMascota = idMascota;
+    }
+
+    public int getIdMascota() {
+        return idMascota;
+    }
     private String nombre;
     private String tipoMascota; // perro, gato, tortuga, etc.
     private String raza;
@@ -101,7 +109,7 @@ public class Mascota implements Serializable {
         return caracteristicasEspeciales;
     }
 
-    public void setCaracteristica_especiales(String caracteristicasEspeciales) {
+    public void setCaracteristicasEspeciales(String caracteristicasEspeciales) {
         this.caracteristicasEspeciales = caracteristicasEspeciales;
     }
 

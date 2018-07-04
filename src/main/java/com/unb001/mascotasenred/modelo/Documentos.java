@@ -28,7 +28,6 @@ import javax.persistence.PrimaryKeyJoinColumn;
 public class Documentos implements Serializable {
 
     @Id
-    
     private int nro; //nro autoincremento
     //private Denunciante denunciante;
     private int tipoComprobante; // 1, 2, depende el nombre del documento
@@ -36,13 +35,12 @@ public class Documentos implements Serializable {
     @ManyToOne
     @PrimaryKeyJoinColumn
     private Denunciante denunciante;
-    @OneToOne(cascade=CascadeType.ALL)
-     @PrimaryKeyJoinColumn
-     private Denuncia denuncia;
+    @OneToOne(cascade = CascadeType.ALL)
+    @PrimaryKeyJoinColumn
+    private Denuncia denuncia;
 
     public Documentos() {
     }
-    
 
     public Documentos(int nro, int tipoComprobante, String nombreComprobante) {
         this.nro = nro;

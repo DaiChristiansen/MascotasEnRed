@@ -27,6 +27,14 @@ public class Denuncia implements Serializable {
 
     @Id
     private int nroDenuncia;
+
+    public void setNroDenuncia(int nroDenuncia) {
+        this.nroDenuncia = nroDenuncia;
+    }
+
+    public int getNroDenuncia() {
+        return nroDenuncia;
+    }
     //private Denunciante denunciante;
     private String tipoDenuncia;
     private Date fecha;

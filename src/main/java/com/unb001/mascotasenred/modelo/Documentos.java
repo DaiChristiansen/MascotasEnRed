@@ -28,6 +28,7 @@ import javax.persistence.PrimaryKeyJoinColumn;
 public class Documentos implements Serializable {
 
     @Id
+    
     private int nro; //nro autoincremento
     //private Denunciante denunciante;
     private int tipoComprobante; // 1, 2, depende el nombre del documento

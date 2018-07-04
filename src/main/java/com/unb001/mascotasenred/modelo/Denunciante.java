@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import static org.hibernate.type.TypeFactory.serializable;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -21,7 +22,7 @@ import javax.persistence.OneToMany;
  */
 @Entity(name="denunciante")
 
-public class Denunciante implements Serializable {
+public class Denunciante  implements Serializable  {
     @Id
     private int dni;   
     private String nombre;
@@ -37,6 +38,7 @@ public class Denunciante implements Serializable {
  
     
     public Denunciante(){
+           super();
     
 }
     

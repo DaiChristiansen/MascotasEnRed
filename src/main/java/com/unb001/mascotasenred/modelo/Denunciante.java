@@ -6,9 +6,9 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+
 import javax.persistence.OneToMany;
-import static org.hibernate.type.TypeFactory.serializable;
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -25,16 +25,21 @@ import static org.hibernate.type.TypeFactory.serializable;
 public class Denunciante  implements Serializable  {
     @Id
     private int dni;   
+
+    @Override
+    public String toString() {
+        return "Denunciante{" + "dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", email=" + email + '}';
+    }
     private String nombre;
     private String apellido;
     private String direccion;
     private String email;
-    @OneToMany
-    @JoinColumn(name="dni")       
-    private List<Telefono> telefono = new ArrayList<>();
-    @OneToMany
-    @JoinColumn(name="dni")       
-    private List<Documentos> documentos = new ArrayList<>();
+    //@OneToMany
+    //@JoinColumn(name="dni")       
+   // private List<Telefono> telefono = new ArrayList<>();
+    //@OneToMany
+   // @JoinColumn(name="dni")       
+    //private List<Documentos> documentos = new ArrayList<>();
  
     
     public Denunciante(){

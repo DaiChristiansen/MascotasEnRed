@@ -28,7 +28,17 @@ public class main {
             System.out.println("DENUNCIANTE: ");
             System.out.println(cli);
         }
-
+        
+        System.out.println("salvando: ");
+        Denunciante nuevo = new Denunciante(4, "otro", "apellido", "Calle",  "mail");
+        
+        manager.getTransaction().begin();
+        //si esta la PK lo une sino lo crea
+        manager.merge(nuevo);
+        //crea siempre, si ya estaba la PK da error
+        manager.persist(nuevo);
+        manager.getTransaction().commit();
+  
         manager.close();
         emf.close();
 

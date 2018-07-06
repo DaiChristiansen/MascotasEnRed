@@ -1,13 +1,8 @@
 package com.unb001.mascotasenred.modelo;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-
-import javax.persistence.OneToMany;
 
 
 /*
@@ -15,16 +10,16 @@ import javax.persistence.OneToMany;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Manuel
  */
-@Entity(name="denunciante")
+//@Entity(name = "denunciante")
 
-public class Denunciante  implements Serializable  {
-    @Id
-    private int dni;   
+public class Denunciante implements Serializable {
+
+   // @Id
+    private int dni;
 
     @Override
     public String toString() {
@@ -36,17 +31,15 @@ public class Denunciante  implements Serializable  {
     private String email;
     //@OneToMany
     //@JoinColumn(name="dni")       
-   // private List<Telefono> telefono = new ArrayList<>();
+    // private List<Telefono> telefono = new ArrayList<>();
     //@OneToMany
-   // @JoinColumn(name="dni")       
+    // @JoinColumn(name="dni")       
     //private List<Documentos> documentos = new ArrayList<>();
- 
-    
-    public Denunciante(){
-           super();
-    
-}
-    
+
+    public Denunciante() {
+        super();
+
+    }
 
     public Denunciante(int dni, String nombre, String apellido, String direccion, String email) {
         this.nombre = nombre;
@@ -95,6 +88,5 @@ public class Denunciante  implements Serializable  {
     public void setDni(int dni) {
         this.dni = dni;
     }
-    
-    
+
 }

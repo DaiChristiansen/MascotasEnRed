@@ -1,13 +1,8 @@
 package com.unb001.mascotasenred.modelo;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import java.util.Date;
 import javax.persistence.CascadeType;
 import javax.persistence.OneToOne;
@@ -22,10 +17,10 @@ import javax.persistence.PrimaryKeyJoinColumn;
  *
  * @author Manuel
  */
-@Entity(name = "denuncia")
+//@Entity(name = "denuncia")
 public class Denuncia implements Serializable {
 
-    @Id
+    //  @Id
     private int nroDenuncia;
 
     public void setNroDenuncia(int nroDenuncia) {
@@ -38,11 +33,11 @@ public class Denuncia implements Serializable {
     //private Denunciante denunciante;
     private String tipoDenuncia;
     private Date fecha;
-    @OneToOne(cascade = CascadeType.ALL)
-    @PrimaryKeyJoinColumn
+    // @OneToOne(cascade = CascadeType.ALL)
+    // @PrimaryKeyJoinColumn
     private Documentos documentos;
-    @OneToOne(cascade = CascadeType.ALL)
-    @PrimaryKeyJoinColumn
+    //   @OneToOne(cascade = CascadeType.ALL)
+    // @PrimaryKeyJoinColumn
     private Mascota mascota;
 
     public Denuncia() {

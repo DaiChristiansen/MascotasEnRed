@@ -1,11 +1,6 @@
 package com.unb001.mascotasenred.modelo;
 
 import java.io.Serializable;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.PrimaryKeyJoinColumn;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

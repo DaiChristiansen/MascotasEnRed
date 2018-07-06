@@ -4,9 +4,6 @@ import java.io.Serializable;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 
@@ -15,14 +12,14 @@ import javax.persistence.PrimaryKeyJoinColumn;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Manuel
  */
-@Entity (name="Mascota")
+//@Entity (name="Mascota")
 public class Mascota implements Serializable {
-    @Id
+    //  @Id
+
     private int idMascota;
 
     public void setIdMascota(int idMascota) {
@@ -40,16 +37,15 @@ public class Mascota implements Serializable {
     private String tamanio;
     private String zona;
     private String estado; //perdido, encontrado, en adopcion o registrado
-     @OneToOne(cascade=CascadeType.ALL)
-     @PrimaryKeyJoinColumn
-     private Denuncia denuncia;
-    
-    
-    public Mascota(){
-        
+    // @OneToOne(cascade=CascadeType.ALL)
+    //@PrimaryKeyJoinColumn
+    private Denuncia denuncia;
+
+    public Mascota() {
+
     }
 
-    public Mascota( int idMascota, String nombre, String tipoMascota, String raza, String color, String caracteristicasEspeciales, String tamanio, String zona, String estado) {
+    public Mascota(int idMascota, String nombre, String tipoMascota, String raza, String color, String caracteristicasEspeciales, String tamanio, String zona, String estado) {
         this.idMascota = idMascota;
         this.nombre = nombre;
         this.tipoMascota = tipoMascota;
@@ -60,7 +56,7 @@ public class Mascota implements Serializable {
         this.zona = zona;
         this.estado = estado;
     }
-    
+
     public Mascota(int idMascota, String tipoMascota, String raza, String color, String caracteristicasEspeciales, String tamanio, String zona, String estado) {
         this.idMascota = idMascota;
         this.tipoMascota = tipoMascota;
@@ -71,7 +67,6 @@ public class Mascota implements Serializable {
         this.zona = zona;
         this.estado = estado;
     }
-    
 
     public String getNombre() {
         return nombre;
@@ -136,7 +131,5 @@ public class Mascota implements Serializable {
     public void setEstado(String estado) {
         this.estado = estado;
     }
-    
-   
-    
+
 }

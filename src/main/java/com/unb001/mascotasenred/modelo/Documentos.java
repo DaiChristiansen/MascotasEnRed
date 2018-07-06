@@ -1,14 +1,9 @@
 package com.unb001.mascotasenred.modelo;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import java.util.Date;
 import javax.persistence.CascadeType;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
@@ -23,20 +18,19 @@ import javax.persistence.PrimaryKeyJoinColumn;
  *
  * @author Manuel
  */
-@Entity(name = "comprobante")
-
+//@Entity(name = "comprobante")
 public class Documentos implements Serializable {
 
-    @Id
+    // @Id
     private int nro; //nro autoincremento
     //private Denunciante denunciante;
     private int tipoComprobante; // 1, 2, depende el nombre del documento
     private String nombreComprobante; // perdido, encontrado, en adopcion o registrado
-    @ManyToOne
-    @PrimaryKeyJoinColumn
+    // @ManyToOne
+    //@PrimaryKeyJoinColumn
     private Denunciante denunciante;
-    @OneToOne(cascade = CascadeType.ALL)
-    @PrimaryKeyJoinColumn
+    //@OneToOne(cascade = CascadeType.ALL)
+    //@PrimaryKeyJoinColumn
     private Denuncia denuncia;
 
     public Documentos() {

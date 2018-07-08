@@ -18,13 +18,8 @@ import javax.persistence.Id;
 
 public class Denunciante implements Serializable {
 
-   // @Id
+    //@Id
     private int dni;
-
-    @Override
-    public String toString() {
-        return "Denunciante{" + "dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", email=" + email + '}';
-    }
     private String nombre;
     private String apellido;
     private String direccion;
@@ -89,4 +84,8 @@ public class Denunciante implements Serializable {
         this.dni = dni;
     }
 
+    @Override
+    public String toString() {
+        return "Denunciante{" + "dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", email=" + email + '}';
+    }
 }

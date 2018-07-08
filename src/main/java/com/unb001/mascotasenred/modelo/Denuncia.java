@@ -66,4 +66,9 @@ public class Denuncia implements Serializable {
         this.fecha = fecha;
     }
 
+    @Override
+    public String toString() {
+        return "Denuncia{" + "nroDenuncia=" + nroDenuncia + ", tipoDenuncia=" + tipoDenuncia + ", fecha=" + fecha + ", documentos=" + documentos + ", mascota=" + mascota + '}';
+    }
+
 }

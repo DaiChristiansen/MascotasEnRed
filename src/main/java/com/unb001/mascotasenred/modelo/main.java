@@ -15,11 +15,93 @@ import javax.persistence.Query;
 
 public class main {
 
-   
-    public static void main(String[] args) {
-        // TODO code application logic here
+    private static EntityManager manager;
+    private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
 
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
+    public static void AgregarDenunciante() {
+        manager = emf.createEntityManager();
+        manager.getTransaction().begin();
+        Denunciante nuevo = new Denunciante(4, "otro", "apellido", "Calle", "mail");
+        Denunciante nuevo1 = new Denunciante(5, "Marisa", "Reser", "Nigro", "Nose");
+        Denunciante nuevo2 = new Denunciante(3, "Mara", "Rodriguez", "tandil", "sitiene");
+        try {
+            manager.merge(nuevo);
+            manager.merge(nuevo1);
+            manager.merge(nuevo2);
+            manager.persist(nuevo);
+            manager.persist(nuevo1);
+            manager.persist(nuevo2);
+            manager.getTransaction().commit();
+           // manager.close();
+            //emf.close();
+        } catch (EntityExistsException e) {
+            System.out.println("ya existe este dato");
+        }
+    }
+
+    public static void BuscarDenunciante() {
+        
+        manager = emf.createEntityManager();
+        manager.getTransaction().begin();
+        try {
+        System.out.println("BUSCANDO");
+        Denunciante denunciante = manager.find(Denunciante.class, 4);
+        System.out.println("Nombre del denunciante: " + denunciante.getNombre());
+        manager.getTransaction().commit();
+       // manager.close();
+       // emf.close();
+         } catch (EntityExistsException e) {
+            System.out.println("error en buscar");
+        }
+    }
+
+    public static void ImprimirTodo() {
+        Query query = manager.createQuery("SELECT e FROM Denunciante e");
+
+        System.out.println((Collection<Denunciante>) query.getResultList());
+        System.out.println("");
+        System.out.println("DENUNCIANTE: ");
+        for (Denunciante cli : (Collection<Denunciante>) query.getResultList()) {
+
+            System.out.println(cli);
+        }
+    }
+
+    public static void RemoverDenunciante() {
+        manager = emf.createEntityManager();
+        manager.getTransaction().begin();
+        try {
+        Denunciante denunciante = manager.find(Denunciante.class, 3);
+        manager.remove(3);
+        manager.getTransaction().commit();
+       // manager.close();
+       // emf.close();
+         } catch (EntityExistsException e) {
+            System.out.println("error en remover");
+        }
+    }
+    public static void CambiarDenunciante(){
+      manager = emf.createEntityManager();
+        manager.getTransaction().begin();
+        try {
+        Denunciante denunciante=manager.find(Denunciante.class, 5);
+       denunciante.setEmail("si tiene");
+        manager.getTransaction().commit();
+        //manager.close();
+        //emf.close();
+         } catch (EntityExistsException e) {
+            System.out.println("error en cambiar");
+        }
+    }
+    public static void main(String[] args) {
+
+        AgregarDenunciante();
+         ImprimirTodo();
+        BuscarDenunciante();
+        CambiarDenunciante();
+        ImprimirTodo();
+
+        /* EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
 
@@ -36,8 +118,7 @@ public class main {
             //crea siempre, si ya estaba la PK da error
             manager.merge(nuevo1);
             manager.persist(nuevo);
-            manager.persist(nuevo1);
-           
+            manager.persist(nuevo1);    
             
             manager.getTransaction().commit();
             manager.close();
@@ -62,6 +143,7 @@ public class main {
         System.out.println("Nombre del denunciante: " + denunciante.getNombre());
 
         
+         */
     }
 
 }

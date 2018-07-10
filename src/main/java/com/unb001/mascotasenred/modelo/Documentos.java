@@ -28,10 +28,10 @@ public class Documentos implements Serializable {
     private String nombreComprobante; // perdido, encontrado, en adopcion o registrado
     // @ManyToOne
     //@PrimaryKeyJoinColumn
-    private Denunciante denunciante;
+   // private Denunciante denunciante;
     //@OneToOne(cascade = CascadeType.ALL)
     //@PrimaryKeyJoinColumn
-    private Denuncia denuncia;
+    //private Denuncia denuncia;
 
     public Documentos() {
     }

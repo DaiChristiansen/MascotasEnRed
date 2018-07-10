@@ -5,7 +5,11 @@
  */
 package com.unb001.mascotasenred.modelo;
 
+import java.time.LocalDate;
 import java.util.Collection;
+import java.util.Date;
+import java.time.LocalDateTime;
+import static java.time.temporal.TemporalQueries.localDate;
 import java.util.List;
 import javax.persistence.EntityExistsException;
 import javax.persistence.EntityManager;
@@ -15,47 +19,51 @@ import javax.persistence.Query;
 
 public class main {
 
-    private static EntityManager manager;
+    // private static EntityManager manager;
     private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
 
     public static void AgregarDenunciante() {
-        manager = emf.createEntityManager();
+        EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
         Denunciante nuevo = new Denunciante(4, "otro", "apellido", "Calle", "mail");
         Denunciante nuevo1 = new Denunciante(5, "Marisa", "Reser", "Nigro", "Nose");
         Denunciante nuevo2 = new Denunciante(3, "Mara", "Rodriguez", "tandil", "sitiene");
+        // Denuncia d = new Denuncia(1, "Extravio", localDateof(12, 05, 1999));
+
         try {
             manager.merge(nuevo);
             manager.merge(nuevo1);
             manager.merge(nuevo2);
+            //nuevo1.setDenuncia(d);
             manager.persist(nuevo);
             manager.persist(nuevo1);
+            // manager.persist(d);
             manager.persist(nuevo2);
             manager.getTransaction().commit();
-           // manager.close();
-            //emf.close();
+            manager.close();
+            // emf.close();
         } catch (EntityExistsException e) {
             System.out.println("ya existe este dato");
         }
     }
 
     public static void BuscarDenunciante() {
-        
-        manager = emf.createEntityManager();
+        EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
         try {
-        System.out.println("BUSCANDO");
-        Denunciante denunciante = manager.find(Denunciante.class, 4);
-        System.out.println("Nombre del denunciante: " + denunciante.getNombre());
-        manager.getTransaction().commit();
-       // manager.close();
-       // emf.close();
-         } catch (EntityExistsException e) {
+            System.out.println("BUSCANDO");
+            Denunciante denunciante = manager.find(Denunciante.class, 4);
+            System.out.println("Nombre del denunciante: " + denunciante.getNombre());
+            manager.getTransaction().commit();
+            manager.close();
+            //emf.close();
+        } catch (EntityExistsException e) {
             System.out.println("error en buscar");
         }
     }
 
     public static void ImprimirTodo() {
+        EntityManager manager = emf.createEntityManager();
         Query query = manager.createQuery("SELECT e FROM Denunciante e");
 
         System.out.println((Collection<Denunciante>) query.getResultList());
@@ -65,43 +73,60 @@ public class main {
 
             System.out.println(cli);
         }
+        manager.close();
     }
 
     public static void RemoverDenunciante() {
-        manager = emf.createEntityManager();
+        EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
         try {
-        Denunciante denunciante = manager.find(Denunciante.class, 3);
-        manager.remove(3);
-        manager.getTransaction().commit();
-       // manager.close();
-       // emf.close();
-         } catch (EntityExistsException e) {
+            Denunciante denunciante = manager.find(Denunciante.class, 3);
+            manager.remove(3);
+            manager.getTransaction().commit();
+            manager.close();
+            //emf.close();
+        } catch (EntityExistsException e) {
             System.out.println("error en remover");
         }
     }
-    public static void CambiarDenunciante(){
-      manager = emf.createEntityManager();
+
+    public static void CambiarDenunciante() {
+        EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
         try {
-        Denunciante denunciante=manager.find(Denunciante.class, 5);
-       denunciante.setEmail("si tiene");
-        manager.getTransaction().commit();
-        //manager.close();
-        //emf.close();
-         } catch (EntityExistsException e) {
+            Denunciante denunciante = manager.find(Denunciante.class, 5);
+            denunciante.setEmail("si tiene");
+            manager.getTransaction().commit();
+            manager.close();
+            //emf.close();
+        } catch (EntityExistsException e) {
             System.out.println("error en cambiar");
         }
     }
+
     public static void main(String[] args) {
+        EntityManager manager = emf.createEntityManager();         
+        Denunciante nuevo4 = new Denunciante(3, "Maria", "Perez", "Rauch 1589", "maria@perez");       
+        //try {
+         //manager.merge(nuevo4);          
+        nuevo4.setDenuncia( new Denuncia(1, "Extravio", LocalDate.of(1998, 12, 01)));
+        manager.getTransaction().begin();
+       // manager.persist(d);
+        manager.persist(nuevo4);
+        manager.getTransaction().commit();
+        manager.close();
+        // emf.close();
+       // } catch (EntityExistsException e) {
+        // System.out.println("no se agrego");
 
-        AgregarDenunciante();
-         ImprimirTodo();
-        BuscarDenunciante();
-        CambiarDenunciante();
+        // AgregarDenunciante();
         ImprimirTodo();
+        //BuscarDenunciante();
+        //CambiarDenunciante();
+        //ImprimirTodo();
+    }
 
-        /* EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
+    /* EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
 
@@ -143,7 +168,7 @@ public class main {
         System.out.println("Nombre del denunciante: " + denunciante.getNombre());
 
         
-         */
-    }
+     */
 
+  
 }

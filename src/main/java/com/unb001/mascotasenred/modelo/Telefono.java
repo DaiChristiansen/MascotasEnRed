@@ -21,7 +21,7 @@ public class Telefono implements Serializable {
     private String tipo;
     //@ManyToOne
     //@PrimaryKeyJoinColumn
-    private Denunciante denunciante;
+   // private Denunciante denunciante;
 
     public Telefono() {
 

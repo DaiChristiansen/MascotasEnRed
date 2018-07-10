@@ -1,12 +1,15 @@
 package com.unb001.mascotasenred.modelo;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Date;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.Table;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -17,37 +20,42 @@ import javax.persistence.PrimaryKeyJoinColumn;
  *
  * @author Manuel
  */
-//@Entity(name = "denuncia")
+@Entity(name = "Denuncia")
+@Table ( name = "Denuncia")
 public class Denuncia implements Serializable {
 
-    //  @Id
+    @Id
+    @Column (name = "NroDenuncia")
     private int nroDenuncia;
 
-    public void setNroDenuncia(int nroDenuncia) {
-        this.nroDenuncia = nroDenuncia;
-    }
-
-    public int getNroDenuncia() {
-        return nroDenuncia;
-    }
-    //private Denunciante denunciante;
+   // private Denunciante denunciante;
+    @Column (name = "tipoDenuncia")
     private String tipoDenuncia;
-    private Date fecha;
+    @Column (name = "fecha")
+    private LocalDate fecha;
     // @OneToOne(cascade = CascadeType.ALL)
     // @PrimaryKeyJoinColumn
-    private Documentos documentos;
+    //private Documentos documentos;
     //   @OneToOne(cascade = CascadeType.ALL)
     // @PrimaryKeyJoinColumn
-    private Mascota mascota;
+   // private Mascota mascota;
 
     public Denuncia() {
 
     }
 
-    public Denuncia(int nroDenuncia, String tipoDenuncia, Date fecha) {
+    public Denuncia(int nroDenuncia, String tipoDenuncia, LocalDate fecha) {
         this.nroDenuncia = nroDenuncia;
         this.tipoDenuncia = tipoDenuncia;
         this.fecha = fecha;
+    }
+
+    public int getNroDenuncia() {
+        return nroDenuncia;
+    }
+
+    public void setNroDenuncia(int nroDenuncia) {
+        this.nroDenuncia = nroDenuncia;
     }
 
     public String getTipoDenuncia() {
@@ -58,17 +66,20 @@ public class Denuncia implements Serializable {
         this.tipoDenuncia = tipoDenuncia;
     }
 
-    public Date getFecha() {
+    public LocalDate getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
 
     @Override
     public String toString() {
-        return "Denuncia{" + "nroDenuncia=" + nroDenuncia + ", tipoDenuncia=" + tipoDenuncia + ", fecha=" + fecha + ", documentos=" + documentos + ", mascota=" + mascota + '}';
+        return "Denuncia{" + "nroDenuncia=" + nroDenuncia + ", tipoDenuncia=" + tipoDenuncia + ", fecha=" + fecha + '}';
     }
+
+   
+   
 
 }

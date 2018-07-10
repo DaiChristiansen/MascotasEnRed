@@ -1,8 +1,13 @@
 package com.unb001.mascotasenred.modelo;
 
 import java.io.Serializable;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 
 /*
@@ -14,15 +19,20 @@ import javax.persistence.Id;
  *
  * @author Manuel
  */
-//@Entity(name = "denunciante")
-
+@Entity(name = "denunciante")
+@Table(name = "Denunciante")
 public class Denunciante implements Serializable {
-
-    //@Id
+ public static final long serialVersionUID = 123644L;
+    @Id 
+    @Column(name= "Dni")
     private int dni;
+    @Column(name= "Nombre")
     private String nombre;
+    @Column(name= "Apellido")
     private String apellido;
+    @Column(name= "Direccion")
     private String direccion;
+    @Column(name= "email")
     private String email;
     //@OneToMany
     //@JoinColumn(name="dni")       
@@ -30,10 +40,11 @@ public class Denunciante implements Serializable {
     //@OneToMany
     // @JoinColumn(name="dni")       
     //private List<Documentos> documentos = new ArrayList<>();
-
-    public Denunciante() {
-        super();
-
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="NroDenuncia")
+     private Denuncia denuncia;
+     
+    public Denunciante() {     // super();
     }
 
     public Denunciante(int dni, String nombre, String apellido, String direccion, String email) {
@@ -84,8 +95,22 @@ public class Denunciante implements Serializable {
         this.dni = dni;
     }
 
+    public Denuncia getDenuncia() {
+        return denuncia;
+    }
+
+    public void setDenuncia(Denuncia denuncia) {
+        this.denuncia = denuncia;
+    }
+
     @Override
     public String toString() {
-        return "Denunciante{" + "dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", email=" + email + '}';
+        return "Denunciante{" + "dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", email=" + email + ", denuncia=" + denuncia + '}';
     }
+
+   
+
+   
+
+  
 }

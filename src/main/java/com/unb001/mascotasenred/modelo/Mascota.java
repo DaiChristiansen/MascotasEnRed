@@ -18,7 +18,7 @@ import javax.persistence.PrimaryKeyJoinColumn;
  */
 //@Entity (name="Mascota")
 public class Mascota implements Serializable {
-    //  @Id
+      //@Id
 
     private int idMascota;
 
@@ -39,7 +39,7 @@ public class Mascota implements Serializable {
     private String estado; //perdido, encontrado, en adopcion o registrado
     // @OneToOne(cascade=CascadeType.ALL)
     //@PrimaryKeyJoinColumn
-    private Denuncia denuncia;
+   // private Denuncia denuncia;
 
     public Mascota() {
 

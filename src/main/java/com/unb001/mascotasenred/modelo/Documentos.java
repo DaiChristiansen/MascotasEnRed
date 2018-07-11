@@ -69,7 +69,9 @@ public class Documentos implements Serializable {
 
     @Override
     public String toString() {
-        return "Documentos{" + "nro=" + nro + ", tipoComprobante=" + tipoComprobante + ", nombreComprobante=" + nombreComprobante + ", denunciante=" + denunciante + ", denuncia=" + denuncia + '}';
+        return "Documentos{" + "nro=" + nro + ", tipoComprobante=" + tipoComprobante + ", nombreComprobante=" + nombreComprobante + '}';
     }
+
+   
 
 }

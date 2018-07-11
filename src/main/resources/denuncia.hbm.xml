@@ -5,5 +5,6 @@
         <id name="nroDenuncia" column="nroDenuncia"/>
         <property name="tipoDenuncia"/>
         <property name="fecha"/>
+        
     </class>
 </hibernate-mapping>

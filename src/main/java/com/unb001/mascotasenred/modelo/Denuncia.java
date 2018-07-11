@@ -20,18 +20,18 @@ import javax.persistence.Table;
  *
  * @author Manuel
  */
-@Entity(name = "Denuncia")
-@Table ( name = "Denuncia")
+//@Entity(name = "Denuncia")
+//@Table ( name = "Denuncia")
 public class Denuncia implements Serializable {
 
-    @Id
-    @Column (name = "NroDenuncia")
+    //@Id
+    //@Column (name = "NroDenuncia")
     private int nroDenuncia;
 
    // private Denunciante denunciante;
-    @Column (name = "tipoDenuncia")
+   // @Column (name = "tipoDenuncia")
     private String tipoDenuncia;
-    @Column (name = "fecha")
+    //@Column (name = "fecha")
     private LocalDate fecha;
     // @OneToOne(cascade = CascadeType.ALL)
     // @PrimaryKeyJoinColumn

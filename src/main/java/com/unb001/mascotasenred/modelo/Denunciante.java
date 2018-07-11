@@ -19,20 +19,20 @@ import javax.persistence.Table;
  *
  * @author Manuel
  */
-@Entity(name = "denunciante")
-@Table(name = "Denunciante")
+//@Entity(name = "denunciante")
+//@Table(name = "Denunciante")
 public class Denunciante implements Serializable {
- public static final long serialVersionUID = 123644L;
-    @Id 
-    @Column(name= "Dni")
+// public static final long serialVersionUID = 123644L;
+    //@Id 
+   // @Column(name= "Dni")
     private int dni;
-    @Column(name= "Nombre")
+   // @Column(name= "Nombre")
     private String nombre;
-    @Column(name= "Apellido")
+    //@Column(name= "Apellido")
     private String apellido;
-    @Column(name= "Direccion")
+    //@Column(name= "Direccion")
     private String direccion;
-    @Column(name= "email")
+    //@Column(name= "email")
     private String email;
     //@OneToMany
     //@JoinColumn(name="dni")       
@@ -40,9 +40,9 @@ public class Denunciante implements Serializable {
     //@OneToMany
     // @JoinColumn(name="dni")       
     //private List<Documentos> documentos = new ArrayList<>();
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="NroDenuncia")
-     private Denuncia denuncia;
+   // @OneToOne(cascade = CascadeType.ALL)
+    //@JoinColumn(name="NroDenuncia")
+     //private Denuncia denuncia;
      
     public Denunciante() {     // super();
     }
@@ -95,18 +95,12 @@ public class Denunciante implements Serializable {
         this.dni = dni;
     }
 
-    public Denuncia getDenuncia() {
-        return denuncia;
-    }
-
-    public void setDenuncia(Denuncia denuncia) {
-        this.denuncia = denuncia;
-    }
-
     @Override
     public String toString() {
-        return "Denunciante{" + "dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", email=" + email + ", denuncia=" + denuncia + '}';
+        return "Denunciante{" + "dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", email=" + email + '}';
     }
+
+  
 
    
 

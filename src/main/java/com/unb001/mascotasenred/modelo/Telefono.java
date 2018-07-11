@@ -68,7 +68,9 @@ public class Telefono implements Serializable {
 
     @Override
     public String toString() {
-        return "Telefono{" + "idTelefono=" + idTelefono + ", area=" + area + ", telefono=" + telefono + ", tipo=" + tipo + ", denunciante=" + denunciante + '}';
+        return "Telefono{" + "idTelefono=" + idTelefono + ", area=" + area + ", telefono=" + telefono + ", tipo=" + tipo + '}';
     }
+
+  
 
 }

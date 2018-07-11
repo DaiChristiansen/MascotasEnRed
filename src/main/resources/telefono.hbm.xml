@@ -6,5 +6,6 @@
         <property name="area" column="area"/>
         <property name="telefono" column="telefono"/>
         <property name="tipo" column="tipo"/>
+        <many-to-one name="denunciante" class="Denunciante" column="dni"/>
     </class>
 </hibernate-mapping>

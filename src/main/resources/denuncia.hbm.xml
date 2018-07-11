@@ -5,6 +5,7 @@
         <id name="nroDenuncia" column="nroDenuncia"/>
         <property name="tipoDenuncia"/>
         <property name="fecha"/>
-        
+        <one-to-one name="comprobante" class="Comprobante" column="nroComprobante"/>
+        <one-to-one name="mascota" class="Mascota" column="idMascota"/>        
     </class>
 </hibernate-mapping>

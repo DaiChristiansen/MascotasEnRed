@@ -19,10 +19,10 @@ import javax.persistence.PrimaryKeyJoinColumn;
  * @author Manuel
  */
 //@Entity(name = "comprobante")
-public class Documentos implements Serializable {
+public class Comprobante implements Serializable {
 
     // @Id
-    private int nro; //nro autoincremento
+    private int nroComprobante; //nro autoincremento
     //private Denunciante denunciante;
     private int tipoComprobante; // 1, 2, depende el nombre del documento
     private String nombreComprobante; // perdido, encontrado, en adopcion o registrado
@@ -33,15 +33,16 @@ public class Documentos implements Serializable {
     //@PrimaryKeyJoinColumn
     //private Denuncia denuncia;
 
-    public Documentos() {
+    public Comprobante() {
     }
 
-    public Documentos(int nro, int tipoComprobante, String nombreComprobante) {
-        this.nro = nro;
+    public Comprobante(int nroComprobante, int tipoComprobante, String nombreComprobante) {
+        this.nroComprobante = nroComprobante;
         this.tipoComprobante = tipoComprobante;
         this.nombreComprobante = nombreComprobante;
-
     }
+
+  
 
     public int getTipoComprobante() {
         return tipoComprobante;
@@ -59,18 +60,20 @@ public class Documentos implements Serializable {
         this.nombreComprobante = nombreComprobante;
     }
 
-    public float getNro() {
-        return nro;
+    public int getNroComprobante() {
+        return nroComprobante;
     }
 
-    public void setNro(int nro) {
-        this.nro = nro;
+    public void setNroComprobante(int nroComprobante) {
+        this.nroComprobante = nroComprobante;
     }
 
     @Override
     public String toString() {
-        return "Documentos{" + "nro=" + nro + ", tipoComprobante=" + tipoComprobante + ", nombreComprobante=" + nombreComprobante + '}';
+        return "Comprobante{" + "nroComprobante=" + nroComprobante + ", tipoComprobante=" + tipoComprobante + ", nombreComprobante=" + nombreComprobante + '}';
     }
+
+    
 
    
 

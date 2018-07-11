@@ -109,7 +109,7 @@ public class main {
         Denunciante nuevo4 = new Denunciante(3, "Maria", "Perez", "Rauch 1589", "maria@perez");       
         //try {
          //manager.merge(nuevo4);          
-        nuevo4.setDenuncia( new Denuncia(1, "Extravio", LocalDate.of(1998, 12, 01)));
+        //nuevo4.setDenuncia( new Denuncia(1, "Extravio", LocalDate.of(1998, 12, 01)));
         manager.getTransaction().begin();
        // manager.persist(d);
         manager.persist(nuevo4);

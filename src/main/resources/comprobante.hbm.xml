@@ -2,8 +2,10 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernateconfiguration-3.0.dtd">
 <hibernate-mapping>
     <class name="com.unb001.mascotasenred.modelo.Documentos" table="comprobante">
-        <id name="nro" column="nro"/>
+        <id name="nroComprobante" column="nroComprobante"/>
         <property name= "tipoComprobante"/>
         <property name= "nombreComprobante"/>
+        <many-to-one name="denunciante" class="Denunciante" column="dni"/>
+        <one-to-one name="denuncia" class="Denuncia"  column="nroDenuncia"/>
     </class>
 </hibernate-mapping>

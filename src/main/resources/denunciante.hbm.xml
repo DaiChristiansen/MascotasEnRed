@@ -8,6 +8,6 @@
         <property name="direccion"/>
         <property name="email"/>
         <one-to-many name="telefono" class="Telefono" column="id_telefono"/>
-        <many-to-one name="comprobante" class="Comprobante" column="nroComprobante"/>    
+        <one-to-many name="comprobante" class="Comprobante" column="nroComprobante"/>    
     </class>
 </hibernate-mapping>

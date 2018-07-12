@@ -20,15 +20,7 @@ import javax.persistence.PrimaryKeyJoinColumn;
 public class Mascota implements Serializable {
       //@Id
 
-    private int idMascota;
-
-    public void setIdMascota(int idMascota) {
-        this.idMascota = idMascota;
-    }
-
-    public int getIdMascota() {
-        return idMascota;
-    }
+    private int idMascota;  
     private String nombre;
     private String tipoMascota; // perro, gato, tortuga, etc.
     private String raza;
@@ -39,11 +31,22 @@ public class Mascota implements Serializable {
     private String estado; //perdido, encontrado, en adopcion o registrado
     // @OneToOne(cascade=CascadeType.ALL)
     //@PrimaryKeyJoinColumn
-   // private Denuncia denuncia;
+    private Denuncia denuncia;
 
     public Mascota() {
-
     }
+
+   /* public Mascota(int idMascota, String nombre, String tipoMascota, String raza, String color, String caracteristicasEspeciales, String tamanio, String zona, String estado) {
+        this.idMascota = idMascota;
+        this.nombre = nombre;
+        this.tipoMascota = tipoMascota;
+        this.raza = raza;
+        this.color = color;
+        this.caracteristicasEspeciales = caracteristicasEspeciales;
+        this.tamanio = tamanio;
+        this.zona = zona;
+        this.estado = estado;
+    }*/
 
     public Mascota(int idMascota, String nombre, String tipoMascota, String raza, String color, String caracteristicasEspeciales, String tamanio, String zona, String estado) {
         this.idMascota = idMascota;
@@ -57,17 +60,24 @@ public class Mascota implements Serializable {
         this.estado = estado;
     }
 
-    public Mascota(int idMascota, String tipoMascota, String raza, String color, String caracteristicasEspeciales, String tamanio, String zona, String estado) {
-        this.idMascota = idMascota;
-        this.tipoMascota = tipoMascota;
-        this.raza = raza;
-        this.color = color;
-        this.caracteristicasEspeciales = caracteristicasEspeciales;
-        this.tamanio = tamanio;
-        this.zona = zona;
-        this.estado = estado;
+    
+
+
+    public Denuncia getDenuncia() {
+        return denuncia;
     }
 
+    public void setDenuncia(Denuncia denuncia) {
+        this.denuncia = denuncia;
+    }
+
+   public void setIdMascota(int idMascota) {
+        this.idMascota = idMascota;
+    }
+
+    public int getIdMascota() {
+        return idMascota;
+    }
     public String getNombre() {
         return nombre;
     }
@@ -134,8 +144,10 @@ public class Mascota implements Serializable {
 
     @Override
     public String toString() {
-        return "Mascota{" + "idMascota=" + idMascota + ", nombre=" + nombre + ", tipoMascota=" + tipoMascota + ", raza=" + raza + ", color=" + color + ", caracteristicasEspeciales=" + caracteristicasEspeciales + ", tamanio=" + tamanio + ", zona=" + zona + ", estado=" + estado + '}';
+        return "Mascota{" + "idMascota=" + idMascota + ", nombre=" + nombre + ", tipoMascota=" + tipoMascota + ", raza=" + raza + ", color=" + color + ", caracteristicasEspeciales=" + caracteristicasEspeciales + ", tamanio=" + tamanio + ", zona=" + zona + ", estado=" + estado + ", denuncia=" + denuncia + '}';
     }
+
+   
 
     
 

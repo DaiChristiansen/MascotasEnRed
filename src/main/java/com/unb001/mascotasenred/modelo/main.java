@@ -5,11 +5,11 @@
  */
 package com.unb001.mascotasenred.modelo;
 
-import java.time.LocalDate;
+//import java.time.LocalDate;
 import java.util.Collection;
 import java.util.Date;
-import java.time.LocalDateTime;
-import static java.time.temporal.TemporalQueries.localDate;
+//import java.time.LocalDateTime;
+//import static java.time.temporal.TemporalQueries.localDate;
 import java.util.List;
 import javax.persistence.EntityExistsException;
 import javax.persistence.EntityManager;
@@ -28,7 +28,7 @@ public class main {
         Denunciante nuevo = new Denunciante(4, "otro", "apellido", "Calle", "mail");
         Denunciante nuevo1 = new Denunciante(5, "Marisa", "Reser", "Nigro", "Nose");
         Denunciante nuevo2 = new Denunciante(3, "Mara", "Rodriguez", "tandil", "sitiene");
-        // Denuncia d = new Denuncia(1, "Extravio", localDateof(12, 05, 1999));
+         
 
         try {
             manager.merge(nuevo);
@@ -106,12 +106,14 @@ public class main {
 
     public static void main(String[] args) {
         EntityManager manager = emf.createEntityManager();         
-        Denunciante nuevo4 = new Denunciante(3, "Maria", "Perez", "Rauch 1589", "maria@perez");       
+       Denunciante nuevo4 = new Denunciante(3, "Maria", "Perez", "Rauch 1589", "maria@perez");
+       //Denuncia d = new Denuncia(1, "Extravio", localDateof(12, 05, 1999));
+       Telefono t= new Telefono(1,2225,459,"celular"); 
         //try {
-         //manager.merge(nuevo4);          
-        //nuevo4.setDenuncia( new Denuncia(1, "Extravio", LocalDate.of(1998, 12, 01)));
+         manager.merge(nuevo4);          
+        nuevo4.setTelefono(t);
         manager.getTransaction().begin();
-       // manager.persist(d);
+       manager.persist(t);
         manager.persist(nuevo4);
         manager.getTransaction().commit();
         manager.close();

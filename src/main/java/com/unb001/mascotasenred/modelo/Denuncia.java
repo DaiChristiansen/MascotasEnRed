@@ -28,23 +28,23 @@ public class Denuncia implements Serializable {
     //@Column (name = "NroDenuncia")
     private int nroDenuncia;
 
-   // private Denunciante denunciante;
-   // @Column (name = "tipoDenuncia")
+    // private Denunciante denunciante;
+    // @Column (name = "tipoDenuncia")
     private String tipoDenuncia;
     //@Column (name = "fecha")
-    private LocalDate fecha;
+    private Date fecha;
     // @OneToOne(cascade = CascadeType.ALL)
     // @PrimaryKeyJoinColumn
-    //private Documentos documentos;
+    private Comprobante comprobante;
     //   @OneToOne(cascade = CascadeType.ALL)
     // @PrimaryKeyJoinColumn
-   // private Mascota mascota;
+    private Mascota mascota;
 
     public Denuncia() {
 
     }
 
-    public Denuncia(int nroDenuncia, String tipoDenuncia, LocalDate fecha) {
+    public Denuncia(int nroDenuncia, String tipoDenuncia, Date fecha) {
         this.nroDenuncia = nroDenuncia;
         this.tipoDenuncia = tipoDenuncia;
         this.fecha = fecha;
@@ -66,20 +66,35 @@ public class Denuncia implements Serializable {
         this.tipoDenuncia = tipoDenuncia;
     }
 
-    public LocalDate getFecha() {
+    public Date getFecha() {
         return fecha;
     }
 
-    public void setFecha(LocalDate fecha) {
+    public void setFecha(Date fecha) {
         this.fecha = fecha;
+    }
+
+    public Comprobante getComprobante() {
+        return comprobante;
+    }
+
+    public void setComprobante(Comprobante comprobante) {
+        this.comprobante = comprobante;
+    }
+
+    public Mascota getMascota() {
+        return mascota;
+    }
+
+    public void setMascota(Mascota mascota) {
+        this.mascota = mascota;
     }
 
     @Override
     public String toString() {
-        return "Denuncia{" + "nroDenuncia=" + nroDenuncia + ", tipoDenuncia=" + tipoDenuncia + ", fecha=" + fecha + '}';
+        return "Denuncia{" + "nroDenuncia=" + nroDenuncia + ", tipoDenuncia=" + tipoDenuncia + ", fecha=" + fecha + ", comprobante=" + comprobante + ", mascota=" + mascota + '}';
     }
 
-   
-   
-
 }
+//<one-to-one name="comprobante" class="Comprobante" column="nroComprobante"/>!>
+ //<one-to-one name="mascota" class="Mascota" column="idMascota"/> 

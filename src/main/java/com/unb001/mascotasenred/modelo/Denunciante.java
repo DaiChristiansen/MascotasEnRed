@@ -42,18 +42,22 @@ public class Denunciante implements Serializable {
     //private List<Documentos> documentos = new ArrayList<>();
    // @OneToOne(cascade = CascadeType.ALL)
     //@JoinColumn(name="NroDenuncia")
-     //private Denuncia denuncia;
+     private Telefono  telefono; 
+      private Comprobante comprobante;        
      
     public Denunciante() {     // super();
     }
 
     public Denunciante(int dni, String nombre, String apellido, String direccion, String email) {
+        this.dni = dni;
         this.nombre = nombre;
         this.apellido = apellido;
         this.direccion = direccion;
         this.email = email;
-        this.dni = dni;
     }
+
+  
+
 
     public String getNombre() {
         return nombre;
@@ -95,10 +99,28 @@ public class Denunciante implements Serializable {
         this.dni = dni;
     }
 
+    public Telefono getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(Telefono telefono) {
+        this.telefono = telefono;
+    }
+
+    public Comprobante getComprobante() {
+        return comprobante;
+    }
+
+    public void setComprobante(Comprobante comprobante) {
+        this.comprobante = comprobante;
+    }
+
     @Override
     public String toString() {
-        return "Denunciante{" + "dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", email=" + email + '}';
+        return "Denunciante{" + "dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", email=" + email + ", telefono=" + telefono + ", comprobante=" + comprobante + '}';
     }
+
+ 
 
   
 

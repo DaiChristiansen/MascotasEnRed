@@ -9,29 +9,18 @@ import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- *
- * @author Manuel
- */
 //@Entity(name = "comprobante")
 public class Comprobante implements Serializable {
-
     // @Id
-    private int nroComprobante; //nro autoincremento
-    //private Denunciante denunciante;
+    private int nroComprobante; //nro autoincremento    
     private int tipoComprobante; // 1, 2, depende el nombre del documento
     private String nombreComprobante; // perdido, encontrado, en adopcion o registrado
     // @ManyToOne
     //@PrimaryKeyJoinColumn
-   // private Denunciante denunciante;
+    private Denunciante denunciante;
     //@OneToOne(cascade = CascadeType.ALL)
     //@PrimaryKeyJoinColumn
-    //private Denuncia denuncia;
+    private Denuncia denuncia;
 
     public Comprobante() {
     }
@@ -40,9 +29,8 @@ public class Comprobante implements Serializable {
         this.nroComprobante = nroComprobante;
         this.tipoComprobante = tipoComprobante;
         this.nombreComprobante = nombreComprobante;
+       
     }
-
-  
 
     public int getTipoComprobante() {
         return tipoComprobante;
@@ -68,13 +56,25 @@ public class Comprobante implements Serializable {
         this.nroComprobante = nroComprobante;
     }
 
-    @Override
-    public String toString() {
-        return "Comprobante{" + "nroComprobante=" + nroComprobante + ", tipoComprobante=" + tipoComprobante + ", nombreComprobante=" + nombreComprobante + '}';
+    public Denunciante getDenunciante() {
+        return denunciante;
     }
 
-    
+    public void setDenunciante(Denunciante denunciante) {
+        this.denunciante = denunciante;
+    }
 
-   
+    public Denuncia getDenuncia() {
+        return denuncia;
+    }
+
+    public void setDenuncia(Denuncia denuncia) {
+        this.denuncia = denuncia;
+    }
+
+    @Override
+    public String toString() {
+        return "Comprobante{" + "nroComprobante=" + nroComprobante + ", tipoComprobante=" + tipoComprobante + ", nombreComprobante=" + nombreComprobante + ", denunciante=" + denunciante + ", denuncia=" + denuncia + '}';
+    }
 
 }

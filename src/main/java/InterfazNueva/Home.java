@@ -48,7 +48,7 @@ public class Home extends javax.swing.JFrame {
         PanelBuscarMascota = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        buscarmascotaestado = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox<>();
@@ -214,18 +214,18 @@ public class Home extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(61, 0, 112));
         jLabel1.setText(" > Buscar Mascota");
 
-        jComboBox1.setBackground(new java.awt.Color(230, 230, 230));
-        jComboBox1.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        jComboBox1.setForeground(new java.awt.Color(51, 51, 51));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Perdido", "Encontrado", "Adopción", "Registrado" }));
-        jComboBox1.setBorder(null);
-        jComboBox1.setName("ComboBoxEstado"); // NOI18N
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        buscarmascotaestado.setBackground(new java.awt.Color(230, 230, 230));
+        buscarmascotaestado.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        buscarmascotaestado.setForeground(new java.awt.Color(51, 51, 51));
+        buscarmascotaestado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Perdido", "Encontrado", "Adopción", "Registrado" }));
+        buscarmascotaestado.setBorder(null);
+        buscarmascotaestado.setName("ComboBoxEstado"); // NOI18N
+        buscarmascotaestado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                buscarmascotaestadoActionPerformed(evt);
             }
         });
-        jComboBox1.setRenderer(new DefaultListCellRenderer() {
+        buscarmascotaestado.setRenderer(new DefaultListCellRenderer() {
             public Component getListCellRendererComponent(
                 JList list, Object value, int index,
                 boolean isSelected, boolean hasFocus) {
@@ -450,7 +450,7 @@ public class Home extends javax.swing.JFrame {
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelBuscarMascotaLayout.createSequentialGroup()
                                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(buscarmascotaestado, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(35, 35, 35)
                                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -482,7 +482,7 @@ public class Home extends javax.swing.JFrame {
                     .addGroup(PanelBuscarMascotaLayout.createSequentialGroup()
                         .addGroup(PanelBuscarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buscarmascotaestado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel8)
                             .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1069,9 +1069,9 @@ public class Home extends javax.swing.JFrame {
         //-----------FIN CAMBIO COLORES INCATIVO/ACTIVO-----------------------------------------------------
     }//GEN-LAST:event_BotonDenunciaMaltratoMouseClicked
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void buscarmascotaestadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarmascotaestadoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_buscarmascotaestadoActionPerformed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
@@ -1232,9 +1232,9 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel PanelDenunciaMaltrato;
     private javax.swing.JPanel PanelRegistrarMascota;
     private javax.swing.JPanel VentanaDeFondo;
+    private javax.swing.JComboBox<String> buscarmascotaestado;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox13;
     private javax.swing.JComboBox<String> jComboBox14;
     private javax.swing.JComboBox<String> jComboBox15;

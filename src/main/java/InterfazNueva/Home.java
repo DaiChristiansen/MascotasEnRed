@@ -64,9 +64,6 @@ public class Home extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        PanelCargarDenunciante = new javax.swing.JPanel();
-        jSeparator3 = new javax.swing.JSeparator();
-        jLabel3 = new javax.swing.JLabel();
         PanelRegistrarMascota = new javax.swing.JPanel();
         jSeparator4 = new javax.swing.JSeparator();
         jLabel4 = new javax.swing.JLabel();
@@ -95,6 +92,21 @@ public class Home extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         jComboBox20 = new javax.swing.JComboBox<>();
+        PanelCargarDenunciante = new javax.swing.JPanel();
+        jSeparator6 = new javax.swing.JSeparator();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        BtnGuardar = new javax.swing.JButton();
+        jTextDNI = new javax.swing.JTextField();
+        jTextNombre = new javax.swing.JTextField();
+        jTextApellido = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        jTextDireccion = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
+        jTextEmail = new javax.swing.JTextField();
+        BtnCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -507,37 +519,6 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap(303, Short.MAX_VALUE))
         );
 
-        PanelCargarDenunciante.setBackground(new java.awt.Color(230, 230, 230));
-        PanelCargarDenunciante.setAlignmentX(0.0F);
-        PanelCargarDenunciante.setAlignmentY(0.0F);
-        PanelCargarDenunciante.setMaximumSize(new java.awt.Dimension(800, 1333));
-        PanelCargarDenunciante.setPreferredSize(new java.awt.Dimension(800, 1333));
-
-        jSeparator3.setBackground(new java.awt.Color(61, 0, 112));
-
-        jLabel3.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(61, 0, 112));
-        jLabel3.setText(" > Cargar Denuncia");
-
-        javax.swing.GroupLayout PanelCargarDenuncianteLayout = new javax.swing.GroupLayout(PanelCargarDenunciante);
-        PanelCargarDenunciante.setLayout(PanelCargarDenuncianteLayout);
-        PanelCargarDenuncianteLayout.setHorizontalGroup(
-            PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator3)
-            .addGroup(PanelCargarDenuncianteLayout.createSequentialGroup()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 418, Short.MAX_VALUE))
-        );
-        PanelCargarDenuncianteLayout.setVerticalGroup(
-            PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelCargarDenuncianteLayout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(310, Short.MAX_VALUE))
-        );
-
         PanelRegistrarMascota.setBackground(new java.awt.Color(230, 230, 230));
         PanelRegistrarMascota.setAlignmentX(0.0F);
         PanelRegistrarMascota.setAlignmentY(0.0F);
@@ -941,6 +922,171 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap(277, Short.MAX_VALUE))
         );
 
+        PanelCargarDenunciante.setBackground(new java.awt.Color(230, 230, 230));
+        PanelCargarDenunciante.setAlignmentX(0.0F);
+        PanelCargarDenunciante.setAlignmentY(0.0F);
+        PanelCargarDenunciante.setMaximumSize(new java.awt.Dimension(1002, 1024));
+        PanelCargarDenunciante.setPreferredSize(new java.awt.Dimension(1002, 1024));
+
+        jSeparator6.setBackground(new java.awt.Color(61, 0, 112));
+        jSeparator6.setPreferredSize(new java.awt.Dimension(0, 5));
+
+        jLabel12.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(61, 0, 112));
+        jLabel12.setText(" > Cargar Denunciante");
+
+        jLabel13.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(61, 0, 112));
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel13.setText("DNI");
+
+        jLabel15.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(61, 0, 112));
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel15.setText("Nombre");
+
+        jLabel17.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(61, 0, 112));
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel17.setText("Apellido");
+
+        BtnGuardar.setBackground(new java.awt.Color(61, 0, 112));
+        BtnGuardar.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        BtnGuardar.setForeground(new java.awt.Color(240, 240, 240));
+        BtnGuardar.setText("GUARDAR");
+        BtnGuardar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BtnGuardar.setName("Boton Buscar"); // NOI18N
+        BtnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnGuardarActionPerformed(evt);
+            }
+        });
+
+        jTextDNI.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextDNIActionPerformed(evt);
+            }
+        });
+
+        jTextNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextNombreActionPerformed(evt);
+            }
+        });
+
+        jTextApellido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextApellidoActionPerformed(evt);
+            }
+        });
+
+        jLabel19.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(61, 0, 112));
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel19.setText("Direccion");
+
+        jTextDireccion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextDireccionActionPerformed(evt);
+            }
+        });
+
+        jLabel20.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(61, 0, 112));
+        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel20.setText("Email");
+
+        jTextEmail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextEmailActionPerformed(evt);
+            }
+        });
+
+        BtnCancelar.setBackground(new java.awt.Color(61, 0, 112));
+        BtnCancelar.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        BtnCancelar.setForeground(new java.awt.Color(240, 240, 240));
+        BtnCancelar.setText("CANCELAR");
+        BtnCancelar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BtnCancelar.setName("Boton Buscar"); // NOI18N
+        BtnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnCancelarActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout PanelCargarDenuncianteLayout = new javax.swing.GroupLayout(PanelCargarDenunciante);
+        PanelCargarDenunciante.setLayout(PanelCargarDenuncianteLayout);
+        PanelCargarDenuncianteLayout.setHorizontalGroup(
+            PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelCargarDenuncianteLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(PanelCargarDenuncianteLayout.createSequentialGroup()
+                        .addGroup(PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PanelCargarDenuncianteLayout.createSequentialGroup()
+                                .addGroup(PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(PanelCargarDenuncianteLayout.createSequentialGroup()
+                                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jTextDNI, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(PanelCargarDenuncianteLayout.createSequentialGroup()
+                                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(33, 33, 33)
+                                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 64, Short.MAX_VALUE))
+                    .addGroup(PanelCargarDenuncianteLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(BtnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(BtnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        PanelCargarDenuncianteLayout.setVerticalGroup(
+            PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelCargarDenuncianteLayout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 1, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelCargarDenuncianteLayout.createSequentialGroup()
+                        .addGroup(PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel15)
+                            .addComponent(jTextDNI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel19)
+                            .addComponent(jLabel20)
+                            .addComponent(jTextDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel17)
+                        .addComponent(jTextApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(15, 15, 15)
+                .addGroup(PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BtnGuardar)
+                    .addComponent(BtnCancelar))
+                .addContainerGap(823, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout VentanaDeFondoLayout = new javax.swing.GroupLayout(VentanaDeFondo);
         VentanaDeFondo.setLayout(VentanaDeFondoLayout);
         VentanaDeFondoLayout.setHorizontalGroup(
@@ -954,24 +1100,26 @@ public class Home extends javax.swing.JFrame {
                     .addGroup(VentanaDeFondoLayout.createSequentialGroup()
                         .addGap(5, 5, 5)
                         .addGroup(VentanaDeFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(PanelCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(PanelRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(PanelDenunciaMaltrato, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(VentanaDeFondoLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(PanelCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 1024, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(PanelCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 1024, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(VentanaDeFondoLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(PanelCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, 1024, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         VentanaDeFondoLayout.setVerticalGroup(
             VentanaDeFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EspacioMenu, javax.swing.GroupLayout.DEFAULT_SIZE, 4609, Short.MAX_VALUE)
+            .addComponent(EspacioMenu, javax.swing.GroupLayout.DEFAULT_SIZE, 5617, Short.MAX_VALUE)
             .addGroup(VentanaDeFondoLayout.createSequentialGroup()
                 .addComponent(PanelBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 1002, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PanelCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 1002, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(1409, 1409, 1409)
-                .addComponent(PanelCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PanelCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, 1002, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PanelCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 1002, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1804, 1804, 1804)
                 .addComponent(PanelRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PanelDenunciaMaltrato, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1071,7 +1219,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonDenunciaMaltratoMouseClicked
 
     private void buscarmascotaestadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarmascotaestadoActionPerformed
-   String variable = buscarmascotaestado.getSelectedItem().ToString();
+   //String variable = buscarmascotaestado.getSelectedItem().ToString();
   
 
 // TODO add your handling code here:
@@ -1185,7 +1333,75 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox20ActionPerformed
 
-    
+    private void BtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGuardarActionPerformed
+        {
+            String dni, nombre, apellido, dire, email;
+            String sql = "";
+            dni = jTextDNI.getText();
+            nombre = jTextNombre.getText();
+            apellido = jTextApellido.getText();
+            dire = jTextDireccion.getText();
+            email = jTextEmail.getText();
+    }//GEN-LAST:event_BtnGuardarActionPerformed
+
+    private void jTextDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextDireccionActionPerformed
+        jTextDireccion.transferFocus();
+    }//GEN-LAST:event_jTextDireccionActionPerformed
+
+    private void jTextDNIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextDNIActionPerformed
+        jTextDNI.transferFocus();
+    }//GEN-LAST:event_jTextDNIActionPerformed
+
+    private void jTextNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextNombreActionPerformed
+        jTextNombre.transferFocus();
+    }//GEN-LAST:event_jTextNombreActionPerformed
+
+    private void jTextApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextApellidoActionPerformed
+        jTextApellido.transferFocus();
+    }//GEN-LAST:event_jTextApellidoActionPerformed
+
+    private void jTextEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextEmailActionPerformed
+        jTextEmail.transferFocus();
+    }//GEN-LAST:event_jTextEmailActionPerformed
+
+    private void BtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCancelarActionPerformed
+        bloquear();
+    }//GEN-LAST:event_BtnCancelarActionPerformed
+
+     public void limpiar() {
+        jTextDNI.setText("");
+        jTextNombre.setText("");
+        jTextApellido.setText("");
+        jTextDireccion.setText("");
+        jTextEmail.setText("");
+    }
+
+    public void bloquear() {
+        jTextDNI.setEnabled(false);
+        jTextNombre.setEnabled(false);
+        jTextApellido.setEnabled(false);
+        jTextDireccion.setEnabled(false);
+        jTextEmail.setEnabled(false);
+        BtnGuardar.setEnabled(false); //activa el boton
+        BtnCancelar.setEnabled(true);
+    }
+
+    public void habilitar() {
+        jTextDNI.setEnabled(true);
+        jTextNombre.setEnabled(true);
+        jTextApellido.setEnabled(true);
+        jTextDireccion.setEnabled(true);
+        jTextEmail.setEnabled(true);
+        BtnGuardar.setEnabled(true); //activa el boton
+        BtnCancelar.setEnabled(false);
+    }
+
+    /*public Home(){
+        initComponents();
+        limpiar();
+        bloquear();
+    }
+    */
     
     /**
      * @param args the command line arguments
@@ -1229,6 +1445,8 @@ public class Home extends javax.swing.JFrame {
     public javax.swing.JLabel BotonCrearAviso;
     public javax.swing.JLabel BotonDenunciaMaltrato;
     public javax.swing.JLabel BotonRegistrarMascota;
+    private javax.swing.JButton BtnCancelar;
+    private javax.swing.JButton BtnGuardar;
     private javax.swing.JPanel EspacioMenu;
     private javax.swing.JPanel PanelBuscarMascota;
     private javax.swing.JPanel PanelCargarDenunciante;
@@ -1255,7 +1473,13 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
@@ -1264,7 +1488,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1275,11 +1498,16 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable3;
+    private javax.swing.JTextField jTextApellido;
+    private javax.swing.JTextField jTextDNI;
+    private javax.swing.JTextField jTextDireccion;
+    private javax.swing.JTextField jTextEmail;
+    private javax.swing.JTextField jTextNombre;
     // End of variables declaration//GEN-END:variables
 
     private void setLblColor(JLabel lbl) {

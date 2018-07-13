@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package InterfazNueva;
-         
+
 //import com.sun.awt.AWTUtilities;
 import java.awt.Color;
 import java.awt.Component;
@@ -12,7 +12,6 @@ import javax.swing.DefaultListCellRenderer;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JList;
-import javax.swing.JTextField;
 
 /**
  *
@@ -24,9 +23,10 @@ public class Home extends javax.swing.JFrame {
      * Creates new form Home
      */
     int x, y;
+
     public Home() {
         initComponents();
-       // AWTUtilities.setWindowOpaque(this, false);
+        // AWTUtilities.setWindowOpaque(this, false);
         this.setLocationRelativeTo(null);
     }
 
@@ -1214,13 +1214,12 @@ public class Home extends javax.swing.JFrame {
         PanelCargarDenunciante.setVisible(false);
         PanelRegistrarMascota.setVisible(false);
         PanelDenunciaMaltrato.setVisible(true);
-        
+
         //-----------FIN CAMBIO COLORES INCATIVO/ACTIVO-----------------------------------------------------
     }//GEN-LAST:event_BotonDenunciaMaltratoMouseClicked
 
     private void buscarmascotaestadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarmascotaestadoActionPerformed
-   //String variable = buscarmascotaestado.getSelectedItem().ToString();
-  
+        //String variable = buscarmascotaestado.getSelectedItem().ToString();
 
 // TODO add your handling code here:
     }//GEN-LAST:event_buscarmascotaestadoActionPerformed
@@ -1333,21 +1332,6 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox20ActionPerformed
 
-    private void BtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGuardarActionPerformed
-        {
-            String dni, nombre, apellido, dire, email;
-            String sql = "";
-            dni = jTextDNI.getText();
-            nombre = jTextNombre.getText();
-            apellido = jTextApellido.getText();
-            dire = jTextDireccion.getText();
-            email = jTextEmail.getText();
-    }//GEN-LAST:event_BtnGuardarActionPerformed
-
-    private void jTextDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextDireccionActionPerformed
-        jTextDireccion.transferFocus();
-    }//GEN-LAST:event_jTextDireccionActionPerformed
-
     private void jTextDNIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextDNIActionPerformed
         jTextDNI.transferFocus();
     }//GEN-LAST:event_jTextDNIActionPerformed
@@ -1360,15 +1344,29 @@ public class Home extends javax.swing.JFrame {
         jTextApellido.transferFocus();
     }//GEN-LAST:event_jTextApellidoActionPerformed
 
+    private void jTextDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextDireccionActionPerformed
+        jTextDireccion.transferFocus();
+    }//GEN-LAST:event_jTextDireccionActionPerformed
+
     private void jTextEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextEmailActionPerformed
         jTextEmail.transferFocus();
     }//GEN-LAST:event_jTextEmailActionPerformed
+
+    private void BtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGuardarActionPerformed
+        String dni, nombre, apellido, dire, email;
+        String sql = "";
+        dni = jTextDNI.getText();
+        nombre = jTextNombre.getText();
+        apellido = jTextApellido.getText();
+        dire = jTextDireccion.getText();
+        email = jTextEmail.getText();
+    }//GEN-LAST:event_BtnGuardarActionPerformed
 
     private void BtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCancelarActionPerformed
         bloquear();
     }//GEN-LAST:event_BtnCancelarActionPerformed
 
-     public void limpiar() {
+    public void limpiar() {
         jTextDNI.setText("");
         jTextNombre.setText("");
         jTextApellido.setText("");
@@ -1401,8 +1399,7 @@ public class Home extends javax.swing.JFrame {
         limpiar();
         bloquear();
     }
-    */
-    
+     */
     /**
      * @param args the command line arguments
      */
@@ -1511,17 +1508,18 @@ public class Home extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void setLblColor(JLabel lbl) {
-        lbl.setBackground(new Color(35,0,66));        
+        lbl.setBackground(new Color(35, 0, 66));
     }
 
     private void resetLblColor(JLabel lbl) {
-        lbl.setBackground(new Color(88,30,138));        
+        lbl.setBackground(new Color(88, 30, 138));
     }
-    
+
     private void setCbColor(JComboBox cb) {
-        cb.setBackground(new Color(35,0,66));        
+        cb.setBackground(new Color(35, 0, 66));
     }
+
     private void resetCbColor(JComboBox cb) {
-        cb.setBackground(new Color(88,30,138));        
+        cb.setBackground(new Color(88, 30, 138));
     }
 }

@@ -11,6 +11,6 @@
         <property name= "tamanio"/>
         <property name= "zona"/>
         <property name= "estado"/>
-        <one-to-one name="denuncia" class="Denuncia" column="nroDenuncia"/>
+        <one-to-one name="denuncia" class="com.unb001.mascotasenred.modelo.Denuncia" />
     </class>
 </hibernate-mapping>

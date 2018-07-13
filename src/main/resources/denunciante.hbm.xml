@@ -7,7 +7,12 @@
         <property name="apellido"/>
         <property name="direccion"/>
         <property name="email"/>
-        <one-to-many name="telefono" class="Telefono" column="id_telefono"/>
-        <one-to-many name="comprobante" class="Comprobante" column="nroComprobante"/>    
+        <bag name="Telefono" table="telefono" inverse="false" fetch="select">
+            <key column="denunciante_dni"/>
+            <one-to-many class="com.unb001.mascotasenred.modelo.Telefono" /> 
+        </bag>
+        
+        <!--<one-to-many name="telefono" class="Telefono" />
+        <one-to-many name="comprobante" class="Comprobante" /> -->   
     </class>
 </hibernate-mapping>

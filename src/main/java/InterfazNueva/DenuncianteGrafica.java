@@ -9,7 +9,8 @@ import java.sql.*;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-impor javax.swing.JOptionPane; 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Alan RR
@@ -271,15 +272,17 @@ public class DenuncianteGrafica extends javax.swing.JPanel {
         //  Conectar cc = new Conectar();
         // Connection cn= cc. Conectar(); 
         // EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
-       // EntityManager manager = emf.createEntityManager();
-        
-        String dni, nom, apel, dir, ema;
-        String sql = "";
-        dni = t_dni.getText();
-        nom = t_nom.getText();
-        apel = t_apel.getText();
-        dir = t_dir.getText();
-         ema=t_ema.getText();
+        // EntityManager manager = emf.createEntityManager();
+        {
+            String dni, nom, apel, dir, ema;
+            String sql = "";
+            dni = t_dni.getText();
+            nom = t_nom.getText();
+            apel = t_apel.getText();
+            dir = t_dir.getText();
+            ema = t_ema.getText();
+
+            /*
          sql= "INSERT INTRO Denunciante(dni, nombre, apellido, direccion, email)VALUES (?,?,?,?,?)";
          try {
          PreparedStatement pst = cn.preparedStatement(sql); 
@@ -290,14 +293,15 @@ public class DenuncianteGrafica extends javax.swing.JPanel {
           pst.setString(5,ema);
          int n= pst.executeUpdate();
          if(n<0){
-             JOption.Pane.showMessageDialog(null,"registro guardado"); 
+             //JOption.Pane.showMessageDialog(null,"registro guardado"); 
              bloquear(); 
           }   
                  }  catch(SQLExcepcion e){
           
 // TODO add your handling code here:
+             */
     }//GEN-LAST:event_jButton7ActionPerformed
-} 
+    }
     private void t_apelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t_apelActionPerformed
         t_apel.transferFocus();// TODO add your handling code here:
     }//GEN-LAST:event_t_apelActionPerformed

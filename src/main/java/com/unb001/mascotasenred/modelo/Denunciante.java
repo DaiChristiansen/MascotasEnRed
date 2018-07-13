@@ -1,13 +1,8 @@
 package com.unb001.mascotasenred.modelo;
 
 import java.io.Serializable;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /*
@@ -36,14 +31,14 @@ public class Denunciante implements Serializable {
     private String email;
     //@OneToMany
     //@JoinColumn(name="dni")       
-    // private List<Telefono> telefono = new ArrayList<>();
+    private List<Telefono> telefono = new ArrayList<>();
     //@OneToMany
     // @JoinColumn(name="dni")       
-    //private List<Documentos> documentos = new ArrayList<>();
+    private List<Comprobante> comprobantes = new ArrayList<>();
    // @OneToOne(cascade = CascadeType.ALL)
     //@JoinColumn(name="NroDenuncia")
-     private Telefono  telefono; 
-      private Comprobante comprobante;        
+    // private Telefono  telefono; 
+      //private Comprobante comprobante;        
      
     public Denunciante() {     // super();
     }
@@ -99,25 +94,26 @@ public class Denunciante implements Serializable {
         this.dni = dni;
     }
 
-    public Telefono getTelefono() {
+    public List<Telefono> getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(Telefono telefono) {
-        this.telefono = telefono;
+    public void setTelefono(List<Telefono> telefonos) {
+        this.telefono = telefonos;
     }
 
-    public Comprobante getComprobante() {
-        return comprobante;
+    public List<Comprobante> getComprobantes() {
+        return comprobantes;
     }
 
-    public void setComprobante(Comprobante comprobante) {
-        this.comprobante = comprobante;
+    public void setComprobantes(List<Comprobante> comprobantes) {
+        this.comprobantes = comprobantes;
     }
 
+    
     @Override
     public String toString() {
-        return "Denunciante{" + "dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", email=" + email + ", telefono=" + telefono + ", comprobante=" + comprobante + '}';
+        return "Denunciante{" + "dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", email=" + email + ", telefono=" + telefono + ", comprobante=" + comprobantes + '}';
     }
 
  

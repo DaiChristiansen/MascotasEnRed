@@ -17,7 +17,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
-import interfazNueva.*;  
+
 public class main {
 
     // private static EntityManager manager;
@@ -29,7 +29,6 @@ public class main {
         Denunciante nuevo = new Denunciante(4, "otro", "apellido", "Calle", "mail");
         Denunciante nuevo1 = new Denunciante(5, "Marisa", "Reser", "Nigro", "Nose");
         Denunciante nuevo2 = new Denunciante(3, "Mara", "Rodriguez", "tandil", "sitiene");
-         
 
         try {
             manager.merge(nuevo);
@@ -106,34 +105,32 @@ public class main {
     }
 
     public static void main(String[] args) {
-        EntityManager manager = emf.createEntityManager();         
-      // Denunciante nuevo4 = new Denunciante(3, "Maria", "Perez", "Rauch 1589", "maria@perez");
-       //Denuncia d = new Denuncia(1, "Extravio", localDateof(12, 05, 1999));
-      // Telefono t= new Telefono(1,2225,459,"celular"); 
+        EntityManager manager = emf.createEntityManager();
+        // Denunciante nuevo4 = new Denunciante(3, "Maria", "Perez", "Rauch 1589", "maria@perez");
+        //Denuncia d = new Denuncia(1, "Extravio", localDateof(12, 05, 1999));
+        // Telefono t= new Telefono(1,2225,459,"celular"); 
         //try {
-       //  manager.merge(nuevo4);          
-       // nuevo4.setTelefono(t);
+        //  manager.merge(nuevo4);          
+        // nuevo4.setTelefono(t);
         //manager.getTransaction().begin();
-       //manager.persist(t);
+        //manager.persist(t);
         //manager.persist(nuevo4);
         //manager.getTransaction().commit();
-       // manager.close();
+        // manager.close();
         // emf.close();
-       // } catch (EntityExistsException e) {
+        // } catch (EntityExistsException e) {
         // System.out.println("no se agrego");
 
-        // AgregarDenunciante();
-        //ImprimirTodo();
-        //BuscarDenunciante();
-        //CambiarDenunciante();
-        //ImprimirTodo();
-        
-        DenuncianteGrafica dg= new DenuncianteGrafica();  
-        dg.setVisible(true);
-    }
-    
+        AgregarDenunciante();
+        ImprimirTodo();
+        BuscarDenunciante();
+        CambiarDenunciante();
+        ImprimirTodo();
 
-    /* EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
+        // DenuncianteGrafica dg= new DenuncianteGrafica();  
+        //   dg.setVisible(true);
+        // }
+        /* EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
 
@@ -175,7 +172,6 @@ public class main {
         System.out.println("Nombre del denunciante: " + denunciante.getNombre());
 
         
-     */
-
-  
+         */
+    }
 }

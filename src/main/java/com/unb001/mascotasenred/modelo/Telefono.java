@@ -17,7 +17,7 @@ public class Telefono implements Serializable {
     //@Id
     private int idTelefono;
     private int area;
-    private int telefono;
+    private int nro;
     private String tipo;
     //@ManyToOne
     //@PrimaryKeyJoinColumn
@@ -30,7 +30,7 @@ public class Telefono implements Serializable {
     public Telefono(int idTelefono, int area, int telefono, String tipo) {
         this.idTelefono = idTelefono;
         this.area = area;
-        this.telefono = telefono;
+        this.nro = telefono;
         this.tipo = tipo;
     }
 
@@ -52,12 +52,12 @@ public class Telefono implements Serializable {
         this.area = area;
     }
 
-    public int getTelefono() {
-        return telefono;
+    public int getNro() {
+        return nro;
     }
 
-    public void setTelefono(int telefono) {
-        this.telefono = telefono;
+    public void setNro(int telefono) {
+        this.nro = telefono;
     }
 
     public String getTipo() {
@@ -78,7 +78,7 @@ public class Telefono implements Serializable {
 
     @Override
     public String toString() {
-        return "Telefono{" + "idTelefono=" + idTelefono + ", area=" + area + ", telefono=" + telefono + ", tipo=" + tipo + ", denunciante=" + denunciante + '}';
+        return "Telefono{" + "idTelefono=" + idTelefono + ", area=" + area + ", telefono=" + nro + ", tipo=" + tipo + '}';
     }
 
   

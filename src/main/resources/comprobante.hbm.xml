@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernateconfiguration-3.0.dtd">
 <hibernate-mapping>
-    <class name="com.unb001.mascotasenred.modelo.Documentos" table="comprobante">
+    <class name="com.unb001.mascotasenred.modelo.Comprobante" table="comprobante">
         <id name="nroComprobante" column="nroComprobante"/>
-        <property name= "tipoComprobante"/>
-        <property name= "nombreComprobante"/>
-        <many-to-one name="denunciante" class="Denunciante" column="dni"/>
-        <one-to-one name="denuncia" class="Denuncia"  column="nroDenuncia"/>
+        <property name="tipoComprobante"/>
+        <property name="nombreComprobante"/>
+        <many-to-one name="denunciante" class="com.unb001.mascotasenred.modelo.Denunciante" column="denunciante_dni" />
+        <!--<one-to-one name="denuncia_nroDenuncia" class="Denuncia" />-->
     </class>
 </hibernate-mapping>

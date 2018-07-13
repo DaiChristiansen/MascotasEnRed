@@ -14,7 +14,7 @@ impor javax.swing.JOptionPane;
  *
  * @author Alan RR
  */
-public class denunciantegrafica extends javax.swing.JPanel {
+public class DenuncianteGrafica extends javax.swing.JPanel {
 
     public void limpiar() {
         t_dni.setText("");
@@ -48,7 +48,7 @@ public class denunciantegrafica extends javax.swing.JPanel {
         jButton9.setEnabled(true);
     }
 
-    public denunciantegrafica() {
+    public DenuncianteGrafica() {
         initComponents();
         limpiar();
         bloquear();

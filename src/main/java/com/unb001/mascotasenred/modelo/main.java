@@ -6,6 +6,7 @@
 package com.unb001.mascotasenred.modelo;
 
 //import java.time.LocalDate;
+import InterfazNueva.DenuncianteGrafica;
 import java.util.Collection;
 import java.util.Date;
 //import java.time.LocalDateTime;
@@ -16,7 +17,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
-
+import interfazNueva.*;  
 public class main {
 
     // private static EntityManager manager;
@@ -106,27 +107,31 @@ public class main {
 
     public static void main(String[] args) {
         EntityManager manager = emf.createEntityManager();         
-       Denunciante nuevo4 = new Denunciante(3, "Maria", "Perez", "Rauch 1589", "maria@perez");
+      // Denunciante nuevo4 = new Denunciante(3, "Maria", "Perez", "Rauch 1589", "maria@perez");
        //Denuncia d = new Denuncia(1, "Extravio", localDateof(12, 05, 1999));
-       Telefono t= new Telefono(1,2225,459,"celular"); 
+      // Telefono t= new Telefono(1,2225,459,"celular"); 
         //try {
-         manager.merge(nuevo4);          
-        nuevo4.setTelefono(t);
-        manager.getTransaction().begin();
-       manager.persist(t);
-        manager.persist(nuevo4);
-        manager.getTransaction().commit();
-        manager.close();
+       //  manager.merge(nuevo4);          
+       // nuevo4.setTelefono(t);
+        //manager.getTransaction().begin();
+       //manager.persist(t);
+        //manager.persist(nuevo4);
+        //manager.getTransaction().commit();
+       // manager.close();
         // emf.close();
        // } catch (EntityExistsException e) {
         // System.out.println("no se agrego");
 
         // AgregarDenunciante();
-        ImprimirTodo();
+        //ImprimirTodo();
         //BuscarDenunciante();
         //CambiarDenunciante();
         //ImprimirTodo();
+        
+        DenuncianteGrafica dg= new DenuncianteGrafica();  
+        dg.setVisible(true);
     }
+    
 
     /* EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();

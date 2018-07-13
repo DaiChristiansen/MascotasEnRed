@@ -12,6 +12,7 @@ import javax.swing.DefaultListCellRenderer;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JTextField;
 
 /**
  *
@@ -1070,7 +1071,10 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonDenunciaMaltratoMouseClicked
 
     private void buscarmascotaestadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarmascotaestadoActionPerformed
-        // TODO add your handling code here:
+   String variable = buscarmascotaestado.getSelectedItem().ToString();
+  
+
+// TODO add your handling code here:
     }//GEN-LAST:event_buscarmascotaestadoActionPerformed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed

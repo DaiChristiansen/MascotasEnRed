@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package InterfazNueva;
-         
+
 //import com.sun.awt.AWTUtilities;
 import java.awt.Color;
 import java.awt.Component;
@@ -24,9 +24,10 @@ public class Home extends javax.swing.JFrame {
      * Creates new form Home
      */
     int x, y;
+
     public Home() {
         initComponents();
-       // AWTUtilities.setWindowOpaque(this, false);
+        // AWTUtilities.setWindowOpaque(this, false);
         this.setLocationRelativeTo(null);
     }
 
@@ -61,7 +62,7 @@ public class Home extends javax.swing.JFrame {
         jComboBox5 = new javax.swing.JComboBox<>();
         jComboBox6 = new javax.swing.JComboBox<>();
         jLabel11 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        BtnBuscar = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         PanelRegistrarMascota = new javax.swing.JPanel();
@@ -284,7 +285,7 @@ public class Home extends javax.swing.JFrame {
                     list, value, index, isSelected, hasFocus);
                 if (isSelected) {
                     label.setForeground(Color.WHITE);
-                    label.setBackground(Color.ORANGE);
+                    label.setBackground(new java.awt.Color(61,0,112));
                 } else {
                     label.setForeground(Color.BLACK);
                     label.setBackground(Color.WHITE);
@@ -314,6 +315,22 @@ public class Home extends javax.swing.JFrame {
                 jComboBox3ActionPerformed(evt);
             }
         });
+        jComboBox3.setRenderer(new DefaultListCellRenderer() {
+            public Component getListCellRendererComponent(
+                JList list, Object value, int index,
+                boolean isSelected, boolean hasFocus) {
+                JLabel label = (JLabel) super.getListCellRendererComponent(
+                    list, value, index, isSelected, hasFocus);
+                if (isSelected) {
+                    label.setForeground(Color.WHITE);
+                    label.setBackground(new java.awt.Color(61,0,112));
+                } else {
+                    label.setForeground(Color.BLACK);
+                    label.setBackground(Color.WHITE);
+                }
+                return label;
+            }
+        });
 
         jLabel9.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(61, 0, 112));
@@ -334,6 +351,22 @@ public class Home extends javax.swing.JFrame {
         jComboBox4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox4ActionPerformed(evt);
+            }
+        });
+        jComboBox4.setRenderer(new DefaultListCellRenderer() {
+            public Component getListCellRendererComponent(
+                JList list, Object value, int index,
+                boolean isSelected, boolean hasFocus) {
+                JLabel label = (JLabel) super.getListCellRendererComponent(
+                    list, value, index, isSelected, hasFocus);
+                if (isSelected) {
+                    label.setForeground(Color.WHITE);
+                    label.setBackground(new java.awt.Color(61,0,112));
+                } else {
+                    label.setForeground(Color.BLACK);
+                    label.setBackground(Color.WHITE);
+                }
+                return label;
             }
         });
 
@@ -358,6 +391,22 @@ public class Home extends javax.swing.JFrame {
                 jComboBox5ActionPerformed(evt);
             }
         });
+        jComboBox5.setRenderer(new DefaultListCellRenderer() {
+            public Component getListCellRendererComponent(
+                JList list, Object value, int index,
+                boolean isSelected, boolean hasFocus) {
+                JLabel label = (JLabel) super.getListCellRendererComponent(
+                    list, value, index, isSelected, hasFocus);
+                if (isSelected) {
+                    label.setForeground(Color.WHITE);
+                    label.setBackground(new java.awt.Color(61,0,112));
+                } else {
+                    label.setForeground(Color.BLACK);
+                    label.setBackground(Color.WHITE);
+                }
+                return label;
+            }
+        });
 
         jComboBox6.setBackground(new java.awt.Color(230, 230, 230));
         jComboBox6.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
@@ -375,21 +424,37 @@ public class Home extends javax.swing.JFrame {
                 jComboBox6ActionPerformed(evt);
             }
         });
+        jComboBox6.setRenderer(new DefaultListCellRenderer() {
+            public Component getListCellRendererComponent(
+                JList list, Object value, int index,
+                boolean isSelected, boolean hasFocus) {
+                JLabel label = (JLabel) super.getListCellRendererComponent(
+                    list, value, index, isSelected, hasFocus);
+                if (isSelected) {
+                    label.setForeground(Color.WHITE);
+                    label.setBackground(new java.awt.Color(61,0,112));
+                } else {
+                    label.setForeground(Color.BLACK);
+                    label.setBackground(Color.WHITE);
+                }
+                return label;
+            }
+        });
 
         jLabel11.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(61, 0, 112));
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel11.setText("Zona");
 
-        jButton1.setBackground(new java.awt.Color(61, 0, 112));
-        jButton1.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(240, 240, 240));
-        jButton1.setText("BUSCAR");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton1.setName("Boton Buscar"); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BtnBuscar.setBackground(new java.awt.Color(61, 0, 112));
+        BtnBuscar.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        BtnBuscar.setForeground(new java.awt.Color(240, 240, 240));
+        BtnBuscar.setText("BUSCAR");
+        BtnBuscar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BtnBuscar.setName("Boton Buscar"); // NOI18N
+        BtnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BtnBuscarActionPerformed(evt);
             }
         });
 
@@ -478,9 +543,9 @@ public class Home extends javax.swing.JFrame {
                                         .addComponent(jLabel11)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jButton1)))
+                                    .addComponent(BtnBuscar)))
                             .addComponent(jScrollPane2))
-                        .addGap(0, 39, Short.MAX_VALUE)))
+                        .addGap(0, 17, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         PanelBuscarMascotaLayout.setVerticalGroup(
@@ -513,10 +578,10 @@ public class Home extends javax.swing.JFrame {
                             .addComponent(jLabel11)
                             .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addComponent(BtnBuscar)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(303, Short.MAX_VALUE))
+                .addContainerGap(325, Short.MAX_VALUE))
         );
 
         PanelRegistrarMascota.setBackground(new java.awt.Color(230, 230, 230));
@@ -538,7 +603,7 @@ public class Home extends javax.swing.JFrame {
             .addComponent(jSeparator4)
             .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 418, Short.MAX_VALUE))
+                .addGap(0, 677, Short.MAX_VALUE))
         );
         PanelRegistrarMascotaLayout.setVerticalGroup(
             PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -547,7 +612,7 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(310, Short.MAX_VALUE))
+                .addContainerGap(1254, Short.MAX_VALUE))
         );
 
         PanelDenunciaMaltrato.setBackground(new java.awt.Color(230, 230, 230));
@@ -566,7 +631,7 @@ public class Home extends javax.swing.JFrame {
         PanelDenunciaMaltrato.setLayout(PanelDenunciaMaltratoLayout);
         PanelDenunciaMaltratoLayout.setHorizontalGroup(
             PanelDenunciaMaltratoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator5, javax.swing.GroupLayout.DEFAULT_SIZE, 541, Short.MAX_VALUE)
+            .addComponent(jSeparator5, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
             .addGroup(PanelDenunciaMaltratoLayout.createSequentialGroup()
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -578,7 +643,7 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(310, Short.MAX_VALUE))
+                .addContainerGap(1254, Short.MAX_VALUE))
         );
 
         PanelCrearAviso.setBackground(new java.awt.Color(230, 230, 230));
@@ -592,7 +657,7 @@ public class Home extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(61, 0, 112));
-        jLabel2.setText(" > CrearAviso");
+        jLabel2.setText(" > Crear Aviso");
 
         jComboBox13.setBackground(new java.awt.Color(230, 230, 230));
         jComboBox13.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
@@ -608,6 +673,22 @@ public class Home extends javax.swing.JFrame {
         jComboBox13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox13ActionPerformed(evt);
+            }
+        });
+        jComboBox13.setRenderer(new DefaultListCellRenderer() {
+            public Component getListCellRendererComponent(
+                JList list, Object value, int index,
+                boolean isSelected, boolean hasFocus) {
+                JLabel label = (JLabel) super.getListCellRendererComponent(
+                    list, value, index, isSelected, hasFocus);
+                if (isSelected) {
+                    label.setForeground(Color.WHITE);
+                    label.setBackground(new java.awt.Color(61,0,112));
+                } else {
+                    label.setForeground(Color.BLACK);
+                    label.setBackground(Color.WHITE);
+                }
+                return label;
             }
         });
 
@@ -637,6 +718,22 @@ public class Home extends javax.swing.JFrame {
                 jComboBox14ActionPerformed(evt);
             }
         });
+        jComboBox14.setRenderer(new DefaultListCellRenderer() {
+            public Component getListCellRendererComponent(
+                JList list, Object value, int index,
+                boolean isSelected, boolean hasFocus) {
+                JLabel label = (JLabel) super.getListCellRendererComponent(
+                    list, value, index, isSelected, hasFocus);
+                if (isSelected) {
+                    label.setForeground(Color.WHITE);
+                    label.setBackground(new java.awt.Color(61,0,112));
+                } else {
+                    label.setForeground(Color.BLACK);
+                    label.setBackground(Color.WHITE);
+                }
+                return label;
+            }
+        });
 
         jLabel23.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(61, 0, 112));
@@ -657,6 +754,22 @@ public class Home extends javax.swing.JFrame {
         jComboBox15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox15ActionPerformed(evt);
+            }
+        });
+        jComboBox15.setRenderer(new DefaultListCellRenderer() {
+            public Component getListCellRendererComponent(
+                JList list, Object value, int index,
+                boolean isSelected, boolean hasFocus) {
+                JLabel label = (JLabel) super.getListCellRendererComponent(
+                    list, value, index, isSelected, hasFocus);
+                if (isSelected) {
+                    label.setForeground(Color.WHITE);
+                    label.setBackground(new java.awt.Color(61,0,112));
+                } else {
+                    label.setForeground(Color.BLACK);
+                    label.setBackground(Color.WHITE);
+                }
+                return label;
             }
         });
 
@@ -681,6 +794,22 @@ public class Home extends javax.swing.JFrame {
                 jComboBox16ActionPerformed(evt);
             }
         });
+        jComboBox16.setRenderer(new DefaultListCellRenderer() {
+            public Component getListCellRendererComponent(
+                JList list, Object value, int index,
+                boolean isSelected, boolean hasFocus) {
+                JLabel label = (JLabel) super.getListCellRendererComponent(
+                    list, value, index, isSelected, hasFocus);
+                if (isSelected) {
+                    label.setForeground(Color.WHITE);
+                    label.setBackground(new java.awt.Color(61,0,112));
+                } else {
+                    label.setForeground(Color.BLACK);
+                    label.setBackground(Color.WHITE);
+                }
+                return label;
+            }
+        });
 
         jLabel25.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(61, 0, 112));
@@ -703,6 +832,22 @@ public class Home extends javax.swing.JFrame {
                 jComboBox17ActionPerformed(evt);
             }
         });
+        jComboBox17.setRenderer(new DefaultListCellRenderer() {
+            public Component getListCellRendererComponent(
+                JList list, Object value, int index,
+                boolean isSelected, boolean hasFocus) {
+                JLabel label = (JLabel) super.getListCellRendererComponent(
+                    list, value, index, isSelected, hasFocus);
+                if (isSelected) {
+                    label.setForeground(Color.WHITE);
+                    label.setBackground(new java.awt.Color(61,0,112));
+                } else {
+                    label.setForeground(Color.BLACK);
+                    label.setBackground(Color.WHITE);
+                }
+                return label;
+            }
+        });
 
         jComboBox18.setBackground(new java.awt.Color(230, 230, 230));
         jComboBox18.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
@@ -718,6 +863,22 @@ public class Home extends javax.swing.JFrame {
         jComboBox18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox18ActionPerformed(evt);
+            }
+        });
+        jComboBox18.setRenderer(new DefaultListCellRenderer() {
+            public Component getListCellRendererComponent(
+                JList list, Object value, int index,
+                boolean isSelected, boolean hasFocus) {
+                JLabel label = (JLabel) super.getListCellRendererComponent(
+                    list, value, index, isSelected, hasFocus);
+                if (isSelected) {
+                    label.setForeground(Color.WHITE);
+                    label.setBackground(new java.awt.Color(61,0,112));
+                } else {
+                    label.setForeground(Color.BLACK);
+                    label.setBackground(Color.WHITE);
+                }
+                return label;
             }
         });
 
@@ -800,16 +961,32 @@ public class Home extends javax.swing.JFrame {
                 jComboBox19ActionPerformed(evt);
             }
         });
+        jComboBox19.setRenderer(new DefaultListCellRenderer() {
+            public Component getListCellRendererComponent(
+                JList list, Object value, int index,
+                boolean isSelected, boolean hasFocus) {
+                JLabel label = (JLabel) super.getListCellRendererComponent(
+                    list, value, index, isSelected, hasFocus);
+                if (isSelected) {
+                    label.setForeground(Color.WHITE);
+                    label.setBackground(new java.awt.Color(61,0,112));
+                } else {
+                    label.setForeground(Color.BLACK);
+                    label.setBackground(Color.WHITE);
+                }
+                return label;
+            }
+        });
 
         jLabel27.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(61, 0, 112));
         jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel27.setText("Tamaño");
+        jLabel27.setText("Nombre");
 
         jLabel28.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(61, 0, 112));
         jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel28.setText("Color");
+        jLabel28.setText("Caract.");
 
         jComboBox20.setBackground(new java.awt.Color(230, 230, 230));
         jComboBox20.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
@@ -825,6 +1002,22 @@ public class Home extends javax.swing.JFrame {
         jComboBox20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox20ActionPerformed(evt);
+            }
+        });
+        jComboBox20.setRenderer(new DefaultListCellRenderer() {
+            public Component getListCellRendererComponent(
+                JList list, Object value, int index,
+                boolean isSelected, boolean hasFocus) {
+                JLabel label = (JLabel) super.getListCellRendererComponent(
+                    list, value, index, isSelected, hasFocus);
+                if (isSelected) {
+                    label.setForeground(Color.WHITE);
+                    label.setBackground(new java.awt.Color(61,0,112));
+                } else {
+                    label.setForeground(Color.BLACK);
+                    label.setBackground(Color.WHITE);
+                }
+                return label;
             }
         });
 
@@ -877,7 +1070,7 @@ public class Home extends javax.swing.JFrame {
                                         .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jButton3)))
                             .addComponent(jScrollPane4))
-                        .addGap(0, 39, Short.MAX_VALUE)))
+                        .addGap(0, 17, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         PanelCrearAvisoLayout.setVerticalGroup(
@@ -919,7 +1112,7 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(jButton3)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(277, Short.MAX_VALUE))
+                .addContainerGap(299, Short.MAX_VALUE))
         );
 
         PanelCargarDenunciante.setBackground(new java.awt.Color(230, 230, 230));
@@ -1047,7 +1240,7 @@ public class Home extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 64, Short.MAX_VALUE))
+                        .addGap(0, 42, Short.MAX_VALUE))
                     .addGroup(PanelCargarDenuncianteLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(BtnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1084,7 +1277,7 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnGuardar)
                     .addComponent(BtnCancelar))
-                .addContainerGap(823, Short.MAX_VALUE))
+                .addContainerGap(845, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout VentanaDeFondoLayout = new javax.swing.GroupLayout(VentanaDeFondo);
@@ -1214,13 +1407,12 @@ public class Home extends javax.swing.JFrame {
         PanelCargarDenunciante.setVisible(false);
         PanelRegistrarMascota.setVisible(false);
         PanelDenunciaMaltrato.setVisible(true);
-        
+
         //-----------FIN CAMBIO COLORES INCATIVO/ACTIVO-----------------------------------------------------
     }//GEN-LAST:event_BotonDenunciaMaltratoMouseClicked
 
     private void buscarmascotaestadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarmascotaestadoActionPerformed
-   //String variable = buscarmascotaestado.getSelectedItem().ToString();
-  
+        //String variable = buscarmascotaestado.getSelectedItem().ToString();
 
 // TODO add your handling code here:
     }//GEN-LAST:event_buscarmascotaestadoActionPerformed
@@ -1261,9 +1453,9 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox6ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BtnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BtnBuscarActionPerformed
 
     private void jComboBox13MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBox13MouseMoved
         // TODO add your handling code here:
@@ -1334,7 +1526,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox20ActionPerformed
 
     private void BtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGuardarActionPerformed
-        {
+        
             String dni, nombre, apellido, dire, email;
             String sql = "";
             dni = jTextDNI.getText();
@@ -1342,6 +1534,7 @@ public class Home extends javax.swing.JFrame {
             apellido = jTextApellido.getText();
             dire = jTextDireccion.getText();
             email = jTextEmail.getText();
+        
     }//GEN-LAST:event_BtnGuardarActionPerformed
 
     private void jTextDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextDireccionActionPerformed
@@ -1368,7 +1561,7 @@ public class Home extends javax.swing.JFrame {
         bloquear();
     }//GEN-LAST:event_BtnCancelarActionPerformed
 
-     public void limpiar() {
+    public void limpiar() {
         jTextDNI.setText("");
         jTextNombre.setText("");
         jTextApellido.setText("");
@@ -1401,8 +1594,7 @@ public class Home extends javax.swing.JFrame {
         limpiar();
         bloquear();
     }
-    */
-    
+     */
     /**
      * @param args the command line arguments
      */
@@ -1445,6 +1637,7 @@ public class Home extends javax.swing.JFrame {
     public javax.swing.JLabel BotonCrearAviso;
     public javax.swing.JLabel BotonDenunciaMaltrato;
     public javax.swing.JLabel BotonRegistrarMascota;
+    private javax.swing.JButton BtnBuscar;
     private javax.swing.JButton BtnCancelar;
     private javax.swing.JButton BtnGuardar;
     private javax.swing.JPanel EspacioMenu;
@@ -1455,7 +1648,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel PanelRegistrarMascota;
     private javax.swing.JPanel VentanaDeFondo;
     private javax.swing.JComboBox<String> buscarmascotaestado;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JComboBox<String> jComboBox13;
     private javax.swing.JComboBox<String> jComboBox14;
@@ -1511,17 +1703,17 @@ public class Home extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void setLblColor(JLabel lbl) {
-        lbl.setBackground(new Color(35,0,66));        
+        lbl.setBackground(new Color(35, 0, 66));
     }
 
     private void resetLblColor(JLabel lbl) {
-        lbl.setBackground(new Color(88,30,138));        
+        lbl.setBackground(new Color(88, 30, 138));
     }
-    
+    /*
     private void setCbColor(JComboBox cb) {
         cb.setBackground(new Color(35,0,66));        
     }
     private void resetCbColor(JComboBox cb) {
         cb.setBackground(new Color(88,30,138));        
-    }
+    }*/
 }

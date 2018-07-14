@@ -44,18 +44,13 @@ public class mainCaro {
             manager.persist(m);
             manager.getTransaction().commit();
             manager.close();
-            emf.close();
+           // emf.close();
 
         } catch (EntityExistsException e) {
             System.out.println("ya existe este dato");
-        } finally {
-
-            manager.close();
-            emf.close();
-        }
-
+      
     }
-
+     }
     public static void agregarDenunciante(Denunciante d) {
 
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
@@ -67,15 +62,11 @@ public class mainCaro {
             manager.persist(d);
             manager.getTransaction().commit();
             manager.close();
-            emf.close();
+            //emf.close();
 
         } catch (EntityExistsException e) {
             System.out.println("ya existe este dato");
-        } finally {
-
-            manager.close();
-            emf.close();
-        }
+        } 
 
     }
 

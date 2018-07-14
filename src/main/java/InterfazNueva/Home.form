@@ -802,7 +802,7 @@
                   <Component id="jSeparator5" alignment="0" pref="800" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jLabel5" min="-2" pref="196" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="345" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -813,7 +813,7 @@
                       <Component id="jLabel5" min="-2" pref="16" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jSeparator5" min="-2" pref="13" max="-2" attributes="0"/>
-                      <EmptySpace pref="1254" max="32767" attributes="0"/>
+                      <EmptySpace pref="310" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -867,15 +867,6 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jComboBox14" min="-2" pref="255" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jComboBox16" min="-2" pref="255" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel21" min="-2" pref="40" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="jComboBox13" min="-2" pref="255" max="-2" attributes="0"/>
@@ -884,14 +875,32 @@
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="jComboBox15" min="-2" pref="255" max="-2" attributes="0"/>
                                           </Group>
-                                          <Group type="102" attributes="0">
-                                              <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jComboBox19" min="-2" pref="255" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jComboBox20" min="-2" pref="255" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jTextField1" max="32767" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jComboBox14" min="-2" pref="255" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <EmptySpace min="41" max="32767" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jComboBox16" min="-2" pref="255" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jComboBox20" min="-2" pref="255" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
                                           </Group>
                                       </Group>
                                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
@@ -944,9 +953,9 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel27" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jComboBox19" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel28" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jComboBox20" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -965,7 +974,7 @@
                       <Component id="jButton3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jScrollPane4" min="-2" pref="511" max="-2" attributes="0"/>
-                      <EmptySpace pref="299" max="32767" attributes="0"/>
+                      <EmptySpace pref="298" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1310,38 +1319,6 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JComboBox" name="jComboBox19">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="e6" green="e6" red="e6" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Calibri" size="12" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="33" green="33" red="33" type="rgb"/>
-                </Property>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="3">
-                    <StringItem index="0" value="Grande"/>
-                    <StringItem index="1" value="Mediano"/>
-                    <StringItem index="2" value="Peque&#xf1;o"/>
-                  </StringArray>
-                </Property>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="null"/>
-                </Property>
-                <Property name="name" type="java.lang.String" value="ComboBoxEstado" noResource="true"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jComboBox19MouseMoved"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox19ActionPerformed"/>
-              </Events>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jComboBox19.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel27">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -1399,6 +1376,11 @@
                 <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jComboBox20.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextField1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jTextField1"/>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>

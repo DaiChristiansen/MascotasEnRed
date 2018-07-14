@@ -12,7 +12,6 @@ import javax.swing.DefaultListCellRenderer;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JList;
-import javax.swing.JTextField;
 
 /**
  *
@@ -89,10 +88,10 @@ public class Home extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
-        jComboBox19 = new javax.swing.JComboBox<>();
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         jComboBox20 = new javax.swing.JComboBox<>();
+        jTextField1 = new javax.swing.JTextField();
         PanelCargarDenunciante = new javax.swing.JPanel();
         jSeparator6 = new javax.swing.JSeparator();
         jLabel12 = new javax.swing.JLabel();
@@ -634,7 +633,7 @@ public class Home extends javax.swing.JFrame {
             .addComponent(jSeparator5, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
             .addGroup(PanelDenunciaMaltratoLayout.createSequentialGroup()
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 345, Short.MAX_VALUE))
         );
         PanelDenunciaMaltratoLayout.setVerticalGroup(
             PanelDenunciaMaltratoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -643,7 +642,7 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1254, Short.MAX_VALUE))
+                .addContainerGap(310, Short.MAX_VALUE))
         );
 
         PanelCrearAviso.setBackground(new java.awt.Color(230, 230, 230));
@@ -945,39 +944,6 @@ public class Home extends javax.swing.JFrame {
         jTable3.setShowVerticalLines(false);
         jScrollPane4.setViewportView(jTable3);
 
-        jComboBox19.setBackground(new java.awt.Color(230, 230, 230));
-        jComboBox19.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        jComboBox19.setForeground(new java.awt.Color(51, 51, 51));
-        jComboBox19.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Grande", "Mediano", "Pequeño" }));
-        jComboBox19.setBorder(null);
-        jComboBox19.setName("ComboBoxEstado"); // NOI18N
-        jComboBox19.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jComboBox19MouseMoved(evt);
-            }
-        });
-        jComboBox19.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox19ActionPerformed(evt);
-            }
-        });
-        jComboBox19.setRenderer(new DefaultListCellRenderer() {
-            public Component getListCellRendererComponent(
-                JList list, Object value, int index,
-                boolean isSelected, boolean hasFocus) {
-                JLabel label = (JLabel) super.getListCellRendererComponent(
-                    list, value, index, isSelected, hasFocus);
-                if (isSelected) {
-                    label.setForeground(Color.WHITE);
-                    label.setBackground(new java.awt.Color(61,0,112));
-                } else {
-                    label.setForeground(Color.BLACK);
-                    label.setBackground(Color.WHITE);
-                }
-                return label;
-            }
-        });
-
         jLabel27.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(61, 0, 112));
         jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -1021,6 +987,8 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
+        jTextField1.setText("jTextField1");
+
         javax.swing.GroupLayout PanelCrearAvisoLayout = new javax.swing.GroupLayout(PanelCrearAviso);
         PanelCrearAviso.setLayout(PanelCrearAvisoLayout);
         PanelCrearAvisoLayout.setHorizontalGroup(
@@ -1035,14 +1003,6 @@ public class Home extends javax.swing.JFrame {
                             .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
                                 .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelCrearAvisoLayout.createSequentialGroup()
-                                        .addComponent(jLabel22)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jComboBox14, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabel24)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jComboBox16, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelCrearAvisoLayout.createSequentialGroup()
                                         .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1050,14 +1010,26 @@ public class Home extends javax.swing.JFrame {
                                         .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jComboBox15, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
-                                        .addComponent(jLabel27)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jComboBox19, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelCrearAvisoLayout.createSequentialGroup()
+                                        .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
+                                                .addComponent(jLabel27)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jTextField1))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelCrearAvisoLayout.createSequentialGroup()
+                                                .addComponent(jLabel22)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jComboBox14, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabel28)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jComboBox20, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCrearAvisoLayout.createSequentialGroup()
+                                                .addComponent(jLabel24)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jComboBox16, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCrearAvisoLayout.createSequentialGroup()
+                                                .addComponent(jLabel28)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jComboBox20, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                                 .addGap(33, 33, 33)
                                 .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
@@ -1097,9 +1069,9 @@ public class Home extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel27)
-                            .addComponent(jComboBox19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel28)
-                            .addComponent(jComboBox20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jComboBox20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
                         .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel25)
@@ -1112,7 +1084,7 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(jButton3)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(299, Short.MAX_VALUE))
+                .addContainerGap(298, Short.MAX_VALUE))
         );
 
         PanelCargarDenunciante.setBackground(new java.awt.Color(230, 230, 230));
@@ -1509,14 +1481,6 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jComboBox19MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBox19MouseMoved
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox19MouseMoved
-
-    private void jComboBox19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox19ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox19ActionPerformed
-
     private void jComboBox20MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBox20MouseMoved
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox20MouseMoved
@@ -1525,7 +1489,7 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox20ActionPerformed
 
-    private void BtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGuardarActionPerformed
+    private void BtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {                                           
         
             String dni, nombre, apellido, dire, email;
             String sql = "";
@@ -1535,11 +1499,11 @@ public class Home extends javax.swing.JFrame {
             dire = jTextDireccion.getText();
             email = jTextEmail.getText();
         
-    }//GEN-LAST:event_BtnGuardarActionPerformed
+    }                                          
 
-    private void jTextDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextDireccionActionPerformed
+    private void jTextDireccionActionPerformed(java.awt.event.ActionEvent evt) {                                               
         jTextDireccion.transferFocus();
-    }//GEN-LAST:event_jTextDireccionActionPerformed
+    }                                              
 
     private void jTextDNIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextDNIActionPerformed
         jTextDNI.transferFocus();
@@ -1552,11 +1516,25 @@ public class Home extends javax.swing.JFrame {
     private void jTextApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextApellidoActionPerformed
         jTextApellido.transferFocus();
     }//GEN-LAST:event_jTextApellidoActionPerformed
-
+/*
+    private void jTextDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextDireccionActionPerformed
+        jTextDireccion.transferFocus();
+    }//GEN-LAST:event_jTextDireccionActionPerformed
+*/
     private void jTextEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextEmailActionPerformed
         jTextEmail.transferFocus();
     }//GEN-LAST:event_jTextEmailActionPerformed
-
+/*
+    private void BtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGuardarActionPerformed
+        String dni, nombre, apellido, dire, email;
+        String sql = "";
+        dni = jTextDNI.getText();
+        nombre = jTextNombre.getText();
+        apellido = jTextApellido.getText();
+        dire = jTextDireccion.getText();
+        email = jTextEmail.getText();
+    }//GEN-LAST:event_BtnGuardarActionPerformed
+*/
     private void BtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCancelarActionPerformed
         bloquear();
     }//GEN-LAST:event_BtnCancelarActionPerformed
@@ -1655,7 +1633,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox16;
     private javax.swing.JComboBox<String> jComboBox17;
     private javax.swing.JComboBox<String> jComboBox18;
-    private javax.swing.JComboBox<String> jComboBox19;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox20;
     private javax.swing.JComboBox<String> jComboBox3;
@@ -1699,6 +1676,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JTextField jTextDNI;
     private javax.swing.JTextField jTextDireccion;
     private javax.swing.JTextField jTextEmail;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextNombre;
     // End of variables declaration//GEN-END:variables
 
@@ -1711,8 +1689,9 @@ public class Home extends javax.swing.JFrame {
     }
     /*
     private void setCbColor(JComboBox cb) {
-        cb.setBackground(new Color(35,0,66));        
+        cb.setBackground(new Color(35, 0, 66));
     }
+
     private void resetCbColor(JComboBox cb) {
         cb.setBackground(new Color(88,30,138));        
     }*/

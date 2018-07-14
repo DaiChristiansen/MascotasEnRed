@@ -21,9 +21,10 @@ import javax.persistence.Query;
 public class main {
 
     // private static EntityManager manager;
-    private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
+    //private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
 
     public static void AgregarDenunciante() {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
         Denunciante nuevo = new Denunciante(4, "otro", "apellido", "Calle", "mail");
@@ -31,9 +32,9 @@ public class main {
         Denunciante nuevo2 = new Denunciante(3, "Mara", "Rodriguez", "tandil", "sitiene");
 
         try {
-            manager.merge(nuevo);
-            manager.merge(nuevo1);
-            manager.merge(nuevo2);
+           // manager.merge(nuevo);
+           // manager.merge(nuevo1);
+            //manager.merge(nuevo2);
             //nuevo1.setDenuncia(d);
             manager.persist(nuevo);
             manager.persist(nuevo1);
@@ -48,6 +49,7 @@ public class main {
     }
 
     public static void BuscarDenunciante() {
+       EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
         try {
@@ -63,6 +65,7 @@ public class main {
     }
 
     public static void ImprimirTodo() {
+       EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         Query query = manager.createQuery("SELECT e FROM Denunciante e");
 
@@ -77,6 +80,7 @@ public class main {
     }
 
     public static void RemoverDenunciante() {
+       EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
         try {
@@ -91,6 +95,7 @@ public class main {
     }
 
     public static void CambiarDenunciante() {
+       EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
         try {
@@ -105,7 +110,7 @@ public class main {
     }
 
     public static void main(String[] args) {
-        EntityManager manager = emf.createEntityManager();
+       // EntityManager manager = emf.createEntityManager();
         // Denunciante nuevo4 = new Denunciante(3, "Maria", "Perez", "Rauch 1589", "maria@perez");
         //Denuncia d = new Denuncia(1, "Extravio", localDateof(12, 05, 1999));
         // Telefono t= new Telefono(1,2225,459,"celular"); 

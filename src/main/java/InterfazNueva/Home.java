@@ -6,8 +6,13 @@
 package InterfazNueva;
 
 //import com.sun.awt.AWTUtilities;
+import com.unb001.mascotasenred.modelo.Denunciante;
 import java.awt.Color;
 import java.awt.Component;
+import javax.persistence.EntityExistsException;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -1353,13 +1358,26 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextEmailActionPerformed
 
     private void BtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGuardarActionPerformed
-        String dni, nombre, apellido, dire, email;
-        String sql = "";
-        dni = jTextDNI.getText();
+
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
+        EntityManager manager = emf.createEntityManager();
+        manager.getTransaction().begin();
+        String nombre, apellido, dire, email;
+        int dni = Integer.parseInt(jTextDNI.getText());
+        //dni = jTextDNI.getText();
         nombre = jTextNombre.getText();
         apellido = jTextApellido.getText();
         dire = jTextDireccion.getText();
         email = jTextEmail.getText();
+        Denunciante dn = new Denunciante(dni, nombre, apellido, dire, email);
+        try {
+           // manager.merge(nuevo5);
+            manager.persist(dn);
+            manager.getTransaction().commit();
+            manager.close();
+        } catch (EntityExistsException e) {
+            System.out.println("ya existe este dato");
+        }
     }//GEN-LAST:event_BtnGuardarActionPerformed
 
     private void BtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCancelarActionPerformed

@@ -5,7 +5,9 @@
  */
 package InterfazNueva;
 
+import com.unb001.mascotasenred.modelo.Denunciante;
 import java.sql.*;
+import javax.persistence.EntityExistsException;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -271,17 +273,35 @@ public class DenuncianteGrafica extends javax.swing.JPanel {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         //  Conectar cc = new Conectar();
         // Connection cn= cc. Conectar(); 
-        // EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
-        // EntityManager manager = emf.createEntityManager();
-        {
-            String dni, nom, apel, dir, ema;
-            String sql = "";
-            dni = t_dni.getText();
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
+         EntityManager manager = emf.createEntityManager();
+            String  nom, apel, dir, ema;
+            int dni  = Integer.parseInt(t_dni.getText()); 
+            //String sql = "";
+           // dni = t_dni.getText();
             nom = t_nom.getText();
             apel = t_apel.getText();
             dir = t_dir.getText();
             ema = t_ema.getText();
+            
+          Denunciante nuevo3 = new Denunciante(dni,nom,apel,dir,ema);
 
+        try {
+            manager.merge(nuevo3);
+           // manager.merge(nuevo1);
+           // manager.merge(nuevo2);
+            //nuevo1.setDenuncia(d);
+           manager.persist(nuevo3);
+            //manager.persist(nuevo1);
+            // manager.persist(d);
+          //  manager.persist(nuevo2);
+            manager.getTransaction().commit();
+            manager.close();
+            // emf.close();
+        } catch (EntityExistsException e) {
+            System.out.println("no ");
+        }
+    }
             /*
          sql= "INSERT INTRO Denunciante(dni, nombre, apellido, direccion, email)VALUES (?,?,?,?,?)";
          try {
@@ -301,7 +321,7 @@ public class DenuncianteGrafica extends javax.swing.JPanel {
 // TODO add your handling code here:
              */
     }//GEN-LAST:event_jButton7ActionPerformed
-    }
+    
     private void t_apelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t_apelActionPerformed
         t_apel.transferFocus();// TODO add your handling code here:
     }//GEN-LAST:event_t_apelActionPerformed

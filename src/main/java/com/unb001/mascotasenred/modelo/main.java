@@ -6,7 +6,7 @@
 package com.unb001.mascotasenred.modelo;
 
 //import java.time.LocalDate;
-import InterfazNueva.DenuncianteGrafica;
+
 import java.util.Collection;
 import java.util.Date;
 //import java.time.LocalDateTime;

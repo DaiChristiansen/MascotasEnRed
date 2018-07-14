@@ -125,9 +125,9 @@ public class mainCaro {
     }
 
     public static void main(String[] args) {
-        Mascota mascota1 = new Mascota (1,"otto","perro","otro","negro","ninguna","pequeño","zona","perdido");
-        Denunciante denunciante1 = new Denunciante(111, "caro", "copes", "ffff", "4444");
-        Denunciante denunciante2 = new Denunciante(222, "maria", "rivas", "gggg", "5555");
+        Mascota mascota1 = new Mascota (10,"otto","perro","otro","negro","ninguna","pequeño","zona","perdido");
+        Denunciante denunciante1 = new Denunciante(1, "caro", "copes", "ffff", "4444");
+        Denunciante denunciante2 = new Denunciante(2, "maria", "rivas", "gggg", "5555");
         // Telefono telefono1 = new Telefono(1, 249, 4012272, "M", denunciante1.getDni());
         // List<Telefono> d1Telefono = new ArrayList<>();
         // d1Telefono.add(telefono1);

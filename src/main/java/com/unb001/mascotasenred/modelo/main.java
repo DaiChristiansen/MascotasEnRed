@@ -12,6 +12,7 @@ import java.util.Date;
 //import java.time.LocalDateTime;
 //import static java.time.temporal.TemporalQueries.localDate;
 import java.util.List;
+import javax.lang.model.UnknownEntityException;
 import javax.persistence.EntityExistsException;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -27,7 +28,7 @@ public class main {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
-        Denunciante nuevo = new Denunciante(4, "otro", "apellido", "Calle", "mail");
+        Denunciante nuevo = new Denunciante(6, "otro", "apellido", "Calle", "mail");
         Denunciante nuevo1 = new Denunciante(5, "Marisa", "Reser", "Nigro", "Nose");
         Denunciante nuevo2 = new Denunciante(3, "Mara", "Rodriguez", "tandil", "sitiene");
 
@@ -89,7 +90,7 @@ public class main {
             manager.getTransaction().commit();
             manager.close();
             //emf.close();
-        } catch (EntityExistsException e) {
+        } catch (IllegalArgumentException e) {
             System.out.println("error en remover");
         }
     }
@@ -126,10 +127,12 @@ public class main {
         // } catch (EntityExistsException e) {
         // System.out.println("no se agrego");
 
-        AgregarDenunciante();
+      //  AgregarDenunciante();
+      //  ImprimirTodo();
+      //  BuscarDenunciante();
+      //  CambiarDenunciante();
         ImprimirTodo();
-        BuscarDenunciante();
-        CambiarDenunciante();
+        RemoverDenunciante();
         ImprimirTodo();
 
         // DenuncianteGrafica dg= new DenuncianteGrafica();  

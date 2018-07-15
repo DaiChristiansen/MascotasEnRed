@@ -9,6 +9,7 @@ package InterfazNueva;
 import com.unb001.mascotasenred.modelo.Denunciante;
 import java.awt.Color;
 import java.awt.Component;
+import java.awt.event.ActionEvent;
 import javax.persistence.EntityExistsException;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -54,21 +55,22 @@ public class Home extends javax.swing.JFrame {
         PanelBuscarMascota = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
-        buscarmascotaestado = new javax.swing.JComboBox<>();
+        jCBEstadoBuscarMascota = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        jCBTamañoBuscarMascota = new javax.swing.JComboBox<>();
         jLabel8 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        jCBTipoBuscarMascota = new javax.swing.JComboBox<>();
         jLabel9 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        jCBColorBuscarMascota = new javax.swing.JComboBox<>();
         jLabel10 = new javax.swing.JLabel();
-        jComboBox5 = new javax.swing.JComboBox<>();
-        jComboBox6 = new javax.swing.JComboBox<>();
+        jCBRazaBuscarMascota = new javax.swing.JComboBox<>();
+        jCBZonaBuscarMascota = new javax.swing.JComboBox<>();
         jLabel11 = new javax.swing.JLabel();
         BtnBuscar = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        BotonCerrar = new javax.swing.JButton();
         PanelRegistrarMascota = new javax.swing.JPanel();
         jSeparator4 = new javax.swing.JSeparator();
         jLabel4 = new javax.swing.JLabel();
@@ -78,25 +80,27 @@ public class Home extends javax.swing.JFrame {
         PanelCrearAviso = new javax.swing.JPanel();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
-        jComboBox13 = new javax.swing.JComboBox<>();
+        jCBEstadoCrearAviso = new javax.swing.JComboBox<>();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
-        jComboBox14 = new javax.swing.JComboBox<>();
+        jCBTamañoCrearAviso = new javax.swing.JComboBox<>();
         jLabel23 = new javax.swing.JLabel();
-        jComboBox15 = new javax.swing.JComboBox<>();
+        jCBTipoCrearAviso = new javax.swing.JComboBox<>();
         jLabel24 = new javax.swing.JLabel();
-        jComboBox16 = new javax.swing.JComboBox<>();
+        jCBColorCrearAviso = new javax.swing.JComboBox<>();
         jLabel25 = new javax.swing.JLabel();
-        jComboBox17 = new javax.swing.JComboBox<>();
-        jComboBox18 = new javax.swing.JComboBox<>();
+        jCBRazaCrearAviso = new javax.swing.JComboBox<>();
+        jCBZonaCrearAviso = new javax.swing.JComboBox<>();
         jLabel26 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
-        jComboBox20 = new javax.swing.JComboBox<>();
-        jTextField1 = new javax.swing.JTextField();
+        jTextNombreCrearAviso = new javax.swing.JTextField();
+        jTextCaractCrearAviso = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
+        jCBDenuncianteCrearAviso = new javax.swing.JComboBox<>();
         PanelCargarDenunciante = new javax.swing.JPanel();
         jSeparator6 = new javax.swing.JSeparator();
         jLabel12 = new javax.swing.JLabel();
@@ -104,14 +108,16 @@ public class Home extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         BtnGuardar = new javax.swing.JButton();
-        jTextDNI = new javax.swing.JTextField();
-        jTextNombre = new javax.swing.JTextField();
-        jTextApellido = new javax.swing.JTextField();
+        jTextDNICargarDenunciante = new javax.swing.JTextField();
+        jTextNombreCargarDenunciante = new javax.swing.JTextField();
+        jTextApellidoCargarDenunciante = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
-        jTextDireccion = new javax.swing.JTextField();
+        jTextDireccionCargarDenunciante = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
-        jTextEmail = new javax.swing.JTextField();
+        jTextTelCargarDenunciante = new javax.swing.JTextField();
         BtnCancelar = new javax.swing.JButton();
+        jLabel29 = new javax.swing.JLabel();
+        jTextEmailCargarDenunciante = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -232,18 +238,18 @@ public class Home extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(61, 0, 112));
         jLabel1.setText(" > Buscar Mascota");
 
-        buscarmascotaestado.setBackground(new java.awt.Color(230, 230, 230));
-        buscarmascotaestado.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        buscarmascotaestado.setForeground(new java.awt.Color(51, 51, 51));
-        buscarmascotaestado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Perdido", "Encontrado", "Adopción", "Registrado" }));
-        buscarmascotaestado.setBorder(null);
-        buscarmascotaestado.setName("ComboBoxEstado"); // NOI18N
-        buscarmascotaestado.addActionListener(new java.awt.event.ActionListener() {
+        jCBEstadoBuscarMascota.setBackground(new java.awt.Color(230, 230, 230));
+        jCBEstadoBuscarMascota.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        jCBEstadoBuscarMascota.setForeground(new java.awt.Color(51, 51, 51));
+        jCBEstadoBuscarMascota.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Perdido", "Encontrado", "Adopción", "Registrado" }));
+        jCBEstadoBuscarMascota.setBorder(null);
+        jCBEstadoBuscarMascota.setName("ComboBoxEstado"); // NOI18N
+        jCBEstadoBuscarMascota.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buscarmascotaestadoActionPerformed(evt);
+                jCBEstadoBuscarMascotaActionPerformed(evt);
             }
         });
-        buscarmascotaestado.setRenderer(new DefaultListCellRenderer() {
+        jCBEstadoBuscarMascota.setRenderer(new DefaultListCellRenderer() {
             public Component getListCellRendererComponent(
                 JList list, Object value, int index,
                 boolean isSelected, boolean hasFocus) {
@@ -270,18 +276,18 @@ public class Home extends javax.swing.JFrame {
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel7.setText("Tamaño");
 
-        jComboBox2.setBackground(new java.awt.Color(230, 230, 230));
-        jComboBox2.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        jComboBox2.setForeground(new java.awt.Color(51, 51, 51));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Grande", "Mediano", "Pequeño" }));
-        jComboBox2.setBorder(null);
-        jComboBox2.setName("ComboBoxEstado"); // NOI18N
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+        jCBTamañoBuscarMascota.setBackground(new java.awt.Color(230, 230, 230));
+        jCBTamañoBuscarMascota.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        jCBTamañoBuscarMascota.setForeground(new java.awt.Color(51, 51, 51));
+        jCBTamañoBuscarMascota.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Grande", "Mediano", "Pequeño" }));
+        jCBTamañoBuscarMascota.setBorder(null);
+        jCBTamañoBuscarMascota.setName("ComboBoxEstado"); // NOI18N
+        jCBTamañoBuscarMascota.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
+                jCBTamañoBuscarMascotaActionPerformed(evt);
             }
         });
-        jComboBox2.setRenderer(new DefaultListCellRenderer() {
+        jCBTamañoBuscarMascota.setRenderer(new DefaultListCellRenderer() {
             public Component getListCellRendererComponent(
                 JList list, Object value, int index,
                 boolean isSelected, boolean hasFocus) {
@@ -303,23 +309,23 @@ public class Home extends javax.swing.JFrame {
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel8.setText("Tipo");
 
-        jComboBox3.setBackground(new java.awt.Color(230, 230, 230));
-        jComboBox3.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        jComboBox3.setForeground(new java.awt.Color(51, 51, 51));
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gato", "Perro", "Conejo", "Tortuga", "Otro" }));
-        jComboBox3.setBorder(null);
-        jComboBox3.setName("ComboBoxEstado"); // NOI18N
-        jComboBox3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        jCBTipoBuscarMascota.setBackground(new java.awt.Color(230, 230, 230));
+        jCBTipoBuscarMascota.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        jCBTipoBuscarMascota.setForeground(new java.awt.Color(51, 51, 51));
+        jCBTipoBuscarMascota.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gato", "Perro", "Conejo", "Tortuga", "Otro" }));
+        jCBTipoBuscarMascota.setBorder(null);
+        jCBTipoBuscarMascota.setName("ComboBoxEstado"); // NOI18N
+        jCBTipoBuscarMascota.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jComboBox3MouseMoved(evt);
+                jCBTipoBuscarMascotaMouseMoved(evt);
             }
         });
-        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+        jCBTipoBuscarMascota.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox3ActionPerformed(evt);
+                jCBTipoBuscarMascotaActionPerformed(evt);
             }
         });
-        jComboBox3.setRenderer(new DefaultListCellRenderer() {
+        jCBTipoBuscarMascota.setRenderer(new DefaultListCellRenderer() {
             public Component getListCellRendererComponent(
                 JList list, Object value, int index,
                 boolean isSelected, boolean hasFocus) {
@@ -341,23 +347,23 @@ public class Home extends javax.swing.JFrame {
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel9.setText("Color");
 
-        jComboBox4.setBackground(new java.awt.Color(230, 230, 230));
-        jComboBox4.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        jComboBox4.setForeground(new java.awt.Color(51, 51, 51));
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Negro", "Blanco", "Marrón Oscuro", "Marrón claro", "Otro" }));
-        jComboBox4.setBorder(null);
-        jComboBox4.setName("ComboBoxEstado"); // NOI18N
-        jComboBox4.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        jCBColorBuscarMascota.setBackground(new java.awt.Color(230, 230, 230));
+        jCBColorBuscarMascota.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        jCBColorBuscarMascota.setForeground(new java.awt.Color(51, 51, 51));
+        jCBColorBuscarMascota.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Negro", "Blanco", "Marrón Oscuro", "Marrón claro", "Otro" }));
+        jCBColorBuscarMascota.setBorder(null);
+        jCBColorBuscarMascota.setName("ComboBoxEstado"); // NOI18N
+        jCBColorBuscarMascota.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jComboBox4MouseMoved(evt);
+                jCBColorBuscarMascotaMouseMoved(evt);
             }
         });
-        jComboBox4.addActionListener(new java.awt.event.ActionListener() {
+        jCBColorBuscarMascota.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox4ActionPerformed(evt);
+                jCBColorBuscarMascotaActionPerformed(evt);
             }
         });
-        jComboBox4.setRenderer(new DefaultListCellRenderer() {
+        jCBColorBuscarMascota.setRenderer(new DefaultListCellRenderer() {
             public Component getListCellRendererComponent(
                 JList list, Object value, int index,
                 boolean isSelected, boolean hasFocus) {
@@ -379,23 +385,23 @@ public class Home extends javax.swing.JFrame {
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel10.setText("Raza");
 
-        jComboBox5.setBackground(new java.awt.Color(230, 230, 230));
-        jComboBox5.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        jComboBox5.setForeground(new java.awt.Color(51, 51, 51));
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Coli", "Caniche" }));
-        jComboBox5.setBorder(null);
-        jComboBox5.setName("ComboBoxEstado"); // NOI18N
-        jComboBox5.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        jCBRazaBuscarMascota.setBackground(new java.awt.Color(230, 230, 230));
+        jCBRazaBuscarMascota.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        jCBRazaBuscarMascota.setForeground(new java.awt.Color(51, 51, 51));
+        jCBRazaBuscarMascota.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Coli", "Caniche" }));
+        jCBRazaBuscarMascota.setBorder(null);
+        jCBRazaBuscarMascota.setName("ComboBoxEstado"); // NOI18N
+        jCBRazaBuscarMascota.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jComboBox5MouseMoved(evt);
+                jCBRazaBuscarMascotaMouseMoved(evt);
             }
         });
-        jComboBox5.addActionListener(new java.awt.event.ActionListener() {
+        jCBRazaBuscarMascota.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox5ActionPerformed(evt);
+                jCBRazaBuscarMascotaActionPerformed(evt);
             }
         });
-        jComboBox5.setRenderer(new DefaultListCellRenderer() {
+        jCBRazaBuscarMascota.setRenderer(new DefaultListCellRenderer() {
             public Component getListCellRendererComponent(
                 JList list, Object value, int index,
                 boolean isSelected, boolean hasFocus) {
@@ -412,23 +418,23 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jComboBox6.setBackground(new java.awt.Color(230, 230, 230));
-        jComboBox6.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        jComboBox6.setForeground(new java.awt.Color(51, 51, 51));
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Villa Italia", "Villa Aguirre", "Otro" }));
-        jComboBox6.setBorder(null);
-        jComboBox6.setName("ComboBoxEstado"); // NOI18N
-        jComboBox6.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        jCBZonaBuscarMascota.setBackground(new java.awt.Color(230, 230, 230));
+        jCBZonaBuscarMascota.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        jCBZonaBuscarMascota.setForeground(new java.awt.Color(51, 51, 51));
+        jCBZonaBuscarMascota.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Villa Italia", "Villa Aguirre", "Otro" }));
+        jCBZonaBuscarMascota.setBorder(null);
+        jCBZonaBuscarMascota.setName("ComboBoxEstado"); // NOI18N
+        jCBZonaBuscarMascota.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jComboBox6MouseMoved(evt);
+                jCBZonaBuscarMascotaMouseMoved(evt);
             }
         });
-        jComboBox6.addActionListener(new java.awt.event.ActionListener() {
+        jCBZonaBuscarMascota.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox6ActionPerformed(evt);
+                jCBZonaBuscarMascotaActionPerformed(evt);
             }
         });
-        jComboBox6.setRenderer(new DefaultListCellRenderer() {
+        jCBZonaBuscarMascota.setRenderer(new DefaultListCellRenderer() {
             public Component getListCellRendererComponent(
                 JList list, Object value, int index,
                 boolean isSelected, boolean hasFocus) {
@@ -508,6 +514,16 @@ public class Home extends javax.swing.JFrame {
         jTable1.setShowVerticalLines(false);
         jScrollPane2.setViewportView(jTable1);
 
+        BotonCerrar.setBackground(new java.awt.Color(61, 0, 112));
+        BotonCerrar.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        BotonCerrar.setForeground(new java.awt.Color(255, 255, 255));
+        BotonCerrar.setText("X");
+        BotonCerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonCerrarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PanelBuscarMascotaLayout = new javax.swing.GroupLayout(PanelBuscarMascota);
         PanelBuscarMascota.setLayout(PanelBuscarMascotaLayout);
         PanelBuscarMascotaLayout.setHorizontalGroup(
@@ -524,38 +540,43 @@ public class Home extends javax.swing.JFrame {
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelBuscarMascotaLayout.createSequentialGroup()
                                         .addComponent(jLabel7)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jCBTamañoBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jLabel9)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jCBColorBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelBuscarMascotaLayout.createSequentialGroup()
                                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(buscarmascotaestado, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jCBEstadoBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(35, 35, 35)
                                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(jCBTipoBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(33, 33, 33)
                                 .addGroup(PanelBuscarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(PanelBuscarMascotaLayout.createSequentialGroup()
                                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jCBRazaBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(PanelBuscarMascotaLayout.createSequentialGroup()
                                         .addComponent(jLabel11)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jCBZonaBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(BtnBuscar)))
                             .addComponent(jScrollPane2))
-                        .addGap(0, 17, Short.MAX_VALUE)))
+                        .addGap(0, 39, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBuscarMascotaLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BotonCerrar)
+                .addGap(55, 55, 55))
         );
         PanelBuscarMascotaLayout.setVerticalGroup(
             PanelBuscarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelBuscarMascotaLayout.createSequentialGroup()
-                .addGap(68, 68, 68)
+                .addComponent(BotonCerrar)
+                .addGap(45, 45, 45)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 1, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -564,28 +585,28 @@ public class Home extends javax.swing.JFrame {
                     .addGroup(PanelBuscarMascotaLayout.createSequentialGroup()
                         .addGroup(PanelBuscarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6)
-                            .addComponent(buscarmascotaestado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCBEstadoBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel8)
-                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jCBTipoBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PanelBuscarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7)
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCBTamañoBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel9)
-                            .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jCBColorBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(PanelBuscarMascotaLayout.createSequentialGroup()
                         .addGroup(PanelBuscarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel10)
-                            .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jCBRazaBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PanelBuscarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel11)
-                            .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jCBZonaBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BtnBuscar)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(325, Short.MAX_VALUE))
+                .addContainerGap(295, Short.MAX_VALUE))
         );
 
         PanelRegistrarMascota.setBackground(new java.awt.Color(230, 230, 230));
@@ -607,7 +628,7 @@ public class Home extends javax.swing.JFrame {
             .addComponent(jSeparator4)
             .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 677, Short.MAX_VALUE))
+                .addGap(0, 418, Short.MAX_VALUE))
         );
         PanelRegistrarMascotaLayout.setVerticalGroup(
             PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -616,7 +637,7 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1254, Short.MAX_VALUE))
+                .addContainerGap(310, Short.MAX_VALUE))
         );
 
         PanelDenunciaMaltrato.setBackground(new java.awt.Color(230, 230, 230));
@@ -663,23 +684,23 @@ public class Home extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(61, 0, 112));
         jLabel2.setText(" > Crear Aviso");
 
-        jComboBox13.setBackground(new java.awt.Color(230, 230, 230));
-        jComboBox13.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        jComboBox13.setForeground(new java.awt.Color(51, 51, 51));
-        jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Perdido", "Encontrado", "Adopción", "Registrado" }));
-        jComboBox13.setBorder(null);
-        jComboBox13.setName("ComboBoxEstado"); // NOI18N
-        jComboBox13.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        jCBEstadoCrearAviso.setBackground(new java.awt.Color(230, 230, 230));
+        jCBEstadoCrearAviso.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        jCBEstadoCrearAviso.setForeground(new java.awt.Color(51, 51, 51));
+        jCBEstadoCrearAviso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Perdido", "Encontrado", "Adopción", "Registrado" }));
+        jCBEstadoCrearAviso.setBorder(null);
+        jCBEstadoCrearAviso.setName("ComboBoxEstado"); // NOI18N
+        jCBEstadoCrearAviso.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jComboBox13MouseMoved(evt);
+                jCBEstadoCrearAvisoMouseMoved(evt);
             }
         });
-        jComboBox13.addActionListener(new java.awt.event.ActionListener() {
+        jCBEstadoCrearAviso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox13ActionPerformed(evt);
+                jCBEstadoCrearAvisoActionPerformed(evt);
             }
         });
-        jComboBox13.setRenderer(new DefaultListCellRenderer() {
+        jCBEstadoCrearAviso.setRenderer(new DefaultListCellRenderer() {
             public Component getListCellRendererComponent(
                 JList list, Object value, int index,
                 boolean isSelected, boolean hasFocus) {
@@ -706,23 +727,23 @@ public class Home extends javax.swing.JFrame {
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel22.setText("Tamaño");
 
-        jComboBox14.setBackground(new java.awt.Color(230, 230, 230));
-        jComboBox14.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        jComboBox14.setForeground(new java.awt.Color(51, 51, 51));
-        jComboBox14.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Grande", "Mediano", "Pequeño" }));
-        jComboBox14.setBorder(null);
-        jComboBox14.setName("ComboBoxEstado"); // NOI18N
-        jComboBox14.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        jCBTamañoCrearAviso.setBackground(new java.awt.Color(230, 230, 230));
+        jCBTamañoCrearAviso.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        jCBTamañoCrearAviso.setForeground(new java.awt.Color(51, 51, 51));
+        jCBTamañoCrearAviso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Grande", "Mediano", "Pequeño" }));
+        jCBTamañoCrearAviso.setBorder(null);
+        jCBTamañoCrearAviso.setName("ComboBoxEstado"); // NOI18N
+        jCBTamañoCrearAviso.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jComboBox14MouseMoved(evt);
+                jCBTamañoCrearAvisoMouseMoved(evt);
             }
         });
-        jComboBox14.addActionListener(new java.awt.event.ActionListener() {
+        jCBTamañoCrearAviso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox14ActionPerformed(evt);
+                jCBTamañoCrearAvisoActionPerformed(evt);
             }
         });
-        jComboBox14.setRenderer(new DefaultListCellRenderer() {
+        jCBTamañoCrearAviso.setRenderer(new DefaultListCellRenderer() {
             public Component getListCellRendererComponent(
                 JList list, Object value, int index,
                 boolean isSelected, boolean hasFocus) {
@@ -744,23 +765,23 @@ public class Home extends javax.swing.JFrame {
         jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel23.setText("Tipo");
 
-        jComboBox15.setBackground(new java.awt.Color(230, 230, 230));
-        jComboBox15.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        jComboBox15.setForeground(new java.awt.Color(51, 51, 51));
-        jComboBox15.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gato", "Perro", "Conejo", "Tortuga", "Otro" }));
-        jComboBox15.setBorder(null);
-        jComboBox15.setName("ComboBoxEstado"); // NOI18N
-        jComboBox15.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        jCBTipoCrearAviso.setBackground(new java.awt.Color(230, 230, 230));
+        jCBTipoCrearAviso.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        jCBTipoCrearAviso.setForeground(new java.awt.Color(51, 51, 51));
+        jCBTipoCrearAviso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gato", "Perro", "Conejo", "Tortuga", "Otro" }));
+        jCBTipoCrearAviso.setBorder(null);
+        jCBTipoCrearAviso.setName("ComboBoxEstado"); // NOI18N
+        jCBTipoCrearAviso.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jComboBox15MouseMoved(evt);
+                jCBTipoCrearAvisoMouseMoved(evt);
             }
         });
-        jComboBox15.addActionListener(new java.awt.event.ActionListener() {
+        jCBTipoCrearAviso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox15ActionPerformed(evt);
+                jCBTipoCrearAvisoActionPerformed(evt);
             }
         });
-        jComboBox15.setRenderer(new DefaultListCellRenderer() {
+        jCBTipoCrearAviso.setRenderer(new DefaultListCellRenderer() {
             public Component getListCellRendererComponent(
                 JList list, Object value, int index,
                 boolean isSelected, boolean hasFocus) {
@@ -782,23 +803,23 @@ public class Home extends javax.swing.JFrame {
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel24.setText("Color");
 
-        jComboBox16.setBackground(new java.awt.Color(230, 230, 230));
-        jComboBox16.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        jComboBox16.setForeground(new java.awt.Color(51, 51, 51));
-        jComboBox16.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Negro", "Blanco", "Marrón Oscuro", "Marrón claro", "Otro" }));
-        jComboBox16.setBorder(null);
-        jComboBox16.setName("ComboBoxEstado"); // NOI18N
-        jComboBox16.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        jCBColorCrearAviso.setBackground(new java.awt.Color(230, 230, 230));
+        jCBColorCrearAviso.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        jCBColorCrearAviso.setForeground(new java.awt.Color(51, 51, 51));
+        jCBColorCrearAviso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Negro", "Blanco", "Marrón Oscuro", "Marrón claro", "Otro" }));
+        jCBColorCrearAviso.setBorder(null);
+        jCBColorCrearAviso.setName("ComboBoxEstado"); // NOI18N
+        jCBColorCrearAviso.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jComboBox16MouseMoved(evt);
+                jCBColorCrearAvisoMouseMoved(evt);
             }
         });
-        jComboBox16.addActionListener(new java.awt.event.ActionListener() {
+        jCBColorCrearAviso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox16ActionPerformed(evt);
+                jCBColorCrearAvisoActionPerformed(evt);
             }
         });
-        jComboBox16.setRenderer(new DefaultListCellRenderer() {
+        jCBColorCrearAviso.setRenderer(new DefaultListCellRenderer() {
             public Component getListCellRendererComponent(
                 JList list, Object value, int index,
                 boolean isSelected, boolean hasFocus) {
@@ -820,23 +841,23 @@ public class Home extends javax.swing.JFrame {
         jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel25.setText("Raza");
 
-        jComboBox17.setBackground(new java.awt.Color(230, 230, 230));
-        jComboBox17.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        jComboBox17.setForeground(new java.awt.Color(51, 51, 51));
-        jComboBox17.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Coli", "Caniche" }));
-        jComboBox17.setBorder(null);
-        jComboBox17.setName("ComboBoxEstado"); // NOI18N
-        jComboBox17.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        jCBRazaCrearAviso.setBackground(new java.awt.Color(230, 230, 230));
+        jCBRazaCrearAviso.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        jCBRazaCrearAviso.setForeground(new java.awt.Color(51, 51, 51));
+        jCBRazaCrearAviso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Coli", "Caniche" }));
+        jCBRazaCrearAviso.setBorder(null);
+        jCBRazaCrearAviso.setName("ComboBoxEstado"); // NOI18N
+        jCBRazaCrearAviso.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jComboBox17MouseMoved(evt);
+                jCBRazaCrearAvisoMouseMoved(evt);
             }
         });
-        jComboBox17.addActionListener(new java.awt.event.ActionListener() {
+        jCBRazaCrearAviso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox17ActionPerformed(evt);
+                jCBRazaCrearAvisoActionPerformed(evt);
             }
         });
-        jComboBox17.setRenderer(new DefaultListCellRenderer() {
+        jCBRazaCrearAviso.setRenderer(new DefaultListCellRenderer() {
             public Component getListCellRendererComponent(
                 JList list, Object value, int index,
                 boolean isSelected, boolean hasFocus) {
@@ -853,23 +874,23 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jComboBox18.setBackground(new java.awt.Color(230, 230, 230));
-        jComboBox18.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        jComboBox18.setForeground(new java.awt.Color(51, 51, 51));
-        jComboBox18.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Villa Italia", "Villa Aguirre", "Otro" }));
-        jComboBox18.setBorder(null);
-        jComboBox18.setName("ComboBoxEstado"); // NOI18N
-        jComboBox18.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        jCBZonaCrearAviso.setBackground(new java.awt.Color(230, 230, 230));
+        jCBZonaCrearAviso.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        jCBZonaCrearAviso.setForeground(new java.awt.Color(51, 51, 51));
+        jCBZonaCrearAviso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Villa Italia", "Villa Aguirre", "Otro" }));
+        jCBZonaCrearAviso.setBorder(null);
+        jCBZonaCrearAviso.setName("ComboBoxEstado"); // NOI18N
+        jCBZonaCrearAviso.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jComboBox18MouseMoved(evt);
+                jCBZonaCrearAvisoMouseMoved(evt);
             }
         });
-        jComboBox18.addActionListener(new java.awt.event.ActionListener() {
+        jCBZonaCrearAviso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox18ActionPerformed(evt);
+                jCBZonaCrearAvisoActionPerformed(evt);
             }
         });
-        jComboBox18.setRenderer(new DefaultListCellRenderer() {
+        jCBZonaCrearAviso.setRenderer(new DefaultListCellRenderer() {
             public Component getListCellRendererComponent(
                 JList list, Object value, int index,
                 boolean isSelected, boolean hasFocus) {
@@ -959,23 +980,28 @@ public class Home extends javax.swing.JFrame {
         jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel28.setText("Caract.");
 
-        jComboBox20.setBackground(new java.awt.Color(230, 230, 230));
-        jComboBox20.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        jComboBox20.setForeground(new java.awt.Color(51, 51, 51));
-        jComboBox20.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Negro", "Blanco", "Marrón Oscuro", "Marrón claro", "Otro" }));
-        jComboBox20.setBorder(null);
-        jComboBox20.setName("ComboBoxEstado"); // NOI18N
-        jComboBox20.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        jLabel30.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(61, 0, 112));
+        jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel30.setText("Denunciante");
+
+        jCBDenuncianteCrearAviso.setBackground(new java.awt.Color(230, 230, 230));
+        jCBDenuncianteCrearAviso.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        jCBDenuncianteCrearAviso.setForeground(new java.awt.Color(51, 51, 51));
+        jCBDenuncianteCrearAviso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Carolina", "Marisa", "Manuel", "Carlos", "Facundo", "Daiana" }));
+        jCBDenuncianteCrearAviso.setBorder(null);
+        jCBDenuncianteCrearAviso.setName("ComboBoxEstado"); // NOI18N
+        jCBDenuncianteCrearAviso.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jComboBox20MouseMoved(evt);
+                jCBDenuncianteCrearAvisoMouseMoved(evt);
             }
         });
-        jComboBox20.addActionListener(new java.awt.event.ActionListener() {
+        jCBDenuncianteCrearAviso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox20ActionPerformed(evt);
+                jCBDenuncianteCrearAvisoActionPerformed(evt);
             }
         });
-        jComboBox20.setRenderer(new DefaultListCellRenderer() {
+        jCBZonaCrearAviso.setRenderer(new DefaultListCellRenderer() {
             public Component getListCellRendererComponent(
                 JList list, Object value, int index,
                 boolean isSelected, boolean hasFocus) {
@@ -991,8 +1017,6 @@ public class Home extends javax.swing.JFrame {
                 return label;
             }
         });
-
-        jTextField1.setText("jTextField1");
 
         javax.swing.GroupLayout PanelCrearAvisoLayout = new javax.swing.GroupLayout(PanelCrearAviso);
         PanelCrearAviso.setLayout(PanelCrearAvisoLayout);
@@ -1010,42 +1034,46 @@ public class Home extends javax.swing.JFrame {
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelCrearAvisoLayout.createSequentialGroup()
                                         .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jCBEstadoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(35, 35, 35)
                                         .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jComboBox15, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jCBTipoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelCrearAvisoLayout.createSequentialGroup()
                                         .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                             .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
                                                 .addComponent(jLabel27)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextField1))
+                                                .addComponent(jTextNombreCrearAviso))
                                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelCrearAvisoLayout.createSequentialGroup()
                                                 .addComponent(jLabel22)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jComboBox14, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(jCBTamañoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCrearAvisoLayout.createSequentialGroup()
                                                 .addComponent(jLabel24)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jComboBox16, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(jCBColorCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCrearAvisoLayout.createSequentialGroup()
                                                 .addComponent(jLabel28)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jComboBox20, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                                .addComponent(jTextCaractCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                                 .addGap(33, 33, 33)
                                 .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
                                         .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jCBRazaCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
                                         .addComponent(jLabel26)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jButton3)))
+                                        .addComponent(jCBZonaCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jButton3)
+                                    .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
+                                        .addComponent(jLabel30)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jCBDenuncianteCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addComponent(jScrollPane4))
                         .addGap(0, 17, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -1062,34 +1090,38 @@ public class Home extends javax.swing.JFrame {
                     .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
                         .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel21)
-                            .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCBEstadoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel23)
-                            .addComponent(jComboBox15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jCBTipoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel22)
-                            .addComponent(jComboBox14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCBTamañoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel24)
-                            .addComponent(jComboBox16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jCBColorCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel27)
                             .addComponent(jLabel28)
-                            .addComponent(jComboBox20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jTextNombreCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextCaractCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
                         .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel25)
-                            .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jCBRazaCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel26)
-                            .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jCBZonaCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel30)
+                            .addComponent(jCBDenuncianteCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton3)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(298, Short.MAX_VALUE))
+                .addContainerGap(277, Short.MAX_VALUE))
         );
 
         PanelCargarDenunciante.setBackground(new java.awt.Color(230, 230, 230));
@@ -1132,21 +1164,21 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jTextDNI.addActionListener(new java.awt.event.ActionListener() {
+        jTextDNICargarDenunciante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextDNIActionPerformed(evt);
+                jTextDNICargarDenuncianteActionPerformed(evt);
             }
         });
 
-        jTextNombre.addActionListener(new java.awt.event.ActionListener() {
+        jTextNombreCargarDenunciante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextNombreActionPerformed(evt);
+                jTextNombreCargarDenuncianteActionPerformed(evt);
             }
         });
 
-        jTextApellido.addActionListener(new java.awt.event.ActionListener() {
+        jTextApellidoCargarDenunciante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextApellidoActionPerformed(evt);
+                jTextApellidoCargarDenuncianteActionPerformed(evt);
             }
         });
 
@@ -1155,20 +1187,20 @@ public class Home extends javax.swing.JFrame {
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel19.setText("Direccion");
 
-        jTextDireccion.addActionListener(new java.awt.event.ActionListener() {
+        jTextDireccionCargarDenunciante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextDireccionActionPerformed(evt);
+                jTextDireccionCargarDenuncianteActionPerformed(evt);
             }
         });
 
         jLabel20.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(61, 0, 112));
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel20.setText("Email");
+        jLabel20.setText("Tel");
 
-        jTextEmail.addActionListener(new java.awt.event.ActionListener() {
+        jTextTelCargarDenunciante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextEmailActionPerformed(evt);
+                jTextTelCargarDenuncianteActionPerformed(evt);
             }
         });
 
@@ -1181,6 +1213,17 @@ public class Home extends javax.swing.JFrame {
         BtnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnCancelarActionPerformed(evt);
+            }
+        });
+
+        jLabel29.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(61, 0, 112));
+        jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel29.setText("Email");
+
+        jTextEmailCargarDenunciante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextEmailCargarDenuncianteActionPerformed(evt);
             }
         });
 
@@ -1199,25 +1242,31 @@ public class Home extends javax.swing.JFrame {
                                     .addGroup(PanelCargarDenuncianteLayout.createSequentialGroup()
                                         .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jTextDNI, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextDNICargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jTextNombreCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(PanelCargarDenuncianteLayout.createSequentialGroup()
                                         .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextDireccionCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(jTextTelCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(33, 33, 33)
-                                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(PanelCargarDenuncianteLayout.createSequentialGroup()
+                                        .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextApellidoCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(PanelCargarDenuncianteLayout.createSequentialGroup()
+                                        .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextEmailCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 42, Short.MAX_VALUE))
+                        .addGap(0, 64, Short.MAX_VALUE))
                     .addGroup(PanelCargarDenuncianteLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(BtnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1239,22 +1288,25 @@ public class Home extends javax.swing.JFrame {
                         .addGroup(PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel13)
                             .addComponent(jLabel15)
-                            .addComponent(jTextDNI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextDNICargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextNombreCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel19)
                             .addComponent(jLabel20)
-                            .addComponent(jTextDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jTextDireccionCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextTelCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel29)
+                                .addComponent(jTextEmailCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel17)
-                        .addComponent(jTextApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(15, 15, 15)
+                        .addComponent(jTextApellidoCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(41, 41, 41)
                 .addGroup(PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnGuardar)
                     .addComponent(BtnCancelar))
-                .addContainerGap(845, Short.MAX_VALUE))
+                .addContainerGap(797, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout VentanaDeFondoLayout = new javax.swing.GroupLayout(VentanaDeFondo);
@@ -1323,6 +1375,7 @@ public class Home extends javax.swing.JFrame {
         setLblColor(BotonRegistrarMascota);
         setLblColor(BotonDenunciaMaltrato);
         //CAMBIA PANELES SEGUN EL BOTON CLICKEADO-----------------------
+        BotonCerrar.setVisible(true);
         PanelBuscarMascota.setVisible(true);
         PanelCrearAviso.setVisible(false);
         PanelCargarDenunciante.setVisible(false);
@@ -1337,6 +1390,7 @@ public class Home extends javax.swing.JFrame {
         setLblColor(BotonCargarDenunciante);
         setLblColor(BotonRegistrarMascota);
         setLblColor(BotonDenunciaMaltrato);
+        BotonCerrar.setVisible(true);
         PanelBuscarMascota.setVisible(false);
         PanelCrearAviso.setVisible(true);
         PanelCargarDenunciante.setVisible(false);
@@ -1351,6 +1405,7 @@ public class Home extends javax.swing.JFrame {
         resetLblColor(BotonCargarDenunciante);
         setLblColor(BotonRegistrarMascota);
         setLblColor(BotonDenunciaMaltrato);
+        BotonCerrar.setVisible(true);
         PanelBuscarMascota.setVisible(false);
         PanelCrearAviso.setVisible(false);
         PanelCargarDenunciante.setVisible(true);
@@ -1365,6 +1420,7 @@ public class Home extends javax.swing.JFrame {
         setLblColor(BotonCargarDenunciante);
         resetLblColor(BotonRegistrarMascota);
         setLblColor(BotonDenunciaMaltrato);
+        BotonCerrar.setVisible(true);
         PanelBuscarMascota.setVisible(false);
         PanelCrearAviso.setVisible(false);
         PanelCargarDenunciante.setVisible(false);
@@ -1379,6 +1435,7 @@ public class Home extends javax.swing.JFrame {
         setLblColor(BotonCargarDenunciante);
         setLblColor(BotonRegistrarMascota);
         resetLblColor(BotonDenunciaMaltrato);
+        BotonCerrar.setVisible(true);
         PanelBuscarMascota.setVisible(false);
         PanelCrearAviso.setVisible(false);
         PanelCargarDenunciante.setVisible(false);
@@ -1388,179 +1445,152 @@ public class Home extends javax.swing.JFrame {
         //-----------FIN CAMBIO COLORES INCATIVO/ACTIVO-----------------------------------------------------
     }//GEN-LAST:event_BotonDenunciaMaltratoMouseClicked
 
-    private void buscarmascotaestadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarmascotaestadoActionPerformed
+    private void jCBEstadoBuscarMascotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBEstadoBuscarMascotaActionPerformed
         //String variable = buscarmascotaestado.getSelectedItem().ToString();
 
 // TODO add your handling code here:
-    }//GEN-LAST:event_buscarmascotaestadoActionPerformed
+    }//GEN-LAST:event_jCBEstadoBuscarMascotaActionPerformed
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+    private void jCBTamañoBuscarMascotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBTamañoBuscarMascotaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    }//GEN-LAST:event_jCBTamañoBuscarMascotaActionPerformed
 
-    private void jComboBox3MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBox3MouseMoved
+    private void jCBTipoBuscarMascotaMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBTipoBuscarMascotaMouseMoved
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox3MouseMoved
+    }//GEN-LAST:event_jCBTipoBuscarMascotaMouseMoved
 
-    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+    private void jCBTipoBuscarMascotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBTipoBuscarMascotaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox3ActionPerformed
+    }//GEN-LAST:event_jCBTipoBuscarMascotaActionPerformed
 
-    private void jComboBox4MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBox4MouseMoved
+    private void jCBColorBuscarMascotaMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBColorBuscarMascotaMouseMoved
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox4MouseMoved
+    }//GEN-LAST:event_jCBColorBuscarMascotaMouseMoved
 
-    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
+    private void jCBColorBuscarMascotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBColorBuscarMascotaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox4ActionPerformed
+    }//GEN-LAST:event_jCBColorBuscarMascotaActionPerformed
 
-    private void jComboBox5MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBox5MouseMoved
+    private void jCBRazaBuscarMascotaMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBRazaBuscarMascotaMouseMoved
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox5MouseMoved
+    }//GEN-LAST:event_jCBRazaBuscarMascotaMouseMoved
 
-    private void jComboBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox5ActionPerformed
+    private void jCBRazaBuscarMascotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBRazaBuscarMascotaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox5ActionPerformed
+    }//GEN-LAST:event_jCBRazaBuscarMascotaActionPerformed
 
-    private void jComboBox6MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBox6MouseMoved
+    private void jCBZonaBuscarMascotaMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBZonaBuscarMascotaMouseMoved
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox6MouseMoved
+    }//GEN-LAST:event_jCBZonaBuscarMascotaMouseMoved
 
-    private void jComboBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox6ActionPerformed
+    private void jCBZonaBuscarMascotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBZonaBuscarMascotaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox6ActionPerformed
+    }//GEN-LAST:event_jCBZonaBuscarMascotaActionPerformed
 
     private void BtnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BtnBuscarActionPerformed
 
-    private void jComboBox13MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBox13MouseMoved
+    private void jCBEstadoCrearAvisoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBEstadoCrearAvisoMouseMoved
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox13MouseMoved
+    }//GEN-LAST:event_jCBEstadoCrearAvisoMouseMoved
 
-    private void jComboBox13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox13ActionPerformed
+    private void jCBEstadoCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBEstadoCrearAvisoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox13ActionPerformed
+    }//GEN-LAST:event_jCBEstadoCrearAvisoActionPerformed
 
-    private void jComboBox14MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBox14MouseMoved
+    private void jCBTamañoCrearAvisoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBTamañoCrearAvisoMouseMoved
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox14MouseMoved
+    }//GEN-LAST:event_jCBTamañoCrearAvisoMouseMoved
 
-    private void jComboBox14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox14ActionPerformed
+    private void jCBTamañoCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBTamañoCrearAvisoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox14ActionPerformed
+    }//GEN-LAST:event_jCBTamañoCrearAvisoActionPerformed
 
-    private void jComboBox15MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBox15MouseMoved
+    private void jCBTipoCrearAvisoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBTipoCrearAvisoMouseMoved
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox15MouseMoved
+    }//GEN-LAST:event_jCBTipoCrearAvisoMouseMoved
 
-    private void jComboBox15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox15ActionPerformed
+    private void jCBTipoCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBTipoCrearAvisoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox15ActionPerformed
+    }//GEN-LAST:event_jCBTipoCrearAvisoActionPerformed
 
-    private void jComboBox16MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBox16MouseMoved
+    private void jCBColorCrearAvisoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBColorCrearAvisoMouseMoved
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox16MouseMoved
+    }//GEN-LAST:event_jCBColorCrearAvisoMouseMoved
 
-    private void jComboBox16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox16ActionPerformed
+    private void jCBColorCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBColorCrearAvisoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox16ActionPerformed
+    }//GEN-LAST:event_jCBColorCrearAvisoActionPerformed
 
-    private void jComboBox17MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBox17MouseMoved
+    private void jCBRazaCrearAvisoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBRazaCrearAvisoMouseMoved
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox17MouseMoved
+    }//GEN-LAST:event_jCBRazaCrearAvisoMouseMoved
 
-    private void jComboBox17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox17ActionPerformed
+    private void jCBRazaCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBRazaCrearAvisoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox17ActionPerformed
+    }//GEN-LAST:event_jCBRazaCrearAvisoActionPerformed
 
-    private void jComboBox18MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBox18MouseMoved
+    private void jCBZonaCrearAvisoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBZonaCrearAvisoMouseMoved
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox18MouseMoved
+    }//GEN-LAST:event_jCBZonaCrearAvisoMouseMoved
 
-    private void jComboBox18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox18ActionPerformed
+    private void jCBZonaCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBZonaCrearAvisoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox18ActionPerformed
+    }//GEN-LAST:event_jCBZonaCrearAvisoActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jComboBox20MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBox20MouseMoved
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox20MouseMoved
+    private void jTextDireccionActionPerformed(java.awt.event.ActionEvent evt) {
+        jTextDireccionCargarDenunciante.transferFocus();
+    }
 
-    private void jComboBox20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox20ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox20ActionPerformed
+    private void jTextDNICargarDenuncianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextDNICargarDenuncianteActionPerformed
+        jTextDNICargarDenunciante.transferFocus();
+    }//GEN-LAST:event_jTextDNICargarDenuncianteActionPerformed
 
-/*
-    private void BtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {                                           
-        
-            String dni, nombre, apellido, dire, email;
-            String sql = "";
-            dni = jTextDNI.getText();
-            nombre = jTextNombre.getText();
-            apellido = jTextApellido.getText();
-            dire = jTextDireccion.getText();
-            email = jTextEmail.getText();
-        
-    }                                          
-*/
+    private void jTextNombreCargarDenuncianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextNombreCargarDenuncianteActionPerformed
+        jTextNombreCargarDenunciante.transferFocus();
+    }//GEN-LAST:event_jTextNombreCargarDenuncianteActionPerformed
+
+    private void jTextApellidoCargarDenuncianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextApellidoCargarDenuncianteActionPerformed
+        jTextApellidoCargarDenunciante.transferFocus();
+    }//GEN-LAST:event_jTextApellidoCargarDenuncianteActionPerformed
+    /*
     private void jTextDireccionActionPerformed(java.awt.event.ActionEvent evt) {                                               
-        jTextDireccion.transferFocus();
-    }                                              
-
-    private void jTextDNIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextDNIActionPerformed
-        jTextDNI.transferFocus();
-    }//GEN-LAST:event_jTextDNIActionPerformed
-
-    private void jTextNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextNombreActionPerformed
-        jTextNombre.transferFocus();
-    }//GEN-LAST:event_jTextNombreActionPerformed
-
-    private void jTextApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextApellidoActionPerformed
-        jTextApellido.transferFocus();
-    }//GEN-LAST:event_jTextApellidoActionPerformed
-/*
-    private void jTextDireccionActionPerformed(java.awt.event.ActionEvent evt) {                                               
-        jTextDireccion.transferFocus();
+        jTextDireccionCargarDenunciante.transferFocus();
     }                                              
 */
     private void jTextEmailActionPerformed(java.awt.event.ActionEvent evt) {                                           
-        jTextEmail.transferFocus();
+        jTextEmailCargarDenunciante.transferFocus();
     }                                          
-/*
-    private void BtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {                                           
-        String dni, nombre, apellido, dire, email;
-        String sql = "";
-        dni = jTextDNI.getText();
-    */
 
-/*
-    private void jTextDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextDireccionActionPerformed
-        jTextDireccion.transferFocus();
-    }//GEN-LAST:event_jTextDireccionActionPerformed
 
-    private void jTextEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextEmailActionPerformed
-        jTextEmail.transferFocus();
-    }//GEN-LAST:event_jTextEmailActionPerformed
-*/
+    private void jTextDireccionCargarDenuncianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextDireccionCargarDenuncianteActionPerformed
+        jTextDireccionCargarDenunciante.transferFocus();
+    }//GEN-LAST:event_jTextDireccionCargarDenuncianteActionPerformed
+
+    private void jTextTelCargarDenuncianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextTelCargarDenuncianteActionPerformed
+        jTextTelCargarDenunciante.transferFocus();
+    }//GEN-LAST:event_jTextTelCargarDenuncianteActionPerformed
+
     private void BtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGuardarActionPerformed
 
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
         String nombre, apellido, dire, email;
-        int dni = Integer.parseInt(jTextDNI.getText());
+        int dni = Integer.parseInt(jTextDNICargarDenunciante.getText());
         //dni = jTextDNI.getText();
-        nombre = jTextNombre.getText();
-        apellido = jTextApellido.getText();
-        dire = jTextDireccion.getText();
-        email = jTextEmail.getText();
+        nombre = jTextNombreCargarDenunciante.getText();
+        apellido = jTextApellidoCargarDenunciante.getText();
+        dire = jTextDireccionCargarDenunciante.getText();
+        email = jTextTelCargarDenunciante.getText();
         Denunciante dn = new Denunciante(dni, nombre, apellido, dire, email);
         try {
-           // manager.merge(nuevo5);
+            // manager.merge(nuevo5);
             manager.persist(dn);
             manager.getTransaction().commit();
             manager.close();
@@ -1573,30 +1603,46 @@ public class Home extends javax.swing.JFrame {
         bloquear();
     }//GEN-LAST:event_BtnCancelarActionPerformed
 
+    private void jTextEmailCargarDenuncianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextEmailCargarDenuncianteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextEmailCargarDenuncianteActionPerformed
+
+    private void jCBDenuncianteCrearAvisoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBDenuncianteCrearAvisoMouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCBDenuncianteCrearAvisoMouseMoved
+
+    private void jCBDenuncianteCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBDenuncianteCrearAvisoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCBDenuncianteCrearAvisoActionPerformed
+
+    private void BotonCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCerrarActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_BotonCerrarActionPerformed
+
     public void limpiar() {
-        jTextDNI.setText("");
-        jTextNombre.setText("");
-        jTextApellido.setText("");
-        jTextDireccion.setText("");
-        jTextEmail.setText("");
+        jTextDNICargarDenunciante.setText("");
+        jTextNombreCargarDenunciante.setText("");
+        jTextApellidoCargarDenunciante.setText("");
+        jTextDireccionCargarDenunciante.setText("");
+        jTextTelCargarDenunciante.setText("");
     }
 
     public void bloquear() {
-        jTextDNI.setEnabled(false);
-        jTextNombre.setEnabled(false);
-        jTextApellido.setEnabled(false);
-        jTextDireccion.setEnabled(false);
-        jTextEmail.setEnabled(false);
+        jTextDNICargarDenunciante.setEnabled(false);
+        jTextNombreCargarDenunciante.setEnabled(false);
+        jTextApellidoCargarDenunciante.setEnabled(false);
+        jTextDireccionCargarDenunciante.setEnabled(false);
+        jTextTelCargarDenunciante.setEnabled(false);
         BtnGuardar.setEnabled(false); //activa el boton
         BtnCancelar.setEnabled(true);
     }
 
     public void habilitar() {
-        jTextDNI.setEnabled(true);
-        jTextNombre.setEnabled(true);
-        jTextApellido.setEnabled(true);
-        jTextDireccion.setEnabled(true);
-        jTextEmail.setEnabled(true);
+        jTextDNICargarDenunciante.setEnabled(true);
+        jTextNombreCargarDenunciante.setEnabled(true);
+        jTextApellidoCargarDenunciante.setEnabled(true);
+        jTextDireccionCargarDenunciante.setEnabled(true);
+        jTextTelCargarDenunciante.setEnabled(true);
         BtnGuardar.setEnabled(true); //activa el boton
         BtnCancelar.setEnabled(false);
     }
@@ -1646,6 +1692,7 @@ public class Home extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JLabel BotonBuscarMascota;
     public javax.swing.JLabel BotonCargarDenunciante;
+    private javax.swing.JButton BotonCerrar;
     public javax.swing.JLabel BotonCrearAviso;
     public javax.swing.JLabel BotonDenunciaMaltrato;
     public javax.swing.JLabel BotonRegistrarMascota;
@@ -1659,20 +1706,20 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel PanelDenunciaMaltrato;
     private javax.swing.JPanel PanelRegistrarMascota;
     private javax.swing.JPanel VentanaDeFondo;
-    private javax.swing.JComboBox<String> buscarmascotaestado;
     private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jComboBox13;
-    private javax.swing.JComboBox<String> jComboBox14;
-    private javax.swing.JComboBox<String> jComboBox15;
-    private javax.swing.JComboBox<String> jComboBox16;
-    private javax.swing.JComboBox<String> jComboBox17;
-    private javax.swing.JComboBox<String> jComboBox18;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox20;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JComboBox<String> jComboBox6;
+    private javax.swing.JComboBox<String> jCBColorBuscarMascota;
+    private javax.swing.JComboBox<String> jCBColorCrearAviso;
+    private javax.swing.JComboBox<String> jCBDenuncianteCrearAviso;
+    private javax.swing.JComboBox<String> jCBEstadoBuscarMascota;
+    private javax.swing.JComboBox<String> jCBEstadoCrearAviso;
+    private javax.swing.JComboBox<String> jCBRazaBuscarMascota;
+    private javax.swing.JComboBox<String> jCBRazaCrearAviso;
+    private javax.swing.JComboBox<String> jCBTamañoBuscarMascota;
+    private javax.swing.JComboBox<String> jCBTamañoCrearAviso;
+    private javax.swing.JComboBox<String> jCBTipoBuscarMascota;
+    private javax.swing.JComboBox<String> jCBTipoCrearAviso;
+    private javax.swing.JComboBox<String> jCBZonaBuscarMascota;
+    private javax.swing.JComboBox<String> jCBZonaCrearAviso;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1691,6 +1738,8 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1706,12 +1755,14 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable3;
-    private javax.swing.JTextField jTextApellido;
-    private javax.swing.JTextField jTextDNI;
-    private javax.swing.JTextField jTextDireccion;
-    private javax.swing.JTextField jTextEmail;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextNombre;
+    private javax.swing.JTextField jTextApellidoCargarDenunciante;
+    private javax.swing.JTextField jTextCaractCrearAviso;
+    private javax.swing.JTextField jTextDNICargarDenunciante;
+    private javax.swing.JTextField jTextDireccionCargarDenunciante;
+    private javax.swing.JTextField jTextEmailCargarDenunciante;
+    private javax.swing.JTextField jTextNombreCargarDenunciante;
+    private javax.swing.JTextField jTextNombreCrearAviso;
+    private javax.swing.JTextField jTextTelCargarDenunciante;
     // End of variables declaration//GEN-END:variables
 
     private void setLblColor(JLabel lbl) {

@@ -298,20 +298,20 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jComboBox2" min="-2" pref="255" max="-2" attributes="0"/>
+                                              <Component id="jCBTamañoBuscarMascota" min="-2" pref="255" max="-2" attributes="0"/>
                                               <EmptySpace max="32767" attributes="0"/>
                                               <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jComboBox4" min="-2" pref="255" max="-2" attributes="0"/>
+                                              <Component id="jCBColorBuscarMascota" min="-2" pref="255" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel6" min="-2" pref="40" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="buscarmascotaestado" min="-2" pref="255" max="-2" attributes="0"/>
+                                              <Component id="jCBEstadoBuscarMascota" min="-2" pref="255" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                                               <Component id="jLabel8" min="-2" pref="40" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jComboBox3" min="-2" pref="255" max="-2" attributes="0"/>
+                                              <Component id="jCBTipoBuscarMascota" min="-2" pref="255" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
@@ -319,29 +319,35 @@
                                           <Group type="102" alignment="1" attributes="0">
                                               <Component id="jLabel10" min="-2" pref="40" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jComboBox5" min="-2" pref="255" max="-2" attributes="0"/>
+                                              <Component id="jCBRazaBuscarMascota" min="-2" pref="255" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
                                               <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jComboBox6" min="-2" pref="255" max="-2" attributes="0"/>
+                                              <Component id="jCBZonaBuscarMascota" min="-2" pref="255" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="BtnBuscar" alignment="1" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Component id="jScrollPane2" alignment="0" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="17" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="39" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="BotonCerrar" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                      <Component id="BotonCerrar" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" pref="16" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jSeparator1" min="-2" pref="1" max="-2" attributes="0"/>
@@ -350,27 +356,27 @@
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="buscarmascotaestado" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jCBEstadoBuscarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jComboBox3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jCBTipoBuscarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jComboBox2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jCBTamañoBuscarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jComboBox4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jCBColorBuscarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jComboBox5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jCBRazaBuscarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jComboBox6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jCBZonaBuscarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -378,7 +384,7 @@
                       <Component id="BtnBuscar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jScrollPane2" min="-2" pref="511" max="-2" attributes="0"/>
-                      <EmptySpace pref="325" max="32767" attributes="0"/>
+                      <EmptySpace pref="295" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -405,7 +411,7 @@
                 <Property name="text" type="java.lang.String" value=" &gt; Buscar Mascota"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="buscarmascotaestado">
+            <Component class="javax.swing.JComboBox" name="jCBEstadoBuscarMascota">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="e6" green="e6" red="e6" type="rgb"/>
@@ -430,10 +436,10 @@
                 <Property name="name" type="java.lang.String" value="ComboBoxEstado" noResource="true"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buscarmascotaestadoActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCBEstadoBuscarMascotaActionPerformed"/>
               </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="buscarmascotaestado.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
+                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jCBEstadoBuscarMascota.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
@@ -461,7 +467,7 @@
                 <Property name="text" type="java.lang.String" value="Tama&#xf1;o"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox2">
+            <Component class="javax.swing.JComboBox" name="jCBTama&#xf1;oBuscarMascota">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="e6" green="e6" red="e6" type="rgb"/>
@@ -485,10 +491,10 @@
                 <Property name="name" type="java.lang.String" value="ComboBoxEstado" noResource="true"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCBTama&#xf1;oBuscarMascotaActionPerformed"/>
               </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jComboBox2.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
+                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jCBTama&#xf1;oBuscarMascota.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
@@ -504,7 +510,7 @@
                 <Property name="text" type="java.lang.String" value="Tipo"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox3">
+            <Component class="javax.swing.JComboBox" name="jCBTipoBuscarMascota">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="e6" green="e6" red="e6" type="rgb"/>
@@ -530,11 +536,11 @@
                 <Property name="name" type="java.lang.String" value="ComboBoxEstado" noResource="true"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jComboBox3MouseMoved"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox3ActionPerformed"/>
+                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jCBTipoBuscarMascotaMouseMoved"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCBTipoBuscarMascotaActionPerformed"/>
               </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jComboBox3.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
+                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jCBTipoBuscarMascota.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
@@ -550,7 +556,7 @@
                 <Property name="text" type="java.lang.String" value="Color"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox4">
+            <Component class="javax.swing.JComboBox" name="jCBColorBuscarMascota">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="e6" green="e6" red="e6" type="rgb"/>
@@ -576,11 +582,11 @@
                 <Property name="name" type="java.lang.String" value="ComboBoxEstado" noResource="true"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jComboBox4MouseMoved"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox4ActionPerformed"/>
+                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jCBColorBuscarMascotaMouseMoved"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCBColorBuscarMascotaActionPerformed"/>
               </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jComboBox4.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
+                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jCBColorBuscarMascota.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
@@ -596,7 +602,7 @@
                 <Property name="text" type="java.lang.String" value="Raza"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox5">
+            <Component class="javax.swing.JComboBox" name="jCBRazaBuscarMascota">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="e6" green="e6" red="e6" type="rgb"/>
@@ -619,15 +625,15 @@
                 <Property name="name" type="java.lang.String" value="ComboBoxEstado" noResource="true"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jComboBox5MouseMoved"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox5ActionPerformed"/>
+                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jCBRazaBuscarMascotaMouseMoved"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCBRazaBuscarMascotaActionPerformed"/>
               </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jComboBox5.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
+                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jCBRazaBuscarMascota.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox6">
+            <Component class="javax.swing.JComboBox" name="jCBZonaBuscarMascota">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="e6" green="e6" red="e6" type="rgb"/>
@@ -651,11 +657,11 @@
                 <Property name="name" type="java.lang.String" value="ComboBoxEstado" noResource="true"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jComboBox6MouseMoved"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox6ActionPerformed"/>
+                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jCBZonaBuscarMascotaMouseMoved"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCBZonaBuscarMascotaActionPerformed"/>
               </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jComboBox6.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
+                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jCBZonaBuscarMascota.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
@@ -721,6 +727,23 @@
                 </Component>
               </SubComponents>
             </Container>
+            <Component class="javax.swing.JButton" name="BotonCerrar">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="70" green="0" red="3d" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Calibri" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="X"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonCerrarActionPerformed"/>
+              </Events>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="PanelRegistrarMascota">
@@ -744,7 +767,7 @@
                   <Component id="jSeparator4" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jLabel4" min="-2" pref="123" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="677" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="418" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -755,7 +778,7 @@
                       <Component id="jLabel4" min="-2" pref="16" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jSeparator4" min="-2" pref="13" max="-2" attributes="0"/>
-                      <EmptySpace pref="1254" max="32767" attributes="0"/>
+                      <EmptySpace pref="310" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -869,23 +892,23 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel21" min="-2" pref="40" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jComboBox13" min="-2" pref="255" max="-2" attributes="0"/>
+                                              <Component id="jCBEstadoCrearAviso" min="-2" pref="255" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                                               <Component id="jLabel23" min="-2" pref="40" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jComboBox15" min="-2" pref="255" max="-2" attributes="0"/>
+                                              <Component id="jCBTipoCrearAviso" min="-2" pref="255" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                                   <Group type="102" attributes="0">
                                                       <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="jTextField1" max="32767" attributes="0"/>
+                                                      <Component id="jTextNombreCrearAviso" max="32767" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="jComboBox14" min="-2" pref="255" max="-2" attributes="0"/>
+                                                      <Component id="jCBTamañoCrearAviso" min="-2" pref="255" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <EmptySpace min="41" max="32767" attributes="0"/>
@@ -893,12 +916,12 @@
                                                   <Group type="102" alignment="1" attributes="0">
                                                       <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="jComboBox16" min="-2" pref="255" max="-2" attributes="0"/>
+                                                      <Component id="jCBColorCrearAviso" min="-2" pref="255" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="1" attributes="0">
                                                       <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="jComboBox20" min="-2" pref="255" max="-2" attributes="0"/>
+                                                      <Component id="jTextCaractCrearAviso" min="-2" pref="255" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                           </Group>
@@ -908,14 +931,19 @@
                                           <Group type="102" alignment="1" attributes="0">
                                               <Component id="jLabel25" min="-2" pref="40" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jComboBox17" min="-2" pref="255" max="-2" attributes="0"/>
+                                              <Component id="jCBRazaCrearAviso" min="-2" pref="255" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
                                               <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jComboBox18" min="-2" pref="255" max="-2" attributes="0"/>
+                                              <Component id="jCBZonaCrearAviso" min="-2" pref="255" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="jButton3" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jCBDenuncianteCrearAviso" min="-2" pref="255" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
                                   </Group>
                                   <Component id="jScrollPane4" alignment="0" max="32767" attributes="0"/>
@@ -939,34 +967,39 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jComboBox13" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jCBEstadoCrearAviso" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jComboBox15" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jCBTipoCrearAviso" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel22" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jComboBox14" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jCBTamañoCrearAviso" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jComboBox16" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jCBColorCrearAviso" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel27" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel28" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jComboBox20" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextNombreCrearAviso" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextCaractCrearAviso" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel25" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jComboBox17" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jCBRazaCrearAviso" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel26" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jComboBox18" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jCBZonaCrearAviso" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel30" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jCBDenuncianteCrearAviso" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -974,7 +1007,7 @@
                       <Component id="jButton3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jScrollPane4" min="-2" pref="511" max="-2" attributes="0"/>
-                      <EmptySpace pref="298" max="32767" attributes="0"/>
+                      <EmptySpace pref="277" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1001,7 +1034,7 @@
                 <Property name="text" type="java.lang.String" value=" &gt; Crear Aviso"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox13">
+            <Component class="javax.swing.JComboBox" name="jCBEstadoCrearAviso">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="e6" green="e6" red="e6" type="rgb"/>
@@ -1026,11 +1059,11 @@
                 <Property name="name" type="java.lang.String" value="ComboBoxEstado" noResource="true"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jComboBox13MouseMoved"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox13ActionPerformed"/>
+                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jCBEstadoCrearAvisoMouseMoved"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCBEstadoCrearAvisoActionPerformed"/>
               </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jComboBox13.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
+                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jCBEstadoCrearAviso.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
@@ -1058,7 +1091,7 @@
                 <Property name="text" type="java.lang.String" value="Tama&#xf1;o"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox14">
+            <Component class="javax.swing.JComboBox" name="jCBTama&#xf1;oCrearAviso">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="e6" green="e6" red="e6" type="rgb"/>
@@ -1082,11 +1115,11 @@
                 <Property name="name" type="java.lang.String" value="ComboBoxEstado" noResource="true"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jComboBox14MouseMoved"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox14ActionPerformed"/>
+                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jCBTama&#xf1;oCrearAvisoMouseMoved"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCBTama&#xf1;oCrearAvisoActionPerformed"/>
               </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jComboBox14.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
+                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jCBTama&#xf1;oCrearAviso.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
@@ -1102,7 +1135,7 @@
                 <Property name="text" type="java.lang.String" value="Tipo"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox15">
+            <Component class="javax.swing.JComboBox" name="jCBTipoCrearAviso">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="e6" green="e6" red="e6" type="rgb"/>
@@ -1128,11 +1161,11 @@
                 <Property name="name" type="java.lang.String" value="ComboBoxEstado" noResource="true"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jComboBox15MouseMoved"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox15ActionPerformed"/>
+                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jCBTipoCrearAvisoMouseMoved"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCBTipoCrearAvisoActionPerformed"/>
               </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jComboBox15.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
+                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jCBTipoCrearAviso.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
@@ -1148,7 +1181,7 @@
                 <Property name="text" type="java.lang.String" value="Color"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox16">
+            <Component class="javax.swing.JComboBox" name="jCBColorCrearAviso">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="e6" green="e6" red="e6" type="rgb"/>
@@ -1174,11 +1207,11 @@
                 <Property name="name" type="java.lang.String" value="ComboBoxEstado" noResource="true"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jComboBox16MouseMoved"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox16ActionPerformed"/>
+                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jCBColorCrearAvisoMouseMoved"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCBColorCrearAvisoActionPerformed"/>
               </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jComboBox16.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
+                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jCBColorCrearAviso.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
@@ -1194,7 +1227,7 @@
                 <Property name="text" type="java.lang.String" value="Raza"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox17">
+            <Component class="javax.swing.JComboBox" name="jCBRazaCrearAviso">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="e6" green="e6" red="e6" type="rgb"/>
@@ -1217,15 +1250,15 @@
                 <Property name="name" type="java.lang.String" value="ComboBoxEstado" noResource="true"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jComboBox17MouseMoved"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox17ActionPerformed"/>
+                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jCBRazaCrearAvisoMouseMoved"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCBRazaCrearAvisoActionPerformed"/>
               </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jComboBox17.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
+                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jCBRazaCrearAviso.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox18">
+            <Component class="javax.swing.JComboBox" name="jCBZonaCrearAviso">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="e6" green="e6" red="e6" type="rgb"/>
@@ -1249,11 +1282,11 @@
                 <Property name="name" type="java.lang.String" value="ComboBoxEstado" noResource="true"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jComboBox18MouseMoved"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox18ActionPerformed"/>
+                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jCBZonaCrearAvisoMouseMoved"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCBZonaCrearAvisoActionPerformed"/>
               </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jComboBox18.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
+                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jCBZonaCrearAviso.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
@@ -1343,7 +1376,23 @@
                 <Property name="text" type="java.lang.String" value="Caract."/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox20">
+            <Component class="javax.swing.JTextField" name="jTextNombreCrearAviso">
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextCaractCrearAviso">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel30">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Calibri" size="12" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="70" green="0" red="3d" type="rgb"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="4"/>
+                <Property name="text" type="java.lang.String" value="Denunciante"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="jCBDenuncianteCrearAviso">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="e6" green="e6" red="e6" type="rgb"/>
@@ -1355,12 +1404,13 @@
                   <Color blue="33" green="33" red="33" type="rgb"/>
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="5">
-                    <StringItem index="0" value="Negro"/>
-                    <StringItem index="1" value="Blanco"/>
-                    <StringItem index="2" value="Marr&#xf3;n Oscuro"/>
-                    <StringItem index="3" value="Marr&#xf3;n claro"/>
-                    <StringItem index="4" value="Otro"/>
+                  <StringArray count="6">
+                    <StringItem index="0" value="Carolina"/>
+                    <StringItem index="1" value="Marisa"/>
+                    <StringItem index="2" value="Manuel"/>
+                    <StringItem index="3" value="Carlos"/>
+                    <StringItem index="4" value="Facundo"/>
+                    <StringItem index="5" value="Daiana"/>
                   </StringArray>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1369,18 +1419,13 @@
                 <Property name="name" type="java.lang.String" value="ComboBoxEstado" noResource="true"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jComboBox20MouseMoved"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox20ActionPerformed"/>
+                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jCBDenuncianteCrearAvisoMouseMoved"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCBDenuncianteCrearAvisoActionPerformed"/>
               </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jComboBox20.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
+                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jCBZonaCrearAviso.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextField1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="jTextField1"/>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -1413,30 +1458,39 @@
                                           <Group type="102" attributes="0">
                                               <Component id="jLabel13" min="-2" pref="40" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jTextDNI" min="-2" pref="255" max="-2" attributes="0"/>
+                                              <Component id="jTextDNICargarDenunciante" min="-2" pref="255" max="-2" attributes="0"/>
                                               <EmptySpace max="32767" attributes="0"/>
                                               <Component id="jLabel15" min="-2" pref="40" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jTextNombre" min="-2" pref="255" max="-2" attributes="0"/>
+                                              <Component id="jTextNombreCargarDenunciante" min="-2" pref="255" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" attributes="0">
                                               <Component id="jLabel19" min="-2" pref="46" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jTextDireccion" min="-2" pref="255" max="-2" attributes="0"/>
+                                              <Component id="jTextDireccionCargarDenunciante" min="-2" pref="255" max="-2" attributes="0"/>
                                               <EmptySpace min="29" max="32767" attributes="0"/>
                                               <Component id="jLabel20" min="-2" pref="40" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jTextEmail" min="-2" pref="255" max="-2" attributes="0"/>
+                                              <Component id="jTextTelCargarDenunciante" min="-2" pref="255" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace min="33" pref="33" max="-2" attributes="0"/>
-                                      <Component id="jLabel17" min="-2" pref="40" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jTextApellido" min="-2" pref="255" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="jLabel17" min="-2" pref="40" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jTextApellidoCargarDenunciante" min="-2" pref="255" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Component id="jLabel29" min="-2" pref="40" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jTextEmailCargarDenunciante" min="-2" pref="255" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
                                   </Group>
                                   <Component id="jLabel12" alignment="0" min="-2" pref="189" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="42" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="64" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -1463,28 +1517,32 @@
                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                   <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextDNI" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextDNICargarDenunciante" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextNombreCargarDenunciante" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                   <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextDireccion" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextDireccionCargarDenunciante" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextTelCargarDenunciante" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel29" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextEmailCargarDenunciante" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                               <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextApellido" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextApellidoCargarDenunciante" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="BtnGuardar" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="BtnCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="845" max="32767" attributes="0"/>
+                      <EmptySpace pref="797" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1570,19 +1628,19 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnGuardarActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextDNI">
+            <Component class="javax.swing.JTextField" name="jTextDNICargarDenunciante">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextDNIActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextDNICargarDenuncianteActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextNombre">
+            <Component class="javax.swing.JTextField" name="jTextNombreCargarDenunciante">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextNombreActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextNombreCargarDenuncianteActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextApellido">
+            <Component class="javax.swing.JTextField" name="jTextApellidoCargarDenunciante">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextApellidoActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextApellidoCargarDenuncianteActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel19">
@@ -1597,9 +1655,9 @@
                 <Property name="text" type="java.lang.String" value="Direccion"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextDireccion">
+            <Component class="javax.swing.JTextField" name="jTextDireccionCargarDenunciante">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextDireccionActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextDireccionCargarDenuncianteActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel20">
@@ -1611,12 +1669,12 @@
                   <Color blue="70" green="0" red="3d" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="4"/>
-                <Property name="text" type="java.lang.String" value="Email"/>
+                <Property name="text" type="java.lang.String" value="Tel"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextEmail">
+            <Component class="javax.swing.JTextField" name="jTextTelCargarDenunciante">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextEmailActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextTelCargarDenuncianteActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="BtnCancelar">
@@ -1640,6 +1698,23 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnCancelarActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel29">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Calibri" size="12" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="70" green="0" red="3d" type="rgb"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="4"/>
+                <Property name="text" type="java.lang.String" value="Email"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextEmailCargarDenunciante">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextEmailCargarDenuncianteActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

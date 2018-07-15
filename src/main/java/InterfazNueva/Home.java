@@ -6,8 +6,13 @@
 package InterfazNueva;
 
 //import com.sun.awt.AWTUtilities;
+import com.unb001.mascotasenred.modelo.Denunciante;
 import java.awt.Color;
 import java.awt.Component;
+import javax.persistence.EntityExistsException;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -1489,6 +1494,7 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox20ActionPerformed
 
+/*
     private void BtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {                                           
         
             String dni, nombre, apellido, dire, email;
@@ -1500,7 +1506,7 @@ public class Home extends javax.swing.JFrame {
             email = jTextEmail.getText();
         
     }                                          
-
+*/
     private void jTextDireccionActionPerformed(java.awt.event.ActionEvent evt) {                                               
         jTextDireccion.transferFocus();
     }                                              
@@ -1517,24 +1523,52 @@ public class Home extends javax.swing.JFrame {
         jTextApellido.transferFocus();
     }//GEN-LAST:event_jTextApellidoActionPerformed
 /*
-    private void jTextDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextDireccionActionPerformed
+    private void jTextDireccionActionPerformed(java.awt.event.ActionEvent evt) {                                               
         jTextDireccion.transferFocus();
-    }//GEN-LAST:event_jTextDireccionActionPerformed
+    }                                              
 */
-    private void jTextEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextEmailActionPerformed
+    private void jTextEmailActionPerformed(java.awt.event.ActionEvent evt) {                                           
         jTextEmail.transferFocus();
-    }//GEN-LAST:event_jTextEmailActionPerformed
+    }                                          
 /*
-    private void BtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGuardarActionPerformed
+    private void BtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {                                           
         String dni, nombre, apellido, dire, email;
         String sql = "";
         dni = jTextDNI.getText();
+    */
+
+/*
+    private void jTextDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextDireccionActionPerformed
+        jTextDireccion.transferFocus();
+    }//GEN-LAST:event_jTextDireccionActionPerformed
+
+    private void jTextEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextEmailActionPerformed
+        jTextEmail.transferFocus();
+    }//GEN-LAST:event_jTextEmailActionPerformed
+*/
+    private void BtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGuardarActionPerformed
+
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
+        EntityManager manager = emf.createEntityManager();
+        manager.getTransaction().begin();
+        String nombre, apellido, dire, email;
+        int dni = Integer.parseInt(jTextDNI.getText());
+        //dni = jTextDNI.getText();
         nombre = jTextNombre.getText();
         apellido = jTextApellido.getText();
         dire = jTextDireccion.getText();
         email = jTextEmail.getText();
+        Denunciante dn = new Denunciante(dni, nombre, apellido, dire, email);
+        try {
+           // manager.merge(nuevo5);
+            manager.persist(dn);
+            manager.getTransaction().commit();
+            manager.close();
+        } catch (EntityExistsException e) {
+            System.out.println("ya existe este dato");
+    }                                          
     }//GEN-LAST:event_BtnGuardarActionPerformed
-*/
+
     private void BtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCancelarActionPerformed
         bloquear();
     }//GEN-LAST:event_BtnCancelarActionPerformed
@@ -1687,6 +1721,7 @@ public class Home extends javax.swing.JFrame {
     private void resetLblColor(JLabel lbl) {
         lbl.setBackground(new Color(88, 30, 138));
     }
+
     /*
     private void setCbColor(JComboBox cb) {
         cb.setBackground(new Color(35, 0, 66));

@@ -27,11 +27,12 @@ public class Telefono implements Serializable {
 
     }
 
-    public Telefono(int idTelefono, int area, int telefono, String tipo) {
+    public Telefono(int idTelefono, int area, int telefono, String tipo, int dni) {
         this.idTelefono = idTelefono;
         this.area = area;
         this.nro = telefono;
         this.tipo = tipo;
+       // this.denunciante = d;
     }
 
   

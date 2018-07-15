@@ -36,9 +36,8 @@ public class Mascota implements Serializable {
     public Mascota() {
     }
 
-   /* public Mascota(int idMascota, String nombre, String tipoMascota, String raza, String color, String caracteristicasEspeciales, String tamanio, String zona, String estado) {
+    public Mascota(int idMascota, String tipoMascota, String raza, String color, String caracteristicasEspeciales, String tamanio, String zona, String estado) {
         this.idMascota = idMascota;
-        this.nombre = nombre;
         this.tipoMascota = tipoMascota;
         this.raza = raza;
         this.color = color;
@@ -46,7 +45,7 @@ public class Mascota implements Serializable {
         this.tamanio = tamanio;
         this.zona = zona;
         this.estado = estado;
-    }*/
+    }
 
     public Mascota(int idMascota, String nombre, String tipoMascota, String raza, String color, String caracteristicasEspeciales, String tamanio, String zona, String estado) {
         this.idMascota = idMascota;

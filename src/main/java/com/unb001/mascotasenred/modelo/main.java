@@ -6,12 +6,13 @@
 package com.unb001.mascotasenred.modelo;
 
 //import java.time.LocalDate;
-import InterfazNueva.DenuncianteGrafica;
+
 import java.util.Collection;
 import java.util.Date;
 //import java.time.LocalDateTime;
 //import static java.time.temporal.TemporalQueries.localDate;
 import java.util.List;
+import javax.lang.model.UnknownEntityException;
 import javax.persistence.EntityExistsException;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -21,19 +22,20 @@ import javax.persistence.Query;
 public class main {
 
     // private static EntityManager manager;
-    private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
+    //private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
 
     public static void AgregarDenunciante() {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
-        Denunciante nuevo = new Denunciante(4, "otro", "apellido", "Calle", "mail");
+        Denunciante nuevo = new Denunciante(6, "otro", "apellido", "Calle", "mail");
         Denunciante nuevo1 = new Denunciante(5, "Marisa", "Reser", "Nigro", "Nose");
         Denunciante nuevo2 = new Denunciante(3, "Mara", "Rodriguez", "tandil", "sitiene");
 
         try {
-            manager.merge(nuevo);
-            manager.merge(nuevo1);
-            manager.merge(nuevo2);
+           // manager.merge(nuevo);
+           // manager.merge(nuevo1);
+            //manager.merge(nuevo2);
             //nuevo1.setDenuncia(d);
             manager.persist(nuevo);
             manager.persist(nuevo1);
@@ -48,6 +50,7 @@ public class main {
     }
 
     public static void BuscarDenunciante() {
+       EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
         try {
@@ -63,6 +66,7 @@ public class main {
     }
 
     public static void ImprimirTodo() {
+       EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         Query query = manager.createQuery("SELECT e FROM Denunciante e");
 
@@ -77,6 +81,7 @@ public class main {
     }
 
     public static void RemoverDenunciante() {
+       EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
         try {
@@ -85,12 +90,13 @@ public class main {
             manager.getTransaction().commit();
             manager.close();
             //emf.close();
-        } catch (EntityExistsException e) {
+        } catch (IllegalArgumentException e) {
             System.out.println("error en remover");
         }
     }
 
     public static void CambiarDenunciante() {
+       EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
         try {
@@ -105,7 +111,27 @@ public class main {
     }
 
     public static void main(String[] args) {
+          EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
+        manager.getTransaction().begin();
+       // Mascota mascota1 = new Mascota(10, "otto", "perro", "otro", "negro", "ninguna", "pequeño", "zona", "perdido");
+        Mascota mascota3 = new Mascota(15,"Viole", "tortuga","nose","verde","lenta", "grande","centro","adopcion");
+        try {
+           // manager.merge(mascota1);
+           // manager.persist(mascota1);
+            manager.persist(mascota3); 
+            manager.getTransaction().commit();
+            manager.close();
+           // emf.close();
+
+        } catch (EntityExistsException e) {
+            System.out.println("no me lo agrego");
+
+        }
+        
+        
+        
+       // EntityManager manager = emf.createEntityManager();
         // Denunciante nuevo4 = new Denunciante(3, "Maria", "Perez", "Rauch 1589", "maria@perez");
         //Denuncia d = new Denuncia(1, "Extravio", localDateof(12, 05, 1999));
         // Telefono t= new Telefono(1,2225,459,"celular"); 
@@ -121,11 +147,13 @@ public class main {
         // } catch (EntityExistsException e) {
         // System.out.println("no se agrego");
 
-        AgregarDenunciante();
-        ImprimirTodo();
-        BuscarDenunciante();
-        CambiarDenunciante();
-        ImprimirTodo();
+      //  AgregarDenunciante();
+      //  ImprimirTodo();
+      //  BuscarDenunciante();
+      //  CambiarDenunciante();
+       // ImprimirTodo();
+       // RemoverDenunciante();
+        //ImprimirTodo();
 
         // DenuncianteGrafica dg= new DenuncianteGrafica();  
         //   dg.setVisible(true);

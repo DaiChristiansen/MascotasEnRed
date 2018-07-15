@@ -111,6 +111,26 @@ public class main {
     }
 
     public static void main(String[] args) {
+          EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
+        EntityManager manager = emf.createEntityManager();
+        manager.getTransaction().begin();
+       // Mascota mascota1 = new Mascota(10, "otto", "perro", "otro", "negro", "ninguna", "pequeño", "zona", "perdido");
+        Mascota mascota3 = new Mascota(15,"Viole", "tortuga","nose","verde","lenta", "grande","centro","adopcion");
+        try {
+           // manager.merge(mascota1);
+           // manager.persist(mascota1);
+            manager.persist(mascota3); 
+            manager.getTransaction().commit();
+            manager.close();
+           // emf.close();
+
+        } catch (EntityExistsException e) {
+            System.out.println("no me lo agrego");
+
+        }
+        
+        
+        
        // EntityManager manager = emf.createEntityManager();
         // Denunciante nuevo4 = new Denunciante(3, "Maria", "Perez", "Rauch 1589", "maria@perez");
         //Denuncia d = new Denuncia(1, "Extravio", localDateof(12, 05, 1999));
@@ -131,9 +151,9 @@ public class main {
       //  ImprimirTodo();
       //  BuscarDenunciante();
       //  CambiarDenunciante();
-        ImprimirTodo();
-        RemoverDenunciante();
-        ImprimirTodo();
+       // ImprimirTodo();
+       // RemoverDenunciante();
+        //ImprimirTodo();
 
         // DenuncianteGrafica dg= new DenuncianteGrafica();  
         //   dg.setVisible(true);

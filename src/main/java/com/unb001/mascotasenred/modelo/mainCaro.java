@@ -29,29 +29,30 @@ public class mainCaro {
         System.out.println("BUSCANDO");
         Denunciante denunciante = manager.find(Denunciante.class, dni);
         System.out.println("Nombre del denunciante: " + denunciante.getNombre());
-     
+
         manager.close();
         emf.close();
     }
-    
-     public static void agregarMascota(Mascota m) {
+
+    public static void agregarMascota(Mascota m) {
 
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
-
+       // Mascota mascota4 = new Mascota(22, "ot", "ave", "otro", "gris", "ninguna", "pequeño", "zona", "perdido");
         try {
-            manager.merge(m);
+            //manager.merge(mascota4);
             manager.persist(m);
             manager.getTransaction().commit();
             manager.close();
-           // emf.close();
+            emf.close();
 
         } catch (EntityExistsException e) {
-            System.out.println("ya existe este dato");
-      
+            System.out.println("no me lo agrego");
+
+        }
     }
-     }
+
     public static void agregarDenunciante(Denunciante d) {
 
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
@@ -67,7 +68,7 @@ public class mainCaro {
 
         } catch (EntityExistsException e) {
             System.out.println("ya existe este dato");
-        } 
+        }
 
     }
 
@@ -126,22 +127,42 @@ public class mainCaro {
     }
 
     public static void main(String[] args) {
-       // Mascota mascota1 = new Mascota (10,"otto","perro","otro","negro","ninguna","pequeño","zona","perdido");
+        
+         
+        // EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
+        //EntityManager manager = emf.createEntityManager();
+       // manager.getTransaction().begin();
+       // Mascota mascota8 = new Mascota(25, "utlimo", "p", "otro", "bicolor", "sinpata", "pequeño", "zona", "perdido");
+       //agregarMascota(Mascota m);
+        
+
+//Mascota mascota2 = new Mascota(11,"Violeta", "gato","nose","blanco","nada", "grande","centro","adopcion");
+       //// try {
+           // manager.merge(mascota1);
+           // manager.persist(mascota1);
+            //manager.persist(mascota2); 
+           // manager.getTransaction().commit();
+           // manager.close();
+           // emf.close();
+
+       // } catch (EntityExistsException e) {
+            //System.out.println("no me lo agrego");
+
+        //}*/
+
         //Denunciante denunciante1 = new Denunciante(1, "caro", "copes", "ffff", "4444");
-        Denunciante denunciante2 = new Denunciante(2, "maria", "rivas", "gggg", "5555");
+        // Denunciante denunciante2 = new Denunciante(2, "maria", "rivas", "gggg", "5555");
         // Telefono telefono1 = new Telefono(1, 249, 4012272, "M", denunciante1.getDni());
         // List<Telefono> d1Telefono = new ArrayList<>();
         // d1Telefono.add(telefono1);
         // denunciante1.setTelefono(d1Telefono);
-
         //agregarDenunciante(denunciante1);
-        agregarDenunciante(denunciante2);
-        //agregarMascota(mascota1);
+        //agregarDenunciante(denunciante2);
+      
 
-        imprimirDenunciantes();
+        //imprimirDenunciantes();
         //imprimirTelefonos();
-        buscarDenunciante(4);
-        
+        //buscarDenunciante(4);
         //HAGO ESTE COMENTARIO MAS QUE NADA PARA HACER EL COMMIT SINO NO ME DEJA...
     }
 }

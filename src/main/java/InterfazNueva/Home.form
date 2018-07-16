@@ -285,7 +285,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jSeparator1" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="TituloBuscarMascota" min="-2" pref="123" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -323,7 +323,6 @@
                                           <Component id="BtnBuscarMascota" alignment="1" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Component id="jScrollPane2" alignment="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="0" pref="39" max="32767" attributes="0"/>
                           </Group>
@@ -376,9 +375,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="BtnBuscarMascota" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jScrollPane2" min="-2" pref="511" max="-2" attributes="0"/>
-                      <EmptySpace pref="295" max="32767" attributes="0"/>
+                      <EmptySpace pref="824" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -694,33 +691,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnBuscarMascotaActionPerformed"/>
               </Events>
             </Component>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane2">
-              <AuxValues>
-                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-              </AuxValues>
-
-              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-              <SubComponents>
-                <Component class="javax.swing.JTable" name="jTable1">
-                  <Properties>
-                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="6" rowCount="20">
-                        <Column editable="false" title="Estado" type="java.lang.Integer"/>
-                        <Column editable="false" title="Tipo" type="java.lang.String"/>
-                        <Column editable="false" title="Raza" type="java.lang.String"/>
-                        <Column editable="false" title="Tama&#xf1;o" type="java.lang.String"/>
-                        <Column editable="false" title="Color" type="java.lang.String"/>
-                        <Column editable="false" title="Zona" type="java.lang.String"/>
-                      </Table>
-                    </Property>
-                    <Property name="selectionBackground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="8a" green="1e" red="58" type="rgb"/>
-                    </Property>
-                    <Property name="showVerticalLines" type="boolean" value="false"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
             <Component class="javax.swing.JButton" name="BotonCerrar">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -782,7 +752,7 @@
                                                   <Group type="102" attributes="0">
                                                       <Component id="jLabel41" min="-2" pref="40" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="jTextField1" min="-2" pref="255" max="-2" attributes="0"/>
+                                                      <Component id="jTextNroAvisoCrearAviso" min="-2" pref="255" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
@@ -810,7 +780,7 @@
                                                   <Group type="102" attributes="0">
                                                       <Component id="jLabel42" min="-2" pref="40" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="jTextField2" min="-2" pref="255" max="-2" attributes="0"/>
+                                                      <Component id="jTextIDCrearAviso" min="-2" pref="255" max="-2" attributes="0"/>
                                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                                       <Component id="jLabel23" min="-2" pref="40" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
@@ -901,12 +871,12 @@
                               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel41" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextNroAvisoCrearAviso" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel42" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextIDCrearAviso" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jCBTipoCrearAviso" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -1340,22 +1310,25 @@
                 <Property name="text" type="java.lang.String" value="Fecha"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField1">
+            <Component class="javax.swing.JTextField" name="jTextNroAvisoCrearAviso">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Numero autogenerado de denuncia"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextNroAvisoCrearAvisoActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextFechaCrearAviso">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFechaCrearAvisoActionPerformed"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField2">
+            <Component class="javax.swing.JTextField" name="jTextIDCrearAviso">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Numero autogenerado de id mascota"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextIDCrearAvisoActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel42">
@@ -1419,7 +1392,7 @@
                                           <Group type="102" attributes="0">
                                               <Component id="jLabel40" min="-2" pref="46" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jTextidMascotaCargarDenunciante" min="-2" pref="255" max="-2" attributes="0"/>
+                                              <Component id="jTextIDCargarDenunciante" min="-2" pref="255" max="-2" attributes="0"/>
                                               <EmptySpace min="303" pref="303" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -1485,7 +1458,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel40" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextidMascotaCargarDenunciante" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextIDCargarDenunciante" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -1687,9 +1660,9 @@
                 <Property name="text" type="java.lang.String" value="ID"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextidMascotaCargarDenunciante">
+            <Component class="javax.swing.JTextField" name="jTextIDCargarDenunciante">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextidMascotaCargarDenuncianteActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextIDCargarDenuncianteActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
@@ -1715,87 +1688,79 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jScrollPane5" max="32767" attributes="0"/>
-                              <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="jSeparator3" alignment="0" pref="1004" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jSeparator3" alignment="0" pref="1004" max="32767" attributes="0"/>
+                                  <Component id="TituloRegistrarMascota" alignment="0" min="-2" pref="123" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="TituloRegistrarMascota" alignment="0" min="-2" pref="123" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="jLabel31" min="-2" pref="40" max="-2" attributes="0"/>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="jCBEstadoRegistrarMascota" min="-2" pref="255" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                                      <Group type="102" alignment="1" attributes="0">
-                                                          <Component id="jLabel37" min="-2" max="-2" attributes="0"/>
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="jTextNombreRegistrarMascota" min="-2" pref="255" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="jLabel32" min="-2" max="-2" attributes="0"/>
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="jCBTamañoRegistrarMascota" min="-2" pref="255" max="-2" attributes="0"/>
-                                                      </Group>
-                                                  </Group>
+                                              <Component id="jLabel31" min="-2" pref="40" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jCBEstadoRegistrarMascota" min="-2" pref="255" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Component id="jLabel37" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jTextNombreRegistrarMascota" min="-2" pref="255" max="-2" attributes="0"/>
                                               </Group>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="jLabel33" min="-2" pref="40" max="-2" attributes="0"/>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="jCBTipoRegistrarMascota" min="-2" pref="255" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Group type="102" alignment="1" attributes="0">
-                                                              <Component id="jLabel34" min="-2" max="-2" attributes="0"/>
-                                                              <EmptySpace max="-2" attributes="0"/>
-                                                              <Component id="jCBColorRegistrarMascota" min="-2" pref="255" max="-2" attributes="0"/>
-                                                          </Group>
-                                                          <Group type="102" alignment="1" attributes="0">
-                                                              <Component id="jLabel38" min="-2" max="-2" attributes="0"/>
-                                                              <EmptySpace max="-2" attributes="0"/>
-                                                              <Component id="jTextCaractRegistrarMascota" min="-2" pref="255" max="-2" attributes="0"/>
-                                                          </Group>
-                                                      </Group>
-                                                  </Group>
-                                              </Group>
-                                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <Component id="jLabel35" min="-2" pref="40" max="-2" attributes="0"/>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="jCBRazaRegistrarMascota" min="-2" pref="255" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <Group type="103" groupAlignment="1" attributes="0">
-                                                          <Component id="jLabel39" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jLabel36" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="jTextDenuncianteRegistrarMascota" max="32767" attributes="0"/>
-                                                          <Component id="jCBZonaRegistrarMascota" pref="255" max="32767" attributes="0"/>
-                                                      </Group>
-                                                  </Group>
-                                                  <Component id="jButton4" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel32" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jCBTamañoRegistrarMascota" min="-2" pref="255" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
-                                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jLabel33" min="-2" pref="40" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jCBTipoRegistrarMascota" min="-2" pref="255" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Component id="jLabel34" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jCBColorRegistrarMascota" min="-2" pref="255" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Component id="jLabel38" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jTextCaractRegistrarMascota" min="-2" pref="255" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="jLabel35" min="-2" pref="40" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jCBRazaRegistrarMascota" min="-2" pref="255" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Group type="103" groupAlignment="1" attributes="0">
+                                                  <Component id="jLabel39" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel36" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="jTextDenuncianteRegistrarMascota" max="32767" attributes="0"/>
+                                                  <Component id="jCBZonaRegistrarMascota" pref="255" max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Component id="jButton4" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1863,9 +1828,7 @@
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jButton4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-                      <Component id="jScrollPane5" min="-2" pref="511" max="-2" attributes="0"/>
-                      <EmptySpace pref="277" max="32767" attributes="0"/>
+                      <EmptySpace pref="801" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2183,33 +2146,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
               </Events>
             </Component>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane5">
-              <AuxValues>
-                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-              </AuxValues>
-
-              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-              <SubComponents>
-                <Component class="javax.swing.JTable" name="jTable4">
-                  <Properties>
-                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="6" rowCount="20">
-                        <Column editable="false" title="Estado" type="java.lang.Integer"/>
-                        <Column editable="false" title="Tipo" type="java.lang.String"/>
-                        <Column editable="false" title="Raza" type="java.lang.String"/>
-                        <Column editable="false" title="Tama&#xf1;o" type="java.lang.String"/>
-                        <Column editable="false" title="Color" type="java.lang.String"/>
-                        <Column editable="false" title="Zona" type="java.lang.String"/>
-                      </Table>
-                    </Property>
-                    <Property name="selectionBackground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="8a" green="1e" red="58" type="rgb"/>
-                    </Property>
-                    <Property name="showVerticalLines" type="boolean" value="false"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
             <Component class="javax.swing.JLabel" name="jLabel37">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -2350,9 +2286,6 @@
                     <Property name="rows" type="int" value="3"/>
                     <Property name="tabSize" type="int" value="5"/>
                     <Property name="text" type="java.lang.String" value="Ley Nacional 14.346 de Protecci&#xf3;n Animal&#xa;&#xa;Art. 1&#xba;: Ser&#xe1; reprimido con prisi&#xf3;n de 15 d&#xed;as a un a&#xf1;o el que infligiere malos tratos o hiciere v&#xed;ctima de actos de crueldad a los animales. &#xa;&#xa;Art. 2&#xba;: Ser&#xe1;n considerados actos de maltrato: &#xa;1) No alimentar en cantidad y calidad suficiente a los animales dom&#xe9;sticos o cautivos. &#xa;2) Azuzarlos para el trabajo mediante instrumentos que, no siendo de simple est&#xed;mulo, les provoquen innecesarios castigos o sensaciones dolorosas. &#xa;3) Hacerlos trabajar en jornadas excesivas, sin proporcionarles descanso adecuado, seg&#xfa;n las estaciones clim&#xe1;ticas. &#xa;4) Emplearlos en el trabajo cuando no se hallen en estado f&#xed;sico adecuado. &#xa;5) Estimularlos con drogas sin perseguir fines terap&#xe9;uticos. &#xa;6) Emplear animales en el tiro de veh&#xed;culos que excedan notoriamente sus fuerzas. &#xa;&#xa;Art. 3&#xba;: Ser&#xe1;n considerados actos de crueldad: &#xa;1) Practicar la vivisecci&#xf3;n con fines que no sean cient&#xed;ficamente demostrables y en lugares o por personas que no est&#xe9;n debidamente autorizadas para ello. &#xa;2) Mutilar cualquier parte del cuerpo de un animal, salvo que el acto tenga fines de mejoramiento, marcaci&#xf3;n o higiene de la respectiva especie animal o se realice por motivos de piedad. &#xa;3) Intervenir quir&#xfa;rgicamente animales sin anestesia y sin poseer el t&#xed;tulo de m&#xe9;dico o veterinario, con fines que no sean terap&#xe9;uticos o de perfeccionamiento t&#xe9;cnico operatorio, salvo en casos de urgencia debidamente comprobada. &#xa;4) Experimentar con animales de grado superior en la escala zool&#xf3;gica al indispensable seg&#xfa;n la naturaleza de la experiencia. &#xa;5) Abandonar a sus propios medios a los animales utilizados en la experimentaci&#xf3;n. &#xa;6) Causar la muerte de animales gr&#xe1;vidos, cuando tal estado sea patente en el animal y salvo en el caso de las industrias legalmente establecidas que se fundan sobre la explotaci&#xf3;n del nonato. &#xa;7) Lastimar o arrollar animales intencionalmente, causarles torturas o sufrimientos innecesarios, o matarlos por el s&#xf3;lo esp&#xed;ritu de perversidad. &#xa;8) Realizar actos p&#xfa;blicos o privados de ri&#xf1;as de animales, corridas de toros, novilladas y parodias, en que se mate, hiera u hostilice animales. &#xa;&#xa;Art. 4&#xba;: Comun&#xed;quese al Poder Ejecutivo. &#xa;&#xa;&#xa;&#xbf;QUE HACER EN CASO DE MALTRATO Y CRUELDAD CONTRA ANIMALES? &#xa;&#xa;Debes tener presente: &#xa;1. Es un delito penado por el C&#xf3;digo Penal. &#xa;2. Es un delito que tiene Acci&#xf3;n P&#xfa;blica, es decir que puede ser denunciado por cualquier persona. &#xa;3. El hecho se puede denunciar ante la Polic&#xed;a o fiscal&#xed;a. &#xa;&#xa;&#xa;Ley 14.346 - DENUNCIAS POR MALTRATO &#xa;&#xa;Pasos y requisitos necesarios para concretar una denuncia: &#xa;&#xa;1. Las denuncias son personales, debe efectuarlas la persona que presencia el hecho y que es testigo del hecho. &#xa;2. El/la denunciante debe ser mayor de edad, (21 a&#xf1;os), y acreditar su identidad con Documento Nacional de Identidad, Libreta de Enrolamiento o C&#xed;vica. Si es extranjero y no posee D.N.I., por medio de su C&#xe9;dula de Identidad. &#xa;3. La denuncia puede hacerse verbalmente o por escrito, ante las autoridades del lugar en que ocurri&#xf3; el hecho. En caso de realizarse por escrito deber&#xe1; ser firmada ante el funcionario que la recibe. &#xa;4. La denuncia no exige mayores formalidades. Basta con describir los hechos considerados delictuosos, el lugar y tiempo en el que ocurren o han ocurrido y, si se lo conoce, el nombre, apodo, se&#xf1;as, y/o domicilio del culpable y cualquier otro dato de inter&#xe9;s que pueda facilitar la investigaci&#xf3;n. &#xa;5. La denuncia debe formularse ante la Comisar&#xed;a de la zona, Juez competente, o el Ministerio Fiscal. LA POLICIA TIENE LA OBLIGACI&#xd3;N DE TOMAR LA DENUNCIA: LA LEY DE PROTECCI&#xd3;N AL ANIMAL NRO. 14.346 ES UNA LEY PENAL Y HAY QUE HACERLA CUMPLIR. &#xa;6. El denunciante no contrae ninguna obligaci&#xf3;n que lo ligue al proceso, ni es necesario el asesoramiento de abogados. &#xa;&#xa;&#xbf;D&#xf3;nde realizar la denuncia? &#xa;&#xa;En la comisar&#xed;a m&#xe1;s pr&#xf3;xima o ante el fiscal en turno o en los Tribunales&#xa;"/>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="null"/>
-                    </Property>
                   </Properties>
                 </Component>
               </SubComponents>

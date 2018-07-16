@@ -1,9 +1,13 @@
 package InterfazNueva;
 
+import com.unb001.mascotasenred.modelo.Denuncia;
 import com.unb001.mascotasenred.modelo.Denunciante;
 import com.unb001.mascotasenred.modelo.Mascota;
 import java.awt.Color;
 import java.awt.Component;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.persistence.EntityExistsException;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -49,8 +53,6 @@ public class Home extends javax.swing.JFrame {
         jCBZonaBuscarMascota = new javax.swing.JComboBox<>();
         jLabel11 = new javax.swing.JLabel();
         BtnBuscarMascota = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
         BotonCerrar = new javax.swing.JButton();
         PanelCrearAviso = new javax.swing.JPanel();
         jSeparator2 = new javax.swing.JSeparator();
@@ -77,9 +79,9 @@ public class Home extends javax.swing.JFrame {
         BtnCancelarCrearAviso = new javax.swing.JButton();
         jLabel41 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jTextNroAvisoCrearAviso = new javax.swing.JTextField();
         jTextFechaCrearAviso = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        jTextIDCrearAviso = new javax.swing.JTextField();
         jLabel42 = new javax.swing.JLabel();
         PanelCargarDenunciante = new javax.swing.JPanel();
         jSeparator6 = new javax.swing.JSeparator();
@@ -99,7 +101,7 @@ public class Home extends javax.swing.JFrame {
         jLabel29 = new javax.swing.JLabel();
         jTextEmailCargarDenunciante = new javax.swing.JTextField();
         jLabel40 = new javax.swing.JLabel();
-        jTextidMascotaCargarDenunciante = new javax.swing.JTextField();
+        jTextIDCargarDenunciante = new javax.swing.JTextField();
         PanelRegistrarMascota = new javax.swing.JPanel();
         jSeparator3 = new javax.swing.JSeparator();
         TituloRegistrarMascota = new javax.swing.JLabel();
@@ -116,8 +118,6 @@ public class Home extends javax.swing.JFrame {
         jCBZonaRegistrarMascota = new javax.swing.JComboBox<>();
         jLabel36 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
         jLabel37 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
         jTextNombreRegistrarMascota = new javax.swing.JTextField();
@@ -479,52 +479,6 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
-            },
-            new String [] {
-                "Estado", "Tipo", "Raza", "Tamaño", "Color", "Zona"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jTable1.setSelectionBackground(new java.awt.Color(88, 30, 138));
-        jTable1.setShowVerticalLines(false);
-        jScrollPane2.setViewportView(jTable1);
-
         BotonCerrar.setBackground(new java.awt.Color(61, 0, 112));
         BotonCerrar.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         BotonCerrar.setForeground(new java.awt.Color(255, 255, 255));
@@ -544,7 +498,7 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(PanelBuscarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(PanelBuscarMascotaLayout.createSequentialGroup()
-                        .addGroup(PanelBuscarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(PanelBuscarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(TituloBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(PanelBuscarMascotaLayout.createSequentialGroup()
                                 .addGroup(PanelBuscarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -574,8 +528,7 @@ public class Home extends javax.swing.JFrame {
                                         .addComponent(jLabel11)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jCBZonaBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(BtnBuscarMascota)))
-                            .addComponent(jScrollPane2))
+                                    .addComponent(BtnBuscarMascota))))
                         .addGap(0, 39, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBuscarMascotaLayout.createSequentialGroup()
@@ -615,9 +568,7 @@ public class Home extends javax.swing.JFrame {
                             .addComponent(jCBZonaBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BtnBuscarMascota)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(295, Short.MAX_VALUE))
+                .addContainerGap(824, Short.MAX_VALUE))
         );
 
         PanelCrearAviso.setBackground(new java.awt.Color(230, 230, 230));
@@ -912,17 +863,23 @@ public class Home extends javax.swing.JFrame {
         jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel43.setText("Fecha");
 
-        jTextField1.setText("Numero autogenerado de denuncia");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jTextNroAvisoCrearAviso.setText("Numero autogenerado de denuncia");
+        jTextNroAvisoCrearAviso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jTextNroAvisoCrearAvisoActionPerformed(evt);
             }
         });
 
-        jTextField2.setText("Numero autogenerado de id mascota");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        jTextFechaCrearAviso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                jTextFechaCrearAvisoActionPerformed(evt);
+            }
+        });
+
+        jTextIDCrearAviso.setText("Numero autogenerado de id mascota");
+        jTextIDCrearAviso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextIDCrearAvisoActionPerformed(evt);
             }
         });
 
@@ -956,7 +913,7 @@ public class Home extends javax.swing.JFrame {
                                             .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
                                                 .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(jTextNroAvisoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
                                                 .addComponent(jLabel27)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -977,7 +934,7 @@ public class Home extends javax.swing.JFrame {
                                             .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
                                                 .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jTextIDCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(18, 18, 18)
                                                 .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1046,11 +1003,11 @@ public class Home extends javax.swing.JFrame {
                         .addGap(16, 16, 16)
                         .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel41)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextNroAvisoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel42)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextIDCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel23)
                             .addComponent(jCBTipoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1178,9 +1135,9 @@ public class Home extends javax.swing.JFrame {
         jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel40.setText("ID");
 
-        jTextidMascotaCargarDenunciante.addActionListener(new java.awt.event.ActionListener() {
+        jTextIDCargarDenunciante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextidMascotaCargarDenuncianteActionPerformed(evt);
+                jTextIDCargarDenuncianteActionPerformed(evt);
             }
         });
 
@@ -1215,7 +1172,7 @@ public class Home extends javax.swing.JFrame {
                                     .addGroup(PanelCargarDenuncianteLayout.createSequentialGroup()
                                         .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextidMascotaCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextIDCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(303, 303, 303)))
                                 .addGap(33, 33, 33)
                                 .addGroup(PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1266,7 +1223,7 @@ public class Home extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel40)
-                                    .addComponent(jTextidMascotaCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(jTextIDCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel17)
                         .addComponent(jTextApellidoCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -1530,52 +1487,6 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
-            },
-            new String [] {
-                "Estado", "Tipo", "Raza", "Tamaño", "Color", "Zona"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jTable4.setSelectionBackground(new java.awt.Color(88, 30, 138));
-        jTable4.setShowVerticalLines(false);
-        jScrollPane5.setViewportView(jTable4);
-
         jLabel37.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
         jLabel37.setForeground(new java.awt.Color(61, 0, 112));
         jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -1600,64 +1511,59 @@ public class Home extends javax.swing.JFrame {
             .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
-                        .addComponent(jScrollPane5)
-                        .addGap(58, 58, 58))
+                    .addComponent(jSeparator3, javax.swing.GroupLayout.DEFAULT_SIZE, 1004, Short.MAX_VALUE)
                     .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
                         .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jSeparator3, javax.swing.GroupLayout.DEFAULT_SIZE, 1004, Short.MAX_VALUE)
+                            .addComponent(TituloRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
-                                .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(TituloRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelRegistrarMascotaLayout.createSequentialGroup()
+                                        .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jCBEstadoRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
+                                            .addComponent(jLabel37)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(jTextNombreRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelRegistrarMascotaLayout.createSequentialGroup()
+                                            .addComponent(jLabel32)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(jCBTamañoRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(18, 18, 18)
+                                .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelRegistrarMascotaLayout.createSequentialGroup()
+                                        .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jCBTipoRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelRegistrarMascotaLayout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelRegistrarMascotaLayout.createSequentialGroup()
+                                                .addComponent(jLabel34)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jCBColorRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelRegistrarMascotaLayout.createSequentialGroup()
+                                                .addComponent(jLabel38)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jTextCaractRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addGap(19, 19, 19)
+                                .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
+                                        .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jCBRazaRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
                                         .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelRegistrarMascotaLayout.createSequentialGroup()
-                                                .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jCBEstadoRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
-                                                    .addComponent(jLabel37)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(jTextNombreRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelRegistrarMascotaLayout.createSequentialGroup()
-                                                    .addComponent(jLabel32)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(jCBTamañoRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelRegistrarMascotaLayout.createSequentialGroup()
-                                                .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jCBTipoRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelRegistrarMascotaLayout.createSequentialGroup()
-                                                .addGap(6, 6, 6)
-                                                .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelRegistrarMascotaLayout.createSequentialGroup()
-                                                        .addComponent(jLabel34)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(jCBColorRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelRegistrarMascotaLayout.createSequentialGroup()
-                                                        .addComponent(jLabel38)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(jTextCaractRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                        .addGap(19, 19, 19)
-                                        .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
-                                                .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jCBRazaRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
-                                                .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(jLabel39)
-                                                    .addComponent(jLabel36))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                    .addComponent(jTextDenuncianteRegistrarMascota)
-                                                    .addComponent(jCBZonaRegistrarMascota, 0, 255, Short.MAX_VALUE)))
-                                            .addComponent(jButton4))))
-                                .addGap(48, 48, 48)))
-                        .addContainerGap())))
+                                            .addComponent(jLabel39)
+                                            .addComponent(jLabel36))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jTextDenuncianteRegistrarMascota)
+                                            .addComponent(jCBZonaRegistrarMascota, 0, 255, Short.MAX_VALUE)))
+                                    .addComponent(jButton4))))
+                        .addGap(48, 48, 48)))
+                .addContainerGap())
         );
         PanelRegistrarMascotaLayout.setVerticalGroup(
             PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1708,9 +1614,7 @@ public class Home extends javax.swing.JFrame {
                             .addComponent(jTextCaractRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton4)
-                .addGap(13, 13, 13)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(277, Short.MAX_VALUE))
+                .addContainerGap(801, Short.MAX_VALUE))
         );
 
         PanelDenunciaMaltrato.setBackground(new java.awt.Color(230, 230, 230));
@@ -1731,7 +1635,6 @@ public class Home extends javax.swing.JFrame {
         jTextArea2.setRows(3);
         jTextArea2.setTabSize(5);
         jTextArea2.setText("Ley Nacional 14.346 de Protección Animal\n\nArt. 1º: Será reprimido con prisión de 15 días a un año el que infligiere malos tratos o hiciere víctima de actos de crueldad a los animales. \n\nArt. 2º: Serán considerados actos de maltrato: \n1) No alimentar en cantidad y calidad suficiente a los animales domésticos o cautivos. \n2) Azuzarlos para el trabajo mediante instrumentos que, no siendo de simple estímulo, les provoquen innecesarios castigos o sensaciones dolorosas. \n3) Hacerlos trabajar en jornadas excesivas, sin proporcionarles descanso adecuado, según las estaciones climáticas. \n4) Emplearlos en el trabajo cuando no se hallen en estado físico adecuado. \n5) Estimularlos con drogas sin perseguir fines terapéuticos. \n6) Emplear animales en el tiro de vehículos que excedan notoriamente sus fuerzas. \n\nArt. 3º: Serán considerados actos de crueldad: \n1) Practicar la vivisección con fines que no sean científicamente demostrables y en lugares o por personas que no estén debidamente autorizadas para ello. \n2) Mutilar cualquier parte del cuerpo de un animal, salvo que el acto tenga fines de mejoramiento, marcación o higiene de la respectiva especie animal o se realice por motivos de piedad. \n3) Intervenir quirúrgicamente animales sin anestesia y sin poseer el título de médico o veterinario, con fines que no sean terapéuticos o de perfeccionamiento técnico operatorio, salvo en casos de urgencia debidamente comprobada. \n4) Experimentar con animales de grado superior en la escala zoológica al indispensable según la naturaleza de la experiencia. \n5) Abandonar a sus propios medios a los animales utilizados en la experimentación. \n6) Causar la muerte de animales grávidos, cuando tal estado sea patente en el animal y salvo en el caso de las industrias legalmente establecidas que se fundan sobre la explotación del nonato. \n7) Lastimar o arrollar animales intencionalmente, causarles torturas o sufrimientos innecesarios, o matarlos por el sólo espíritu de perversidad. \n8) Realizar actos públicos o privados de riñas de animales, corridas de toros, novilladas y parodias, en que se mate, hiera u hostilice animales. \n\nArt. 4º: Comuníquese al Poder Ejecutivo. \n\n\n¿QUE HACER EN CASO DE MALTRATO Y CRUELDAD CONTRA ANIMALES? \n\nDebes tener presente: \n1. Es un delito penado por el Código Penal. \n2. Es un delito que tiene Acción Pública, es decir que puede ser denunciado por cualquier persona. \n3. El hecho se puede denunciar ante la Policía o fiscalía. \n\n\nLey 14.346 - DENUNCIAS POR MALTRATO \n\nPasos y requisitos necesarios para concretar una denuncia: \n\n1. Las denuncias son personales, debe efectuarlas la persona que presencia el hecho y que es testigo del hecho. \n2. El/la denunciante debe ser mayor de edad, (21 años), y acreditar su identidad con Documento Nacional de Identidad, Libreta de Enrolamiento o Cívica. Si es extranjero y no posee D.N.I., por medio de su Cédula de Identidad. \n3. La denuncia puede hacerse verbalmente o por escrito, ante las autoridades del lugar en que ocurrió el hecho. En caso de realizarse por escrito deberá ser firmada ante el funcionario que la recibe. \n4. La denuncia no exige mayores formalidades. Basta con describir los hechos considerados delictuosos, el lugar y tiempo en el que ocurren o han ocurrido y, si se lo conoce, el nombre, apodo, señas, y/o domicilio del culpable y cualquier otro dato de interés que pueda facilitar la investigación. \n5. La denuncia debe formularse ante la Comisaría de la zona, Juez competente, o el Ministerio Fiscal. LA POLICIA TIENE LA OBLIGACIÓN DE TOMAR LA DENUNCIA: LA LEY DE PROTECCIÓN AL ANIMAL NRO. 14.346 ES UNA LEY PENAL Y HAY QUE HACERLA CUMPLIR. \n6. El denunciante no contrae ninguna obligación que lo ligue al proceso, ni es necesario el asesoramiento de abogados. \n\n¿Dónde realizar la denuncia? \n\nEn la comisaría más próxima o ante el fiscal en turno o en los Tribunales\n");
-        jTextArea2.setBorder(null);
         jScrollPane3.setViewportView(jTextArea2);
 
         javax.swing.GroupLayout PanelDenunciaMaltratoLayout = new javax.swing.GroupLayout(PanelDenunciaMaltrato);
@@ -1976,8 +1879,14 @@ public class Home extends javax.swing.JFrame {
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
         String estado, tipoMascota, raza, tamanio, color, zona, nombre, caracteristicasEspeciales;
-        Denunciante denunciante;
-        int idMascota = Integer.parseInt(jTextidMascotaCargarDenunciante.getText());
+        int nro = Integer.parseInt(jTextNroAvisoCrearAviso.getText());
+        String tipoDenuncia;
+        DateFormat df = DateFormat.getDateInstance();
+        Date fechaActual = new Date();
+        jTextFechaCrearAviso.setText(df.format(fechaActual));
+        SimpleDateFormat formateador = new SimpleDateFormat("yyyy/MM/dd");
+        String f = formateador.format(fechaActual);
+        int idMascota = Integer.parseInt(jTextIDCrearAviso.getText());
         estado = jCBEstadoCrearAviso.getSelectedItem().toString();
         tipoMascota = jCBTipoCrearAviso.getSelectedItem().toString();
         raza = jCBRazaCrearAviso.getSelectedItem().toString();
@@ -1986,10 +1895,11 @@ public class Home extends javax.swing.JFrame {
         zona = jCBZonaCrearAviso.getSelectedItem().toString();
         nombre = jTextNombreCrearAviso.getText();
         caracteristicasEspeciales = jTextCaractCrearAviso.getText();
-        denunciante = jTextDenuncianteCrearAviso.getText();
-        Mascota Masc = new Mascota(idMascota, nombre, tipoMascota, raza, color, caracteristicasEspeciales, tamanio, zona, estado, Denunciante denunciante);
+        Denuncia den = new Denuncia(nro, estado, fechaActual);
+        Mascota Masc = new Mascota(idMascota, nombre, tipoMascota, raza, color, caracteristicasEspeciales, tamanio, zona, estado);
         try {
             manager.persist(Masc);
+            manager.persist(den);
             manager.getTransaction().commit();
             manager.close();
         } catch (EntityExistsException e) {
@@ -1998,7 +1908,7 @@ public class Home extends javax.swing.JFrame {
 
     }//GEN-LAST:event_BtnCargarCrearAvisoActionPerformed
 
-    //FIN CAREAR AVISO---------------------------------------------------------------------------
+    //FIN CREAR AVISO---------------------------------------------------------------------------
     //CARGAR DENUNCIANTE------------------------------------------------------------
     private void jTextDireccionActionPerformed(java.awt.event.ActionEvent evt) {
         jTextDireccionCargarDenunciante.transferFocus();
@@ -2040,12 +1950,13 @@ public class Home extends javax.swing.JFrame {
         manager.getTransaction().begin();
         String nombre, apellido, dire, email;
         int dni = Integer.parseInt(jTextDNICargarDenunciante.getText());
-        //dni = jTextDNI.getText();
+        int telefono = Integer.parseInt(jTextTelCargarDenunciante.getText());
+        int id = Integer.parseInt(jTextIDCargarDenunciante.getText());
         nombre = jTextNombreCargarDenunciante.getText();
         apellido = jTextApellidoCargarDenunciante.getText();
         dire = jTextDireccionCargarDenunciante.getText();
         email = jTextTelCargarDenunciante.getText();
-        Denunciante dn = new Denunciante(dni, nombre, apellido, dire, email);
+        Denunciante dn = new Denunciante(dni, nombre, apellido, dire, email, telefono, id);
         try {
             // manager.merge(nuevo5);
             manager.persist(dn);
@@ -2124,17 +2035,26 @@ public class Home extends javax.swing.JFrame {
         bloquear();
     }//GEN-LAST:event_BtnCancelarCrearAvisoActionPerformed
 
-    private void jTextidMascotaCargarDenuncianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextidMascotaCargarDenuncianteActionPerformed
+    private void jTextIDCargarDenuncianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextIDCargarDenuncianteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextidMascotaCargarDenuncianteActionPerformed
+    }//GEN-LAST:event_jTextIDCargarDenuncianteActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jTextNroAvisoCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextNroAvisoCrearAvisoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jTextNroAvisoCrearAvisoActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void jTextIDCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextIDCrearAvisoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_jTextIDCrearAvisoActionPerformed
+
+    private void jTextFechaCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFechaCrearAvisoActionPerformed
+        DateFormat df = DateFormat.getDateInstance();
+        Date fechaActual = new Date();
+        jTextFechaCrearAviso.setText(df.format(fechaActual));
+        SimpleDateFormat formateador = new SimpleDateFormat("yyyy/MM/dd");
+        String f = formateador.format(fechaActual);
+        
+    }//GEN-LAST:event_jTextFechaCrearAvisoActionPerformed
 
     public void limpiar() {
         jTextDNICargarDenunciante.setText("");
@@ -2283,16 +2203,12 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator6;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable4;
     private javax.swing.JTextField jTextApellidoCargarDenunciante;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextCaractCrearAviso;
@@ -2303,13 +2219,13 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JTextField jTextDireccionCargarDenunciante;
     private javax.swing.JTextField jTextEmailCargarDenunciante;
     private javax.swing.JTextField jTextFechaCrearAviso;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextIDCargarDenunciante;
+    private javax.swing.JTextField jTextIDCrearAviso;
     private javax.swing.JTextField jTextNombreCargarDenunciante;
     private javax.swing.JTextField jTextNombreCrearAviso;
     private javax.swing.JTextField jTextNombreRegistrarMascota;
+    private javax.swing.JTextField jTextNroAvisoCrearAviso;
     private javax.swing.JTextField jTextTelCargarDenunciante;
-    private javax.swing.JTextField jTextidMascotaCargarDenunciante;
     // End of variables declaration//GEN-END:variables
 
     private void setLblColor(JLabel lbl) {

@@ -62,27 +62,13 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <Component id="EspacioMenu" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="PanelBuscarMascota" min="-2" pref="1024" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                          <Component id="PanelDenunciaMaltrato" min="-2" pref="541" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="PanelCrearAviso" min="-2" pref="1024" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="PanelCargarDenunciante" min="-2" pref="1024" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="PanelRegistrarMascota" min="-2" pref="1024" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="PanelBuscarMascota" alignment="0" min="-2" pref="1024" max="-2" attributes="0"/>
+                      <Component id="PanelCrearAviso" min="-2" pref="1024" max="-2" attributes="0"/>
+                      <Component id="PanelCargarDenunciante" min="-2" pref="1024" max="-2" attributes="0"/>
+                      <Component id="PanelRegistrarMascota" min="-2" pref="1024" max="-2" attributes="0"/>
+                      <Component id="PanelDenunciaMaltrato" min="-2" pref="1024" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -90,17 +76,17 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="EspacioMenu" pref="9627" max="32767" attributes="0"/>
+              <Component id="EspacioMenu" pref="5045" max="32767" attributes="0"/>
               <Group type="102" attributes="0">
                   <Component id="PanelBuscarMascota" min="-2" pref="1002" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="PanelDenunciaMaltrato" min="-2" pref="1002" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="PanelCargarDenunciante" min="-2" pref="1002" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="PanelCrearAviso" min="-2" pref="1002" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="PanelRegistrarMascota" min="-2" pref="1002" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="5201" max="-2" attributes="0"/>
-                  <Component id="PanelDenunciaMaltrato" min="-2" pref="389" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -814,7 +800,7 @@
                                                   <Group type="102" alignment="1" attributes="0">
                                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                                       <Component id="jLabel21" min="-2" pref="40" max="-2" attributes="0"/>
-                                                      <EmptySpace max="32767" attributes="0"/>
+                                                      <EmptySpace pref="15" max="32767" attributes="0"/>
                                                       <Component id="jCBEstadoCrearAviso" min="-2" pref="255" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
@@ -868,7 +854,7 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="0" pref="59" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="70" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -944,7 +930,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="787" max="32767" attributes="0"/>
+                      <EmptySpace pref="765" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1453,7 +1439,7 @@
                                   </Group>
                                   <Component id="TituloCargarDenunciante" alignment="0" min="-2" pref="189" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="42" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="64" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -1514,7 +1500,7 @@
                           <Component id="BtnGuardar" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="BtnCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="793" max="32767" attributes="0"/>
+                      <EmptySpace pref="771" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1735,7 +1721,7 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jSeparator3" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jSeparator3" alignment="0" pref="1004" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="TituloRegistrarMascota" alignment="0" min="-2" pref="123" max="-2" attributes="0"/>
@@ -1879,7 +1865,7 @@
                       <Component id="jButton4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                       <Component id="jScrollPane5" min="-2" pref="511" max="-2" attributes="0"/>
-                      <EmptySpace pref="299" max="32767" attributes="0"/>
+                      <EmptySpace pref="277" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2273,50 +2259,71 @@
         </Container>
         <Container class="javax.swing.JPanel" name="PanelDenunciaMaltrato">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="e6" green="e6" red="e6" type="rgb"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="new java.awt.Color(230, 230, 230)" type="code"/>
             </Property>
-            <Property name="alignmentX" type="float" value="0.0"/>
-            <Property name="alignmentY" type="float" value="0.0"/>
-            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[800, 1333]"/>
+            <Property name="alignmentX" type="float" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="0.0F" type="code"/>
             </Property>
-            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[800, 1333]"/>
+            <Property name="alignmentY" type="float" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="0.0F" type="code"/>
+            </Property>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="new java.awt.Dimension(1002, 1024)" type="code"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="new java.awt.Dimension(1002, 1024)" type="code"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JPanel()"/>
+          </AuxValues>
 
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jSeparator5" alignment="0" pref="800" max="32767" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="TituloDenunciaDeMaltrato" min="-2" pref="196" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="604" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jSeparator4" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="TituloBuscarMascota1" min="-2" pref="159" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane3" min="-2" pref="966" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="38" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                      <Component id="TituloDenunciaDeMaltrato" min="-2" pref="16" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                      <Component id="TituloBuscarMascota1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jSeparator5" min="-2" pref="13" max="-2" attributes="0"/>
-                      <EmptySpace pref="1254" max="32767" attributes="0"/>
+                      <Component id="jSeparator4" min="-2" pref="1" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jScrollPane3" min="-2" pref="569" max="-2" attributes="0"/>
+                      <EmptySpace pref="316" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JSeparator" name="jSeparator5">
+            <Component class="javax.swing.JSeparator" name="jSeparator4">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="70" green="0" red="3d" type="rgb"/>
                 </Property>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[0, 5]"/>
+                </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="TituloDenunciaDeMaltrato">
+            <Component class="javax.swing.JLabel" name="TituloBuscarMascota1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Calibri" size="14" style="1"/>
@@ -2327,6 +2334,29 @@
                 <Property name="text" type="java.lang.String" value=" &gt; Denuncia de Maltrato"/>
               </Properties>
             </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="jTextArea2">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Calibri" size="12" style="0"/>
+                    </Property>
+                    <Property name="rows" type="int" value="3"/>
+                    <Property name="tabSize" type="int" value="5"/>
+                    <Property name="text" type="java.lang.String" value="Ley Nacional 14.346 de Protecci&#xf3;n Animal&#xa;&#xa;Art. 1&#xba;: Ser&#xe1; reprimido con prisi&#xf3;n de 15 d&#xed;as a un a&#xf1;o el que infligiere malos tratos o hiciere v&#xed;ctima de actos de crueldad a los animales. &#xa;&#xa;Art. 2&#xba;: Ser&#xe1;n considerados actos de maltrato: &#xa;1) No alimentar en cantidad y calidad suficiente a los animales dom&#xe9;sticos o cautivos. &#xa;2) Azuzarlos para el trabajo mediante instrumentos que, no siendo de simple est&#xed;mulo, les provoquen innecesarios castigos o sensaciones dolorosas. &#xa;3) Hacerlos trabajar en jornadas excesivas, sin proporcionarles descanso adecuado, seg&#xfa;n las estaciones clim&#xe1;ticas. &#xa;4) Emplearlos en el trabajo cuando no se hallen en estado f&#xed;sico adecuado. &#xa;5) Estimularlos con drogas sin perseguir fines terap&#xe9;uticos. &#xa;6) Emplear animales en el tiro de veh&#xed;culos que excedan notoriamente sus fuerzas. &#xa;&#xa;Art. 3&#xba;: Ser&#xe1;n considerados actos de crueldad: &#xa;1) Practicar la vivisecci&#xf3;n con fines que no sean cient&#xed;ficamente demostrables y en lugares o por personas que no est&#xe9;n debidamente autorizadas para ello. &#xa;2) Mutilar cualquier parte del cuerpo de un animal, salvo que el acto tenga fines de mejoramiento, marcaci&#xf3;n o higiene de la respectiva especie animal o se realice por motivos de piedad. &#xa;3) Intervenir quir&#xfa;rgicamente animales sin anestesia y sin poseer el t&#xed;tulo de m&#xe9;dico o veterinario, con fines que no sean terap&#xe9;uticos o de perfeccionamiento t&#xe9;cnico operatorio, salvo en casos de urgencia debidamente comprobada. &#xa;4) Experimentar con animales de grado superior en la escala zool&#xf3;gica al indispensable seg&#xfa;n la naturaleza de la experiencia. &#xa;5) Abandonar a sus propios medios a los animales utilizados en la experimentaci&#xf3;n. &#xa;6) Causar la muerte de animales gr&#xe1;vidos, cuando tal estado sea patente en el animal y salvo en el caso de las industrias legalmente establecidas que se fundan sobre la explotaci&#xf3;n del nonato. &#xa;7) Lastimar o arrollar animales intencionalmente, causarles torturas o sufrimientos innecesarios, o matarlos por el s&#xf3;lo esp&#xed;ritu de perversidad. &#xa;8) Realizar actos p&#xfa;blicos o privados de ri&#xf1;as de animales, corridas de toros, novilladas y parodias, en que se mate, hiera u hostilice animales. &#xa;&#xa;Art. 4&#xba;: Comun&#xed;quese al Poder Ejecutivo. &#xa;&#xa;&#xa;&#xbf;QUE HACER EN CASO DE MALTRATO Y CRUELDAD CONTRA ANIMALES? &#xa;&#xa;Debes tener presente: &#xa;1. Es un delito penado por el C&#xf3;digo Penal. &#xa;2. Es un delito que tiene Acci&#xf3;n P&#xfa;blica, es decir que puede ser denunciado por cualquier persona. &#xa;3. El hecho se puede denunciar ante la Polic&#xed;a o fiscal&#xed;a. &#xa;&#xa;&#xa;Ley 14.346 - DENUNCIAS POR MALTRATO &#xa;&#xa;Pasos y requisitos necesarios para concretar una denuncia: &#xa;&#xa;1. Las denuncias son personales, debe efectuarlas la persona que presencia el hecho y que es testigo del hecho. &#xa;2. El/la denunciante debe ser mayor de edad, (21 a&#xf1;os), y acreditar su identidad con Documento Nacional de Identidad, Libreta de Enrolamiento o C&#xed;vica. Si es extranjero y no posee D.N.I., por medio de su C&#xe9;dula de Identidad. &#xa;3. La denuncia puede hacerse verbalmente o por escrito, ante las autoridades del lugar en que ocurri&#xf3; el hecho. En caso de realizarse por escrito deber&#xe1; ser firmada ante el funcionario que la recibe. &#xa;4. La denuncia no exige mayores formalidades. Basta con describir los hechos considerados delictuosos, el lugar y tiempo en el que ocurren o han ocurrido y, si se lo conoce, el nombre, apodo, se&#xf1;as, y/o domicilio del culpable y cualquier otro dato de inter&#xe9;s que pueda facilitar la investigaci&#xf3;n. &#xa;5. La denuncia debe formularse ante la Comisar&#xed;a de la zona, Juez competente, o el Ministerio Fiscal. LA POLICIA TIENE LA OBLIGACI&#xd3;N DE TOMAR LA DENUNCIA: LA LEY DE PROTECCI&#xd3;N AL ANIMAL NRO. 14.346 ES UNA LEY PENAL Y HAY QUE HACERLA CUMPLIR. &#xa;6. El denunciante no contrae ninguna obligaci&#xf3;n que lo ligue al proceso, ni es necesario el asesoramiento de abogados. &#xa;&#xa;&#xbf;D&#xf3;nde realizar la denuncia? &#xa;&#xa;En la comisar&#xed;a m&#xe1;s pr&#xf3;xima o ante el fiscal en turno o en los Tribunales&#xa;"/>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="null"/>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
       </SubComponents>

@@ -125,8 +125,10 @@ public class Home extends javax.swing.JFrame {
         jLabel39 = new javax.swing.JLabel();
         jTextDenuncianteRegistrarMascota = new javax.swing.JTextField();
         PanelDenunciaMaltrato = new javax.swing.JPanel();
-        jSeparator5 = new javax.swing.JSeparator();
-        TituloDenunciaDeMaltrato = new javax.swing.JLabel();
+        jSeparator4 = new javax.swing.JSeparator();
+        TituloBuscarMascota1 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -968,7 +970,7 @@ public class Home extends javax.swing.JFrame {
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCrearAvisoLayout.createSequentialGroup()
                                                 .addGap(18, 18, 18)
                                                 .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                                                 .addComponent(jCBEstadoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                     .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
                                         .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -1007,7 +1009,7 @@ public class Home extends javax.swing.JFrame {
                                         .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jTextFechaCrearAviso)))))
-                        .addGap(0, 59, Short.MAX_VALUE))))
+                        .addGap(0, 70, Short.MAX_VALUE))))
         );
         PanelCrearAvisoLayout.setVerticalGroup(
             PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1065,7 +1067,7 @@ public class Home extends javax.swing.JFrame {
                             .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel28)
                                 .addComponent(jTextCaractCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(787, Short.MAX_VALUE))
+                .addContainerGap(765, Short.MAX_VALUE))
         );
 
         PanelCargarDenunciante.setBackground(new java.awt.Color(230, 230, 230));
@@ -1226,7 +1228,7 @@ public class Home extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jTextEmailCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addComponent(TituloCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 42, Short.MAX_VALUE))
+                        .addGap(0, 64, Short.MAX_VALUE))
                     .addGroup(PanelCargarDenuncianteLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(BtnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1272,7 +1274,7 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnGuardar)
                     .addComponent(BtnCancelar))
-                .addContainerGap(793, Short.MAX_VALUE))
+                .addContainerGap(771, Short.MAX_VALUE))
         );
 
         PanelRegistrarMascota.setBackground(new java.awt.Color(230, 230, 230));
@@ -1603,7 +1605,7 @@ public class Home extends javax.swing.JFrame {
                         .addGap(58, 58, 58))
                     .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
                         .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jSeparator3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jSeparator3, javax.swing.GroupLayout.DEFAULT_SIZE, 1004, Short.MAX_VALUE)
                             .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
                                 .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(TituloRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1708,38 +1710,55 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(jButton4)
                 .addGap(13, 13, 13)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(299, Short.MAX_VALUE))
+                .addContainerGap(277, Short.MAX_VALUE))
         );
 
         PanelDenunciaMaltrato.setBackground(new java.awt.Color(230, 230, 230));
         PanelDenunciaMaltrato.setAlignmentX(0.0F);
         PanelDenunciaMaltrato.setAlignmentY(0.0F);
-        PanelDenunciaMaltrato.setMaximumSize(new java.awt.Dimension(800, 1333));
-        PanelDenunciaMaltrato.setPreferredSize(new java.awt.Dimension(800, 1333));
+        PanelDenunciaMaltrato.setMaximumSize(new java.awt.Dimension(1002, 1024));
+        PanelDenunciaMaltrato.setPreferredSize(new java.awt.Dimension(1002, 1024));
 
-        jSeparator5.setBackground(new java.awt.Color(61, 0, 112));
+        jSeparator4.setBackground(new java.awt.Color(61, 0, 112));
+        jSeparator4.setPreferredSize(new java.awt.Dimension(0, 5));
 
-        TituloDenunciaDeMaltrato.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        TituloDenunciaDeMaltrato.setForeground(new java.awt.Color(61, 0, 112));
-        TituloDenunciaDeMaltrato.setText(" > Denuncia de Maltrato");
+        TituloBuscarMascota1.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        TituloBuscarMascota1.setForeground(new java.awt.Color(61, 0, 112));
+        TituloBuscarMascota1.setText(" > Denuncia de Maltrato");
+
+        jTextArea2.setColumns(20);
+        jTextArea2.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        jTextArea2.setRows(3);
+        jTextArea2.setTabSize(5);
+        jTextArea2.setText("Ley Nacional 14.346 de Protección Animal\n\nArt. 1º: Será reprimido con prisión de 15 días a un año el que infligiere malos tratos o hiciere víctima de actos de crueldad a los animales. \n\nArt. 2º: Serán considerados actos de maltrato: \n1) No alimentar en cantidad y calidad suficiente a los animales domésticos o cautivos. \n2) Azuzarlos para el trabajo mediante instrumentos que, no siendo de simple estímulo, les provoquen innecesarios castigos o sensaciones dolorosas. \n3) Hacerlos trabajar en jornadas excesivas, sin proporcionarles descanso adecuado, según las estaciones climáticas. \n4) Emplearlos en el trabajo cuando no se hallen en estado físico adecuado. \n5) Estimularlos con drogas sin perseguir fines terapéuticos. \n6) Emplear animales en el tiro de vehículos que excedan notoriamente sus fuerzas. \n\nArt. 3º: Serán considerados actos de crueldad: \n1) Practicar la vivisección con fines que no sean científicamente demostrables y en lugares o por personas que no estén debidamente autorizadas para ello. \n2) Mutilar cualquier parte del cuerpo de un animal, salvo que el acto tenga fines de mejoramiento, marcación o higiene de la respectiva especie animal o se realice por motivos de piedad. \n3) Intervenir quirúrgicamente animales sin anestesia y sin poseer el título de médico o veterinario, con fines que no sean terapéuticos o de perfeccionamiento técnico operatorio, salvo en casos de urgencia debidamente comprobada. \n4) Experimentar con animales de grado superior en la escala zoológica al indispensable según la naturaleza de la experiencia. \n5) Abandonar a sus propios medios a los animales utilizados en la experimentación. \n6) Causar la muerte de animales grávidos, cuando tal estado sea patente en el animal y salvo en el caso de las industrias legalmente establecidas que se fundan sobre la explotación del nonato. \n7) Lastimar o arrollar animales intencionalmente, causarles torturas o sufrimientos innecesarios, o matarlos por el sólo espíritu de perversidad. \n8) Realizar actos públicos o privados de riñas de animales, corridas de toros, novilladas y parodias, en que se mate, hiera u hostilice animales. \n\nArt. 4º: Comuníquese al Poder Ejecutivo. \n\n\n¿QUE HACER EN CASO DE MALTRATO Y CRUELDAD CONTRA ANIMALES? \n\nDebes tener presente: \n1. Es un delito penado por el Código Penal. \n2. Es un delito que tiene Acción Pública, es decir que puede ser denunciado por cualquier persona. \n3. El hecho se puede denunciar ante la Policía o fiscalía. \n\n\nLey 14.346 - DENUNCIAS POR MALTRATO \n\nPasos y requisitos necesarios para concretar una denuncia: \n\n1. Las denuncias son personales, debe efectuarlas la persona que presencia el hecho y que es testigo del hecho. \n2. El/la denunciante debe ser mayor de edad, (21 años), y acreditar su identidad con Documento Nacional de Identidad, Libreta de Enrolamiento o Cívica. Si es extranjero y no posee D.N.I., por medio de su Cédula de Identidad. \n3. La denuncia puede hacerse verbalmente o por escrito, ante las autoridades del lugar en que ocurrió el hecho. En caso de realizarse por escrito deberá ser firmada ante el funcionario que la recibe. \n4. La denuncia no exige mayores formalidades. Basta con describir los hechos considerados delictuosos, el lugar y tiempo en el que ocurren o han ocurrido y, si se lo conoce, el nombre, apodo, señas, y/o domicilio del culpable y cualquier otro dato de interés que pueda facilitar la investigación. \n5. La denuncia debe formularse ante la Comisaría de la zona, Juez competente, o el Ministerio Fiscal. LA POLICIA TIENE LA OBLIGACIÓN DE TOMAR LA DENUNCIA: LA LEY DE PROTECCIÓN AL ANIMAL NRO. 14.346 ES UNA LEY PENAL Y HAY QUE HACERLA CUMPLIR. \n6. El denunciante no contrae ninguna obligación que lo ligue al proceso, ni es necesario el asesoramiento de abogados. \n\n¿Dónde realizar la denuncia? \n\nEn la comisaría más próxima o ante el fiscal en turno o en los Tribunales\n");
+        jTextArea2.setBorder(null);
+        jScrollPane3.setViewportView(jTextArea2);
 
         javax.swing.GroupLayout PanelDenunciaMaltratoLayout = new javax.swing.GroupLayout(PanelDenunciaMaltrato);
         PanelDenunciaMaltrato.setLayout(PanelDenunciaMaltratoLayout);
         PanelDenunciaMaltratoLayout.setHorizontalGroup(
             PanelDenunciaMaltratoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator5, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
             .addGroup(PanelDenunciaMaltratoLayout.createSequentialGroup()
-                .addComponent(TituloDenunciaDeMaltrato, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 604, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(PanelDenunciaMaltratoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(PanelDenunciaMaltratoLayout.createSequentialGroup()
+                        .addGroup(PanelDenunciaMaltratoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(TituloBuscarMascota1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 966, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 38, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         PanelDenunciaMaltratoLayout.setVerticalGroup(
             PanelDenunciaMaltratoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelDenunciaMaltratoLayout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(TituloDenunciaDeMaltrato, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(75, 75, 75)
+                .addComponent(TituloBuscarMascota1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1254, Short.MAX_VALUE))
+                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 1, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 569, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(316, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout VentanaDeFondoLayout = new javax.swing.GroupLayout(VentanaDeFondo);
@@ -1748,37 +1767,28 @@ public class Home extends javax.swing.JFrame {
             VentanaDeFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(VentanaDeFondoLayout.createSequentialGroup()
                 .addComponent(EspacioMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(VentanaDeFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(VentanaDeFondoLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(PanelBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 1024, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(VentanaDeFondoLayout.createSequentialGroup()
-                        .addGap(5, 5, 5)
-                        .addComponent(PanelDenunciaMaltrato, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(VentanaDeFondoLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(PanelCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 1024, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(VentanaDeFondoLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(PanelCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, 1024, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(VentanaDeFondoLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(PanelRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 1024, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(PanelBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 1024, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 1024, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, 1024, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 1024, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelDenunciaMaltrato, javax.swing.GroupLayout.PREFERRED_SIZE, 1024, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         VentanaDeFondoLayout.setVerticalGroup(
             VentanaDeFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(EspacioMenu, javax.swing.GroupLayout.DEFAULT_SIZE, 9627, Short.MAX_VALUE)
+            .addComponent(EspacioMenu, javax.swing.GroupLayout.DEFAULT_SIZE, 5045, Short.MAX_VALUE)
             .addGroup(VentanaDeFondoLayout.createSequentialGroup()
                 .addComponent(PanelBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 1002, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PanelDenunciaMaltrato, javax.swing.GroupLayout.PREFERRED_SIZE, 1002, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PanelCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, 1002, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PanelCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 1002, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PanelRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 1002, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(5201, 5201, 5201)
-                .addComponent(PanelDenunciaMaltrato, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -2215,9 +2225,9 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel PanelDenunciaMaltrato;
     private javax.swing.JPanel PanelRegistrarMascota;
     private javax.swing.JLabel TituloBuscarMascota;
+    private javax.swing.JLabel TituloBuscarMascota1;
     private javax.swing.JLabel TituloCargarDenunciante;
     private javax.swing.JLabel TituloCrearAviso;
-    private javax.swing.JLabel TituloDenunciaDeMaltrato;
     private javax.swing.JLabel TituloRegistrarMascota;
     private javax.swing.JPanel VentanaDeFondo;
     private javax.swing.JButton jButton4;
@@ -2274,15 +2284,17 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable4;
     private javax.swing.JTextField jTextApellidoCargarDenunciante;
+    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextCaractCrearAviso;
     private javax.swing.JTextField jTextCaractRegistrarMascota;
     private javax.swing.JTextField jTextDNICargarDenunciante;

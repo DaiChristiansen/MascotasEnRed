@@ -1955,7 +1955,7 @@ public class Home extends javax.swing.JFrame {
         nombre = jTextNombreCargarDenunciante.getText();
         apellido = jTextApellidoCargarDenunciante.getText();
         dire = jTextDireccionCargarDenunciante.getText();
-        email = jTextTelCargarDenunciante.getText();
+        email = jTextEmailCargarDenunciante.getText();
         Denunciante dn = new Denunciante(dni, nombre, apellido, dire, email, telefono, id);
         try {
             // manager.merge(nuevo5);
@@ -1965,6 +1965,7 @@ public class Home extends javax.swing.JFrame {
         } catch (EntityExistsException e) {
             System.out.println("ya existe este dato");
         }
+        limpiarDenunciante();
     }//GEN-LAST:event_BtnGuardarActionPerformed
 
     private void BtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCancelarActionPerformed
@@ -2053,15 +2054,17 @@ public class Home extends javax.swing.JFrame {
         jTextFechaCrearAviso.setText(df.format(fechaActual));
         SimpleDateFormat formateador = new SimpleDateFormat("yyyy/MM/dd");
         String f = formateador.format(fechaActual);
-        
+
     }//GEN-LAST:event_jTextFechaCrearAvisoActionPerformed
 
-    public void limpiar() {
+    public void limpiarDenunciante() {
         jTextDNICargarDenunciante.setText("");
         jTextNombreCargarDenunciante.setText("");
         jTextApellidoCargarDenunciante.setText("");
         jTextDireccionCargarDenunciante.setText("");
         jTextTelCargarDenunciante.setText("");
+        jTextEmailCargarDenunciante.setText("");
+        jTextIDCargarDenunciante.setText("");
     }
 
     public void bloquear() {

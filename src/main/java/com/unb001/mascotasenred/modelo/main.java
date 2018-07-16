@@ -6,7 +6,7 @@
 package com.unb001.mascotasenred.modelo;
 
 //import java.time.LocalDate;
-
+import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
 //import java.time.LocalDateTime;
@@ -23,7 +23,6 @@ public class main {
 
     // private static EntityManager manager;
     //private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
-
     public static void AgregarDenunciante() {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
@@ -33,8 +32,8 @@ public class main {
         Denunciante nuevo2 = new Denunciante(3, "Mara", "Rodriguez", "tandil", "sitiene");
 
         try {
-           // manager.merge(nuevo);
-           // manager.merge(nuevo1);
+            // manager.merge(nuevo);
+            // manager.merge(nuevo1);
             //manager.merge(nuevo2);
             //nuevo1.setDenuncia(d);
             manager.persist(nuevo);
@@ -50,7 +49,7 @@ public class main {
     }
 
     public static void BuscarDenunciante() {
-       EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
         try {
@@ -66,7 +65,7 @@ public class main {
     }
 
     public static void ImprimirTodo() {
-       EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         Query query = manager.createQuery("SELECT e FROM Denunciante e");
 
@@ -81,7 +80,7 @@ public class main {
     }
 
     public static void RemoverDenunciante() {
-       EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
         try {
@@ -96,7 +95,7 @@ public class main {
     }
 
     public static void CambiarDenunciante() {
-       EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
         try {
@@ -111,7 +110,12 @@ public class main {
     }
 
     public static void main(String[] args) {
-          EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
+        Date fecha = new Date();
+        SimpleDateFormat formateador = new SimpleDateFormat("dd/MM/yyyy");
+        String f = formateador.format(fecha);
+        System.out.println("La fecha es:" + f);
+
+        /*  EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
        // Mascota mascota1 = new Mascota(10, "otto", "perro", "otro", "negro", "ninguna", "pequeño", "zona", "perdido");
@@ -125,40 +129,35 @@ public class main {
            // emf.close();
 
         } catch (EntityExistsException e) {
-            System.out.println("no me lo agrego");
+            System.out.println("no me lo agrego");*/
+    }
 
-        }
-        
-        
-        
-       // EntityManager manager = emf.createEntityManager();
-        // Denunciante nuevo4 = new Denunciante(3, "Maria", "Perez", "Rauch 1589", "maria@perez");
-        //Denuncia d = new Denuncia(1, "Extravio", localDateof(12, 05, 1999));
-        // Telefono t= new Telefono(1,2225,459,"celular"); 
-        //try {
-        //  manager.merge(nuevo4);          
-        // nuevo4.setTelefono(t);
-        //manager.getTransaction().begin();
-        //manager.persist(t);
-        //manager.persist(nuevo4);
-        //manager.getTransaction().commit();
-        // manager.close();
-        // emf.close();
-        // } catch (EntityExistsException e) {
-        // System.out.println("no se agrego");
-
-      //  AgregarDenunciante();
-      //  ImprimirTodo();
-      //  BuscarDenunciante();
-      //  CambiarDenunciante();
-       // ImprimirTodo();
-       // RemoverDenunciante();
-        //ImprimirTodo();
-
-        // DenuncianteGrafica dg= new DenuncianteGrafica();  
-        //   dg.setVisible(true);
-        // }
-        /* EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
+    // EntityManager manager = emf.createEntityManager();
+    // Denunciante nuevo4 = new Denunciante(3, "Maria", "Perez", "Rauch 1589", "maria@perez");
+    //Denuncia d = new Denuncia(1, "Extravio", localDateof(12, 05, 1999));
+    // Telefono t= new Telefono(1,2225,459,"celular"); 
+    //try {
+    //  manager.merge(nuevo4);          
+    // nuevo4.setTelefono(t);
+    //manager.getTransaction().begin();
+    //manager.persist(t);
+    //manager.persist(nuevo4);
+    //manager.getTransaction().commit();
+    // manager.close();
+    // emf.close();
+    // } catch (EntityExistsException e) {
+    // System.out.println("no se agrego");
+    //  AgregarDenunciante();
+    //  ImprimirTodo();
+    //  BuscarDenunciante();
+    //  CambiarDenunciante();
+    // ImprimirTodo();
+    // RemoverDenunciante();
+    //ImprimirTodo();
+    // DenuncianteGrafica dg= new DenuncianteGrafica();  
+    //   dg.setVisible(true);
+    // }
+    /* EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
 
@@ -200,6 +199,6 @@ public class main {
         System.out.println("Nombre del denunciante: " + denunciante.getNombre());
 
         
-         */
-    }
+     */
 }
+

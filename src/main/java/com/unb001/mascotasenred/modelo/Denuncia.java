@@ -38,7 +38,10 @@ public class Denuncia implements Serializable {
     private Comprobante comprobante;
     //   @OneToOne(cascade = CascadeType.ALL)
     // @PrimaryKeyJoinColumn
-    private Mascota mascota;
+    
+    
+    
+    private Mascota mascota;   
 
     public Denuncia() {
 

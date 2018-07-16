@@ -72,29 +72,8 @@ public class mainCaro {
 
     }
 
-    public static void agregarTelefono(Telefono t) {
-
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
-        EntityManager manager = emf.createEntityManager();
-        manager.getTransaction().begin();
-
-        try {
-            manager.merge(t);
-            manager.persist(t);
-
-            manager.getTransaction().commit();
-            manager.close();
-            emf.close();
-
-        } catch (EntityExistsException e) {
-            System.out.println("ya existe este dato");
-        } finally {
-
-            manager.close();
-            emf.close();
-        }
-
-    }
+   
+  
 
     public static void imprimirDenunciantes() {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
@@ -111,20 +90,7 @@ public class mainCaro {
         emf.close();
     }
 
-    public static void imprimirTelefonos() {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
-        EntityManager manager = emf.createEntityManager();
-        Query query = manager.createQuery("SELECT e FROM Telefono e");
-        for (Telefono tel : (Collection<Telefono>) query.getResultList()) {
-            System.out.println("TELEFONO: ");
-            System.out.println(tel);
-        }
-
-        //System.out.println("");
-        // System.out.println("DENUNCIANTE: ");
-        manager.close();
-        emf.close();
-    }
+   
 
     public static void main(String[] args) {
         
@@ -161,6 +127,20 @@ public class mainCaro {
       
 
         //imprimirDenunciantes();
+        
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
+        EntityManager manager = emf.createEntityManager();
+        Query query = manager.createQuery("SELECT e FROM Denuncia e");
+        for (Denuncia den : (Collection<Denuncia>) query.getResultList()) {
+            System.out.println("Denuncia: ");
+            System.out.println(den);
+        }
+
+        //System.out.println("");
+        // System.out.println("DENUNCIANTE: ");
+        //manager.close();
+        //emf.close();
+        
         //imprimirTelefonos();
         //buscarDenunciante(4);
         //HAGO ESTE COMENTARIO MAS QUE NADA PARA HACER EL COMMIT SINO NO ME DEJA...

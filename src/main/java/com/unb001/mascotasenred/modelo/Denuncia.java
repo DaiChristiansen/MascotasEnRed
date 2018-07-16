@@ -1,6 +1,7 @@
 package com.unb001.mascotasenred.modelo;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -24,24 +25,11 @@ import javax.persistence.Table;
 //@Table ( name = "Denuncia")
 public class Denuncia implements Serializable {
 
-    //@Id
-    //@Column (name = "NroDenuncia")
     private int nroDenuncia;
-
-    // private Denunciante denunciante;
-    // @Column (name = "tipoDenuncia")
     private String tipoDenuncia;
-    //@Column (name = "fecha")
     private Date fecha;
-    // @OneToOne(cascade = CascadeType.ALL)
-    // @PrimaryKeyJoinColumn
-    private Comprobante comprobante;
-    //   @OneToOne(cascade = CascadeType.ALL)
-    // @PrimaryKeyJoinColumn
-    
-    
-    
-    private Mascota mascota;   
+    private Denunciante denunciante;
+    private Mascota mascota;
 
     public Denuncia() {
 
@@ -50,7 +38,8 @@ public class Denuncia implements Serializable {
     public Denuncia(int nroDenuncia, String tipoDenuncia, Date fecha) {
         this.nroDenuncia = nroDenuncia;
         this.tipoDenuncia = tipoDenuncia;
-        this.fecha = fecha;
+        this.fecha=fecha;
+       
     }
 
     public int getNroDenuncia() {
@@ -77,16 +66,16 @@ public class Denuncia implements Serializable {
         this.fecha = fecha;
     }
 
-    public Comprobante getComprobante() {
-        return comprobante;
-    }
-
-    public void setComprobante(Comprobante comprobante) {
-        this.comprobante = comprobante;
-    }
-
     public Mascota getMascota() {
         return mascota;
+    }
+
+    public Denunciante getDenunciante() {
+        return denunciante;
+    }
+
+    public void setDenunciante(Denunciante denunciante) {
+        this.denunciante = denunciante;
     }
 
     public void setMascota(Mascota mascota) {
@@ -95,9 +84,8 @@ public class Denuncia implements Serializable {
 
     @Override
     public String toString() {
-        return "Denuncia{" + "nroDenuncia=" + nroDenuncia + ", tipoDenuncia=" + tipoDenuncia + ", fecha=" + fecha + ", comprobante=" + comprobante + ", mascota=" + mascota + '}';
+        return "Denuncia{" + "nroDenuncia=" + nroDenuncia + ", tipoDenuncia=" + tipoDenuncia + ", fecha=" + fecha + ", mascota=" + mascota +", denunciante=" + denunciante + '}';
     }
 
 }
-//<one-to-one name="comprobante" class="Comprobante" column="nroComprobante"/>!>
- //<one-to-one name="mascota" class="Mascota" column="idMascota"/> 
+

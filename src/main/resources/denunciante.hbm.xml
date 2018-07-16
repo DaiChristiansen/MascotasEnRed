@@ -2,17 +2,15 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernateconfiguration-3.0.dtd">
 <hibernate-mapping>
     <class name="com.unb001.mascotasenred.modelo.Denunciante" table="denunciante">
-        <id name="dni" column="dni"/>
+        <id name="idDenunciante" column="idDenunciante"/>
+        <property name="dni"/>
         <property name="nombre"/>
         <property name="apellido"/>
         <property name="direccion"/>
         <property name="email"/>
-        <bag name="Telefono" table="telefono" inverse="false" fetch="select">
-            <key column="denunciante_dni"/>
-            <one-to-many class="com.unb001.mascotasenred.modelo.Telefono" /> 
-        </bag>
-        
-        <!--<one-to-many name="telefono" class="Telefono" />
-        <one-to-many name="comprobante" class="Comprobante" /> -->   
+        <property name="telefono"/>
+        <one-to-one name="mascota" class="com.unb001.mascotasenred.modelo.Mascota"/> 
+        <one-to-one name="denuncia" class="com.unb001.mascotasenred.modelo.Denuncia"/> 
+       
     </class>
 </hibernate-mapping>

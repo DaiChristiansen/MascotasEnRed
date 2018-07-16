@@ -46,8 +46,6 @@ Contributor(s):
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mascotaenred?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">1234</property>
-    <mapping resource="denunciante.hbm.xml"/>
-    <mapping resource="telefono.hbm.xml"/>
     <mapping resource="denuncia.hbm.xml"/>
     <mapping resource="mascota.hbm.xml"/>
     <mapping resource="documentos.hbm.xml"/>

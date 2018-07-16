@@ -18,37 +18,51 @@ import java.util.List;
 //@Table(name = "Denunciante")
 public class Denunciante implements Serializable {
 // public static final long serialVersionUID = 123644L;
-    //@Id 
-   // @Column(name= "Dni")
+private int idDenunciante;
     private int dni;
-   // @Column(name= "Nombre")
     private String nombre;
-    //@Column(name= "Apellido")
     private String apellido;
-    //@Column(name= "Direccion")
     private String direccion;
-    //@Column(name= "email")
     private String email;
-    //@OneToMany
-    //@JoinColumn(name="dni")       
-    private List<Telefono> telefono = new ArrayList<>();
-    //@OneToMany
-    // @JoinColumn(name="dni")       
-    private List<Comprobante> comprobantes = new ArrayList<>();
-   // @OneToOne(cascade = CascadeType.ALL)
-    //@JoinColumn(name="NroDenuncia")
-    // private Telefono  telefono; 
-      //private Comprobante comprobante;        
-     
+    private long telefono;
+    private Denuncia denuncia;
+    private Mascota mascota;
+   
     public Denunciante() {     // super();
     }
 
-    public Denunciante(int dni, String nombre, String apellido, String direccion, String email) {
+    public Denunciante( int dni, String nombre, String apellido, String direccion, String email, long telefono, int idDenunciante) {
+        this.idDenunciante=idDenunciante;
         this.dni = dni;
         this.nombre = nombre;
         this.apellido = apellido;
         this.direccion = direccion;
         this.email = email;
+        this.telefono= telefono;
+    }
+
+    public int getIdDenunciante() {
+        return idDenunciante;
+    }
+
+    public void setIdDenunciante(int idDenunciante) {
+        this.idDenunciante = idDenunciante;
+    }
+
+    public Denuncia getDenuncia() {
+        return denuncia;
+    }
+
+    public void setDenuncia(Denuncia denuncia) {
+        this.denuncia = denuncia;
+    }
+
+    public Mascota getMascota() {
+        return mascota;
+    }
+
+    public void setMascota(Mascota mascota) {
+        this.mascota = mascota;
     }
 
   
@@ -94,27 +108,23 @@ public class Denunciante implements Serializable {
         this.dni = dni;
     }
 
-    public List<Telefono> getTelefono() {
+    
+
+    public long getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(List<Telefono> telefonos) {
-        this.telefono = telefonos;
-    }
-
-    public List<Comprobante> getComprobantes() {
-        return comprobantes;
-    }
-
-    public void setComprobantes(List<Comprobante> comprobantes) {
-        this.comprobantes = comprobantes;
+    public void setTelefono(long telefono) {
+        this.telefono = telefono;
     }
 
     
     @Override
     public String toString() {
-        return "Denunciante{" + "dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", email=" + email + ", telefono=" + telefono + ", comprobante=" + comprobantes + '}';
+        return "Denunciante{" + "id=" + idDenunciante + ", dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", email=" + email + ", telefono=" + telefono + '}';
     }
+
+
 
  
 

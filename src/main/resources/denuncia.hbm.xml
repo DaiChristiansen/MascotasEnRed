@@ -5,7 +5,8 @@
         <id name="nroDenuncia" column="nroDenuncia"/>
         <property name="tipoDenuncia"/>
         <property name="fecha"/>
-        <one-to-one name="comprobante" class="com.unb001.mascotasenred.modelo.Comprobante" lazy="false" fetch="join" cascade="all" constrained="true"/>
-        <one-to-one name="mascota" class="com.unb001.mascotasenred.modelo.Mascota" lazy="false" fetch="join" cascade="all" constrained="true"/>          
+        <one-to-one name="denunciante" class="com.unb001.mascotasenred.modelo.Denunciante"/>
+        <one-to-one name="mascota" class="com.unb001.mascotasenred.modelo.Mascota"/>
+                    
     </class>
 </hibernate-mapping>

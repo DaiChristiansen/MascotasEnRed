@@ -1950,7 +1950,7 @@ public class Home extends javax.swing.JFrame {
         manager.getTransaction().begin();
         String nombre, apellido, dire, email;
         int dni = Integer.parseInt(jTextDNICargarDenunciante.getText());
-        int telefono = Integer.parseInt(jTextTelCargarDenunciante.getText());
+        long telefono = Long.valueOf(jTextTelCargarDenunciante.getText());
         int id = Integer.parseInt(jTextIDCargarDenunciante.getText());
         nombre = jTextNombreCargarDenunciante.getText();
         apellido = jTextApellidoCargarDenunciante.getText();

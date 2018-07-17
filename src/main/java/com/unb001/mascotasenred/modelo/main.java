@@ -23,7 +23,7 @@ public class main {
 
     // private static EntityManager manager;
     //private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
-   /* public static void AgregarDenunciante() {
+    /* public static void AgregarDenunciante() {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
@@ -47,7 +47,7 @@ public class main {
             System.out.println("ya existe este dato");
         }
     }
-*/
+     */
     public static void BuscarDenunciante() {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
@@ -109,13 +109,12 @@ public class main {
         }
     }
 
-    public static void main(String[] args) {
-       // Date fecha = new Date();
-      //  SimpleDateFormat formateador = new SimpleDateFormat("dd/MM/yyyy");
-        //String f = formateador.format(fecha);
+    // Date fecha = new Date();
+    //  SimpleDateFormat formateador = new SimpleDateFormat("dd/MM/yyyy");
+    //String f = formateador.format(fecha);
 //        System.out.println("La fecha es:" + f);
 
-        /*  EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
+    /*  EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
        // Mascota mascota1 = new Mascota(10, "otto", "perro", "otro", "negro", "ninguna", "pequeño", "zona", "perdido");
@@ -130,8 +129,7 @@ public class main {
 
         } catch (EntityExistsException e) {
             System.out.println("no me lo agrego");*/
-   // }
-
+    // }
     // EntityManager manager = emf.createEntityManager();
     // Denunciante nuevo4 = new Denunciante(3, "Maria", "Perez", "Rauch 1589", "maria@perez");
     //Denuncia d = new Denuncia(1, "Extravio", localDateof(12, 05, 1999));
@@ -152,7 +150,7 @@ public class main {
     //  BuscarDenunciante();
     //  CambiarDenunciante();
     // ImprimirTodo();
-    RemoverDenunciante();
+    //RemoverDenunciante();
     //ImprimirTodo();
     // DenuncianteGrafica dg= new DenuncianteGrafica();  
     //   dg.setVisible(true);
@@ -201,5 +199,3 @@ public class main {
         
      */
 }
-}
-

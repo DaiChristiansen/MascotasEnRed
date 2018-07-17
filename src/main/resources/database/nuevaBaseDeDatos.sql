@@ -7,8 +7,23 @@
  * Author:  Usuario
  * Created: 17/07/2018
  */
+drop database mascotaenred;
+create database  IF NOT EXISTS mascotaenred;
 
-drop database mascotasenred;
+
+CREATE TABLE IF NOT EXISTS `mascotaenred`.`denunciante` (
+  
+  `dni` INT NOT NULL,
+  `nombre` VARCHAR(45) NOT NULL,
+  `apellido` VARCHAR(45) NOT NULL,
+  `direccion` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+   `telefono` long NOT NULL,
+  
+  PRIMARY KEY (`dni`))
+	ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
 CREATE TABLE IF NOT EXISTS `mascotaenred`.`mascota` (
   `idMascota` INT NOT NULL,
   `nombre` VARCHAR(45) NOT NULL,
@@ -53,4 +68,3 @@ CREATE TABLE IF NOT EXISTS `mascotaenred`.`denuncia` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
-

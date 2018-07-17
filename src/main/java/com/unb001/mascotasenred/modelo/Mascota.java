@@ -30,7 +30,7 @@ public class Mascota implements Serializable {
     private String zona;
     private String estado; //perdido, encontrado, en adopcion o registrado
     private Denunciante denunciante;
-    private Denuncia denuncia;
+    
        
 
     public Mascota() {
@@ -47,17 +47,9 @@ public class Mascota implements Serializable {
         this.tamanio = tamanio;
         this.zona = zona;
         this.estado = estado;
+        
     }
 
-    public Denuncia getDenuncia() {
-        return denuncia;
-    }
-
-    public void setDenuncia(Denuncia denuncia) {
-        this.denuncia = denuncia;
-    }
-
-    
 
    public void setIdMascota(int idMascota) {
         this.idMascota = idMascota;

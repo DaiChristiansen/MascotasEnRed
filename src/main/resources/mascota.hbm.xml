@@ -13,8 +13,7 @@
         <property name= "tamanio"/>
         <property name= "zona"/>
         <property name= "estado"/>
-     
-        <one-to-one name="denuncia" class="com.unb001.mascotasenred.modelo.Denuncia" />
-        <one-to-one name="denunciante" class="com.unb001.mascotasenred.modelo.Denunciante" />
+       
+     <many-to-one name="denunciante" class="com.unb001.mascotasenred.modelo.Denunciante" column="denunciante_dni"/>
     </class>
 </hibernate-mapping>

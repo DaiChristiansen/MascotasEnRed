@@ -7,7 +7,9 @@
         </id>
         <property name="tipoDenuncia"/>
         <property name="fecha"/>
-        <one-to-one name="denunciante" class="com.unb001.mascotasenred.modelo.Denunciante"/>
+           
+        
+        <many-to-one name="denunciante" class="com.unb001.mascotasenred.modelo.Denunciante" column="denunciante_dni"/>
         <one-to-one name="mascota" class="com.unb001.mascotasenred.modelo.Mascota"/>
                     
     </class>

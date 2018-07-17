@@ -19,15 +19,15 @@ import javax.swing.JList;
 import javax.swing.JOptionPane;
 
 public class Home extends javax.swing.JFrame {
-    
+
     int x, y;
-    
+
     public Home() {
         initComponents();
         // AWTUtilities.setWindowOpaque(this, false);
         this.setLocationRelativeTo(null);
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -103,7 +103,6 @@ public class Home extends javax.swing.JFrame {
         jLabel29 = new javax.swing.JLabel();
         jTextEmailCargarDenunciante = new javax.swing.JTextField();
         jLabel40 = new javax.swing.JLabel();
-        jTextIDCargarDenunciante = new javax.swing.JTextField();
         PanelRegistrarMascota = new javax.swing.JPanel();
         jSeparator3 = new javax.swing.JSeparator();
         TituloRegistrarMascota = new javax.swing.JLabel();
@@ -119,13 +118,14 @@ public class Home extends javax.swing.JFrame {
         jCBRazaRegistrarMascota = new javax.swing.JComboBox<>();
         jCBZonaRegistrarMascota = new javax.swing.JComboBox<>();
         jLabel36 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
+        BtnCargarRegistrarMascota = new javax.swing.JButton();
         jLabel37 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
         jTextNombreRegistrarMascota = new javax.swing.JTextField();
         jTextCaractRegistrarMascota = new javax.swing.JTextField();
         jLabel39 = new javax.swing.JLabel();
         jTextDenuncianteRegistrarMascota = new javax.swing.JTextField();
+        BtnCancelarRegistrarMascota = new javax.swing.JButton();
         PanelDenunciaMaltrato = new javax.swing.JPanel();
         jSeparator4 = new javax.swing.JSeparator();
         TituloBuscarMascota1 = new javax.swing.JLabel();
@@ -929,7 +929,7 @@ public class Home extends javax.swing.JFrame {
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCrearAvisoLayout.createSequentialGroup()
                                                 .addGap(18, 18, 18)
                                                 .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                                                 .addComponent(jCBEstadoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                     .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
                                         .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -968,7 +968,7 @@ public class Home extends javax.swing.JFrame {
                                         .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jTextFechaCrearAviso)))))
-                        .addGap(0, 70, Short.MAX_VALUE))))
+                        .addGap(0, 65, Short.MAX_VALUE))))
         );
         PanelCrearAvisoLayout.setVerticalGroup(
             PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1137,12 +1137,6 @@ public class Home extends javax.swing.JFrame {
         jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel40.setText("ID");
 
-        jTextIDCargarDenunciante.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextIDCargarDenuncianteActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout PanelCargarDenuncianteLayout = new javax.swing.GroupLayout(PanelCargarDenunciante);
         PanelCargarDenunciante.setLayout(PanelCargarDenuncianteLayout);
         PanelCargarDenuncianteLayout.setHorizontalGroup(
@@ -1173,8 +1167,6 @@ public class Home extends javax.swing.JFrame {
                                         .addComponent(jTextTelCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(PanelCargarDenuncianteLayout.createSequentialGroup()
                                         .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextIDCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(303, 303, 303)))
                                 .addGap(33, 33, 33)
                                 .addGroup(PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1223,17 +1215,15 @@ public class Home extends javax.swing.JFrame {
                                     .addComponent(jTextDireccionCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextTelCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel40)
-                                    .addComponent(jTextIDCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(jLabel40))))
                     .addGroup(PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel17)
                         .addComponent(jTextApellidoCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(41, 41, 41)
+                .addGap(42, 42, 42)
                 .addGroup(PanelCargarDenuncianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnGuardar)
                     .addComponent(BtnCancelar))
-                .addContainerGap(771, Short.MAX_VALUE))
+                .addContainerGap(774, Short.MAX_VALUE))
         );
 
         PanelRegistrarMascota.setBackground(new java.awt.Color(230, 230, 230));
@@ -1477,15 +1467,15 @@ public class Home extends javax.swing.JFrame {
         jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel36.setText("Zona");
 
-        jButton4.setBackground(new java.awt.Color(61, 0, 112));
-        jButton4.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(240, 240, 240));
-        jButton4.setText("CARGAR");
-        jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton4.setName("Boton Buscar"); // NOI18N
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        BtnCargarRegistrarMascota.setBackground(new java.awt.Color(61, 0, 112));
+        BtnCargarRegistrarMascota.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        BtnCargarRegistrarMascota.setForeground(new java.awt.Color(240, 240, 240));
+        BtnCargarRegistrarMascota.setText("CARGAR");
+        BtnCargarRegistrarMascota.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BtnCargarRegistrarMascota.setName("Boton Buscar"); // NOI18N
+        BtnCargarRegistrarMascota.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                BtnCargarRegistrarMascotaActionPerformed(evt);
             }
         });
 
@@ -1505,6 +1495,18 @@ public class Home extends javax.swing.JFrame {
         jLabel39.setText("Dueño");
 
         jTextDenuncianteRegistrarMascota.setText("dni del denunciante previamente dado de alta");
+
+        BtnCancelarRegistrarMascota.setBackground(new java.awt.Color(61, 0, 112));
+        BtnCancelarRegistrarMascota.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        BtnCancelarRegistrarMascota.setForeground(new java.awt.Color(240, 240, 240));
+        BtnCancelarRegistrarMascota.setText("CANCELAR");
+        BtnCancelarRegistrarMascota.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BtnCancelarRegistrarMascota.setName("Boton Buscar"); // NOI18N
+        BtnCancelarRegistrarMascota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnCancelarRegistrarMascotaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PanelRegistrarMascotaLayout = new javax.swing.GroupLayout(PanelRegistrarMascota);
         PanelRegistrarMascota.setLayout(PanelRegistrarMascotaLayout);
@@ -1562,8 +1564,12 @@ public class Home extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(jTextDenuncianteRegistrarMascota)
-                                            .addComponent(jCBZonaRegistrarMascota, 0, 255, Short.MAX_VALUE)))
-                                    .addComponent(jButton4))))
+                                            .addComponent(jCBZonaRegistrarMascota, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
+                                        .addComponent(BtnCargarRegistrarMascota)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(BtnCancelarRegistrarMascota)
+                                        .addGap(2, 2, 2)))))
                         .addGap(48, 48, 48)))
                 .addContainerGap())
         );
@@ -1615,7 +1621,9 @@ public class Home extends javax.swing.JFrame {
                             .addComponent(jLabel38)
                             .addComponent(jTextCaractRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton4)
+                .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BtnCargarRegistrarMascota)
+                    .addComponent(BtnCancelarRegistrarMascota))
                 .addContainerGap(801, Short.MAX_VALUE))
         );
 
@@ -1898,32 +1906,63 @@ public class Home extends javax.swing.JFrame {
         zona = jCBZonaCrearAviso.getSelectedItem().toString();
         nombre = jTextNombreCrearAviso.getText();
         caracteristicasEspeciales = jTextCaractCrearAviso.getText();
-        
+
         try {
-            Denunciante denunciante = manager.find (Denunciante.class, dni);
-            Mascota masc = new Mascota(idMascota, nombre, tipoMascota, raza, color, caracteristicasEspeciales,tamanio,zona,estado);
+            Denunciante denunciante = manager.find(Denunciante.class, dni);
+            Mascota masc = new Mascota(idMascota, nombre, tipoMascota, raza, color, caracteristicasEspeciales, tamanio, zona, estado);
             masc.setDenunciante(denunciante);
-            manager.persist(masc);   
-            
+            manager.persist(masc);
+
             System.out.println(denunciante);
             System.out.println(masc);
-                     
-           Denuncia den = new Denuncia(nro, estado, fechaActual);
-           den.setMascota(masc);
-           den.setDenunciante(denunciante);
-           System.out.println(den);
+
+            Denuncia den = new Denuncia(nro, estado, fechaActual);
+            den.setMascota(masc);
+            den.setDenunciante(denunciante);
+            System.out.println(den);
             //manager.persist(Masc);
-           manager.persist(den);
-            
+            manager.persist(den);
+
             manager.getTransaction().commit();
             manager.close();
         } catch (EntityExistsException e) {
             System.out.println("ya existe este dato");
         }
-
+        limpiarCrearAviso();
     }//GEN-LAST:event_BtnCargarCrearAvisoActionPerformed
 
+    public void limpiarCrearAviso() {
+        jTextNroAvisoCrearAviso.setText("");
+        jTextFechaCrearAviso.setText("");
+        jTextIDCrearAviso.setText("");
+        jTextNombreCrearAviso.setText("");
+        jTextCaractCrearAviso.setText("");
+        jTextDenuncianteCrearAviso.setText("");
+    }
+
+    public void bloquearCrearAviso() {
+        jTextNroAvisoCrearAviso.setEnabled(false);
+        jTextFechaCrearAviso.setEnabled(false);
+        jTextIDCrearAviso.setEnabled(false);
+        jTextNombreCrearAviso.setEnabled(false);
+        jTextCaractCrearAviso.setEnabled(false);
+        jTextDenuncianteCrearAviso.setEnabled(false);
+        BtnCargarCrearAviso.setEnabled(false); //activa el boton
+        BtnCancelarCrearAviso.setEnabled(true);
+    }
+
+    public void habilitarCrearAviso() {
+        jTextNroAvisoCrearAviso.setEnabled(true);
+        jTextFechaCrearAviso.setEnabled(true);
+        jTextIDCrearAviso.setEnabled(true);
+        jTextNombreCrearAviso.setEnabled(true);
+        jTextCaractCrearAviso.setEnabled(true);
+        jTextDenuncianteCrearAviso.setEnabled(true);
+        BtnCargarCrearAviso.setEnabled(true); //activa el boton
+        BtnCancelarCrearAviso.setEnabled(false);
+    }
     //FIN CREAR AVISO---------------------------------------------------------------------------
+
     //CARGAR DENUNCIANTE------------------------------------------------------------
     private void jTextDireccionActionPerformed(java.awt.event.ActionEvent evt) {
         jTextDireccionCargarDenunciante.transferFocus();
@@ -1931,8 +1970,17 @@ public class Home extends javax.swing.JFrame {
 
     private void jTextDNICargarDenuncianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextDNICargarDenuncianteActionPerformed
         jTextDNICargarDenunciante.transferFocus();
-    }//GEN-LAST:event_jTextDNICargarDenuncianteActionPerformed
 
+    }//GEN-LAST:event_jTextDNICargarDenuncianteActionPerformed
+    /*private void jTexDniCargarDenuncianteKeyTyped(java.awt.event.KeyEvent evt){
+     char c = evt.get.KeyChar();
+     if( c<"0"││ c> "9") evet.consume(){
+         
+     }
+     
+     
+     
+ }*/
     private void jTextNombreCargarDenuncianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextNombreCargarDenuncianteActionPerformed
         jTextNombreCargarDenunciante.transferFocus();
     }//GEN-LAST:event_jTextNombreCargarDenuncianteActionPerformed
@@ -1944,11 +1992,11 @@ public class Home extends javax.swing.JFrame {
     private void jTextDireccionActionPerformed(java.awt.event.ActionEvent evt) {                                               
         jTextDireccionCargarDenunciante.transferFocus();
     }          */
-    
+
     private void jTextEmailActionPerformed(java.awt.event.ActionEvent evt) {
         jTextEmailCargarDenunciante.transferFocus();
     }
-    
+
 
     private void jTextDireccionCargarDenuncianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextDireccionCargarDenuncianteActionPerformed
         jTextDireccionCargarDenunciante.transferFocus();
@@ -1959,7 +2007,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextTelCargarDenuncianteActionPerformed
 
     private void BtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGuardarActionPerformed
-        
+
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
@@ -1972,6 +2020,7 @@ public class Home extends javax.swing.JFrame {
         dire = jTextDireccionCargarDenunciante.getText();
         email = jTextEmailCargarDenunciante.getText();
         Denunciante dn = new Denunciante(dni, nombre, apellido, dire, email, telefono);
+
         try {
             // manager.merge(nuevo5);
             manager.persist(dn);
@@ -1986,7 +2035,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnGuardarActionPerformed
 
     private void BtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCancelarActionPerformed
-        bloquear();
+        bloquearDenunciante();
     }//GEN-LAST:event_BtnCancelarActionPerformed
 
     private void jTextEmailCargarDenuncianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextEmailCargarDenuncianteActionPerformed
@@ -2045,17 +2094,13 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jCBZonaRegistrarMascotaActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void BtnCargarRegistrarMascotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCargarRegistrarMascotaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_BtnCargarRegistrarMascotaActionPerformed
 
     private void BtnCancelarCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCancelarCrearAvisoActionPerformed
-        bloquear();
+        bloquearCrearAviso();
     }//GEN-LAST:event_BtnCancelarCrearAvisoActionPerformed
-
-    private void jTextIDCargarDenuncianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextIDCargarDenuncianteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextIDCargarDenuncianteActionPerformed
 
     private void jTextNroAvisoCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextNroAvisoCrearAvisoActionPerformed
         // TODO add your handling code here:
@@ -2073,7 +2118,12 @@ public class Home extends javax.swing.JFrame {
         String f = formateador.format(fechaActual);
 
     }//GEN-LAST:event_jTextFechaCrearAvisoActionPerformed
-    
+
+
+    private void BtnCancelarRegistrarMascotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCancelarRegistrarMascotaActionPerformed
+        bloquearRegistrarMascota();
+    }//GEN-LAST:event_BtnCancelarRegistrarMascotaActionPerformed
+
     public void limpiarDenunciante() {
         jTextDNICargarDenunciante.setText("");
         jTextNombreCargarDenunciante.setText("");
@@ -2081,10 +2131,14 @@ public class Home extends javax.swing.JFrame {
         jTextDireccionCargarDenunciante.setText("");
         jTextTelCargarDenunciante.setText("");
         jTextEmailCargarDenunciante.setText("");
-        jTextIDCargarDenunciante.setText("");
+        //jTextIDCargarDenunciante.setText("");
     }
-    
-    public void bloquear() {
+
+    //public void bloquear() {
+  
+
+    public void bloquearDenunciante() {
+
         jTextDNICargarDenunciante.setEnabled(false);
         jTextNombreCargarDenunciante.setEnabled(false);
         jTextApellidoCargarDenunciante.setEnabled(false);
@@ -2093,8 +2147,11 @@ public class Home extends javax.swing.JFrame {
         BtnGuardar.setEnabled(false); //activa el boton
         BtnCancelar.setEnabled(true);
     }
-    
-    public void habilitar() {
+
+    //public void habilitar() {
+
+        public void habilitarDenunciante() {
+
         jTextDNICargarDenunciante.setEnabled(true);
         jTextNombreCargarDenunciante.setEnabled(true);
         jTextApellidoCargarDenunciante.setEnabled(true);
@@ -2102,6 +2159,29 @@ public class Home extends javax.swing.JFrame {
         jTextTelCargarDenunciante.setEnabled(true);
         BtnGuardar.setEnabled(true); //activa el boton
         BtnCancelar.setEnabled(false);
+        
+    }
+
+    public void limpiarRegistrarMascota() {
+        jTextNombreRegistrarMascota.setText("");
+        jTextCaractRegistrarMascota.setText("");
+        jTextDenuncianteRegistrarMascota.setText("");
+    }
+
+    public void bloquearRegistrarMascota() {
+        jTextNombreRegistrarMascota.setEnabled(false);
+        jTextCaractRegistrarMascota.setEnabled(false);
+        jTextDenuncianteRegistrarMascota.setEnabled(false);
+        BtnCargarRegistrarMascota.setEnabled(false); //activa el boton
+        BtnCancelarRegistrarMascota.setEnabled(true);
+    }
+
+    public void habilitarRegistrarMascota() {
+        jTextNombreRegistrarMascota.setEnabled(true);
+        jTextCaractRegistrarMascota.setEnabled(true);
+        jTextDenuncianteRegistrarMascota.setEnabled(true);
+        BtnCargarRegistrarMascota.setEnabled(true); //activa el boton
+        BtnCancelarRegistrarMascota.setEnabled(false);
     }
 
     /*public Home(){
@@ -2156,7 +2236,9 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton BtnBuscarMascota;
     private javax.swing.JButton BtnCancelar;
     private javax.swing.JButton BtnCancelarCrearAviso;
+    private javax.swing.JButton BtnCancelarRegistrarMascota;
     private javax.swing.JButton BtnCargarCrearAviso;
+    private javax.swing.JButton BtnCargarRegistrarMascota;
     private javax.swing.JButton BtnGuardar;
     private javax.swing.JPanel EspacioMenu;
     private javax.swing.JPanel PanelBuscarMascota;
@@ -2170,7 +2252,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel TituloCrearAviso;
     private javax.swing.JLabel TituloRegistrarMascota;
     private javax.swing.JPanel VentanaDeFondo;
-    private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jCBColorBuscarMascota;
     private javax.swing.JComboBox<String> jCBColorCrearAviso;
     private javax.swing.JComboBox<String> jCBColorRegistrarMascota;
@@ -2239,7 +2320,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JTextField jTextDireccionCargarDenunciante;
     private javax.swing.JTextField jTextEmailCargarDenunciante;
     private javax.swing.JTextField jTextFechaCrearAviso;
-    private javax.swing.JTextField jTextIDCargarDenunciante;
     private javax.swing.JTextField jTextIDCrearAviso;
     private javax.swing.JTextField jTextNombreCargarDenunciante;
     private javax.swing.JTextField jTextNombreCrearAviso;
@@ -2251,7 +2331,7 @@ public class Home extends javax.swing.JFrame {
     private void setLblColor(JLabel lbl) {
         lbl.setBackground(new Color(35, 0, 66));
     }
-    
+
     private void resetLblColor(JLabel lbl) {
         lbl.setBackground(new Color(88, 30, 138));
     }

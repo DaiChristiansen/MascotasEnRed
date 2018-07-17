@@ -106,16 +106,16 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="BotonBuscarMascota" alignment="0" min="-2" pref="215" max="-2" attributes="0"/>
                           <Component id="BotonCrearAviso" min="-2" pref="215" max="-2" attributes="0"/>
+                          <Component id="BotonBuscarMascota" alignment="0" min="-2" pref="215" max="-2" attributes="0"/>
                           <Component id="BotonCargarDenunciante" min="-2" pref="215" max="-2" attributes="0"/>
                           <Component id="BotonRegistrarMascota" min="-2" pref="215" max="-2" attributes="0"/>
                           <Component id="BotonDenunciaMaltrato" min="-2" pref="215" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="37" max="32767" attributes="0"/>
+                      <EmptySpace pref="29" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -125,14 +125,14 @@
                       <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
                       <Component id="BotonBuscarMascota" min="-2" pref="30" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="BotonCrearAviso" min="-2" pref="30" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="BotonCargarDenunciante" min="-2" pref="30" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="BotonCrearAviso" min="-2" pref="30" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       <Component id="BotonRegistrarMascota" min="-2" pref="30" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="BotonDenunciaMaltrato" min="-2" pref="30" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="738" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

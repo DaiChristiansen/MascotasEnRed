@@ -28,11 +28,13 @@ public class Denunciante implements Serializable {
     private long telefono;
     private Denuncia denuncia;
     private Mascota mascota;
+    
+   
 
     public Denunciante() {     // super();
     }
 
-    public Denunciante(int dni, String nombre, String apellido, String direccion, String email, long telefono, int idDenunciante) {
+    public Denunciante(int idDenunciante, int dni, String nombre, String apellido, String direccion, String email, long telefono) {
         this.idDenunciante = idDenunciante;
         this.dni = dni;
         this.nombre = nombre;

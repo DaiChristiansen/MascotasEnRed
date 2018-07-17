@@ -2,7 +2,9 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernateconfiguration-3.0.dtd">
 <hibernate-mapping>
     <class name="com.unb001.mascotasenred.modelo.Mascota" table="mascota">
-        <id name="idMascota" column="idMascota"/>
+        <id name="idMascota" column="idMascota">
+            <generator class="increment"/>
+        </id>
         <property name= "nombre"/>
         <property name= "tipoMascota"/>
         <property name= "raza"/>

@@ -2,7 +2,9 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernateconfiguration-3.0.dtd">
 <hibernate-mapping>
     <class name="com.unb001.mascotasenred.modelo.Denuncia" table="denuncia">
-        <id name="nroDenuncia" column="nroDenuncia"/>
+        <id name="nroDenuncia" column="nroDenuncia">
+        <generator class="increment"/>
+        </id>
         <property name="tipoDenuncia"/>
         <property name="fecha"/>
         <one-to-one name="denunciante" class="com.unb001.mascotasenred.modelo.Denunciante"/>

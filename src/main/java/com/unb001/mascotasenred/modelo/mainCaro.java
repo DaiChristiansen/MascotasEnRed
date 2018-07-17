@@ -132,7 +132,7 @@ public class mainCaro {
         EntityManager manager = emf.createEntityManager();
         Query query = manager.createQuery("SELECT e FROM Denuncia e");
         for (Denuncia den : (Collection<Denuncia>) query.getResultList()) {
-            System.out.println("Denuncia: ");
+            System.out.println("Mascota: ");
             System.out.println(den);
         }
 

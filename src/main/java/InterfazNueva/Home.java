@@ -1917,8 +1917,17 @@ public class Home extends javax.swing.JFrame {
 
     private void jTextDNICargarDenuncianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextDNICargarDenuncianteActionPerformed
         jTextDNICargarDenunciante.transferFocus();
+      
     }//GEN-LAST:event_jTextDNICargarDenuncianteActionPerformed
-
+ /*private void jTexDniCargarDenuncianteKeyTyped(java.awt.event.KeyEvent evt){
+     char c = evt.get.KeyChar();
+     if( c<"0"││ c> "9") evet.consume(){
+         
+     }
+     
+     
+     
+ }*/
     private void jTextNombreCargarDenuncianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextNombreCargarDenuncianteActionPerformed
         jTextNombreCargarDenunciante.transferFocus();
     }//GEN-LAST:event_jTextNombreCargarDenuncianteActionPerformed
@@ -1957,7 +1966,7 @@ public class Home extends javax.swing.JFrame {
         apellido = jTextApellidoCargarDenunciante.getText();
         dire = jTextDireccionCargarDenunciante.getText();
         email = jTextEmailCargarDenunciante.getText();
-        Denunciante dn = new Denunciante(dni, nombre, apellido, dire, email, telefono, id);
+       // Denunciante dn = new Denunciante(dni, nombre, apellido, dire, email, telefono, id);
         try {
             // manager.merge(nuevo5);
             manager.persist(dn);

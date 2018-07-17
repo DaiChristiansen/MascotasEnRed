@@ -1412,7 +1412,7 @@
                                   </Group>
                                   <Component id="TituloCargarDenunciante" alignment="0" min="-2" pref="189" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="42" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="64" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -1473,7 +1473,7 @@
                           <Component id="BtnGuardar" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="BtnCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="793" max="32767" attributes="0"/>
+                      <EmptySpace pref="771" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

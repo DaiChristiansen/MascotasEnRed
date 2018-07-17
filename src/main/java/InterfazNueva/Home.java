@@ -15,6 +15,7 @@ import javax.persistence.Persistence;
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 
 public class Home extends javax.swing.JFrame {
 
@@ -1962,8 +1963,10 @@ public class Home extends javax.swing.JFrame {
             manager.persist(dn);
             manager.getTransaction().commit();
             manager.close();
+            JOptionPane.showConfirmDialog(null, "Denunciante agregado","Atención",JOptionPane.YES_OPTION);
         } catch (EntityExistsException e) {
-            System.out.println("ya existe este dato");
+            JOptionPane.showConfirmDialog(null,"Ya existe este dato","Error",JOptionPane.YES_OPTION );
+            //System.out.println("ya existe este dato");
         }
         limpiarDenunciante();
     }//GEN-LAST:event_BtnGuardarActionPerformed

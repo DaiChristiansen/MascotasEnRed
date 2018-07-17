@@ -18,7 +18,8 @@ import java.util.List;
 //@Table(name = "Denunciante")
 public class Denunciante implements Serializable {
 // public static final long serialVersionUID = 123644L;
-private int idDenunciante;
+
+    private int idDenunciante;
     private int dni;
     private String nombre;
     private String apellido;
@@ -27,18 +28,18 @@ private int idDenunciante;
     private long telefono;
     private Denuncia denuncia;
     private Mascota mascota;
-   
+
     public Denunciante() {     // super();
     }
 
-    public Denunciante( int dni, String nombre, String apellido, String direccion, String email, long telefono, int idDenunciante) {
-        this.idDenunciante=idDenunciante;
+    public Denunciante(int dni, String nombre, String apellido, String direccion, String email, long telefono, int idDenunciante) {
+        this.idDenunciante = idDenunciante;
         this.dni = dni;
         this.nombre = nombre;
         this.apellido = apellido;
         this.direccion = direccion;
         this.email = email;
-        this.telefono= telefono;
+        this.telefono = telefono;
     }
 
     public int getIdDenunciante() {
@@ -64,9 +65,6 @@ private int idDenunciante;
     public void setMascota(Mascota mascota) {
         this.mascota = mascota;
     }
-
-  
-
 
     public String getNombre() {
         return nombre;
@@ -108,8 +106,6 @@ private int idDenunciante;
         this.dni = dni;
     }
 
-    
-
     public long getTelefono() {
         return telefono;
     }
@@ -118,21 +114,9 @@ private int idDenunciante;
         this.telefono = telefono;
     }
 
-    
     @Override
     public String toString() {
         return "Denunciante{" + "id=" + idDenunciante + ", dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", email=" + email + ", telefono=" + telefono + '}';
     }
 
-
-
- 
-
-  
-
-   
-
-   
-
-  
 }

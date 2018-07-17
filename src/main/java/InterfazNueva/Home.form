@@ -1438,7 +1438,7 @@
                                   </Group>
                                   <Component id="TituloCargarDenunciante" alignment="0" min="-2" pref="189" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="42" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="64" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -1499,7 +1499,7 @@
                           <Component id="BtnGuardar" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="BtnCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="796" max="32767" attributes="0"/>
+                      <EmptySpace pref="774" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1714,7 +1714,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jSeparator3" alignment="0" pref="982" max="32767" attributes="0"/>
+                          <Component id="jSeparator3" alignment="0" pref="1004" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="TituloRegistrarMascota" alignment="0" min="-2" pref="123" max="-2" attributes="0"/>
@@ -1774,7 +1774,7 @@
                                                       </Group>
                                                   </Group>
                                               </Group>
-                                              <EmptySpace pref="19" max="32767" attributes="0"/>
+                                              <EmptySpace pref="41" max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
                                                   <Component id="jLabel39" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabel36" min="-2" max="-2" attributes="0"/>
@@ -1876,7 +1876,7 @@
                           <Component id="BtnCargarRegistrarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="BtnCancelarRegistrarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="797" max="32767" attributes="0"/>
+                      <EmptySpace pref="775" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2333,8 +2333,8 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jSeparator4" min="-2" pref="1" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jScrollPane3" pref="881" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jScrollPane3" min="-2" pref="600" max="-2" attributes="0"/>
+                      <EmptySpace pref="292" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

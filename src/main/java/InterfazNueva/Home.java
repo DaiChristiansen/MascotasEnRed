@@ -7,6 +7,7 @@ import java.awt.Color;
 import java.awt.Component;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import javax.persistence.EntityExistsException;
 import javax.persistence.EntityManager;
@@ -18,15 +19,15 @@ import javax.swing.JList;
 import javax.swing.JOptionPane;
 
 public class Home extends javax.swing.JFrame {
-
+    
     int x, y;
-
+    
     public Home() {
         initComponents();
         // AWTUtilities.setWindowOpaque(this, false);
         this.setLocationRelativeTo(null);
     }
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -1887,6 +1888,7 @@ public class Home extends javax.swing.JFrame {
         jTextFechaCrearAviso.setText(df.format(fechaActual));
         SimpleDateFormat formateador = new SimpleDateFormat("yyyy/MM/dd");
         String f = formateador.format(fechaActual);
+        int dni = Integer.parseInt(jTextDenuncianteCrearAviso.getText());
         int idMascota = Integer.parseInt(jTextIDCrearAviso.getText());
         estado = jCBEstadoCrearAviso.getSelectedItem().toString();
         tipoMascota = jCBTipoCrearAviso.getSelectedItem().toString();
@@ -1896,11 +1898,23 @@ public class Home extends javax.swing.JFrame {
         zona = jCBZonaCrearAviso.getSelectedItem().toString();
         nombre = jTextNombreCrearAviso.getText();
         caracteristicasEspeciales = jTextCaractCrearAviso.getText();
-        Denuncia den = new Denuncia(nro, estado, fechaActual);
-        Mascota Masc = new Mascota(idMascota, nombre, tipoMascota, raza, color, caracteristicasEspeciales, tamanio, zona, estado);
+        
         try {
-            manager.persist(Masc);
-            manager.persist(den);
+            Denunciante denunciante = manager.find (Denunciante.class, dni);
+            Mascota masc = new Mascota(idMascota, nombre, tipoMascota, raza, color, caracteristicasEspeciales,tamanio,zona,estado);
+            masc.setDenunciante(denunciante);
+            manager.persist(masc);   
+            
+            System.out.println(denunciante);
+            System.out.println(masc);
+                     
+           Denuncia den = new Denuncia(nro, estado, fechaActual);
+           den.setMascota(masc);
+           den.setDenunciante(denunciante);
+           System.out.println(den);
+            //manager.persist(Masc);
+           manager.persist(den);
+            
             manager.getTransaction().commit();
             manager.close();
         } catch (EntityExistsException e) {
@@ -1930,11 +1944,11 @@ public class Home extends javax.swing.JFrame {
     private void jTextDireccionActionPerformed(java.awt.event.ActionEvent evt) {                                               
         jTextDireccionCargarDenunciante.transferFocus();
     }          */
-
+    
     private void jTextEmailActionPerformed(java.awt.event.ActionEvent evt) {
         jTextEmailCargarDenunciante.transferFocus();
     }
-
+    
 
     private void jTextDireccionCargarDenuncianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextDireccionCargarDenuncianteActionPerformed
         jTextDireccionCargarDenunciante.transferFocus();
@@ -1945,27 +1959,27 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextTelCargarDenuncianteActionPerformed
 
     private void BtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGuardarActionPerformed
-
+        
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
         String nombre, apellido, dire, email;
         int dni = Integer.parseInt(jTextDNICargarDenunciante.getText());
         long telefono = Long.valueOf(jTextTelCargarDenunciante.getText());
-        int id = Integer.parseInt(jTextIDCargarDenunciante.getText());
+        //int id = Integer.parseInt(jTextIDCargarDenunciante.getText());
         nombre = jTextNombreCargarDenunciante.getText();
         apellido = jTextApellidoCargarDenunciante.getText();
         dire = jTextDireccionCargarDenunciante.getText();
         email = jTextEmailCargarDenunciante.getText();
-        Denunciante dn = new Denunciante(dni, nombre, apellido, dire, email, telefono, id);
+        Denunciante dn = new Denunciante(dni, nombre, apellido, dire, email, telefono);
         try {
             // manager.merge(nuevo5);
             manager.persist(dn);
             manager.getTransaction().commit();
             manager.close();
-            JOptionPane.showConfirmDialog(null, "Denunciante agregado","Atención",JOptionPane.YES_OPTION);
+            JOptionPane.showConfirmDialog(null, "Denunciante agregado", "Atención", JOptionPane.YES_OPTION);
         } catch (EntityExistsException e) {
-            JOptionPane.showConfirmDialog(null,"Ya existe este dato","Error",JOptionPane.YES_OPTION );
+            JOptionPane.showConfirmDialog(null, "Ya existe este dato", "Error", JOptionPane.YES_OPTION);
             //System.out.println("ya existe este dato");
         }
         limpiarDenunciante();
@@ -2059,7 +2073,7 @@ public class Home extends javax.swing.JFrame {
         String f = formateador.format(fechaActual);
 
     }//GEN-LAST:event_jTextFechaCrearAvisoActionPerformed
-
+    
     public void limpiarDenunciante() {
         jTextDNICargarDenunciante.setText("");
         jTextNombreCargarDenunciante.setText("");
@@ -2069,7 +2083,7 @@ public class Home extends javax.swing.JFrame {
         jTextEmailCargarDenunciante.setText("");
         jTextIDCargarDenunciante.setText("");
     }
-
+    
     public void bloquear() {
         jTextDNICargarDenunciante.setEnabled(false);
         jTextNombreCargarDenunciante.setEnabled(false);
@@ -2079,7 +2093,7 @@ public class Home extends javax.swing.JFrame {
         BtnGuardar.setEnabled(false); //activa el boton
         BtnCancelar.setEnabled(true);
     }
-
+    
     public void habilitar() {
         jTextDNICargarDenunciante.setEnabled(true);
         jTextNombreCargarDenunciante.setEnabled(true);
@@ -2237,7 +2251,7 @@ public class Home extends javax.swing.JFrame {
     private void setLblColor(JLabel lbl) {
         lbl.setBackground(new Color(35, 0, 66));
     }
-
+    
     private void resetLblColor(JLabel lbl) {
         lbl.setBackground(new Color(88, 30, 138));
     }

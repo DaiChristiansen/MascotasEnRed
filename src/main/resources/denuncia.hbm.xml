@@ -10,7 +10,7 @@
            
         
         <many-to-one name="denunciante" class="com.unb001.mascotasenred.modelo.Denunciante" column="denunciante_dni"/>
-        <one-to-one name="mascota" class="com.unb001.mascotasenred.modelo.Mascota"/>
+        <many-to-one name="mascota" class="com.unb001.mascotasenred.modelo.Mascota" column= "mascota_idMascota"/>
                     
     </class>
 </hibernate-mapping>

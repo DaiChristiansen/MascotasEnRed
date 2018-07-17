@@ -76,7 +76,7 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="EspacioMenu" pref="5045" max="32767" attributes="0"/>
+              <Component id="EspacioMenu" pref="5040" max="32767" attributes="0"/>
               <Group type="102" attributes="0">
                   <Component id="PanelBuscarMascota" min="-2" pref="1002" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
@@ -324,7 +324,7 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="0" pref="39" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="41" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -375,7 +375,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="BtnBuscarMascota" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="824" max="32767" attributes="0"/>
+                      <EmptySpace pref="804" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -770,7 +770,7 @@
                                                   <Group type="102" alignment="1" attributes="0">
                                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                                       <Component id="jLabel21" min="-2" pref="40" max="-2" attributes="0"/>
-                                                      <EmptySpace pref="20" max="32767" attributes="0"/>
+                                                      <EmptySpace max="32767" attributes="0"/>
                                                       <Component id="jCBEstadoCrearAviso" min="-2" pref="255" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
@@ -824,7 +824,7 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="0" pref="65" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="26" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -900,7 +900,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="765" max="32767" attributes="0"/>
+                      <EmptySpace pref="764" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -939,11 +939,10 @@
                   <Color blue="33" green="33" red="33" type="rgb"/>
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="4">
+                  <StringArray count="3">
                     <StringItem index="0" value="Perdido"/>
                     <StringItem index="1" value="Encontrado"/>
                     <StringItem index="2" value="Adopci&#xf3;n"/>
-                    <StringItem index="3" value="Registrado"/>
                   </StringArray>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1389,10 +1388,6 @@
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="jTextTelCargarDenunciante" min="-2" pref="255" max="-2" attributes="0"/>
                                           </Group>
-                                          <Group type="102" attributes="0">
-                                              <Component id="jLabel40" min="-2" pref="46" max="-2" attributes="0"/>
-                                              <EmptySpace min="303" pref="303" max="-2" attributes="0"/>
-                                          </Group>
                                       </Group>
                                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
@@ -1446,15 +1441,11 @@
                                       <Component id="jLabel29" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jTextEmailCargarDenunciante" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextDireccionCargarDenunciante" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextTelCargarDenunciante" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jLabel40" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextDireccionCargarDenunciante" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextTelCargarDenunciante" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -1463,12 +1454,12 @@
                               <Component id="jTextApellidoCargarDenunciante" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="BtnGuardar" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="BtnCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="774" max="32767" attributes="0"/>
+                      <EmptySpace pref="766" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1643,18 +1634,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextEmailCargarDenuncianteActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel40">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Calibri" size="12" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="70" green="0" red="3d" type="rgb"/>
-                </Property>
-                <Property name="horizontalAlignment" type="int" value="4"/>
-                <Property name="text" type="java.lang.String" value="ID"/>
-              </Properties>
-            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="PanelRegistrarMascota">
@@ -1678,7 +1657,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jSeparator3" alignment="0" pref="1004" max="32767" attributes="0"/>
+                          <Component id="jSeparator3" alignment="0" pref="1012" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="TituloRegistrarMascota" alignment="0" min="-2" pref="123" max="-2" attributes="0"/>
@@ -1826,7 +1805,7 @@
                           <Component id="BtnCargarRegistrarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="BtnCancelarRegistrarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="801" max="32767" attributes="0"/>
+                      <EmptySpace pref="784" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2248,7 +2227,7 @@
                                   <Component id="TituloBuscarMascota1" min="-2" pref="159" max="-2" attributes="0"/>
                                   <Component id="jScrollPane3" min="-2" pref="966" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="38" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="46" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>

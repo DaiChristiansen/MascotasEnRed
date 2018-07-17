@@ -8,24 +8,7 @@
  * Created: 17/07/2018
  */
 
-drop database mascotaenred;
-create database  IF NOT EXISTS mascotaenred;
-
-
-CREATE TABLE IF NOT EXISTS `mascotaenred`.`denunciante` (
-  `idDenunciante` int not null,
-  `dni` INT NOT NULL,
-  `nombre` VARCHAR(45) NOT NULL,
-  `apellido` VARCHAR(45) NOT NULL,
-  `direccion` VARCHAR(45) NOT NULL,
-  `email` VARCHAR(45) NOT NULL,
-   `telefono` long NOT NULL,
-  PRIMARY KEY (`idDenunciante`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
-
-
-
+drop database mascotasenred;
 CREATE TABLE IF NOT EXISTS `mascotaenred`.`mascota` (
   `idMascota` INT NOT NULL,
   `nombre` VARCHAR(45) NOT NULL,
@@ -36,25 +19,31 @@ CREATE TABLE IF NOT EXISTS `mascotaenred`.`mascota` (
   `tamanio` VARCHAR(45) NOT NULL,
   `zona` VARCHAR(45) NOT NULL,
   `estado` VARCHAR(45) NOT NULL,
- `idDenunciante` int(11) NOT NULL,
+ `denunciante_dni` int(11) NOT NULL,
   PRIMARY KEY (`idMascota`),
-  KEY `idDenunciante_idx` (`idDenunciante`))
+ INDEX `fk_mascota_denunciante1_idx` (`denunciante_dni` ASC),
+  CONSTRAINT `fk_mascota_denunciante1`
+    FOREIGN KEY (`denunciante_dni`)
+    REFERENCES `mascotaenred`.`denunciante` (`dni`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
 
+
 CREATE TABLE IF NOT EXISTS `mascotaenred`.`denuncia` (
-  `nroDenuncia` INT NOT NULL DEFAULT 0,
-  `tipoDenuncia` INT NOT NULL,
+  `nroDenuncia` INT NOT NULL,
+  `tipoDenuncia` varchar(15),
   `fecha` DATE NOT NULL,
   `mascota_idMascota` INT NOT NULL,
-  `denunciante_idDenunciante` int(11) NOT NULL,
+  `denunciante_dni` int(11) NOT NULL,
   PRIMARY KEY (`nroDenuncia`),
- INDEX `fk_denuncia_denunciante1_idx` (`denunciante_idDenunciante` ASC),
+ INDEX `fk_denuncia_denunciante1_idx` (`denunciante_dni` ASC),
   INDEX `fk_denuncia_mascota1_idx` (`mascota_idMascota` ASC),
   CONSTRAINT `fk_denuncia_denunciante1`
-    FOREIGN KEY (`denunciante_idDenunciante`)
-    REFERENCES `mascotaenred`.`denunciante` (`idDenunciante`)
+    FOREIGN KEY (`denunciante_dni`)
+    REFERENCES `mascotaenred`.`denunciante` (`dni`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_denuncia_mascota1`
@@ -64,3 +53,4 @@ CREATE TABLE IF NOT EXISTS `mascotaenred`.`denuncia` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
+

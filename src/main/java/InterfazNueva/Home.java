@@ -1719,8 +1719,8 @@ public class Home extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 1, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(292, Short.MAX_VALUE))
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 881, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout VentanaDeFondoLayout = new javax.swing.GroupLayout(VentanaDeFondo);
@@ -2082,7 +2082,7 @@ public class Home extends javax.swing.JFrame {
             manager.getTransaction().commit();
             manager.close();
             JOptionPane.showConfirmDialog(null, "Denunciante agregado", "Atención", JOptionPane.YES_OPTION);
-        } catch (EntityExistsException e) {
+        } catch (Exception e) {
             JOptionPane.showConfirmDialog(null, "Ya existe este dato", "Error", JOptionPane.YES_OPTION);
             //System.out.println("ya existe este dato");
         }

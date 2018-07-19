@@ -139,6 +139,9 @@ public class Home extends javax.swing.JFrame {
         jLabel40 = new javax.swing.JLabel();
         jTextIDRegistrarMascota = new javax.swing.JTextField();
         BotonCerrar3 = new javax.swing.JButton();
+        BtnMostrarRegistrarMascota = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTableMostrarMascotasRegistradas = new javax.swing.JTable();
         PanelDenunciaMaltrato = new javax.swing.JPanel();
         jSeparator4 = new javax.swing.JSeparator();
         TituloBuscarMascota1 = new javax.swing.JLabel();
@@ -1040,7 +1043,7 @@ public class Home extends javax.swing.JFrame {
                                     .addComponent(jCBRazaCrearAviso, 0, 255, Short.MAX_VALUE)
                                     .addComponent(jCBZonaCrearAviso, 0, 255, Short.MAX_VALUE)
                                     .addComponent(jTextDenuncianteCrearAviso))))
-                        .addGap(0, 45, Short.MAX_VALUE))))
+                        .addGap(0, 23, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCrearAvisoLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(BtnCargarCrearAviso)
@@ -1062,7 +1065,7 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
                         .addGap(41, 41, 41)
-                        .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel25)
                             .addComponent(jCBRazaCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
@@ -1108,7 +1111,7 @@ public class Home extends javax.swing.JFrame {
                     .addComponent(BtnMostrarCrearAviso))
                 .addGap(38, 38, 38)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(274, Short.MAX_VALUE))
+                .addContainerGap(296, Short.MAX_VALUE))
         );
 
         PanelCargarDenunciante.setBackground(new java.awt.Color(230, 230, 230));
@@ -1316,8 +1319,7 @@ public class Home extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextTelCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(jTextTelCargarDenunciante, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jScrollPane1))))
                         .addGap(64, 64, 64))
                     .addGroup(PanelCargarDenuncianteLayout.createSequentialGroup()
@@ -1652,6 +1654,60 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
+        BtnMostrarRegistrarMascota.setBackground(new java.awt.Color(61, 0, 112));
+        BtnMostrarRegistrarMascota.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        BtnMostrarRegistrarMascota.setForeground(new java.awt.Color(240, 240, 240));
+        BtnMostrarRegistrarMascota.setText("MOSTRAR MASCOTAS REGISTRADAS");
+        BtnMostrarRegistrarMascota.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BtnMostrarRegistrarMascota.setName("Boton Buscar"); // NOI18N
+        BtnMostrarRegistrarMascota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnMostrarRegistrarMascotaActionPerformed(evt);
+            }
+        });
+
+        jTableMostrarMascotasRegistradas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "ID", "ESTADO", "NOMBRE", "TIPO", "RAZA", "COLOR", "CARACT. ESP.", "TAMAÑO", "ZONA", "DENUNCIANTE"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane4.setViewportView(jTableMostrarMascotasRegistradas);
+
         javax.swing.GroupLayout PanelRegistrarMascotaLayout = new javax.swing.GroupLayout(PanelRegistrarMascota);
         PanelRegistrarMascota.setLayout(PanelRegistrarMascotaLayout);
         PanelRegistrarMascotaLayout.setHorizontalGroup(
@@ -1659,36 +1715,32 @@ public class Home extends javax.swing.JFrame {
             .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator3, javax.swing.GroupLayout.DEFAULT_SIZE, 1004, Short.MAX_VALUE)
                     .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
                         .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TituloRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jSeparator3, javax.swing.GroupLayout.DEFAULT_SIZE, 982, Short.MAX_VALUE)
                             .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
-                                .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
-                                        .addComponent(jLabel37)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextNombreRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelRegistrarMascotaLayout.createSequentialGroup()
-                                        .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel32)
-                                            .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jCBTamañoRegistrarMascota, 0, 255, Short.MAX_VALUE)
-                                            .addComponent(jTextEstadoRegistarMascota)))
+                                        .addComponent(TituloRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))
                                     .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
-                                        .addComponent(jLabel40)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextIDRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
-                                        .addGap(338, 338, 338)
-                                        .addComponent(BtnCargarRegistrarMascota)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(BtnCancelarRegistrarMascota)
-                                        .addGap(2, 2, 2))
-                                    .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
+                                        .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
+                                                .addComponent(jLabel37)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jTextNombreRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelRegistrarMascotaLayout.createSequentialGroup()
+                                                .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabel32)
+                                                    .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addComponent(jCBTamañoRegistrarMascota, 0, 255, Short.MAX_VALUE)
+                                                    .addComponent(jTextEstadoRegistarMascota)))
+                                            .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
+                                                .addComponent(jLabel40)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jTextIDRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGap(18, 18, 18)
                                         .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelRegistrarMascotaLayout.createSequentialGroup()
@@ -1706,7 +1758,7 @@ public class Home extends javax.swing.JFrame {
                                                         .addComponent(jLabel38)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                         .addComponent(jTextCaractRegistrarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                                         .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(jLabel39)
                                             .addComponent(jLabel36)
@@ -1715,13 +1767,25 @@ public class Home extends javax.swing.JFrame {
                                         .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(jCBRazaRegistrarMascota, javax.swing.GroupLayout.Alignment.TRAILING, 0, 255, Short.MAX_VALUE)
                                             .addComponent(jCBZonaRegistrarMascota, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jTextDenuncianteRegistrarMascota, javax.swing.GroupLayout.Alignment.TRAILING))))))
-                        .addGap(48, 48, 48)))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelRegistrarMascotaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(BotonCerrar3)
-                .addGap(59, 59, 59))
+                                            .addComponent(jTextDenuncianteRegistrarMascota, javax.swing.GroupLayout.Alignment.TRAILING)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelRegistrarMascotaLayout.createSequentialGroup()
+                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(BtnCargarRegistrarMascota)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(BtnCancelarRegistrarMascota)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(BtnMostrarRegistrarMascota)))
+                                .addGap(48, 48, 48)))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelRegistrarMascotaLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(BotonCerrar3)
+                        .addGap(59, 59, 59))))
+            .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
+                    .addGap(16, 16, 16)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 931, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(55, Short.MAX_VALUE)))
         );
         PanelRegistrarMascotaLayout.setVerticalGroup(
             PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1779,8 +1843,14 @@ public class Home extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnCargarRegistrarMascota)
-                    .addComponent(BtnCancelarRegistrarMascota))
-                .addContainerGap(775, Short.MAX_VALUE))
+                    .addComponent(BtnCancelarRegistrarMascota)
+                    .addComponent(BtnMostrarRegistrarMascota))
+                .addContainerGap(797, Short.MAX_VALUE))
+            .addGroup(PanelRegistrarMascotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PanelRegistrarMascotaLayout.createSequentialGroup()
+                    .addGap(298, 298, 298)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(299, Short.MAX_VALUE)))
         );
 
         PanelDenunciaMaltrato.setBackground(new java.awt.Color(230, 230, 230));
@@ -2067,38 +2137,20 @@ public class Home extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jTextDNICargarDenuncianteActionPerformed
 
-    
-    
-    
-    
-    
-
-  //  private void jTexDniCargarDenuncianteKeyTyped(java.awt.event.KeyEvent evt) {
-       // char caracter = evt.getKeyChar();
-
-        // Verificar si la tecla pulsada no es un digito
-       // if (((caracter < '0') || (caracter > '9')) && (caracter != '\b' /*corresponde a BACK_SPACE*/)) {
-         //   evt.consume();  // ignorar el evento de teclado
-        //}
-      //JOptionPane.showMessageDialog(null, "Solo Ingresar numero");  
-   // }
-
-
-
-   
-
-
-
+    //  private void jTexDniCargarDenuncianteKeyTyped(java.awt.event.KeyEvent evt) {
+    // char caracter = evt.getKeyChar();
+    // Verificar si la tecla pulsada no es un digito
+    // if (((caracter < '0') || (caracter > '9')) && (caracter != '\b' /*corresponde a BACK_SPACE*/)) {
+    //   evt.consume();  // ignorar el evento de teclado
+    //}
+    //JOptionPane.showMessageDialog(null, "Solo Ingresar numero");  
+    // }
 //char validar = evt.getKeyChar(); 
     //if(Character.isLetter(validar)){
-      // evt.consume();
-   // }
+    // evt.consume();
+    // }
     //JOptionPane.showMessageDialog(null, "Solo Ingresar numero");
-     
-     
-     
-     
- 
+
     private void jTextNombreCargarDenuncianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextNombreCargarDenuncianteActionPerformed
         jTextNombreCargarDenunciante.transferFocus();
     }//GEN-LAST:event_jTextNombreCargarDenuncianteActionPerformed
@@ -2223,11 +2275,9 @@ public class Home extends javax.swing.JFrame {
         nombre = jTextNombreRegistrarMascota.getText();
         caracteristicasEspeciales = jTextCaractRegistrarMascota.getText();
 
-        
-
-try {
-            Denunciante denunciante = manager.find(Denunciante.class
-, dni);
+        try {
+            Denunciante denunciante = manager.find(Denunciante.class,
+                     dni);
             Mascota masc = new Mascota(idMascota, nombre, tipoMascota, raza, color, caracteristicasEspeciales, tamanio, zona, estado);
             masc.setDenunciante(denunciante);
             manager.persist(masc);
@@ -2353,17 +2403,10 @@ try {
             Mascota masc = new Mascota(idMascota, nombre, tipoMascota, raza, color, caracteristicasEspeciales, tamanio, zona, estado);
             masc.setDenunciante(denunciante);
             manager.persist(masc);
-
-            System.out.println(denunciante);
-            System.out.println(masc);
-
             Denuncia den = new Denuncia(nro, estado, fechaActual);
             den.setMascota(masc);
             den.setDenunciante(denunciante);
-            System.out.println(den);
-            //manager.persist(Masc);
             manager.persist(den);
-
             manager.getTransaction().commit();
 
         } catch (EntityExistsException e) {
@@ -2422,6 +2465,23 @@ try {
     private void jCBEstadoCrearAvisoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBEstadoCrearAvisoMouseMoved
 
     }//GEN-LAST:event_jCBEstadoCrearAvisoMouseMoved
+
+    private void BtnMostrarRegistrarMascotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnMostrarRegistrarMascotaActionPerformed
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
+        EntityManager manager = emf.createEntityManager();
+        manager.getTransaction().begin();
+        DefaultTableModel dfmAviso = new DefaultTableModel();
+        this.jTableMostrarMascotasRegistradas.setModel(dfmAviso);
+        dfmAviso.setColumnIdentifiers(new Object[]{"ID", "ESTADO", "NOMBRE", "TIPO", "RAZA", "COLOR", "CARACT. ESP.", "TAMAÑO", "ZONA", "DENUNCIANTE"});
+        Query query = manager.createQuery("SELECT m FROM Mascota m WHERE m.estado = 'Registrado'");
+
+        for (Mascota m : (Collection<Mascota>) query.getResultList()) {
+            dfmAviso.addRow(new Object[]{m.getIdMascota(), m.getEstado(), m.getNombre(), m.getTipoMascota(), m.getRaza(), m.getColor(), m.getCaracteristicasEspeciales(), m.getTamanio(), m.getZona(), m.getDenunciante().getDni()});
+        }
+        manager.close();
+
+        emf.close();
+    }//GEN-LAST:event_BtnMostrarRegistrarMascotaActionPerformed
 
     public void limpiarRegistarMascota() {
         jTextDenuncianteRegistrarMascota.setText("");
@@ -2529,35 +2589,23 @@ try {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
 
-                
-
-}
+                }
             }
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(Home.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-
-        
-
-} catch (InstantiationException ex) {
+        } catch (InstantiationException ex) {
             java.util.logging.Logger.getLogger(Home.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-
-        
-
-} catch (IllegalAccessException ex) {
+        } catch (IllegalAccessException ex) {
             java.util.logging.Logger.getLogger(Home.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-
-        
-
-} catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Home.class
-
-.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -2590,6 +2638,7 @@ try {
     private javax.swing.JButton BtnGuardar;
     private javax.swing.JButton BtnMostrarCrearAviso;
     private javax.swing.JButton BtnMostrarDenunciantes;
+    private javax.swing.JButton BtnMostrarRegistrarMascota;
     private javax.swing.JPanel EspacioMenu;
     private javax.swing.JPanel PanelBuscarMascota;
     private javax.swing.JPanel PanelCargarDenunciante;
@@ -2656,6 +2705,7 @@ try {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
@@ -2663,6 +2713,7 @@ try {
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JTable jTableCrearAviso;
     private javax.swing.JTable jTableDenunciantes;
+    private javax.swing.JTable jTableMostrarMascotasRegistradas;
     private javax.swing.JTextField jTextApellidoCargarDenunciante;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextCaractCrearAviso;

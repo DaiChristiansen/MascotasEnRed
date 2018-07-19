@@ -2196,9 +2196,9 @@ public class Home extends javax.swing.JFrame {
             manager.persist(dn);
             manager.getTransaction().commit();
 
-            JOptionPane.showConfirmDialog(null, "Denunciante agregado", "Atención", JOptionPane.YES_OPTION);
+            JOptionPane.showMessageDialog(null,"Denunciante guardado con éxito", "Aviso", JOptionPane.INFORMATION_MESSAGE);
         } catch (Exception e) {
-            JOptionPane.showConfirmDialog(null, "Ya existe este dato", "Error", JOptionPane.YES_OPTION);
+            JOptionPane.showMessageDialog(null,"Ya existe este dato", "Error", x);
             //System.out.println("ya existe este dato");
         }
         manager.close();
@@ -2408,9 +2408,10 @@ public class Home extends javax.swing.JFrame {
             den.setDenunciante(denunciante);
             manager.persist(den);
             manager.getTransaction().commit();
-
+            JOptionPane.showMessageDialog(null,"Aviso creado con éxito", "Aviso", JOptionPane.INFORMATION_MESSAGE);
         } catch (EntityExistsException e) {
-            System.out.println("ya existe este dato");
+            JOptionPane.showMessageDialog(null,"Ya existe este dato", "Error", x);
+            //System.out.println("ya existe este dato");
         }
         manager.close();
         emf.close();

@@ -89,6 +89,9 @@ public class Home extends javax.swing.JFrame {
         jTextIDCrearAviso = new javax.swing.JTextField();
         jLabel42 = new javax.swing.JLabel();
         BotonCerrar2 = new javax.swing.JButton();
+        BtnMostrarCrearAviso = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTableCrearAviso = new javax.swing.JTable();
         PanelCargarDenunciante = new javax.swing.JPanel();
         jSeparator6 = new javax.swing.JSeparator();
         TituloCargarDenunciante = new javax.swing.JLabel();
@@ -912,6 +915,60 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
+        BtnMostrarCrearAviso.setBackground(new java.awt.Color(61, 0, 112));
+        BtnMostrarCrearAviso.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        BtnMostrarCrearAviso.setForeground(new java.awt.Color(240, 240, 240));
+        BtnMostrarCrearAviso.setText("MOSTRAR");
+        BtnMostrarCrearAviso.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BtnMostrarCrearAviso.setName("Boton Buscar"); // NOI18N
+        BtnMostrarCrearAviso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnMostrarCrearAvisoActionPerformed(evt);
+            }
+        });
+
+        jTableCrearAviso.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "ID", "ESTADO", "NOMBRE", "TIPO", "RAZA", "COLOR", "CARACT. ESP.", "TAMAÑO", "ZONA", "DENUNCIANTE"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(jTableCrearAviso);
+
         javax.swing.GroupLayout PanelCrearAvisoLayout = new javax.swing.GroupLayout(PanelCrearAviso);
         PanelCrearAviso.setLayout(PanelCrearAvisoLayout);
         PanelCrearAvisoLayout.setHorizontalGroup(
@@ -924,75 +981,74 @@ public class Home extends javax.swing.JFrame {
                             .addComponent(jSeparator2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(TituloCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCrearAvisoLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(BotonCerrar2)
+                        .addGap(54, 54, 54))
                     .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
-                        .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
-                                .addComponent(BtnCargarCrearAviso)
+                        .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelCrearAvisoLayout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(BtnCancelarCrearAviso))
-                            .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
-                                .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCrearAvisoLayout.createSequentialGroup()
-                                        .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
-                                                .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextNroAvisoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
-                                                .addComponent(jLabel27)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextNombreCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
-                                                .addGap(24, 24, 24)
-                                                .addComponent(jLabel28)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextCaractCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jCBEstadoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                    .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
-                                            .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jTextIDCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jCBTipoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
-                                            .addComponent(jLabel22)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jCBTamañoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabel24)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jCBColorCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addGap(18, 46, Short.MAX_VALUE)
-                                .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
-                                        .addComponent(jLabel30)
+                                        .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextDenuncianteCrearAviso))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCrearAvisoLayout.createSequentialGroup()
-                                        .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextNroAvisoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jCBRazaCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCrearAvisoLayout.createSequentialGroup()
-                                        .addComponent(jLabel26)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jCBZonaCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCrearAvisoLayout.createSequentialGroup()
-                                        .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextFechaCrearAviso)))))
-                        .addGap(0, 53, Short.MAX_VALUE))))
+                                        .addComponent(jCBEstadoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
+                                        .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
+                                                .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jTextIDCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jCBTipoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCrearAvisoLayout.createSequentialGroup()
+                                                .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(jLabel22)
+                                                    .addComponent(jLabel27))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
+                                                        .addComponent(jTextNombreCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jLabel28))
+                                                    .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
+                                                        .addComponent(jCBTamañoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jLabel24)))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jCBColorCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jTextCaractCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addGap(14, 14, 14)
+                                        .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel26)
+                                            .addComponent(jLabel30))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextFechaCrearAviso, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE)
+                                    .addComponent(jCBRazaCrearAviso, 0, 255, Short.MAX_VALUE)
+                                    .addComponent(jCBZonaCrearAviso, 0, 255, Short.MAX_VALUE)
+                                    .addComponent(jTextDenuncianteCrearAviso))))
+                        .addGap(0, 45, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCrearAvisoLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(BotonCerrar2)
-                .addGap(54, 54, 54))
+                .addComponent(BtnCargarCrearAviso)
+                .addGap(18, 18, 18)
+                .addComponent(BtnCancelarCrearAviso)
+                .addGap(18, 18, 18)
+                .addComponent(BtnMostrarCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(59, 59, 59))
         );
         PanelCrearAvisoLayout.setVerticalGroup(
             PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1005,54 +1061,54 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 1, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel43)
-                            .addComponent(jCBEstadoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel21)
-                            .addComponent(jTextFechaCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(41, 41, 41)
                         .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel25)
-                            .addComponent(jCBRazaCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel26)
-                            .addComponent(jCBZonaCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel30)
-                            .addComponent(jTextDenuncianteCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(BtnCargarCrearAviso)
-                            .addComponent(BtnCancelarCrearAviso)))
+                            .addComponent(jCBRazaCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel41)
-                            .addComponent(jTextNroAvisoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel42)
-                            .addComponent(jTextIDCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel23)
-                            .addComponent(jCBTipoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel22)
-                            .addComponent(jCBTamañoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel24)
-                            .addComponent(jCBColorCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jTextNroAvisoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel21)
+                            .addComponent(jCBEstadoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel43)
+                            .addComponent(jTextFechaCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel27)
-                                .addComponent(jTextNombreCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel28)
-                                .addComponent(jTextCaractCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(765, Short.MAX_VALUE))
+                            .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel42)
+                                    .addComponent(jTextIDCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel23)
+                                    .addComponent(jCBTipoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel22)
+                                    .addComponent(jCBTamañoCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel24)
+                                    .addComponent(jCBColorCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(PanelCrearAvisoLayout.createSequentialGroup()
+                                .addGap(32, 32, 32)
+                                .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jCBZonaCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel26))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel27)
+                            .addComponent(jTextNombreCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel28)
+                            .addComponent(jTextCaractCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel30)
+                            .addComponent(jTextDenuncianteCrearAviso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(35, 35, 35)
+                .addGroup(PanelCrearAvisoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BtnCargarCrearAviso)
+                    .addComponent(BtnCancelarCrearAviso)
+                    .addComponent(BtnMostrarCrearAviso))
+                .addGap(38, 38, 38)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(274, Short.MAX_VALUE))
         );
 
         PanelCargarDenunciante.setBackground(new java.awt.Color(230, 230, 230));
@@ -1969,90 +2025,6 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnBuscarMascotaActionPerformed
 //FIN BUSCAR MASCOTA-------------------------------------------------------------------------------------------------
 
-    //CREAR AVISO--------------------------------------------------------------------------------------------------
-    private void jCBEstadoCrearAvisoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBEstadoCrearAvisoMouseMoved
-    }//GEN-LAST:event_jCBEstadoCrearAvisoMouseMoved
-
-    private void jCBEstadoCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBEstadoCrearAvisoActionPerformed
-    }//GEN-LAST:event_jCBEstadoCrearAvisoActionPerformed
-
-    private void jCBTamañoCrearAvisoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBTamañoCrearAvisoMouseMoved
-    }//GEN-LAST:event_jCBTamañoCrearAvisoMouseMoved
-
-    private void jCBTamañoCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBTamañoCrearAvisoActionPerformed
-    }//GEN-LAST:event_jCBTamañoCrearAvisoActionPerformed
-
-    private void jCBTipoCrearAvisoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBTipoCrearAvisoMouseMoved
-    }//GEN-LAST:event_jCBTipoCrearAvisoMouseMoved
-
-    private void jCBTipoCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBTipoCrearAvisoActionPerformed
-    }//GEN-LAST:event_jCBTipoCrearAvisoActionPerformed
-
-    private void jCBColorCrearAvisoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBColorCrearAvisoMouseMoved
-    }//GEN-LAST:event_jCBColorCrearAvisoMouseMoved
-
-    private void jCBColorCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBColorCrearAvisoActionPerformed
-    }//GEN-LAST:event_jCBColorCrearAvisoActionPerformed
-
-    private void jCBRazaCrearAvisoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBRazaCrearAvisoMouseMoved
-    }//GEN-LAST:event_jCBRazaCrearAvisoMouseMoved
-
-    private void jCBRazaCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBRazaCrearAvisoActionPerformed
-    }//GEN-LAST:event_jCBRazaCrearAvisoActionPerformed
-
-    private void jCBZonaCrearAvisoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBZonaCrearAvisoMouseMoved
-    }//GEN-LAST:event_jCBZonaCrearAvisoMouseMoved
-
-    private void jCBZonaCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBZonaCrearAvisoActionPerformed
-    }//GEN-LAST:event_jCBZonaCrearAvisoActionPerformed
-
-    private void BtnCargarCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCargarCrearAvisoActionPerformed
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
-        EntityManager manager = emf.createEntityManager();
-        manager.getTransaction().begin();
-        String estado, tipoMascota, raza, tamanio, color, zona, nombre, caracteristicasEspeciales;
-        int nro = Integer.parseInt(jTextNroAvisoCrearAviso.getText());
-        String tipoDenuncia;
-        DateFormat df = DateFormat.getDateInstance();
-        Date fechaActual = new Date();
-        jTextFechaCrearAviso.setText(df.format(fechaActual));
-        SimpleDateFormat formateador = new SimpleDateFormat("yyyy/MM/dd");
-        String f = formateador.format(fechaActual);
-        int dni = Integer.parseInt(jTextDenuncianteCrearAviso.getText());
-        int idMascota = Integer.parseInt(jTextIDCrearAviso.getText());
-        estado = jCBEstadoCrearAviso.getSelectedItem().toString();
-        tipoMascota = jCBTipoCrearAviso.getSelectedItem().toString();
-        raza = jCBRazaCrearAviso.getSelectedItem().toString();
-        tamanio = jCBTamañoCrearAviso.getSelectedItem().toString();
-        color = jCBColorCrearAviso.getSelectedItem().toString();
-        zona = jCBZonaCrearAviso.getSelectedItem().toString();
-        nombre = jTextNombreCrearAviso.getText();
-        caracteristicasEspeciales = jTextCaractCrearAviso.getText();
-
-        try {
-            Denunciante denunciante = manager.find(Denunciante.class, dni);
-            Mascota masc = new Mascota(idMascota, nombre, tipoMascota, raza, color, caracteristicasEspeciales, tamanio, zona, estado);
-            masc.setDenunciante(denunciante);
-            manager.persist(masc);
-
-            System.out.println(denunciante);
-            System.out.println(masc);
-
-            Denuncia den = new Denuncia(nro, estado, fechaActual);
-            den.setMascota(masc);
-            den.setDenunciante(denunciante);
-            System.out.println(den);
-            //manager.persist(Masc);
-            manager.persist(den);
-
-            manager.getTransaction().commit();
-            manager.close();
-        } catch (EntityExistsException e) {
-            System.out.println("ya existe este dato");
-        }
-        limpiarCrearAviso();
-    }//GEN-LAST:event_BtnCargarCrearAvisoActionPerformed
-
     public void limpiarCrearAviso() {
         jTextNroAvisoCrearAviso.setText("");
         jTextFechaCrearAviso.setText("");
@@ -2147,12 +2119,14 @@ public class Home extends javax.swing.JFrame {
             // manager.merge(nuevo5);
             manager.persist(dn);
             manager.getTransaction().commit();
-            manager.close();
+         
             JOptionPane.showConfirmDialog(null, "Denunciante agregado", "Atención", JOptionPane.YES_OPTION);
         } catch (Exception e) {
             JOptionPane.showConfirmDialog(null, "Ya existe este dato", "Error", JOptionPane.YES_OPTION);
             //System.out.println("ya existe este dato");
         }
+           manager.close();
+           emf.close();
         limpiarDenunciante();
     }//GEN-LAST:event_BtnGuardarActionPerformed
 
@@ -2231,33 +2205,14 @@ public class Home extends javax.swing.JFrame {
             masc.setDenunciante(denunciante);
             manager.persist(masc);
             manager.getTransaction().commit();
-            manager.close();
+            
         } catch (EntityExistsException e) {
             System.out.println("ya existe este dato");
         }
+        manager.close();
+        emf.close();
         limpiarRegistarMascota();
      }//GEN-LAST:event_BtnCargarRegistrarMascotaActionPerformed
-
-    private void BtnCancelarCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCancelarCrearAvisoActionPerformed
-        bloquearCrearAviso();
-    }//GEN-LAST:event_BtnCancelarCrearAvisoActionPerformed
-
-    private void jTextNroAvisoCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextNroAvisoCrearAvisoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextNroAvisoCrearAvisoActionPerformed
-
-    private void jTextIDCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextIDCrearAvisoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextIDCrearAvisoActionPerformed
-
-    private void jTextFechaCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFechaCrearAvisoActionPerformed
-        DateFormat df = DateFormat.getDateInstance();
-        Date fechaActual = new Date();
-        jTextFechaCrearAviso.setText(df.format(fechaActual));
-        SimpleDateFormat formateador = new SimpleDateFormat("yyyy/MM/dd");
-        String f = formateador.format(fechaActual);
-
-    }//GEN-LAST:event_jTextFechaCrearAvisoActionPerformed
 
 
     private void BtnCancelarRegistrarMascotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCancelarRegistrarMascotaActionPerformed
@@ -2276,10 +2231,6 @@ public class Home extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_BotonCerrar1ActionPerformed
 
-    private void BotonCerrar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCerrar2ActionPerformed
-        this.dispose();        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonCerrar2ActionPerformed
-
     private void BotonCerrar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCerrar3ActionPerformed
         this.dispose();
     }//GEN-LAST:event_BotonCerrar3ActionPerformed
@@ -2295,15 +2246,156 @@ public class Home extends javax.swing.JFrame {
         this.jTableDenunciantes.setModel(dfm);
         dfm.setColumnIdentifiers(new Object[]{"DNI", "NOMBRE", "APELLIDO", "DIRECCION", "TELEFONO", "EMAIL"});
         Query query = manager.createQuery("SELECT e FROM Denunciante e");
-       
+
         for (Denunciante e : (Collection<Denunciante>) query.getResultList()) {
             dfm.addRow(new Object[]{e.getDni(), e.getNombre(), e.getApellido(), e.getDireccion(), e.getTelefono(), e.getEmail()});
     }//GEN-LAST:event_BtnMostrarDenunciantesActionPerformed
-        manager.close();
+    manager.close();
 
         emf.close();
+    
     }
+    
+    
+    private void BtnMostrarCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnMostrarCrearAvisoActionPerformed
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
+        EntityManager manager = emf.createEntityManager();
+        manager.getTransaction().begin();
+        DefaultTableModel dfmAviso = new DefaultTableModel();
+        this.jTableCrearAviso.setModel(dfmAviso);
+        dfmAviso.setColumnIdentifiers(new Object[]{"ID", "ESTADO", "NOMBRE", "TIPO", "RAZA", "COLOR","CARACT. ESP.","TAMAÑO","ZONA","DENUNCIANTE"});
+        Query query = manager.createQuery("SELECT m FROM Mascota m");
 
+        for (Mascota m : (Collection<Mascota>) query.getResultList()) {
+            dfmAviso.addRow(new Object[]{m.getIdMascota(), m.getEstado(), m.getNombre(), m.getTipoMascota(), m.getRaza(),m.getColor(),m.getCaracteristicasEspeciales(),m.getTamanio(),m.getZona(),m.getDenunciante().getDni()});
+        }
+              manager.close();
+
+        emf.close();
+    }//GEN-LAST:event_BtnMostrarCrearAvisoActionPerformed
+
+    private void BotonCerrar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCerrar2ActionPerformed
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_BotonCerrar2ActionPerformed
+
+    private void jTextIDCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextIDCrearAvisoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextIDCrearAvisoActionPerformed
+
+    private void jTextFechaCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFechaCrearAvisoActionPerformed
+        DateFormat df = DateFormat.getDateInstance();
+        Date fechaActual = new Date();
+        jTextFechaCrearAviso.setText(df.format(fechaActual));
+        SimpleDateFormat formateador = new SimpleDateFormat("yyyy/MM/dd");
+        String f = formateador.format(fechaActual);
+    }//GEN-LAST:event_jTextFechaCrearAvisoActionPerformed
+
+    private void jTextNroAvisoCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextNroAvisoCrearAvisoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextNroAvisoCrearAvisoActionPerformed
+
+    private void BtnCancelarCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCancelarCrearAvisoActionPerformed
+        bloquearCrearAviso();
+    }//GEN-LAST:event_BtnCancelarCrearAvisoActionPerformed
+
+    private void BtnCargarCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCargarCrearAvisoActionPerformed
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
+        EntityManager manager = emf.createEntityManager();
+        manager.getTransaction().begin();
+        String estado, tipoMascota, raza, tamanio, color, zona, nombre, caracteristicasEspeciales;
+        int nro = Integer.parseInt(jTextNroAvisoCrearAviso.getText());
+        String tipoDenuncia;
+        DateFormat df = DateFormat.getDateInstance();
+        Date fechaActual = new Date();
+        jTextFechaCrearAviso.setText(df.format(fechaActual));
+        SimpleDateFormat formateador = new SimpleDateFormat("yyyy/MM/dd");
+        String f = formateador.format(fechaActual);
+        int dni = Integer.parseInt(jTextDenuncianteCrearAviso.getText());
+        int idMascota = Integer.parseInt(jTextIDCrearAviso.getText());
+        estado = jCBEstadoCrearAviso.getSelectedItem().toString();
+        tipoMascota = jCBTipoCrearAviso.getSelectedItem().toString();
+        raza = jCBRazaCrearAviso.getSelectedItem().toString();
+        tamanio = jCBTamañoCrearAviso.getSelectedItem().toString();
+        color = jCBColorCrearAviso.getSelectedItem().toString();
+        zona = jCBZonaCrearAviso.getSelectedItem().toString();
+        nombre = jTextNombreCrearAviso.getText();
+        caracteristicasEspeciales = jTextCaractCrearAviso.getText();
+
+        try {
+            Denunciante denunciante = manager.find(Denunciante.class, dni);
+            Mascota masc = new Mascota(idMascota, nombre, tipoMascota, raza, color, caracteristicasEspeciales, tamanio, zona, estado);
+            masc.setDenunciante(denunciante);
+            manager.persist(masc);
+
+            System.out.println(denunciante);
+            System.out.println(masc);
+
+            Denuncia den = new Denuncia(nro, estado, fechaActual);
+            den.setMascota(masc);
+            den.setDenunciante(denunciante);
+            System.out.println(den);
+            //manager.persist(Masc);
+            manager.persist(den);
+
+            manager.getTransaction().commit();
+
+        } catch (EntityExistsException e) {
+            System.out.println("ya existe este dato");
+        }
+        manager.close();
+        emf.close();
+        limpiarCrearAviso();
+    }//GEN-LAST:event_BtnCargarCrearAvisoActionPerformed
+
+    private void jCBZonaCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBZonaCrearAvisoActionPerformed
+
+    }//GEN-LAST:event_jCBZonaCrearAvisoActionPerformed
+
+    private void jCBZonaCrearAvisoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBZonaCrearAvisoMouseMoved
+
+    }//GEN-LAST:event_jCBZonaCrearAvisoMouseMoved
+
+    private void jCBRazaCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBRazaCrearAvisoActionPerformed
+
+    }//GEN-LAST:event_jCBRazaCrearAvisoActionPerformed
+
+    private void jCBRazaCrearAvisoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBRazaCrearAvisoMouseMoved
+
+    }//GEN-LAST:event_jCBRazaCrearAvisoMouseMoved
+
+    private void jCBColorCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBColorCrearAvisoActionPerformed
+
+    }//GEN-LAST:event_jCBColorCrearAvisoActionPerformed
+
+    private void jCBColorCrearAvisoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBColorCrearAvisoMouseMoved
+
+    }//GEN-LAST:event_jCBColorCrearAvisoMouseMoved
+
+    private void jCBTipoCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBTipoCrearAvisoActionPerformed
+
+    }//GEN-LAST:event_jCBTipoCrearAvisoActionPerformed
+
+    private void jCBTipoCrearAvisoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBTipoCrearAvisoMouseMoved
+
+    }//GEN-LAST:event_jCBTipoCrearAvisoMouseMoved
+
+    private void jCBTamañoCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBTamañoCrearAvisoActionPerformed
+
+    }//GEN-LAST:event_jCBTamañoCrearAvisoActionPerformed
+
+    private void jCBTamañoCrearAvisoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBTamañoCrearAvisoMouseMoved
+
+    }//GEN-LAST:event_jCBTamañoCrearAvisoMouseMoved
+
+    private void jCBEstadoCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBEstadoCrearAvisoActionPerformed
+
+    }//GEN-LAST:event_jCBEstadoCrearAvisoActionPerformed
+
+    //CREAR AVISO--------------------------------------------------------------------------------------------------
+    private void jCBEstadoCrearAvisoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBEstadoCrearAvisoMouseMoved
+
+    }//GEN-LAST:event_jCBEstadoCrearAvisoMouseMoved
+        
     public void limpiarRegistarMascota() {
         jTextDenuncianteRegistrarMascota.setText("");
         jTextNombreRegistrarMascota.setText("");
@@ -2457,6 +2549,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton BtnCargarCrearAviso;
     private javax.swing.JButton BtnCargarRegistrarMascota;
     private javax.swing.JButton BtnGuardar;
+    private javax.swing.JButton BtnMostrarCrearAviso;
     private javax.swing.JButton BtnMostrarDenunciantes;
     private javax.swing.JPanel EspacioMenu;
     private javax.swing.JPanel PanelBuscarMascota;
@@ -2522,12 +2615,14 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JTable jTableCrearAviso;
     private javax.swing.JTable jTableDenunciantes;
     private javax.swing.JTextField jTextApellidoCargarDenunciante;
     private javax.swing.JTextArea jTextArea2;

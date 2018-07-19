@@ -2119,14 +2119,14 @@ public class Home extends javax.swing.JFrame {
             // manager.merge(nuevo5);
             manager.persist(dn);
             manager.getTransaction().commit();
-         
+
             JOptionPane.showConfirmDialog(null, "Denunciante agregado", "Atención", JOptionPane.YES_OPTION);
         } catch (Exception e) {
             JOptionPane.showConfirmDialog(null, "Ya existe este dato", "Error", JOptionPane.YES_OPTION);
             //System.out.println("ya existe este dato");
         }
-           manager.close();
-           emf.close();
+        manager.close();
+        emf.close();
         limpiarDenunciante();
     }//GEN-LAST:event_BtnGuardarActionPerformed
 
@@ -2205,7 +2205,7 @@ public class Home extends javax.swing.JFrame {
             masc.setDenunciante(denunciante);
             manager.persist(masc);
             manager.getTransaction().commit();
-            
+
         } catch (EntityExistsException e) {
             System.out.println("ya existe este dato");
         }
@@ -2250,26 +2250,26 @@ public class Home extends javax.swing.JFrame {
         for (Denunciante e : (Collection<Denunciante>) query.getResultList()) {
             dfm.addRow(new Object[]{e.getDni(), e.getNombre(), e.getApellido(), e.getDireccion(), e.getTelefono(), e.getEmail()});
     }//GEN-LAST:event_BtnMostrarDenunciantesActionPerformed
-    manager.close();
+        manager.close();
 
         emf.close();
-    
+
     }
-    
-    
+
+
     private void BtnMostrarCrearAvisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnMostrarCrearAvisoActionPerformed
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("MascotasEnRedPersistence");
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
         DefaultTableModel dfmAviso = new DefaultTableModel();
         this.jTableCrearAviso.setModel(dfmAviso);
-        dfmAviso.setColumnIdentifiers(new Object[]{"ID", "ESTADO", "NOMBRE", "TIPO", "RAZA", "COLOR","CARACT. ESP.","TAMAÑO","ZONA","DENUNCIANTE"});
+        dfmAviso.setColumnIdentifiers(new Object[]{"ID", "ESTADO", "NOMBRE", "TIPO", "RAZA", "COLOR", "CARACT. ESP.", "TAMAÑO", "ZONA", "DENUNCIANTE"});
         Query query = manager.createQuery("SELECT m FROM Mascota m");
 
         for (Mascota m : (Collection<Mascota>) query.getResultList()) {
-            dfmAviso.addRow(new Object[]{m.getIdMascota(), m.getEstado(), m.getNombre(), m.getTipoMascota(), m.getRaza(),m.getColor(),m.getCaracteristicasEspeciales(),m.getTamanio(),m.getZona(),m.getDenunciante().getDni()});
+            dfmAviso.addRow(new Object[]{m.getIdMascota(), m.getEstado(), m.getNombre(), m.getTipoMascota(), m.getRaza(), m.getColor(), m.getCaracteristicasEspeciales(), m.getTamanio(), m.getZona(), m.getDenunciante().getDni()});
         }
-              manager.close();
+        manager.close();
 
         emf.close();
     }//GEN-LAST:event_BtnMostrarCrearAvisoActionPerformed
@@ -2395,7 +2395,7 @@ public class Home extends javax.swing.JFrame {
     private void jCBEstadoCrearAvisoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBEstadoCrearAvisoMouseMoved
 
     }//GEN-LAST:event_jCBEstadoCrearAvisoMouseMoved
-        
+
     public void limpiarRegistarMascota() {
         jTextDenuncianteRegistrarMascota.setText("");
         jTextNombreRegistrarMascota.setText("");

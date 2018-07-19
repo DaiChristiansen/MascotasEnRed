@@ -2094,15 +2094,39 @@ public class Home extends javax.swing.JFrame {
         jTextDNICargarDenunciante.transferFocus();
 
     }//GEN-LAST:event_jTextDNICargarDenuncianteActionPerformed
-    /*private void jTexDniCargarDenuncianteKeyTyped(java.awt.event.KeyEvent evt){
-     char c = evt.get.KeyChar();
-     if( c<"0"││ c> "9") evet.consume(){
-         
-     }
+
+    
+    
+    
+    
+    
+
+  //  private void jTexDniCargarDenuncianteKeyTyped(java.awt.event.KeyEvent evt) {
+       // char caracter = evt.getKeyChar();
+
+        // Verificar si la tecla pulsada no es un digito
+       // if (((caracter < '0') || (caracter > '9')) && (caracter != '\b' /*corresponde a BACK_SPACE*/)) {
+         //   evt.consume();  // ignorar el evento de teclado
+        //}
+      //JOptionPane.showMessageDialog(null, "Solo Ingresar numero");  
+   // }
+
+
+
+   
+
+
+
+//char validar = evt.getKeyChar(); 
+    //if(Character.isLetter(validar)){
+      // evt.consume();
+   // }
+    //JOptionPane.showMessageDialog(null, "Solo Ingresar numero");
      
      
      
- }*/
+     
+ 
     private void jTextNombreCargarDenuncianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextNombreCargarDenuncianteActionPerformed
         jTextNombreCargarDenunciante.transferFocus();
     }//GEN-LAST:event_jTextNombreCargarDenuncianteActionPerformed
@@ -2225,8 +2249,11 @@ public class Home extends javax.swing.JFrame {
         nombre = jTextNombreRegistrarMascota.getText();
         caracteristicasEspeciales = jTextCaractRegistrarMascota.getText();
 
-        try {
-            Denunciante denunciante = manager.find(Denunciante.class, dni);
+        
+
+try {
+            Denunciante denunciante = manager.find(Denunciante.class
+, dni);
             Mascota masc = new Mascota(idMascota, nombre, tipoMascota, raza, color, caracteristicasEspeciales, tamanio, zona, estado);
             masc.setDenunciante(denunciante);
             manager.persist(masc);
@@ -2410,23 +2437,35 @@ public class Home extends javax.swing.JFrame {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
 
-                }
+                
+
+}
             }
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(Home.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Home.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Home.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        
 
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+} catch (InstantiationException ex) {
             java.util.logging.Logger.getLogger(Home.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
+.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
+        
+
+} catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Home.class
+
+.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
+        
+
+} catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Home.class
+
+.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>

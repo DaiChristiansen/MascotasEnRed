@@ -383,13 +383,15 @@
                                   <Component id="jTextTipoBuscarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextTamañoBuscarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextColorBuscarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jTextZonaBuscarMascota" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextTamañoBuscarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextColorBuscarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -2473,8 +2475,8 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jSeparator4" min="-2" pref="1" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jScrollPane3" pref="881" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jScrollPane3" pref="840" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2502,6 +2504,9 @@
               </Properties>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+              <Properties>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
+              </Properties>
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
               </AuxValues>
@@ -2510,6 +2515,7 @@
               <SubComponents>
                 <Component class="javax.swing.JTextArea" name="jTextArea2">
                   <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Calibri" size="12" style="0"/>

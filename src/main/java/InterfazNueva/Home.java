@@ -967,6 +967,11 @@ public class Home extends javax.swing.JFrame {
                 jTextNombreCargarDenuncianteActionPerformed(evt);
             }
         });
+        jTextNombreCargarDenunciante.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextNombreCargarDenuncianteKeyTyped(evt);
+            }
+        });
 
         jTextApellidoCargarDenunciante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2244,12 +2249,12 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextDNICargarDenuncianteKeyTyped
 
     private void jTextApellidoCargarDenuncianteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextApellidoCargarDenuncianteKeyTyped
-        /*  char caracter = evt.getKeyChar();
+       char caracter = evt.getKeyChar();
 
-  if ((caracter< 'a') || (caracter> 'z') && (caracter< 'A') || (caracter> 'Z')){  
+  if ((caracter<'a' || caracter> 'z') && (caracter< 'A' || caracter> 'Z')&& (caracter != '\b' /*corresponde a BACK_SPACE*/) ){  
             evt.consume();
    JOptionPane.showMessageDialog(null, "Solo ingresar letras");
-        }*/
+        }
     }//GEN-LAST:event_jTextApellidoCargarDenuncianteKeyTyped
 
     private void jTextTelCargarDenuncianteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextTelCargarDenuncianteKeyTyped
@@ -2260,6 +2265,14 @@ public class Home extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Solo ingresar numero");
         }// TODO add your handling code here:
     }//GEN-LAST:event_jTextTelCargarDenuncianteKeyTyped
+
+    private void jTextNombreCargarDenuncianteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextNombreCargarDenuncianteKeyTyped
+       char caracter = evt.getKeyChar();
+  if ((caracter<'a' || caracter> 'z') && (caracter< 'A' || caracter> 'Z')&& (caracter != '\b' /*corresponde a BACK_SPACE*/) ){  
+            evt.consume();
+   JOptionPane.showMessageDialog(null, "Solo ingresar letras");
+        }
+    }//GEN-LAST:event_jTextNombreCargarDenuncianteKeyTyped
 
     public void limpiarRegistarMascota() {
         jTextDenuncianteRegistrarMascota.setText("");

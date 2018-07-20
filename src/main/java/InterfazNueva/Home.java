@@ -2045,7 +2045,7 @@ public class Home extends javax.swing.JFrame {
         zona = jTextZonaRegistrarMascota.getText();
         nombre = jTextNombreRegistrarMascota.getText();
         caracteristicasEspeciales = jTextCaractRegistrarMascota.getText();
-
+//
         try {
             Denunciante denunciante = manager.find(Denunciante.class,
                     dni);

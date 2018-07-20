@@ -9,7 +9,7 @@ package com.unb001.mascotasenred.modelo;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
-//import java.time.LocalDateTime;
+
 //import static java.time.temporal.TemporalQueries.localDate;
 import java.util.List;
 import javax.lang.model.UnknownEntityException;

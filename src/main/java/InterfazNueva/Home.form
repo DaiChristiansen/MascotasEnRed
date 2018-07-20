@@ -1550,6 +1550,7 @@
             <Component class="javax.swing.JTextField" name="jTextDNICargarDenunciante">
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextDNICargarDenuncianteActionPerformed"/>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextDNICargarDenuncianteKeyTyped"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextNombreCargarDenunciante">
@@ -1560,6 +1561,7 @@
             <Component class="javax.swing.JTextField" name="jTextApellidoCargarDenunciante">
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextApellidoCargarDenuncianteActionPerformed"/>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextApellidoCargarDenuncianteKeyTyped"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel19">
@@ -1594,6 +1596,7 @@
             <Component class="javax.swing.JTextField" name="jTextTelCargarDenunciante">
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextTelCargarDenuncianteActionPerformed"/>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextTelCargarDenuncianteKeyTyped"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="BtnCancelar">

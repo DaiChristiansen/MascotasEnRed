@@ -956,6 +956,11 @@ public class Home extends javax.swing.JFrame {
                 jTextDNICargarDenuncianteActionPerformed(evt);
             }
         });
+        jTextDNICargarDenunciante.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextDNICargarDenuncianteKeyTyped(evt);
+            }
+        });
 
         jTextNombreCargarDenunciante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -966,6 +971,11 @@ public class Home extends javax.swing.JFrame {
         jTextApellidoCargarDenunciante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextApellidoCargarDenuncianteActionPerformed(evt);
+            }
+        });
+        jTextApellidoCargarDenunciante.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextApellidoCargarDenuncianteKeyTyped(evt);
             }
         });
 
@@ -988,6 +998,11 @@ public class Home extends javax.swing.JFrame {
         jTextTelCargarDenunciante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextTelCargarDenuncianteActionPerformed(evt);
+            }
+        });
+        jTextTelCargarDenunciante.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextTelCargarDenuncianteKeyTyped(evt);
             }
         });
 
@@ -2208,6 +2223,43 @@ public class Home extends javax.swing.JFrame {
 
         emf.close();
     }//GEN-LAST:event_BtnMostrarRegistrarMascotaActionPerformed
+
+
+    private void jCBZonaRegistrarMascotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBZonaRegistrarMascotaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCBZonaRegistrarMascotaActionPerformed
+
+    private void jCBZonaRegistrarMascotaMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBZonaRegistrarMascotaMouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCBZonaRegistrarMascotaMouseMoved
+
+    private void jTextDNICargarDenuncianteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextDNICargarDenuncianteKeyTyped
+             char caracter = evt.getKeyChar();
+        //Verificar si la tecla pulsada no es un digito
+        if (((caracter < '0') || (caracter > '9')) && (caracter != '\b' /*corresponde a BACK_SPACE*/)) {
+            evt.consume();  
+            JOptionPane.showMessageDialog(null, "Solo ingresar numero");
+        }
+    }//GEN-LAST:event_jTextDNICargarDenuncianteKeyTyped
+
+    private void jTextApellidoCargarDenuncianteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextApellidoCargarDenuncianteKeyTyped
+        /*  char caracter = evt.getKeyChar();
+
+  if ((caracter< 'a') || (caracter> 'z') && (caracter< 'A') || (caracter> 'Z')){  
+            evt.consume();
+   JOptionPane.showMessageDialog(null, "Solo ingresar letras");
+        }*/
+    }//GEN-LAST:event_jTextApellidoCargarDenuncianteKeyTyped
+
+    private void jTextTelCargarDenuncianteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextTelCargarDenuncianteKeyTyped
+         char caracter = evt.getKeyChar();
+        //Verificar si la tecla pulsada no es un digito
+        if (((caracter < '0') || (caracter > '9')) && (caracter != '\b' /*corresponde a BACK_SPACE*/)) {
+            evt.consume();  
+            JOptionPane.showMessageDialog(null, "Solo ingresar numero");
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_jTextTelCargarDenuncianteKeyTyped
+
 
     public void limpiarRegistarMascota() {
         jTextDenuncianteRegistrarMascota.setText("");

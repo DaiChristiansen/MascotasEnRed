@@ -778,8 +778,6 @@ public class Home extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jTableCrearAviso);
 
-        jTextZonaCrearAviso.setText("jTextField1");
-
         javax.swing.GroupLayout PanelCrearAvisoLayout = new javax.swing.GroupLayout(PanelCrearAviso);
         PanelCrearAviso.setLayout(PanelCrearAvisoLayout);
         PanelCrearAvisoLayout.setHorizontalGroup(
@@ -1871,6 +1869,7 @@ public class Home extends javax.swing.JFrame {
         manager.close();
 
         emf.close();
+        limpiarBuscarMascota();
     }//GEN-LAST:event_BtnBuscarMascotaActionPerformed
 //FIN BUSCAR MASCOTA-------------------------------------------------------------------------------------------------
 
@@ -1881,6 +1880,14 @@ public class Home extends javax.swing.JFrame {
         jTextNombreCrearAviso.setText("");
         jTextCaractCrearAviso.setText("");
         jTextDenuncianteCrearAviso.setText("");
+    }
+    public void limpiarBuscarMascota() {
+        jTextEstadoBuscarMascota.setText("");
+        jTextTipoBuscarMascota.setText("");
+       jTextRazaBuscarMascota.setText("");
+        jTextColorBuscarMascota.setText("");
+        jTextZonaBuscarMascota.setText("");
+        jTextTamañoBuscarMascota.setText("");
     }
 
     public void bloquearCrearAviso() {

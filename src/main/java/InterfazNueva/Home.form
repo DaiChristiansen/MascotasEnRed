@@ -84,7 +84,7 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="EspacioMenu" pref="5046" max="32767" attributes="0"/>
+              <Component id="EspacioMenu" pref="5056" max="32767" attributes="0"/>
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="PanelBuscarMascota" min="-2" pref="1002" max="-2" attributes="0"/>
@@ -293,51 +293,60 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jSeparator1" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jCBTamañoBuscarMascota" min="-2" pref="255" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jCBColorBuscarMascota" min="-2" pref="255" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel6" min="-2" pref="40" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jCBEstadoBuscarMascota" min="-2" pref="255" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                                      <Component id="jLabel8" min="-2" pref="40" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jCBTipoBuscarMascota" min="-2" pref="255" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jLabel10" min="-2" pref="40" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jTextRazaBuscarMascota" min="-2" pref="254" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="BtnBuscarMascota" min="-2" max="-2" attributes="0"/>
-                                          <Group type="102" attributes="0">
-                                              <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jCBZonaBuscarMascota" min="-2" pref="255" max="-2" attributes="0"/>
+                                              <Component id="jTextTamañoBuscarMascota" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jLabel6" min="-2" pref="40" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jTextEstadoBuscarMascota" min="-2" pref="255" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace min="35" pref="54" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jTextColorBuscarMascota" min="-2" pref="255" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="jLabel8" min="-2" pref="40" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jTextTipoBuscarMascota" min="-2" pref="255" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="jLabel10" min="-2" pref="40" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jTextRazaBuscarMascota" min="-2" pref="254" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="1" attributes="0">
+                                                  <Component id="BtnBuscarMascota" min="-2" max="-2" attributes="0"/>
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jTextZonaBuscarMascota" min="-2" pref="255" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
                                           </Group>
                                       </Group>
                                   </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="TituloBuscarMascota" min="-2" pref="123" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <EmptySpace min="205" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="TituloBuscarMascota" min="-2" pref="123" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="36" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -346,6 +355,13 @@
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="BotonCerrar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                          <Component id="jScrollPane5" min="-2" pref="931" max="-2" attributes="0"/>
+                          <EmptySpace pref="47" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -357,37 +373,40 @@
                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                       <Component id="TituloBuscarMascota" min="-2" pref="16" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jSeparator1" min="-2" pref="1" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jSeparator1" min="-2" pref="1" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCBEstadoBuscarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCBTipoBuscarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextEstadoBuscarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextTipoBuscarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCBTamañoBuscarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCBColorBuscarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCBZonaBuscarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextTamañoBuscarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextColorBuscarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextZonaBuscarMascota" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextRazaBuscarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jTextRazaBuscarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="BtnBuscarMascota" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="792" max="32767" attributes="0"/>
+                      <EmptySpace pref="814" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="287" max="-2" attributes="0"/>
+                          <Component id="jScrollPane5" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="288" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -431,38 +450,6 @@
                 <Property name="text" type="java.lang.String" value=" &gt; Buscar Mascota"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jCBEstadoBuscarMascota">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="e6" green="e6" red="e6" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Calibri" size="12" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="33" green="33" red="33" type="rgb"/>
-                </Property>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="4">
-                    <StringItem index="0" value="Perdido"/>
-                    <StringItem index="1" value="Encontrado"/>
-                    <StringItem index="2" value="Adopci&#xf3;n"/>
-                    <StringItem index="3" value="Registrado"/>
-                  </StringArray>
-                </Property>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="null"/>
-                </Property>
-                <Property name="name" type="java.lang.String" value="ComboBoxEstado" noResource="true"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCBEstadoBuscarMascotaActionPerformed"/>
-              </Events>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jCBEstadoBuscarMascota.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel6">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -487,37 +474,6 @@
                 <Property name="text" type="java.lang.String" value="Tama&#xf1;o"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jCBTama&#xf1;oBuscarMascota">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="e6" green="e6" red="e6" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Calibri" size="12" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="33" green="33" red="33" type="rgb"/>
-                </Property>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="3">
-                    <StringItem index="0" value="Grande"/>
-                    <StringItem index="1" value="Mediano"/>
-                    <StringItem index="2" value="Peque&#xf1;o"/>
-                  </StringArray>
-                </Property>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="null"/>
-                </Property>
-                <Property name="name" type="java.lang.String" value="ComboBoxEstado" noResource="true"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCBTama&#xf1;oBuscarMascotaActionPerformed"/>
-              </Events>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jCBTama&#xf1;oBuscarMascota.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel8">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -529,40 +485,6 @@
                 <Property name="horizontalAlignment" type="int" value="4"/>
                 <Property name="text" type="java.lang.String" value="Tipo"/>
               </Properties>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="jCBTipoBuscarMascota">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="e6" green="e6" red="e6" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Calibri" size="12" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="33" green="33" red="33" type="rgb"/>
-                </Property>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="5">
-                    <StringItem index="0" value="Gato"/>
-                    <StringItem index="1" value="Perro"/>
-                    <StringItem index="2" value="Conejo"/>
-                    <StringItem index="3" value="Tortuga"/>
-                    <StringItem index="4" value="Otro"/>
-                  </StringArray>
-                </Property>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="null"/>
-                </Property>
-                <Property name="name" type="java.lang.String" value="ComboBoxEstado" noResource="true"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jCBTipoBuscarMascotaMouseMoved"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCBTipoBuscarMascotaActionPerformed"/>
-              </Events>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jCBTipoBuscarMascota.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel9">
               <Properties>
@@ -576,40 +498,6 @@
                 <Property name="text" type="java.lang.String" value="Color"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jCBColorBuscarMascota">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="e6" green="e6" red="e6" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Calibri" size="12" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="33" green="33" red="33" type="rgb"/>
-                </Property>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="5">
-                    <StringItem index="0" value="Negro"/>
-                    <StringItem index="1" value="Blanco"/>
-                    <StringItem index="2" value="Marr&#xf3;n Oscuro"/>
-                    <StringItem index="3" value="Marr&#xf3;n claro"/>
-                    <StringItem index="4" value="Otro"/>
-                  </StringArray>
-                </Property>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="null"/>
-                </Property>
-                <Property name="name" type="java.lang.String" value="ComboBoxEstado" noResource="true"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jCBColorBuscarMascotaMouseMoved"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCBColorBuscarMascotaActionPerformed"/>
-              </Events>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jCBColorBuscarMascota.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel10">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -621,38 +509,6 @@
                 <Property name="horizontalAlignment" type="int" value="4"/>
                 <Property name="text" type="java.lang.String" value="Raza"/>
               </Properties>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="jCBZonaBuscarMascota">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="e6" green="e6" red="e6" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Calibri" size="12" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="33" green="33" red="33" type="rgb"/>
-                </Property>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="3">
-                    <StringItem index="0" value="Villa Italia"/>
-                    <StringItem index="1" value="Villa Aguirre"/>
-                    <StringItem index="2" value="Otro"/>
-                  </StringArray>
-                </Property>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="null"/>
-                </Property>
-                <Property name="name" type="java.lang.String" value="ComboBoxEstado" noResource="true"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jCBZonaBuscarMascotaMouseMoved"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCBZonaBuscarMascotaActionPerformed"/>
-              </Events>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jCBZonaBuscarMascota.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel11">
               <Properties>
@@ -691,14 +547,105 @@
             </Component>
             <Component class="javax.swing.JTextField" name="jTextRazaBuscarMascota">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Calibri" size="12" style="0"/>
                 </Property>
               </Properties>
             </Component>
+            <Component class="javax.swing.JTextField" name="jTextEstadoBuscarMascota">
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextTipoBuscarMascota">
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextTama&#xf1;oBuscarMascota">
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextColorBuscarMascota">
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextZonaBuscarMascota">
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane5">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTable" name="jTableBuscarMascota">
+                  <Properties>
+                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                      <Table columnCount="10" rowCount="25">
+                        <Column editable="true" title="ID" type="java.lang.Integer"/>
+                        <Column editable="true" title="ESTADO" type="java.lang.String"/>
+                        <Column editable="true" title="NOMBRE" type="java.lang.String"/>
+                        <Column editable="true" title="TIPO" type="java.lang.String"/>
+                        <Column editable="true" title="RAZA" type="java.lang.String"/>
+                        <Column editable="true" title="COLOR" type="java.lang.String"/>
+                        <Column editable="true" title="CARACT. ESP." type="java.lang.String"/>
+                        <Column editable="true" title="TAMA&#xd1;O" type="java.lang.String"/>
+                        <Column editable="true" title="ZONA" type="java.lang.String"/>
+                        <Column editable="true" title="DENUNCIANTE" type="java.lang.Integer"/>
+                      </Table>
+                    </Property>
+                    <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                      <TableColumnModel selectionModel="0">
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                      </TableColumnModel>
+                    </Property>
+                    <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                      <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="PanelCrearAviso">
@@ -798,13 +745,13 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Component id="jTextFechaCrearAviso" alignment="0" pref="255" max="32767" attributes="0"/>
-                                          <Component id="jCBZonaCrearAviso" pref="255" max="32767" attributes="0"/>
                                           <Component id="jTextDenuncianteCrearAviso" alignment="0" max="32767" attributes="0"/>
                                           <Component id="jTextRazaCrearAviso" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jTextZonaCrearAviso" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="0" pref="21" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="45" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -853,7 +800,7 @@
                           <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jCBColorCrearAviso" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel26" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jCBZonaCrearAviso" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextZonaCrearAviso" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -872,7 +819,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="277" max="32767" attributes="0"/>
+                      <EmptySpace pref="273" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1090,38 +1037,6 @@
                 <Property name="horizontalAlignment" type="int" value="4"/>
                 <Property name="text" type="java.lang.String" value="Raza"/>
               </Properties>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="jCBZonaCrearAviso">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="e6" green="e6" red="e6" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Calibri" size="12" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="33" green="33" red="33" type="rgb"/>
-                </Property>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="3">
-                    <StringItem index="0" value="Villa Italia"/>
-                    <StringItem index="1" value="Villa Aguirre"/>
-                    <StringItem index="2" value="Otro"/>
-                  </StringArray>
-                </Property>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="null"/>
-                </Property>
-                <Property name="name" type="java.lang.String" value="ComboBoxEstado" noResource="true"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jCBZonaCrearAvisoMouseMoved"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCBZonaCrearAvisoActionPerformed"/>
-              </Events>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jCBZonaCrearAviso.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel26">
               <Properties>
@@ -1411,10 +1326,10 @@
               </SubComponents>
             </Container>
             <Component class="javax.swing.JTextField" name="jTextRazaCrearAviso">
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextZonaCrearAviso">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
+                <Property name="text" type="java.lang.String" value="jTextField1"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -1547,7 +1462,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                       <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="311" max="32767" attributes="0"/>
+                      <EmptySpace pref="299" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1847,7 +1762,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jSeparator3" alignment="0" pref="990" max="32767" attributes="0"/>
+                                  <Component id="jSeparator3" alignment="0" pref="1004" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
@@ -1901,7 +1816,7 @@
                                                       </Group>
                                                   </Group>
                                               </Group>
-                                              <EmptySpace pref="21" max="32767" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="1" attributes="0">
                                                   <Component id="jLabel39" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabel36" min="-2" max="-2" attributes="0"/>
@@ -1909,9 +1824,9 @@
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                  <Component id="jCBRazaRegistrarMascota" alignment="1" pref="255" max="32767" attributes="0"/>
                                                   <Component id="jCBZonaRegistrarMascota" alignment="1" max="32767" attributes="0"/>
-                                                  <Component id="jTextDenuncianteRegistrarMascota" alignment="1" max="32767" attributes="0"/>
+                                                  <Component id="jTextDenuncianteRegistrarMascota" alignment="1" pref="255" max="32767" attributes="0"/>
+                                                  <Component id="jTextRazaRegistrarMascota" alignment="0" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
@@ -1939,7 +1854,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                           <Component id="jScrollPane4" min="-2" pref="931" max="-2" attributes="0"/>
-                          <EmptySpace pref="55" max="32767" attributes="0"/>
+                          <EmptySpace pref="77" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -1999,7 +1914,7 @@
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel35" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCBRazaRegistrarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextRazaRegistrarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -2019,13 +1934,13 @@
                           <Component id="BtnCancelarRegistrarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="BtnMostrarRegistrarMascota" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="768" max="32767" attributes="0"/>
+                      <EmptySpace pref="775" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="298" max="-2" attributes="0"/>
                           <Component id="jScrollPane4" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="299" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -2212,37 +2127,6 @@
                 <Property name="horizontalAlignment" type="int" value="4"/>
                 <Property name="text" type="java.lang.String" value="Raza"/>
               </Properties>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="jCBRazaRegistrarMascota">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="e6" green="e6" red="e6" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Calibri" size="12" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="33" green="33" red="33" type="rgb"/>
-                </Property>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="2">
-                    <StringItem index="0" value="Coli"/>
-                    <StringItem index="1" value="Caniche"/>
-                  </StringArray>
-                </Property>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="null"/>
-                </Property>
-                <Property name="name" type="java.lang.String" value="ComboBoxEstado" noResource="true"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jCBRazaRegistrarMascotaMouseMoved"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCBRazaRegistrarMascotaActionPerformed"/>
-              </Events>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="jCBRazaRegistrarMascota.setRenderer(new DefaultListCellRenderer() {&#xa;    public Component getListCellRendererComponent(&#xa;          JList list, Object value, int index,&#xa;          boolean isSelected, boolean hasFocus) {&#xa;        JLabel label = (JLabel) super.getListCellRendererComponent(&#xa;            list, value, index, isSelected, hasFocus);&#xa;        if (isSelected) {&#xa;          label.setForeground(Color.WHITE);&#xa;          label.setBackground(new java.awt.Color(61,0,112));&#xa;        } else {&#xa;          label.setForeground(Color.BLACK);&#xa;          label.setBackground(Color.WHITE);&#xa;        }&#xa;        return label;&#xa;    }&#xa;});"/>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
             </Component>
             <Component class="javax.swing.JComboBox" name="jCBZonaRegistrarMascota">
               <Properties>
@@ -2531,6 +2415,8 @@
                 </Component>
               </SubComponents>
             </Container>
+            <Component class="javax.swing.JTextField" name="jTextRazaRegistrarMascota">
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="PanelDenunciaMaltrato">
@@ -2562,7 +2448,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jSeparator4" pref="36" max="32767" attributes="0"/>
+                              <Component id="jSeparator4" pref="32" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="982" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
@@ -2590,7 +2476,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jSeparator4" min="-2" pref="1" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jScrollPane3" pref="877" max="32767" attributes="0"/>
+                      <Component id="jScrollPane3" pref="881" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>

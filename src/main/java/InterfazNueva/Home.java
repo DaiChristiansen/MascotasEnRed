@@ -2296,6 +2296,7 @@ public class Home extends javax.swing.JFrame {
         jTextApellidoCargarDenunciante.setEnabled(false);
         jTextDireccionCargarDenunciante.setEnabled(false);
         jTextTelCargarDenunciante.setEnabled(false);
+        jTextEmailCargarDenunciante.setEnabled(false);
         BtnGuardar.setEnabled(false); //activa el boton
         BtnCancelar.setEnabled(true);
     }

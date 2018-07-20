@@ -228,7 +228,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jLabelLogo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Usuario\\Desktop\\logo final.png")); // NOI18N
+        jLabelLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo final.png"))); // NOI18N
 
         javax.swing.GroupLayout EspacioMenuLayout = new javax.swing.GroupLayout(EspacioMenu);
         EspacioMenu.setLayout(EspacioMenuLayout);
@@ -1749,7 +1749,7 @@ public class Home extends javax.swing.JFrame {
         PanelCargarDenunciante.setVisible(false);
         PanelRegistrarMascota.setVisible(false);
         PanelDenunciaMaltrato.setVisible(false);
-        jLabelLogo.setVisible(true);
+        //jLabelLogo.setVisible(true);
     }//GEN-LAST:event_BotonBuscarMascotaMouseClicked
 
     private void BotonCrearAvisoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonCrearAvisoMouseClicked

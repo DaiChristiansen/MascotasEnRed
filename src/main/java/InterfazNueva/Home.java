@@ -1867,10 +1867,11 @@ public class Home extends javax.swing.JFrame {
         jTextCaractCrearAviso.setText("");
         jTextDenuncianteCrearAviso.setText("");
     }
+
     public void limpiarBuscarMascota() {
         jTextEstadoBuscarMascota.setText("");
         jTextTipoBuscarMascota.setText("");
-       jTextRazaBuscarMascota.setText("");
+        jTextRazaBuscarMascota.setText("");
         jTextColorBuscarMascota.setText("");
         jTextZonaBuscarMascota.setText("");
         jTextTamañoBuscarMascota.setText("");
@@ -2038,7 +2039,7 @@ public class Home extends javax.swing.JFrame {
             masc.setDenunciante(denunciante);
             manager.persist(masc);
             manager.getTransaction().commit();
-
+            JOptionPane.showMessageDialog(null, "Mascota registrada con éxito", "Aviso", JOptionPane.INFORMATION_MESSAGE);
         } catch (EntityExistsException e) {
             System.out.println("ya existe este dato");
         }
@@ -2234,10 +2235,10 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_jCBZonaRegistrarMascotaMouseMoved
 
     private void jTextDNICargarDenuncianteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextDNICargarDenuncianteKeyTyped
-             char caracter = evt.getKeyChar();
+        char caracter = evt.getKeyChar();
         //Verificar si la tecla pulsada no es un digito
         if (((caracter < '0') || (caracter > '9')) && (caracter != '\b' /*corresponde a BACK_SPACE*/)) {
-            evt.consume();  
+            evt.consume();
             JOptionPane.showMessageDialog(null, "Solo ingresar numero");
         }
     }//GEN-LAST:event_jTextDNICargarDenuncianteKeyTyped
@@ -2252,20 +2253,21 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextApellidoCargarDenuncianteKeyTyped
 
     private void jTextTelCargarDenuncianteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextTelCargarDenuncianteKeyTyped
-         char caracter = evt.getKeyChar();
+        char caracter = evt.getKeyChar();
         //Verificar si la tecla pulsada no es un digito
         if (((caracter < '0') || (caracter > '9')) && (caracter != '\b' /*corresponde a BACK_SPACE*/)) {
-            evt.consume();  
+            evt.consume();
             JOptionPane.showMessageDialog(null, "Solo ingresar numero");
         }// TODO add your handling code here:
     }//GEN-LAST:event_jTextTelCargarDenuncianteKeyTyped
-
 
     public void limpiarRegistarMascota() {
         jTextDenuncianteRegistrarMascota.setText("");
         jTextNombreRegistrarMascota.setText("");
         jTextCaractRegistrarMascota.setText("");
         jTextIDRegistrarMascota.setText("");
+        jTextRazaRegistrarMascota.setText("");
+        jTextZonaRegistrarMascota.setText("");
     }
 
     /* 

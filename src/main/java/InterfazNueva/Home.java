@@ -42,7 +42,7 @@ public class Home extends javax.swing.JFrame {
         BotonCargarDenunciante = new javax.swing.JLabel();
         BotonRegistrarMascota = new javax.swing.JLabel();
         BotonDenunciaMaltrato = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabelLogo = new javax.swing.JLabel();
         PanelBuscarMascota = new javax.swing.JPanel();
         BotonCerrar = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
@@ -228,7 +228,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Usuario\\Desktop\\logo final.png")); // NOI18N
+        jLabelLogo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Usuario\\Desktop\\logo final.png")); // NOI18N
 
         javax.swing.GroupLayout EspacioMenuLayout = new javax.swing.GroupLayout(EspacioMenu);
         EspacioMenu.setLayout(EspacioMenuLayout);
@@ -246,14 +246,14 @@ public class Home extends javax.swing.JFrame {
                             .addComponent(BotonDenunciaMaltrato, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)))
                     .addGroup(EspacioMenuLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabelLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
         EspacioMenuLayout.setVerticalGroup(
             EspacioMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EspacioMenuLayout.createSequentialGroup()
                 .addGap(59, 59, 59)
-                .addComponent(jLabel2)
+                .addComponent(jLabelLogo)
                 .addGap(33, 33, 33)
                 .addComponent(BotonBuscarMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1749,6 +1749,7 @@ public class Home extends javax.swing.JFrame {
         PanelCargarDenunciante.setVisible(false);
         PanelRegistrarMascota.setVisible(false);
         PanelDenunciaMaltrato.setVisible(false);
+        jLabelLogo.setVisible(true);
     }//GEN-LAST:event_BotonBuscarMascotaMouseClicked
 
     private void BotonCrearAvisoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonCrearAvisoMouseClicked
@@ -2467,7 +2468,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -2496,6 +2496,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelLogo;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
